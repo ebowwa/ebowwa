@@ -4,7 +4,8 @@
     "paths": {
       "@/*": [
         "src/app/*",
-        "src/*"
+        "src/*",
+        "./src/*"
       ],
       "@public/*": [
         "public/*"
@@ -44,7 +45,6 @@
     ".next/types/**/*.ts",
     "."
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
+
