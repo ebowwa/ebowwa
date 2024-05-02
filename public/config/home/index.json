@@ -1,0 +1,7 @@
+{
+    "threeJSConfig": "threeJSConfig.json",
+    "threeJSLightingConfig": "threeJSLightingConfig.json",
+    "threeJSSceneConfig": "threeJSSceneConfig.json",
+    "threeJSDefaultState": "threeJSDefaultState.json",
+    "threeJSModelConfig": "threeJSModelConfig.json"
+}

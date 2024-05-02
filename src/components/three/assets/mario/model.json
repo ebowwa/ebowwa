@@ -1,0 +1,26 @@
+{
+    "nodes": {
+        "Hip": "Hip",
+        "Spine1": "Spine1",
+        "Face00__MarioFaceMat00": "Face00__MarioFaceMat00",
+        "Face00__MarioHigeMat00": "Face00__MarioHigeMat00",
+        "Mario__MarioBodyMat00": "Mario__MarioBodyMat00",
+        "Mario__MarioBodyMat01": "Mario__MarioBodyMat01",
+        "Mario__MarioFaceMat00": "Mario__MarioFaceMat00",
+        "Mario__MarioMetalMat00": "Mario__MarioMetalMat00",
+        "Mario__MarioShoesMat00": "Mario__MarioShoesMat00",
+        "Eyeball__MarioEyeMat00": "Eyeball__MarioEyeMat00",
+        "HandL00__MarioHandMat00": "HandL00__MarioHandMat00",
+        "HandR00__MarioHandMat00": "HandR00__MarioHandMat00"
+    },
+    "materials": {
+        "MarioFaceMat00": "MarioFaceMat00",
+        "MarioHigeMat00": "MarioHigeMat00",
+        "MarioBodyMat00": "MarioBodyMat00",
+        "MarioBodyMat01": "MarioBodyMat01",
+        "MarioMetalMat00": "MarioMetalMat00",
+        "MarioShoesMat00": "MarioShoesMat00",
+        "MarioEyeMat00": "MarioEyeMat00",
+        "MarioHandMat00": "MarioHandMat00"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "ambientLight": {
+        "color": 4210752
+    },
+    "directionalLight": {
+        "color": 16777215,
+        "intensity": 1,
+        "position": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+        }
+    }
+}
