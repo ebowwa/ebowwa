@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
-import { Button } from '@/components/landing/ui/button';
-import { Checkbox } from '@/components/landing/ui/checkbox';
+import { Button } from '@/components/ui/button';
+import { Checkbox } from '@/components/ui/checkbox';
 import { v4 as uuidv4 } from 'uuid';
 
 interface Todo {

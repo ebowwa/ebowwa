@@ -1,6 +1,6 @@
 'use client';
 
-import useScreenshot from '@/hooks/useScreenshot';
+import useScreenshot from '@/hooks/browser/useScreenshot';
 
 const MyPage: React.FC = () => {
     const [screenshot, pageRef, takeScreenshot, isDownloadable, downloadScreenshot] = useScreenshot(() => {

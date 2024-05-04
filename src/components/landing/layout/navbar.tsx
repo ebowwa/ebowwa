@@ -1,7 +1,7 @@
 // Navbar.tsx
 import React from 'react';
 import Link from 'next/link';
-import { BotIcon } from '../ui/icons';
+import { BotIcon } from '../../ui/icons';
 
 interface NavbarProps {
     logo: {

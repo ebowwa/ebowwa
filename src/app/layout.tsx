@@ -1,6 +1,6 @@
 // app/layout.tsx
-import { Layout } from '@/components/three/dom/Layout';
-import Head from './head';
+import { Layout } from '@/components/landing/layout/dom/Layout';
+import Head from '../components/landing/layout/head';
 import '@/styles/global.css';
 
 export const metadata = {

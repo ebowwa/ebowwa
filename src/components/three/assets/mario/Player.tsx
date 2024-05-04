@@ -5,7 +5,7 @@ import { useGLTF, useAnimations } from '@react-three/drei';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { Group, SkinnedMesh} from 'three';
-import { GLTFResult } from '../../studio/src/ModelLoader/gltf';
+import { GLTFResult } from '../../studio/src/core/ModelLoader';
 
 
 // Define the props interface for the Player component
@@ -23,7 +23,7 @@ export function Player({ animation, rotation }: PlayerProps) {
     // Use the useGLTF hook to load the 3D model from the '/Player.glb' file
     // The returned object contains the nodes, materials, and animations of the model
     // @ts-ignore
-    const { nodes, materials, animations } = useGLTF('/Player.glb') as GLTFResult;
+    const { nodes, materials, animations } = useGLTF('/models/Player.glb') as GLTFResult;
 
     // Use the useAnimations hook to extract the animation actions from the loaded model
     // The actions object contains the individual animation actions that can be played
@@ -176,4 +176,4 @@ export function Player({ animation, rotation }: PlayerProps) {
     );
 }
 
-useGLTF.preload('/Player.glb');
+useGLTF.preload('/models/Player.glb');

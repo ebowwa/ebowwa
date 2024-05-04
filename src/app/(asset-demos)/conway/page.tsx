@@ -3,7 +3,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { VoxelGrid, CellularAutomaton } from '@/helpers/math/discrete-3d-helper';
+import { VoxelGrid, CellularAutomaton } from '@/components/utility/helpers/studio/math/discrete-3d-helper';
 
 const Home: React.FC = () => {
     const [scene, setScene] = useState<THREE.Scene | null>(null);

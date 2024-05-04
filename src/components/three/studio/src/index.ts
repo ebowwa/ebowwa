@@ -1,9 +1,3 @@
-// @/components/studio/index.ts
-// src/components/studio/src/Animate/index.ts
-// This code is a part of the ThreeJSAnimate class, which is responsible for animating a ThreeJS scene.
-// The class has a private method called setupAnimate that sets up the animation loop.
-// The animate method is called repeatedly using requestAnimationFrame, which renders the scene using the ThreeJSScene object.
-// To start the animation, you can call the startAnimation method on an instance of the ThreeJSAnimate class.
 export * from './core/Camera';
 // src/components/studio/Camera.ts
 // This code defines the ThreeJSCamera class, which is responsible for creating a perspective camera for a ThreeJS scene.
@@ -24,7 +18,7 @@ export * from './core/Controls';
 // The setupRenderer method sets the size of the renderer.
 // The setupLighting method adds an ambient light and a directional light to the scene.
 // The scene, renderer, and camera objects can be accessed through the public properties of the ThreeJSScene instance.
-export * from './ModelLoader';
+export * from './core/ModelLoader';
 // src/helpers/GLTFModels/model-helper.ts
 // This file contains a set of helper functions for loading, setting up, and animating 3D models in a ThreeJS scene.
 // The loadAndSetupModel function loads a GLTF model from a given URL and sets its position and rotation.
@@ -35,14 +29,6 @@ export * from './ModelLoader';
 // The setupViewingPerspective function sets the camera's projection matrix, position, and rotation based on a given viewing perspective.
 // The ModelConfigFromJSON function creates a configuration object for multiple 3D models from a JSON object.
 // The loadGLTFModel function is a helper function that loads a GLTF model from a given URL.
-export * from './core/Renderer';
-// src/components/studio/Renderer.ts
-// This code defines the ThreeJSRenderer class, which is responsible for setting up a WebGLRenderer and a Scene for a ThreeJS scene.
-// The constructor takes in the width and height of the renderer, as well as a RendererConfig object that contains the background color.
-// The code creates a new WebGLRenderer instance and sets its size and background color.
-// It also creates a new Scene instance, which is like a stage where you can put all the things you want to draw on the screen.
-// The renderer and scene objects can be accessed through the public renderer and scene properties of the ThreeJSRenderer instance.
-
 
 
 // DOES THIS DO A GOOD JOB OF TELLING STATE MANAGEMENT AND PROPS

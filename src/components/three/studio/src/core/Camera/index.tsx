@@ -1,5 +1,4 @@
-import * as THREE from 'three';
-import { Vector3 } from 'three';
+import { useFrame, useThree } from '@react-three/fiber';
 
 export interface CameraConfig {
     fov: number;
@@ -17,34 +16,27 @@ export interface CameraConfig {
     };
 }
 
-export class ThreeJSCamera {
-    public camera: THREE.PerspectiveCamera;
+export const ThreeJSCamera: React.FC<CameraConfig> = ({
+    fov,
+    near,
+    far,
+    cameraPosition,
+    targetPosition,
+}) => {
+    const { camera } = useThree();
 
-    constructor(width: number, height: number, cameraConfig: CameraConfig) {
-        this.camera = new THREE.PerspectiveCamera(
-            cameraConfig.fov,
-            width / height,
-            cameraConfig.near,
-            cameraConfig.far
+    useFrame(() => {
+        camera.position.set(
+            cameraPosition.x,
+            cameraPosition.y,
+            cameraPosition.z
         );
-        this.camera.position.set(
-            cameraConfig.cameraPosition.x,
-            cameraConfig.cameraPosition.y,
-            cameraConfig.cameraPosition.z
+        camera.lookAt(
+            targetPosition.x,
+            targetPosition.y,
+            targetPosition.z
         );
-        this.lookAt(
-            cameraConfig.targetPosition.x,
-            cameraConfig.targetPosition.y,
-            cameraConfig.targetPosition.z
-        );
-    }
+    });
 
-    lookAt(x: number, y: number, z: number) {
-        this.camera.lookAt(new Vector3(x, y, z));
-    }
-
-    dispose() {
-        this.camera.removeFromParent(); // Remove the camera from its parent object, if it was added to a scene or another object
-        this.camera.clear(); // Clear the camera's properties and event listeners
-    }
-}
+    return null;
+};

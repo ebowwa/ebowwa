@@ -1,5 +1,5 @@
 // @src/hooks/useDeviceDetection.ts
-import { useMediaQuery } from './useMediaQuery';
+import { useMediaQuery } from './browser/useMediaQuery';
 import { useState, useEffect } from 'react';
 import useCookieStore from '@/store/cookies-store';
 

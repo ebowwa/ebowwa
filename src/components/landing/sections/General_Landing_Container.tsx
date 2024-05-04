@@ -5,10 +5,10 @@
  */
 // 
 import Link from "next/link";
-import { ChurchIcon, HeartIcon, CalendarIcon } from "@/components/landing/ui/icons";
+import { ChurchIcon, HeartIcon, CalendarIcon } from "@/components/ui/icons";
 import CoinScene from "@/components/three/assets/coin/CoinContainer";
 import textData from "@public/html/homepage.json";
-import { useViewportSize } from "@/components/viewport/useViewportSize";
+import { useViewportSize } from "@/components/utility/viewport/useViewportSize";
 
 export default function LandingContainer() {
     const { width, height } = useViewportSize();

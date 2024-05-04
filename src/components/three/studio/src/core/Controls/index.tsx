@@ -1,6 +1,6 @@
-// src/components/studio/src/core/Controls/index.ts
+import { useEffect, useRef } from 'react';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { PerspectiveCamera } from 'three';
+import { useThree } from '@react-three/fiber';
 
 export interface ThreeJSControlsConfig {
     maxTilt: number;
@@ -8,46 +8,46 @@ export interface ThreeJSControlsConfig {
     domElement: HTMLElement;
 }
 
-export class ThreeJSControls {
-    public controls: OrbitControls | null;
+export const ThreeJSControls: React.FC<ThreeJSControlsConfig> = ({
+    maxTilt,
+    maxPan,
+    domElement,
+}) => {
+    const { camera, gl } = useThree();
+    const controlsRef = useRef<OrbitControls | null>(null);
 
-    constructor(config: ThreeJSControlsConfig) {
-        this.controls = null;
-        this.setupControls(config);
-    }
+    useEffect(() => {
+        // Create a new OrbitControls instance and associate it with the camera and DOM element
+        controlsRef.current = new OrbitControls(camera, domElement);
 
-    private setupControls(config: ThreeJSControlsConfig): void {
-        // Check if config.domElement is defined
-        if (config.domElement) {
-            // Create a new OrbitControls instance and associate it with the camera and DOM element
-            this.controls = new OrbitControls(new PerspectiveCamera(), config.domElement);
+        // Set the maximum tilt and pan angles for the controls
+        controlsRef.current.maxPolarAngle = maxTilt;
+        controlsRef.current.maxAzimuthAngle = maxPan;
 
-            // Set the maximum tilt and pan angles for the controls
-            this.controls.maxPolarAngle = config.maxTilt;
-            this.controls.maxAzimuthAngle = config.maxPan;
+        // Set the target of the controls to the origin (0, 0, 0)
+        controlsRef.current.target.set(0, 0, 0);
 
-            // Set the target of the controls to the origin (0, 0, 0)
-            this.controls.target.set(0, 0, 0);
+        // Update the controls to ensure they are in the correct state
+        controlsRef.current.update();
 
-            // Update the controls to ensure they are in the correct state
-            this.controls.update();
-        } else {
-            // Handle the case where config.domElement is undefined
-            console.error('config.domElement is undefined');
-        }
-    }
+        // Clean up the controls when the component is unmounted
+        return () => {
+            if (controlsRef.current) {
+                controlsRef.current.dispose();
+            }
+        };
+    }, [camera, domElement, maxTilt, maxPan, gl]);
 
-    public update(): void {
-        // If the controls have been set up, update them
-        if (this.controls) {
-            this.controls.update();
-        }
-    }
+    useEffect(() => {
+        // Update the controls on each frame
+        const animate = () => {
+            requestAnimationFrame(animate);
+            if (controlsRef.current) {
+                controlsRef.current.update();
+            }
+        };
+        animate();
+    }, []);
 
-    public dispose(): void {
-        // If the controls have been set up, dispose of them
-        if (this.controls) {
-            this.controls.dispose();
-        }
-    }
-}
+    return null;
+};
