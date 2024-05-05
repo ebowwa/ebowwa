@@ -6,62 +6,60 @@ License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 Source: https://sketchfab.com/3d-models/a-book-of-poems-5bcbbf682a12409687671a6954d99021
 Title: A Book Of Poems
 */
-
 import * as THREE from 'three'
 import React, { useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
+import * as z from 'zod'
 
-type Length = {
- [key: string]: number;
-};
+const GLTFResultSchema = z.object({
+  nodes: z.object({
+    mesh_2: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_3: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_4: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_5: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_6: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_7: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_8: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_9: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_10: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_11: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_12: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_13: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_14: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_15: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_16: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_17: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_18: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_19: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_20: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_21: z.object({ geometry: z.any(), material: z.any() }),
+    mesh_22: z.object({ geometry: z.any(), material: z.any() }),
+    Object_4: z.object({ geometry: z.any(), material: z.any() }),
+    Object_6: z.object({ geometry: z.any(), material: z.any() }),
+    Object_50: z.object({ geometry: z.any(), material: z.any() }),
+    Object_52: z.object({ geometry: z.any(), material: z.any() }),
+    Object_54: z.object({ geometry: z.any(), material: z.any() }),
+    Object_56: z.object({ geometry: z.any(), material: z.any() }),
+    Object_58: z.object({ geometry: z.any(), material: z.any() }),
+    Object_60: z.object({ geometry: z.any(), material: z.any() }),
+    Object_62: z.object({ geometry: z.any(), material: z.any() }),
+    Object_64: z.object({ geometry: z.any(), material: z.any() }),
+    Object_66: z.object({ geometry: z.any(), material: z.any() }),
+  }),
+  materials: z.object({
+    Snow: z.any(),
+    Holdout: z.any(),
+    Book: z.any(),
+    Terrain: z.any(),
+    Bush: z.any(),
+    material: z.any(),
+    LightCone: z.any(),
+  }),
+  animations: z.array(z.any()),
+})
 
-type GLTFResult = GLTF & {
- nodes: {
-   mesh_2: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_3: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_4: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_5: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_6: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_7: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_8: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_9: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_10: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_11: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_12: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_13: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_14: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_15: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_16: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_17: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_18: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_19: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_20: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_21: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   mesh_22: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   Object_4: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   Object_6: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   Object_50: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   Object_52: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   Object_54: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   Object_56: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   Object_58: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   Object_60: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   Object_62: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   Object_64: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
-   Object_66: THREE.Mesh & { geometry: THREE.BufferGeometry & { length: number } }
- }
- materials: {
-   Snow: THREE.MeshBasicMaterial
-   Holdout: THREE.MeshBasicMaterial
-   Book: THREE.MeshBasicMaterial
-   Terrain: THREE.MeshBasicMaterial
-   Bush: THREE.MeshBasicMaterial
-   material: THREE.MeshBasicMaterial
-   LightCone: THREE.MeshBasicMaterial
- }
- animations: GLTFAction[]
-}
+type GLTFResult = z.infer<typeof GLTFResultSchema>
 
 type ActionName = 'Animation'
 interface GLTFAction extends THREE.AnimationClip {
@@ -70,9 +68,9 @@ interface GLTFAction extends THREE.AnimationClip {
 type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>>
 
 export function Model(props: JSX.IntrinsicElements['group']) {
-  const group = useRef<THREE.Group>()
+  const group = useRef<THREE.Group>(null)
   const { nodes, materials, animations } = useGLTF('/models/a_book_of_poems.glb') as GLTFResult
-  const { actions } = useAnimations(animations, group)
+  const { actions } = useAnimations(animations.map(clip => clip as THREE.AnimationClip), group);
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
@@ -183,4 +181,4 @@ export function Model(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('models/a_book_of_poems.glb')
+useGLTF.preload('/models/a_book_of_poems.glb')

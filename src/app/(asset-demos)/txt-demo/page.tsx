@@ -2,7 +2,7 @@
 'use client'
 
 import { Canvas } from '@react-three/fiber'
-import Stars from '@/components/Stars'
+import Stars from '@/components/three/assets/Stars'
 
 export default function Page() {
   return (

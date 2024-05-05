@@ -4,9 +4,9 @@
     LOCATION: src/(clientsubstrate)/components/QRUI.tsx
  */
 "use client"
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/landing/ui/button";
 import { FC, useState } from "react";
-import { ShareIcon, DownloadIcon, CopyIcon } from "@/components/ui/icons";
+import { ShareIcon, DownloadIcon, CopyIcon } from "@/components/landing/ui/icons";
 import QRCodeGenerator from './QRCodeGenerator';
 import marketplaceContent from '@public/html/marketplaceContent.json';
 import Image from 'next/image';

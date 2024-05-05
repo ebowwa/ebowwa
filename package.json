@@ -49,7 +49,7 @@
     "drag-drop": "^7.2.0",
     "file-saver": "^2.0.5",
     "glsl-random": "^0.0.5",
-    "gltfjsx": "^6.2.16",
+    "gltfjsx": "6.2.16",
     "gsap": "^3.12.5",
     "html2canvas": "^1.4.1",
     "immer": "^10.1.1",

@@ -123,7 +123,7 @@ dependencies:
     specifier: ^0.0.5
     version: 0.0.5
   gltfjsx:
-    specifier: ^6.2.16
+    specifier: 6.2.16
     version: 6.2.16
   gsap:
     specifier: ^3.12.5

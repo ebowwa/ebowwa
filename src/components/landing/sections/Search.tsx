@@ -3,10 +3,10 @@
  * @see https://v0.dev/t/tswvUJam489
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { MicroscopeIcon, ArrowRightIcon } from "@/components/ui/icons";
+import { Input } from "@/components/landing/ui/input";
+import { Button } from "@/components/landing/ui/button";
+import { Badge } from "@/components/landing/ui/badge";
+import { MicroscopeIcon, ArrowRightIcon } from "@/components/landing/ui/icons";
 
 export default function Component() {
     return (
