@@ -3,3 +3,5 @@ pnpm install @radix-ui/react-slot @radix-ui/react-dropdown-menu @radix-ui/react-
 
 
 https://github.com/pmndrs/use-cannon/tree/master/packages/react-three-cannon-examples/src/demos
+
+npx gltfjsx --types public/Coin.glb

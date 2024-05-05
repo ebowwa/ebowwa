@@ -73,6 +73,7 @@ const nextConfig = {
   swcMinify: true,
 }
 
+
 const KEYS_TO_OMIT = ['webpackDevMiddleware', 'configOrigin', 'target', 'analyticsId', 'webpack5', 'amp', 'assetPrefix']
 
 module.exports = (_phase, { defaultConfig }) => {

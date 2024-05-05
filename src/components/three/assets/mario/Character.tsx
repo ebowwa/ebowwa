@@ -12,7 +12,7 @@ interface CharacterRendererProps {
 }
 
 const CharacterRenderer: React.FC<CharacterRendererProps> = ({ nodes, materials }) => {
-    const group = useRef<Group>(null);
+    const group = useRef<THREE.Group>(null);
 
     const renderedElements = useMemo(() => {
         const elements: JSX.Element[] = [];
@@ -30,17 +30,20 @@ const CharacterRenderer: React.FC<CharacterRendererProps> = ({ nodes, materials 
 
         // Render the skinnedMesh elements
         Object.keys(nodes).forEach((nodeName) => {
-            if (nodes[nodeName] instanceof SkinnedMesh) {
+            const node = nodes[nodeName];
+            if (node instanceof SkinnedMesh) {
                 const materialName = nodeName.split('__')[1];
                 elements.push(
                     <skinnedMesh
                         name={nodeName}
-                        geometry={nodes[nodeName].geometry}
+                        geometry={node.geometry}
                         material={materials[materialName]}
-                        skeleton={nodes[nodeName].skeleton}
+                        skeleton={node.skeleton}
                         key={nodeName}
                     />
                 );
+            } else if (node instanceof THREE.Object3D) {
+                // Handle other types of nodes as needed
             }
         });
 

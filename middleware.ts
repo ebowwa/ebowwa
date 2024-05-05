@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import countries from '@/lib/countries.json'
+import countries from '@/hooks/browser/lib/countries.json'
 import Cookies from 'js-cookie'
 
 // run only on homepage

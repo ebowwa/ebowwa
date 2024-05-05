@@ -44,7 +44,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "."
-  ],
+, "(broken)"  ],
   "exclude": ["node_modules"]
 }
 

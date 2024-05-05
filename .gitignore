@@ -4,3 +4,5 @@ src/app/.DS_Store
 /node_modules
 .env
 yarn-error.log
+.DS_Store
+src/components/three/studio/.DS_Store
