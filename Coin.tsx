@@ -16,7 +16,6 @@ type GLTFResult = GLTF & {
   materials: {
     CoinMat00: THREE.MeshStandardMaterial
   }
-  animations: GLTFAction[]
 }
 
 type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['skinnedMesh'] | JSX.IntrinsicElements['bone']>>

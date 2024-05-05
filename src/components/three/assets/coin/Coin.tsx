@@ -8,7 +8,6 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
-type GLTFAction = THREE.AnimationClip
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -18,7 +17,6 @@ type GLTFResult = GLTF & {
   materials: {
     CoinMat00: THREE.MeshStandardMaterial
   }
-  animations: GLTFAction[]
 }
 
 type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['skinnedMesh'] | JSX.IntrinsicElements['bone']>>
