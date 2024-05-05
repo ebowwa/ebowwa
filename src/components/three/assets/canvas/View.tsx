@@ -1,6 +1,4 @@
 // src/components/canvas/View.tsx
-'use client'
-
 import { forwardRef, Suspense, useImperativeHandle, useRef } from 'react'
 import { OrbitControls, PerspectiveCamera, View as ViewImpl } from '@react-three/drei'
 import { Three } from '@/components/utility/helpers/studio/lib/Three'
