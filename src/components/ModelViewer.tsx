@@ -1,8 +1,8 @@
 // src/components/ModelViewer.tsx
-import React, { useEffect } from 'react';
-import { Canvas, useThree, useLoader } from '@react-three/fiber';
+import React, { useEffect, useState } from 'react';
+import { Canvas, useThree } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 interface ModelInfo {
   url: string;
@@ -45,7 +45,8 @@ const ModelViewerContent: React.FC<ModelViewerProps> = ({
   models,
   children,
 }) => {
-  const { camera, scene, gl } = useThree();
+  const { camera, scene } = useThree();
+  const [loadedModels, setLoadedModels] = useState<GLTF['scene'][]>([]);
 
   useEffect(() => {
     camera.position.set(...cameraPosition);
@@ -53,12 +54,15 @@ const ModelViewerContent: React.FC<ModelViewerProps> = ({
 
   useEffect(() => {
     const loadModels = async () => {
+      const loadedObjects: GLTF['scene'][] = [];
       for (const model of models) {
         const { url, position = [0, 0, 0] } = model;
-        const object = await useLoader(GLTFLoader, url);
-        object.scene.position.set(...position);
-        scene.add(object.scene);
+        const gltf = await new GLTFLoader().loadAsync(url);
+        gltf.scene.position.set(...position);
+        loadedObjects.push(gltf.scene);
+        scene.add(gltf.scene);
       }
+      setLoadedModels(loadedObjects);
     };
     loadModels();
   }, [models, scene]);
