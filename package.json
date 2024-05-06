@@ -13,6 +13,7 @@
     "@ducanh2912/next-pwa": "^10.2.6",
     "@fal-ai/serverless-client": "^0.9.3",
     "@fal-ai/serverless-proxy": "^0.7.4",
+    "@ffmpeg/core": "^0.12.6",
     "@ffmpeg/core-mt": "0.12.3",
     "@ffmpeg/ffmpeg": "0.12.3",
     "@ffmpeg/util": "0.12.1",

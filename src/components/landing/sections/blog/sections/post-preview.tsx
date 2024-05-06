@@ -1,8 +1,8 @@
 // src/components/blog/post-preview.tsx
-import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
+import DateFormatter from '../components/date-formatter'
+import CoverImage from '../components/cover-image'
 import Link from 'next/link'
-import styles from '@/styles/Tags.module.css' // Import the CSS module for tags
+import styles from '../styles/Tags.module.css' // Import the CSS module for tags
 
 type Props = {
   title: string

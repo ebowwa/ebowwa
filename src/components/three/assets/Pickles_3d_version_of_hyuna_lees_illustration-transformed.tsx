@@ -26,7 +26,7 @@ type GLTFResult = GLTF & {
 type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>>
 
 export function Model(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/models/pickles_3d_version_of_hyuna_lees_illustration-transformed.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('https://cdn.jsdelivr.net/gh/ebowwar/threejs-assets@main/pickles_3d_version_of_hyuna_lees_illustration-transformed.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Object_4.geometry} material={materials['floor.001']} position={[0, -0.005, 0]} rotation={[0, 0.002, 0]} scale={0.109} />
@@ -35,4 +35,4 @@ export function Model(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/models/pickles_3d_version_of_hyuna_lees_illustration-transformed.glb')
+useGLTF.preload('https://cdn.jsdelivr.net/gh/ebowwar/threejs-assets@main/pickles_3d_version_of_hyuna_lees_illustration-transformed.glb')

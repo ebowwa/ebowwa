@@ -73,7 +73,7 @@ export const Logo: FC<redirectModel> = ({ route = '/blob', ...props }) => {
 };
 
 export const Duck: FC<Model> = (props) => {
-  const { scene } = useGLTF('/models/duck.glb');
+  const { scene } = useGLTF('https://cdn.jsdelivr.net/gh/ebowwar/threejs-assets@main/duck.glb');
 
   useFrame((state, delta) => (scene.rotation.y += delta));
 
@@ -81,7 +81,7 @@ export const Duck: FC<Model> = (props) => {
 };
 
 export const Dog: FC<Model> = (props) => {
-  const { scene } = useGLTF('/models/dog.glb');
+  const { scene } = useGLTF('https://cdn.jsdelivr.net/gh/ebowwar/threejs-assets@main/dog.glb');
 
   return <primitive object={scene} {...props} />;
 };

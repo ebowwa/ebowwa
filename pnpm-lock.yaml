@@ -14,6 +14,9 @@ dependencies:
   '@fal-ai/serverless-proxy':
     specifier: ^0.7.4
     version: 0.7.4(next@14.2.3)(react-dom@18.3.1)(react@18.3.1)
+  '@ffmpeg/core':
+    specifier: ^0.12.6
+    version: 0.12.6
   '@ffmpeg/core-mt':
     specifier: 0.12.3
     version: 0.12.3
@@ -1715,6 +1718,11 @@ packages:
 
   /@ffmpeg/core-mt@0.12.3:
     resolution: {integrity: sha512-BuHya7GktKPXsJPwrrJpeUvHYlNjZOGjNh/IAZyIYyXLonl4VN36IeV7kPmhSGdsFRgiVtSS41EnTaSbwB+U8Q==}
+    engines: {node: '>=16.x'}
+    dev: false
+
+  /@ffmpeg/core@0.12.6:
+    resolution: {integrity: sha512-PrjWBTfGn2WVn9T7wGnzfFwChbqWeZc7tM9vvJZVRadYFUDakfzy7W0LpYC0cvvK0xT82qlBsk38lQhJ/Hps5A==}
     engines: {node: '>=16.x'}
     dev: false
 

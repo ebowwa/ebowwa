@@ -23,7 +23,7 @@ export default function Page() {
         const ffmpeg = new FFmpeg();
         await ffmpeg.load();
         const ffmpegArgs = ['-i', file.name, '-c:v', 'libx264', `${file.name.split('.')[0]}.mp4`];
-        await convertFile(ffmpeg, file, ffmpegArgs, setProgress);
+        await convertFile(ffmpeg, file, ffmpegArgs);
         setIsConverting(false);
       } catch (err) {
         setIsConverting(false);

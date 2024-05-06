@@ -59,7 +59,7 @@ type GLTFResult = GLTF & {
 type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>>
 
 export function Model(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/models/billboard.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('https://cdn.jsdelivr.net/gh/ebowwar/threejs-assets@main/billboard.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Object_4.geometry} material={materials['Material.001']} position={[1.847, 8.655, 0]} rotation={[0, 0, -Math.PI / 2]} scale={[3.786, 2.716, 8.615]} />
@@ -100,4 +100,4 @@ export function Model(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/models/billboard.glb')
+useGLTF.preload('https://cdn.jsdelivr.net/gh/ebowwar/threejs-assets@main/billboard.glb')

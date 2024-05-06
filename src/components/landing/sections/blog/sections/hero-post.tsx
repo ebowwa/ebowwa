@@ -1,6 +1,6 @@
 // components/hero-post.tsx
-import DateFormatter from './date-formatter';
-import CoverImage from './cover-image';
+import DateFormatter from '../components/date-formatter';
+import CoverImage from '../components/cover-image';
 import Link from 'next/link';
 import { route } from "@/lib/constants";
 

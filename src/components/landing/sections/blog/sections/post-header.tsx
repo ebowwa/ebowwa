@@ -1,14 +1,14 @@
 // src/components/blog/post-header.tsx
-import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
-import { PostTitle } from './post-title'
-import styles from '@/styles/Tags.module.css' // Import the CSS module for tags
+import DateFormatter from '../components/date-formatter'
+import CoverImage from '../components/cover-image'
+import { PostTitle } from '../components/post-title'
+import styles from '../styles/Tags.module.css' 
 
 type Props = {
   title: string
   coverImage: string
   date: string
-  tags: string[] // Added tags array
+  tags: string[] 
 }
 
 export const PostHeader = ({ title, coverImage, date, tags }: Props) => {

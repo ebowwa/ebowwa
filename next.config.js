@@ -71,7 +71,27 @@ const nextConfig = {
     return config
   },
   swcMinify: true,
-
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+        pathname: '/ebowwagoldson/goldson-public-storage/main/projects/images/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.jsdelivr.net',
+        pathname: '/gh/ebowwagoldson/goldson-public-storage@main/projects/images/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+        pathname: '/ebowwagoldson/goldson-public-storage/main/static/**',
+      },
+    ],
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60,
+  },
   async headers() {
     return [
       {

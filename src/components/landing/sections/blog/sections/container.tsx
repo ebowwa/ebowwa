@@ -1,7 +1,7 @@
 "use client"; // src/components/blog/container.tsx
 
 import React, { useState } from "react";
-import Alert from './alert';
+import Alert from '../components/alert';
 
 type Props = {
   preview?: boolean;

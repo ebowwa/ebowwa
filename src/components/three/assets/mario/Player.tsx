@@ -23,7 +23,7 @@ export function Player({ animation, rotation }: PlayerProps) {
     // Use the useGLTF hook to load the 3D model from the '/Player.glb' file
     // The returned object contains the nodes, materials, and animations of the model
     // @ts-ignore
-    const { nodes, materials, animations } = useGLTF('/models/Player.glb') as GLTFResult;
+    const { nodes, materials, animations } = useGLTF('https://cdn.jsdelivr.net/gh/ebowwar/threejs-assets@main/Player.glb') as GLTFResult;
 
     // Use the useAnimations hook to extract the animation actions from the loaded model
     // The actions object contains the individual animation actions that can be played
@@ -176,4 +176,4 @@ export function Player({ animation, rotation }: PlayerProps) {
     );
 }
 
-useGLTF.preload('/models/Player.glb');
+useGLTF.preload('https://cdn.jsdelivr.net/gh/ebowwar/threejs-assets@main/Player.glb');

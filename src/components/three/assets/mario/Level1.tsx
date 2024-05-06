@@ -22,7 +22,7 @@ interface GLTFResult {
 }
 
 export function Level(props: JSX.IntrinsicElements['group']) {
-    const { nodes, materials } = useGLTF('/mario_level.glb') as GLTFResult;
+    const { nodes, materials } = useGLTF('https://cdn.jsdelivr.net/gh/ebowwar/threejs-assets@main/mario_level.glb') as GLTFResult;
 
     return (
         <group {...props} dispose={null} rotation={[0, -Math.PI / 2, 0]} position={[4, 0, 55]}>
@@ -57,4 +57,4 @@ export function Level(props: JSX.IntrinsicElements['group']) {
     )
 }
 
-useGLTF.preload('/mario_level.glb')
+useGLTF.preload('https://cdn.jsdelivr.net/gh/ebowwar/threejs-assets@main/mario_level.glb')
