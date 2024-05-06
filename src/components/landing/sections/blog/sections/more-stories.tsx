@@ -1,6 +1,6 @@
 // src/components/blog/more-stories.tsx
 import PostPreview from './post-preview'
-import type Post from '@/interfaces/post'
+import type Post from '@/components/landing/sections/blog/lib/interfaces/post'
 
 // Define the type for the props expected by MoreStories
 type Props = {

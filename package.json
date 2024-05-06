@@ -99,6 +99,7 @@
     "@react-three/babel": "^1.0.2",
     "@react-three/drei": "^9.103.0",
     "@react-three/fiber": "^8.16.3",
+    "@types/child-process-promise": "^2.2.6",
     "@types/gsap": "^3.0.0",
     "@types/node": "^20.12.8",
     "@types/react": "^18.3.1",

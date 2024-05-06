@@ -262,6 +262,9 @@ devDependencies:
   '@react-three/babel':
     specifier: ^1.0.2
     version: 1.0.2(@babel/core@7.24.5)(@react-three/fiber@8.16.3)(three@0.164.1)
+  '@types/child-process-promise':
+    specifier: ^2.2.6
+    version: 2.2.6
   '@types/gsap':
     specifier: ^3.0.0
     version: 3.0.0
@@ -3273,6 +3276,12 @@ packages:
 
   /@tweenjs/tween.js@23.1.1:
     resolution: {integrity: sha512-ZpboH7pCPPeyBWKf8c7TJswtCEQObFo3bOBYalm99NzZarATALYCo5OhbCa/n4RQyJyHfhkdx+hNrdL5ByFYDw==}
+
+  /@types/child-process-promise@2.2.6:
+    resolution: {integrity: sha512-g0pOHijr6Trug43D2bV0PLSIsSHa/xHEES2HeX5BAlduq1vW0nZcq27Zeud5lgmNB+kPYYVqiMap32EHGTco/w==}
+    dependencies:
+      '@types/node': 20.12.8
+    dev: true
 
   /@types/cookie@0.6.0:
     resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}

@@ -1,3 +1,4 @@
+// src/hooks/browser/useClipboard.tsx
 import { useEffect, useState } from "react";
 
 export function useClipboard() {

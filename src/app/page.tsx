@@ -1,12 +1,14 @@
 // app/page/tsx
 "use client"
 import LandingContainer from '@/components/landing/sections/General_Landing_Container';
-import Component from '@/components/landing/sections/Search'
+import PerplexitySearch from '@/components/landing/sections/perplexity-search';
+import InfoSubstrate from '@/components/landing/sections/InfoSubstrate'
 export default function HomePage() {
     return (
         <div>
-            <Component />
+            <PerplexitySearch />
             <LandingContainer />
+            <InfoSubstrate />
         </div>
     );
 }

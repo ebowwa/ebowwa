@@ -3,7 +3,7 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Model } from '@/components/three/assets/Billboard'
-import ModelViewer from '@/components/ModelViewer'
+import ModelViewer from '@/components/three/ModelViewer'
 
 export default function Home() {
   return (

@@ -1,8 +1,8 @@
 import { FFmpeg } from '@ffmpeg/ffmpeg';
 import { toBlobURL, fetchFile } from '@ffmpeg/util';
 import { useState } from 'react';
-import showAlert from './showAlert';
-import reset from './Reset';
+import showAlert from '../components/(experimential)/fabulous-minimovie/utils/showAlert';
+import reset from '../components/(experimential)/fabulous-minimovie/utils/Reset';
 
 const FFMPEG_CORE_VERSION = '0.12.3';
 
