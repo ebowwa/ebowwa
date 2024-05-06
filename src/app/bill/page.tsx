@@ -13,7 +13,7 @@ export default function Home() {
         environmentPreset="sunset"
         models={[
           {
-            url: '/models/coin.glb',
+            url: 'https://cdn.jsdelivr.net/gh/ebowwar/threejs-assets@main/coin.glb',
             position: [0, 0, 0],
           },
         ]}
