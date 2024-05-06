@@ -22,7 +22,7 @@ type GLTFResult = GLTF & {
 type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['skinnedMesh'] | JSX.IntrinsicElements['bone']>>
 
 export function CoinModel(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/models/Coin.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/models/coin.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
       <primitive object={nodes.Coin_2} />
@@ -31,4 +31,4 @@ export function CoinModel(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/models/Coin.glb')
+useGLTF.preload('/models/coin.glb')

@@ -13,7 +13,7 @@ export default function Home() {
         environmentPreset="sunset"
         models={[
           {
-            url: '/models/Coin.glb',
+            url: '/models/coin.glb',
             position: [0, 0, 0],
           },
         ]}
