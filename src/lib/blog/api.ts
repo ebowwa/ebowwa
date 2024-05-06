@@ -1,7 +1,7 @@
 // src/lib/blog/api.ts
 
 import { z } from 'zod';
-import rawData from '../../../public/raw-data/posts.json';
+import rawData from '@public/raw_data/posts.json';
 import PostType from '@/interfaces/post';
 
 // Zod schema for individual post
