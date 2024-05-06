@@ -1,6 +1,4 @@
 // /lib/constants.ts
-
-// layout.tsx
 export const NEXT_SITE_TITLE = "San Francisco Bay Area's Goldson Landscaping, Concrete, Construction";
 export const NEXT_SITE_DESCRIPTION = "Goldson - Transforming Outdoor Spaces in the SF Bay Area with Concrete Stamping, Landscaping, and Construction Services";
 export const OG_IMAGE_URL = "https://drive.google.com/file/d/1w8usIcbvq1sOoe2Ni4_l3otajKDaxHmT/view?usp=drive_link";

@@ -47,6 +47,7 @@
     "clipboard-copy": "^4.0.1",
     "clsx": "^2.1.1",
     "cookies-next": "^4.1.1",
+    "date-fns": "^3.6.0",
     "dayjs": "^1.11.11",
     "drag-drop": "^7.2.0",
     "file-saver": "^2.0.5",
