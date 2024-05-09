@@ -1,3 +1,4 @@
+// src/components/(experimential)/(lang)/utils/render-button-style.tsx
 export function renderButtonStyle(type: string) {
     switch (type) {
         case "primary":

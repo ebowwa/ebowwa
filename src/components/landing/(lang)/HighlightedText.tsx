@@ -1,3 +1,4 @@
+// src/components/(experimential)/(lang)/HighlightedText.tsx
 interface HighlightedTextProps {
     text: string;
     tag: string;
