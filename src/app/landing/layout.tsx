@@ -3,6 +3,7 @@ import Navbar from '@/components/landing/layout/navbar';
 import Footer from '@/components/landing/layout/footer';
 //  { platform: 'LinkedIn', url: 'https://linkedin.com/example' },
 //   { platform: 'Instagram', url: 'https://instagram.com/example' },
+import { Layout } from '@/components/landing/layout/dom/Layout';
 
 const navbarLinks = [
   { label: 'Home', href: '/' },
@@ -35,7 +36,9 @@ export default function RootLayout({
           logo={{ altText: 'SimulationAPI' }}
           links={navbarLinks}
         />
-        <main>{children}</main>
+        <Layout>
+          <main>{children}</main>
+        </Layout>
         <Footer
           links={footerLinks}
           socialMedia={socialMedia}

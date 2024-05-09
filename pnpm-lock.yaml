@@ -248,6 +248,9 @@ dependencies:
   tunnel-rat:
     specifier: ^0.1.2
     version: 0.1.2(@types/react@18.3.1)(immer@10.1.1)(react@18.3.1)
+  utf8:
+    specifier: ^3.0.0
+    version: 3.0.0
   uuid:
     specifier: ^9.0.1
     version: 9.0.1
@@ -11479,6 +11482,10 @@ packages:
     requiresBuild: true
     dependencies:
       node-gyp-build: 4.8.1
+    dev: false
+
+  /utf8@3.0.0:
+    resolution: {integrity: sha512-E8VjFIQ/TyQgp+TZfS6l8yp/xWppSAHzidGiRrqe4bK4XP9pTRyKFgGJpO3SN7zdX4DeomTrwaseCHovfpFcqQ==}
     dev: false
 
   /util-deprecate@1.0.2:

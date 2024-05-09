@@ -7,20 +7,20 @@
 "use client"
 import Link from "next/link";
 import { ChurchIcon, HeartIcon, CalendarIcon } from "@/components/landing/ui/icons";
-import CoinScene from "@/components/three/assets/coin/CoinContainer";
 import textData from "@public/html/homepage.json";
-import { useViewportSize } from "@/components/utility/viewport/useViewportSize";
+import dynamic from 'next/dynamic';
+import Image from 'next/image'
+
+// Import the CoinContainer using dynamic import with ssr: false
+const CoinContainer = dynamic(() => import("@/components/three/assets/coin/CoinContainer"), {
+    ssr: false,
+});
 
 export default function LandingContainer() {
-    const { width, height } = useViewportSize();
-
     return (
         <>
-            <section
-                className={`relative overflow-hidden ${width < 768 ? "h-[60vh]" : "h-[80vh]"
-                    }`}
-            >
-                <img
+            <section className="relative overflow-hidden h-[80vh]">
+                <Image
                     alt="Church exterior"
                     className="h-full w-full object-cover object-center"
                     height={1080}
@@ -36,14 +36,16 @@ export default function LandingContainer() {
                     <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">{textData.welcomeTitle}</h1>
                     <p className="max-w-xl text-lg">{textData.welcomeDescription}</p>
                     <div className="flex items-center space-x-8">
-                        <Link
-                            className="inline-flex h-10 items-center justify-center rounded-md bg-white px-6 py-2 text-sm font-medium text-gray-900 transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900"
-                            href="#"
-                        >
-                            {textData.learnMoreLabel}
-                        </Link>
-                        <div className="w-64 h-64">
-                            <CoinScene />
+                        <div>
+                            <Link
+                                className="inline-flex h-10 items-center justify-center rounded-md bg-white px-6 py-2 text-sm font-medium text-gray-900 transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900"
+                                href="#"
+                            >
+                                {textData.learnMoreLabel}
+                            </Link>
+                        </div>
+                        <div className="w-64 h-64" suppressHydrationWarning>
+                            <CoinContainer />
                         </div>
                     </div>
                 </div>
@@ -75,15 +77,17 @@ export default function LandingContainer() {
                         <div>
                             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{textData.communityTitle}</h2>
                             <p className="mt-4 text-gray-500">{textData.communityDescription}</p>
-                            <Link
-                                className="mt-6 inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
-                                href="#"
-                            >
-                                {textData.exploreEventsLabel}
-                            </Link>
+                            <div>
+                                <Link
+                                    className="mt-6 inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+                                    href="#"
+                                >
+                                    {textData.exploreEventsLabel}
+                                </Link>
+                            </div>
                         </div>
                         <div>
-                            <img
+                            <Image
                                 alt="Church interior"
                                 className="h-full w-full rounded-lg object-cover object-center"
                                 height={600}
