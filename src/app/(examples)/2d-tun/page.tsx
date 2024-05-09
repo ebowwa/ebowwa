@@ -1,7 +1,7 @@
 // src/app/tun/page.tsx
 "use client"
 import React from 'react';
-import { Tunnel } from '@/components/three/tunnel';
+import { Tunnel } from '@/components/three/utils/tunnel';
 
 const IndexPage: React.FC = () => {
   return (

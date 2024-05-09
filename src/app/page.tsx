@@ -4,7 +4,7 @@ import LandingContainer from '@/components/landing/sections/general/General_Land
 import PerplexitySearch from '@/components/landing/sections/general/perplexity-search'; // <PerplexitySearch />
 import InfoSubstrate from '@/components/landing/sections/general/InfoSubstrate'; // <InfoSubstrate />
 import SiteMap, { SiteMapProps, SiteMapItem } from '@/components/landing/sections/general/SiteMap';
-import siteMapData from './sitemap.json';
+import siteMapData from '@public/html/sitemap.json';
 
 export default function HomePage() {
   return (
