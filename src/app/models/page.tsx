@@ -1,4 +1,3 @@
-// app/models/page.tsx
 import ThreeDModelCard from "@/components/three/ThreeDModelCardUI";
 import { getAvailableModels, ModelData } from '@/components/three/utils/models';
 
@@ -12,14 +11,13 @@ export default async function ModelsPage() {
         {models.map((model) => (
           <ThreeDModelCard
             key={model.id}
+            id={model.id}
             title={model.title}
+            url={model.url}
+            position={model.position}
+            rotation={model.rotation}
+            scale={model.scale}
             imageUrl="/placeholder.svg"
-            modelData={{
-              url: model.url,
-              position: [0, 0, 0],
-              rotation: [0, 0, 0],
-              scale: [1, 1, 1],
-            }}
           />
         ))}
       </div>
