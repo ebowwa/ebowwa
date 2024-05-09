@@ -17,9 +17,7 @@ const nextConfig = {
   // uncomment the following snippet if using styled components
   // compiler: {
   //   styledComponents: true,
-  // },
-  reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
-  
+  // },  
   images: {},
   webpack: (config, { isServer }) => {
     if (!isServer) {

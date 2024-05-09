@@ -1,12 +1,11 @@
 import OpenAI from 'openai';
 import { OpenAIStream, StreamingTextResponse } from 'ai';
 const openai = new OpenAI({
-  apiKey: 'your_api_key_here',
-//apiKey: process.env.OPENAI_API_KEY,
+  //apiKey: 'your_api_key_here',
+  apiKey: process.env.OPENAI_API_KEY,
 
 });
 
- 
 // IMPORTANT! Set the runtime to edge
 export const runtime = 'edge';
  

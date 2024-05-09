@@ -1,3 +1,4 @@
+// src/components/three/slider.tsx
 "use client";
 import React, { useState } from 'react';
 import { Slider } from '@/components/landing/ui/slider';

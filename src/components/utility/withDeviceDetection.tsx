@@ -1,6 +1,6 @@
 // app/components/withDeviceDetection.tsx
 import React from 'react';
-import { useDeviceDetection } from '@/hooks/useDeviceDetection';
+import { useDeviceDetection } from '@/components/utility/ads/hooks/useDeviceDetection';
 
 interface WithDeviceDetectionProps {
     isMobile: boolean;

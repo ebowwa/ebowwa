@@ -1,8 +1,8 @@
 // src/app/api/exa-content/route.ts
 // https://vercel.com/ebowwas-projects/goldson/settings/cron-jobs to manage this 
 import { NextResponse } from 'next/server';
-import { getExaContent } from '../../../lib/exa/exa';
-import { getCachedData, setCachedData } from '../../../lib/exa/cache';
+import { getExaContent } from '../../../lib/exa-seo/exa';
+import { getCachedData, setCachedData } from '../../../lib/exa-seo/cache';
 import fs from 'fs';
 import path from 'path';
 

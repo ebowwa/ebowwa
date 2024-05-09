@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import useVideoRecording from '@/hooks/browser/useVideoRecording';
+import useVideoRecording from '@/components/utility/ads/hooks/browser/useVideoRecording';
 
 const Page: React.FC = () => {
     const [recording, pageRef, startRecording, stopRecording, videoBlob, downloadVideo] = useVideoRecording(

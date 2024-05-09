@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { useIsClient } from '@/hooks/browser/isClient';
+import { useIsClient } from '@/components/utility/ads/hooks/browser/isClient';
 
 export const useViewportSize = () => {
   const [size, setSize] = useState({ width: 0, height: 0 });

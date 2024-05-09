@@ -5,7 +5,7 @@ import '@/styles/global.css';
 
 export const metadata = {
   title: 'Ebowwa',
-  description: 'what is the difference between digital and physical?',
+  description: 'a blitz into react, 3D assets, and AI applications',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

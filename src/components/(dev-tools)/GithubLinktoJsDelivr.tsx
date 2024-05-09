@@ -1,6 +1,6 @@
 //src/components/(dev-tools)/GithubLinktoJsDelivr.tsx
 import React, { useState } from 'react';
-import { useClipboard } from '@/hooks/browser/useClipboard';
+import { useClipboard } from '@/components/utility/ads/hooks/browser/useClipboard';
 
 interface GithubLink {
   url: string;
