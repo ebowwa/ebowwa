@@ -1,6 +1,19 @@
 [
+  {
+    "title": "Elijah Arbee",
+    "links": [
+        {
+            "label": "Resume",
+            "href": "/resume-of-Elijah-Arbee"
+        },
+        {
+            "label": "Socials",
+            "href": "/connect-with-elijah"
+        }
+    ]
+},
     {
-      "title": "General",
+      "title": "Simulation Guide [preview]",
       "links": [
         {
           "label": "Landing",
@@ -25,7 +38,7 @@
       ]
     },
     {
-        "title": "Developer Tools",
+        "title": "Developer Tools [resources]",
         "links": [
             {
                 "label": "Hex",
@@ -38,7 +51,7 @@
         ]
     },
     {
-      "title": "Three Examples",
+      "title": "Three [examples]",
       "links": [
         {
           "label": "Model Viewer",
@@ -63,7 +76,7 @@
       ]
     },
     {
-      "title": "React Features",
+      "title": "React [features]",
       "links": [
         {
           "label": "React Node Flows",
@@ -80,7 +93,7 @@
       ]
     },
     {
-      "title": "Fal",
+      "title": "Fal [third-party ai provider]",
       "links": [
           {
               "label": "Real Time Camera Diffusion",
