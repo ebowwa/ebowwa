@@ -10,7 +10,7 @@ const CoinScene = () => {
 
     const handleClick = () => {
         setIsClicked((prevState) => !prevState);
-        window.location.href = '/todo';
+        window.location.href = '/models';
     };
 
     return (

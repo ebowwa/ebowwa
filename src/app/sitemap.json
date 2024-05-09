@@ -3,6 +3,10 @@
       "title": "General",
       "links": [
         {
+          "label": "Landing",
+           "href": "/landing"
+        },
+        {
           "label": "Contact",
           "href": "/contact"
         },
@@ -21,11 +25,15 @@
       ]
     },
     {
-        "title": "developer tools",
+        "title": "Developer Tools",
         "links": [
             {
-                "label": "hex identifier",
+                "label": "Hex",
                 "href": "/dev"
+            },
+            {
+                "label": "Github link to JsDelivr Convertor",
+                "href": "/dev/linkconvert"
             }
         ]
     },

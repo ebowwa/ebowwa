@@ -4,6 +4,7 @@
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
 // 
+"use client"
 import Link from "next/link";
 import { ChurchIcon, HeartIcon, CalendarIcon } from "@/components/landing/ui/icons";
 import CoinScene from "@/components/three/assets/coin/CoinContainer";
