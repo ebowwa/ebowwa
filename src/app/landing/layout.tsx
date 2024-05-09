@@ -7,7 +7,7 @@ import Footer from '@/components/landing/layout/footer';
 const navbarLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Services', href: '/simulation' },
+  { label: 'Simulation', href: '/simulation' },
   { label: 'Contact', href: '/contact' },
 ];
 
