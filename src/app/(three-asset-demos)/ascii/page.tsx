@@ -5,54 +5,64 @@ import * as THREE from 'three';
 import { AsciiEffect } from 'three/addons/effects/AsciiEffect';
 import { TrackballControls } from 'three/addons/controls/TrackballControls';
 
-const camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 1000);
-const scene: THREE.Scene = new THREE.Scene();
-const renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer();
-const effect: AsciiEffect = new AsciiEffect(renderer, ' .:-+*=%@#', { invert: true });
+let camera: THREE.PerspectiveCamera;
+let controls: TrackballControls;
+let scene: THREE.Scene;
+let renderer: THREE.WebGLRenderer;
+let effect: AsciiEffect;
 
-const controls: TrackballControls = new TrackballControls(camera, effect.domElement);
+let sphere: THREE.Mesh;
+let plane: THREE.Mesh;
 
-const sphere: THREE.Mesh = new THREE.Mesh(new THREE.SphereGeometry(200, 20, 10), new THREE.MeshPhongMaterial({ flatShading: true }));
-const plane: THREE.Mesh = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshBasicMaterial({ color: 0xe0e0e0 }));
-
-const start: number = Date.now();
+const start = Date.now();
 
 const init = () => {
-  camera.position.y = 150;
-  camera.position.z = 500;
-  scene.background = new THREE.Color(0, 0, 0);
+  if (typeof window !== 'undefined') {
+    camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 1000);
+    camera.position.y = 150;
+    camera.position.z = 500;
 
-  const pointLight1: THREE.PointLight = new THREE.PointLight(0xffffff, 3, 0, 0);
-  pointLight1.position.set(500, 500, 500);
-  scene.add(pointLight1);
+    scene = new THREE.Scene();
+    scene.background = new THREE.Color(0, 0, 0);
 
-  const pointLight2: THREE.PointLight = new THREE.PointLight(0xffffff, 1, 0, 0);
-  pointLight2.position.set(-500, -500, -500);
-  scene.add(pointLight2);
+    const pointLight1 = new THREE.PointLight(0xffffff, 3, 0, 0);
+    pointLight1.position.set(500, 500, 500);
+    scene.add(pointLight1);
 
-  scene.add(sphere);
+    const pointLight2 = new THREE.PointLight(0xffffff, 1, 0, 0);
+    pointLight2.position.set(-500, -500, -500);
+    scene.add(pointLight2);
 
-  plane.position.y = -200;
-  plane.rotation.x = -Math.PI / 2;
-  scene.add(plane);
+    sphere = new THREE.Mesh(new THREE.SphereGeometry(200, 20, 10), new THREE.MeshPhongMaterial({ flatShading: true }));
+    scene.add(sphere);
 
-  renderer.setSize(window.innerWidth, window.innerHeight);
+    plane = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshBasicMaterial({ color: 0xe0e0e0 }));
+    plane.position.y = -200;
+    plane.rotation.x = -Math.PI / 2;
+    scene.add(plane);
 
-  effect.setSize(window.innerWidth, window.innerHeight);
-  effect.domElement.style.color = 'white';
-  effect.domElement.style.backgroundColor = 'black';
+    renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
 
-  document.body.appendChild(effect.domElement);
+    effect = new AsciiEffect(renderer, ' .:-+*=%@#', { invert: true });
+    effect.setSize(window.innerWidth, window.innerHeight);
+    effect.domElement.style.color = 'white';
+    effect.domElement.style.backgroundColor = 'black';
 
-  window.addEventListener('resize', onWindowResize);
+    controls = new TrackballControls(camera, effect.domElement);
+
+    window.addEventListener('resize', onWindowResize);
+  }
 };
 
 const onWindowResize = () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
+  if (typeof window !== 'undefined') {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
 
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  effect.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    effect.setSize(window.innerWidth, window.innerHeight);
+  }
 };
 
 const animate = () => {
@@ -61,7 +71,7 @@ const animate = () => {
 };
 
 const render = () => {
-  const timer: number = Date.now() - start;
+  const timer = Date.now() - start;
 
   sphere.position.y = Math.abs(Math.sin(timer * 0.002)) * 150;
   sphere.rotation.x = timer * 0.0003;
@@ -73,6 +83,8 @@ const render = () => {
 };
 
 export default function Page() {
+  const [effectDomElement, setEffectDomElement] = React.useState<HTMLDivElement | null>(null);
+
   React.useEffect(() => {
     init();
     animate();
@@ -81,9 +93,17 @@ export default function Page() {
       // Clean up the scene and event listeners
       scene.remove(sphere);
       scene.remove(plane);
-      window.removeEventListener('resize', onWindowResize);
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', onWindowResize);
+      }
     };
   }, []);
+
+  React.useEffect(() => {
+    if (effectDomElement && effect?.domElement) {
+      effectDomElement.appendChild(effect.domElement);
+    }
+  }, [effectDomElement, effect?.domElement]);
 
   return (
     <div>
@@ -93,6 +113,7 @@ export default function Page() {
         </a>{' '}
         - effects - ascii
       </div>
+      <div ref={(el) => setEffectDomElement(el)} />
     </div>
   );
 }
