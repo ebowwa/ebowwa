@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { CollectionResponse, CollectionList, UserDetail, AvatarRelated, SkillDetail} from "../interfaces"
+import { CollectionResponse, CollectionList, UserDetail, AvatarRelated, SkillDetail} from "../../interfaces"
 
 
 const CollectionComponent: React.FC = () => {
