@@ -1,3 +1,4 @@
+// src/app/(platform)/models/page.tsx
 import ThreeDModelCard from "@/components/three/ThreeDModelCardUI";
 import { getAvailableModels, ModelData } from '@/components/three/utils/models';
 

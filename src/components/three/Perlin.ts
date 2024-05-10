@@ -1,3 +1,4 @@
+// https://codesandbox.io/p/sandbox/perlin-cubes-r3f-perf-headless-mh1jl7?file=%2Fsrc%2Fperlin.js%3A1%2C1
 function fade(t: number): number {
     return t * t * t * (t * (t * 6 - 15) + 10);
   }

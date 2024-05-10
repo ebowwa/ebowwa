@@ -10,7 +10,8 @@
       ],
       "@public/*": [
         "public/*"
-      ]
+      ],
+      "three/addons/*": ["node_modules/three/examples/jsm/*"]
     },
     "target": "es5",
     "lib": [

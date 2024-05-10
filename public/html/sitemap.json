@@ -4,11 +4,7 @@
     "links": [
         {
             "label": "Resume",
-            "href": "/resume-of-Elijah-Arbee"
-        },
-        {
-            "label": "Socials",
-            "href": "/connect-with-elijah"
+            "href": "/elijah"
         }
     ]
 },
@@ -72,6 +68,10 @@
         {
             "label": "Outline Objects",
             "href": "/outline"
+        },
+        {
+          "label": "Ascii",
+          "href": "/ascii"
         }
       ]
     },

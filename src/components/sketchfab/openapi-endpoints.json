@@ -1,0 +1,756 @@
+{
+    "models": [
+      {
+        "method": "POST",
+        "endpoint": "/v3/models/{uid}/transfer-to-org"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/models/{uid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/models/{uid}"
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/v3/models/{uid}"
+      },
+      {
+        "method": "PUT",
+        "endpoint": "/v3/models/{uid}"
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/v3/models/{uid}/options"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/likes"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/me/likes"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/models"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/models"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/models/purchases"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/collections/{uid}/models"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/collections/{uid}/models"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/collections/{uid}/models"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/models/{uid}/download"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/search?type=models"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/models/{uid}/archives/extra/latest"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/models/{uid}/archives/extra/latest"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/search?type=models"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/orgs/{orgUid}/models/{modelUid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/orgs/{orgUid}/models/{modelUid}"
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/v3/orgs/{orgUid}/models/{modelUid}"
+      },
+      {
+        "method": "PUT",
+        "endpoint": "/v3/orgs/{orgUid}/models/{modelUid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/search"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/orgs/{orgUid}/search?type=models"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/models/{uid}/archives/extra"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/models"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/orgs/{orgUid}/models"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/orgs/{orgUid}/models"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/orgs/{orgUid}/models/{modelUid}/download"
+      }
+    ],
+    "users": [
+      {
+        "method": "GET",
+        "endpoint": "/v3/users"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me"
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/v3/me"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/users/{uid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/account"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/users/{uid}/followings"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/orgs"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/avatars/{uid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/users/{uid}/followers"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/me/followings/{uid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/search"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/followings"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/me/followings"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/me/likes/{uid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/search?type=users"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/followers"
+      }
+    ],
+    "me": [
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/me/subscriptions/{uid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me"
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/v3/me"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/environments"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/me/environments"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/backgrounds"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/me/backgrounds"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/subscriptions"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/me/subscriptions"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/likes"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/me/likes"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/models/purchases"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/matcaps"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/me/matcaps"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/me/environments/{uid}"
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/v3/me/environments/{uid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/search?type=models"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/me/followings/{uid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/collections"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/me/backgrounds/{uid}"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/me/matcaps/{matcapUid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/matcaps/{matcapUid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/followings"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/me/followings"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/models"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/me/likes/{uid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/followers"
+      }
+    ],
+    "collections": [
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/me/subscriptions/{uid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/collections"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/collections"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/subscriptions"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/me/subscriptions"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/collections/{uid}"
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/v3/collections/{uid}"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/collections/{uid}/models"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/collections/{uid}/models"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/collections/{uid}/models"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/search?type=collections"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/collections"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/search"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/collections/thumbnails"
+      }
+    ],
+    "avatars": [
+      {
+        "method": "GET",
+        "endpoint": "/v3/avatars/{uid}"
+      }
+    ],
+    "categories": [
+      {
+        "method": "GET",
+        "endpoint": "/v3/categories/{uid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/categories"
+      }
+    ],
+    "skills": [
+      {
+        "method": "GET",
+        "endpoint": "/v3/skills"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/skills/{slug}"
+      }
+    ],
+    "environments": [
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/environments"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/me/environments"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/orgs/{orgUid}/environments/{environmentUid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/orgs/{orgUid}/environments/{environmentUid}"
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/v3/orgs/{orgUid}/environments/{environmentUid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/orgs/{orgUid}/environments"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/orgs/{orgUid}/environments"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/me/environments/{uid}"
+      },
+      {
+        "method": "PATCH",
+        "endpoint": "/v3/me/environments/{uid}"
+      }
+    ],
+    "tags": [
+      {
+        "method": "GET",
+        "endpoint": "/v3/tags/{slug}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/orgs/{orgUid}/tags"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/tags"
+      }
+    ],
+    "relationships": [
+      {
+        "method": "GET",
+        "endpoint": "/v3/users/{uid}/followings"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/users/{uid}/followers"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/me/followings/{uid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/followings"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/me/followings"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/followers"
+      }
+    ],
+    "backgrounds": [
+      {
+        "method": "GET",
+        "endpoint": "/v3/orgs/{orgUid}/backgrounds"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/orgs/{orgUid}/backgrounds"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/backgrounds"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/me/backgrounds"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/orgs/{orgUid}/backgrounds/{backgroundUid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/orgs/{orgUid}/backgrounds/{backgroundUid}"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/me/backgrounds/{uid}"
+      }
+    ],
+    "matcaps": [
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/orgs/{orgUid}/matcaps/{matcapUid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/orgs/{orgUid}/matcaps/{matcapUid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/matcaps"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/me/matcaps"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/orgs/{orgUid}/matcaps"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/orgs/{orgUid}/matcaps"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/me/matcaps/{matcapUid}"
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/matcaps/{matcapUid}"
+      }
+    ],
+    "thumbnails": [
+      {
+        "method": "GET",
+        "endpoint": "/v3/collections/thumbnails"
+      }
+    ],
+    "likes": [
+      {
+        "method": "GET",
+        "endpoint": "/v3/me/likes"
+      },
+      {
+        "method": "POST",
+        "endpoint": "/v3/me/likes"
+      },
+      {
+        "method": "DELETE",
+        "endpoint": "/v3/me/likes/{uid}"
+      }
+    ],
+        "search": [
+          {
+            "method": "GET",
+            "endpoint": "/v3/search"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/search?type=projects"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/search?type=models"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/search?type=users"
+          }
+        ],
+        "comments": [
+          {
+            "method": "GET",
+            "endpoint": "/v3/comments"
+          },
+          {
+            "method": "POST",
+            "endpoint": "/v3/comments"
+          },
+          {
+            "method": "DELETE",
+            "endpoint": "/v3/comments/{uid}"
+          }
+        ],
+        "licenses": [
+          {
+            "method": "GET",
+            "endpoint": "/v3/licenses"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/licences/{uid}"
+          }
+        ],
+        "purchases": [
+          {
+            "method": "GET",
+            "endpoint": "/v3/me/models/purchases"
+          }
+        ],
+        "orgs": [
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}"
+          },
+          {
+            "method": "PATCH",
+            "endpoint": "/v3/orgs/{orgUid}"
+          },
+          {
+            "method": "POST",
+            "endpoint": "/v3/models/{uid}/transfer-to-org"
+          },
+          {
+            "method": "DELETE",
+            "endpoint": "/v3/orgs/{orgUid}/matcaps/{matcapUid}"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/matcaps/{matcapUid}"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/backgrounds"
+          },
+          {
+            "method": "POST",
+            "endpoint": "/v3/orgs/{orgUid}/backgrounds"
+          },
+          {
+            "method": "DELETE",
+            "endpoint": "/v3/orgs/{orgUid}/environments/{environmentUid}"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/environments/{environmentUid}"
+          },
+          {
+            "method": "PATCH",
+            "endpoint": "/v3/orgs/{orgUid}/environments/{environmentUid}"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/environments"
+          },
+          {
+            "method": "POST",
+            "endpoint": "/v3/orgs/{orgUid}/environments"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/tags"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/me/orgs"
+          },
+          {
+            "method": "PATCH",
+            "endpoint": "/v3/orgs/{orgUid}/models/{modelUid}/options"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/matcaps"
+          },
+          {
+            "method": "POST",
+            "endpoint": "/v3/orgs/{orgUid}/matcaps"
+          },
+          {
+            "method": "DELETE",
+            "endpoint": "/v3/orgs/{orgUid}/backgrounds/{backgroundUid}"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/backgrounds/{backgroundUid}"
+          },
+          {
+            "method": "DELETE",
+            "endpoint": "/v3/orgs/{orgUid}/models/{modelUid}"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/models/{modelUid}"
+          },
+          {
+            "method": "PATCH",
+            "endpoint": "/v3/orgs/{orgUid}/models/{modelUid}"
+          },
+          {
+            "method": "PUT",
+            "endpoint": "/v3/orgs/{orgUid}/models/{modelUid}"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/projects"
+          },
+          {
+            "method": "POST",
+            "endpoint": "/v3/orgs/{orgUid}/projects"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/search?type=projects"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/search?type=models"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/models"
+          },
+          {
+            "method": "POST",
+            "endpoint": "/v3/orgs/{orgUid}/models"
+          },
+          {
+            "method": "DELETE",
+            "endpoint": "/v3/orgs/{orgUid}/projects/{projectUid}"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/projects/{projectUid}"
+          },
+          {
+            "method": "PATCH",
+            "endpoint": "/v3/orgs/{orgUid}/projects/{projectUid}"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/models/{modelUid}/download"
+          }
+        ],
+        "projects": [
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/projects"
+          },
+          {
+            "method": "POST",
+            "endpoint": "/v3/orgs/{orgUid}/projects"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/search?type=projects"
+          },
+          {
+            "method": "DELETE",
+            "endpoint": "/v3/orgs/{orgUid}/projects/{projectUid}"
+          },
+          {
+            "method": "GET",
+            "endpoint": "/v3/orgs/{orgUid}/projects/{projectUid}"
+          },
+          {
+            "method": "PATCH",
+            "endpoint": "/v3/orgs/{orgUid}/projects/{projectUid}"
+          }
+        ],
+        "baseUrl": "",
+        "apiVersion": "3.0.0"
+      }
