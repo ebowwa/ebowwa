@@ -43,7 +43,11 @@
             {
                 "label": "Github link to JsDelivr Convertor",
                 "href": "/dev/linkconvert"
-            }
+            },
+            {
+              "label": "Github link to JsDelivr Convertor",
+              "href": "/dev/html2tsx"
+          }
         ]
     },
     {
