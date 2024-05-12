@@ -158,7 +158,7 @@ export default function WebcamPage() {
       return;
     }
     send({
-      prompt: 'a picture of an alien man, high asf, lost, optimistic & happy coding, enhance but keep the background, elegant, in a suit, 8k, uhd',
+      prompt: 'a picture of an alien man, lost, optimistic & happy coding, enhance but keep the background, elegant, in a suit, 8k, uhd',
       image: data,
       num_inference_steps: 3,
       strength: 0.7,

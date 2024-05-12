@@ -58,6 +58,7 @@
     "gltfjsx": "6.2.12",
     "gsap": "^3.12.5",
     "html2canvas": "^1.4.1",
+    "htmlparser2": "^9.1.0",
     "idb": "^8.0.0",
     "immer": "^10.1.1",
     "install": "^0.13.0",
