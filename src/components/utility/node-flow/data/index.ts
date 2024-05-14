@@ -1,18 +1,23 @@
 // data.ts
 import { Node, Edge } from 'reactflow';
 
-interface NodeData {
+export interface NodeData {
   label: string;
   color?: string;
   size?: number;
   // Add any other properties you need for your nodes
 }
 
-interface EdgeData {
+export interface EdgeData {
   label?: string;
   color?: string;
   width?: number;
   // Add any other properties you need for your edges
+}
+
+export interface FlowProps {
+  initialNodes: Node<any, string>[];
+  initialEdges: any[];
 }
 
 export function getInitialNodesAndEdges(data: any): { initialNodes: Node<NodeData>[]; initialEdges: Edge<EdgeData>[] } {
@@ -26,7 +31,7 @@ export function getInitialNodesAndEdges(data: any): { initialNodes: Node<NodeDat
     },
   }));
 
-  const initialEdges: Edge<EdgeData>[] = data.edges.map((edge: any) => ({
+const initialEdges: Edge<EdgeData>[] = data.edges.map((edge: any) => ({
     id: `e${edge.source}-${edge.target}`,
     source: edge.source,
     target: edge.target,

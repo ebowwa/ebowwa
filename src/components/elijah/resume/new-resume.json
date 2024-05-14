@@ -1,0 +1,48 @@
+{
+    "name": "Elijah Arbee",
+    "dob": "2000-04-14", 
+    "title": "Your Title",
+    "email": "ec.arbee1@gmail.com",
+    "phone": "+1 (510) 946-9214",
+    "linkedin": "https://www.linkedin.com/in/elijah-arbee/",
+    "github": "https://github.com/ebowwa",
+    "workExperience": [
+      {
+        "title": "Operator/Sales",
+        "company": "Autonomy Solutions a Door-to-Door Solar Sales Dealership",
+        "duration": "Jan 2015 - Dec 2020",
+        "responsibilities": [
+          "Managed a team of 20 salespeople",
+          "Increased sales by 50% year-over-year",
+          "Implemented new CRM system to track sales and customer interactions"
+        ]
+      },
+      {
+        "title": "Restaurant Server and Catering Staff",
+        "company": "Various Hospitality Roles",
+        "duration": "Jan 2010 - Dec 2014",
+        "responsibilities": [
+          "Provided excellent customer service in fast-paced environments",
+          "Assisted in event setup and breakdown for catering events",
+          "Ensured customer satisfaction through attentive and friendly service"
+        ]
+      }
+    ],
+    "hackathons": [
+      {
+        "name": "Hackathon 1",
+        "date": "Jan 2021",
+        "project": "Project Name",
+        "description": "Project description goes here."
+      },
+      {
+        "name": "Hackathon 2",
+        "date": "Feb 2021",
+        "project": "Project Name",
+        "description": "Project description goes here."
+      }
+    ],
+    "technicalSkills": ["Typescript", "React", "NextJS", "Python", "ThreeJS", "Dataset Curation", "Synthetic Data Gathering"],
+    "softSkills": ["Leadership", "Communication", "Teamwork"],
+    "interests": ["AI", "Data", "Hackathons", "Solar Energy"]
+  }

@@ -1,5 +1,5 @@
 "use client"
-import CollectionsPage from '@/components/sketchfab/collections/personal/index';
+import CollectionsPage from '@/components/(external_api)/sketchfab/collections/personal/index';
 
 export default function Page() {
   return (

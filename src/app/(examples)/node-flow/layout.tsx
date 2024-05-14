@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
       </header>
       <main className="flex-1 p-6">{children}</main>
       <footer className="bg-gray-800 text-white py-4 px-6 text-center">
-        <p>&copy; 2023 My React Flow App</p>
+        <p>&copy; 2024 Ebowwa brands</p>
       </footer>
     </div>
   );
