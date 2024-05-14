@@ -3,7 +3,7 @@
 // https://samplelib.com/sample-mp4.html for the example 3MB
 "use client"
 import React from 'react';
-import Video from '@/components/utility/video/autoplayloop/Video';
+import Video from '@/components/utility/video/autoplayloop';
 
 const Page = () => {
   return (
@@ -14,6 +14,7 @@ const Page = () => {
         options={{
           loop: true,
           autoplay: true,
+          preload: 'auto', // Add the preload property here
         }}
       />
     </div>
