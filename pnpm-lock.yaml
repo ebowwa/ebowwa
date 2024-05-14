@@ -33,8 +33,8 @@ dependencies:
     specifier: ^2.0.3
     version: 2.0.3(react-dom@18.3.1)(react@18.3.1)
   '@heroicons/react':
-    specifier: ^2.1.3
-    version: 2.1.3(react@18.3.1)
+    specifier: ^1.0.6
+    version: 1.0.6(react@18.3.1)
   '@mantine/core':
     specifier: ^7.9.0
     version: 7.9.0(@mantine/hooks@7.9.0)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
@@ -1901,8 +1901,8 @@ packages:
       react-dom: 18.3.1(react@18.3.1)
     dev: false
 
-  /@heroicons/react@2.1.3(react@18.3.1):
-    resolution: {integrity: sha512-fEcPfo4oN345SoqdlCDdSa4ivjaKbk0jTd+oubcgNxnNgAfzysfwWfQUr+51wigiWHQQRiZNd1Ao0M5Y3M2EGg==}
+  /@heroicons/react@1.0.6(react@18.3.1):
+    resolution: {integrity: sha512-JJCXydOFWMDpCP4q13iEplA503MQO3xLoZiKum+955ZCtHINWnx26CUxVxxFQu/uLb4LW3ge15ZpzIkXKkJ8oQ==}
     peerDependencies:
       react: '>= 16'
     dependencies:
