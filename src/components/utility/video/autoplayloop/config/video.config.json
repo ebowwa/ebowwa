@@ -1,0 +1,23 @@
+{
+    "video": {
+      "loop": {
+        "className": "video-loop",
+        "styles": {
+          "objectFit": "cover",
+          "width": "100%",
+          "height": "100%",
+          "loop": true
+        }
+      },
+      "autoplay": {
+        "className": "video-autoplay",
+        "styles": {
+          "objectFit": "cover",
+          "width": "100%",
+          "height": "100%",
+          "autoplay": true,
+          "muted": true
+        }
+      }
+    }
+  }
