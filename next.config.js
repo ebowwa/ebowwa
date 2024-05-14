@@ -14,6 +14,8 @@ const withPWA = require('@ducanh2912/next-pwa').default({
 })
 
 const nextConfig = {
+  transpilePackages: ['three'],
+
   // uncomment the following snippet if using styled components
   // compiler: {
   //   styledComponents: true,

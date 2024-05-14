@@ -1,3 +1,4 @@
+// src/components/three/studio/src/core/Camera/index.tsx
 import { useFrame, useThree } from '@react-three/fiber';
 
 export interface CameraConfig {
