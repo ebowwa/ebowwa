@@ -1,5 +1,5 @@
 'use client'
-
+// i like the menu
 import { Suspense, useDeferredValue } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { useGLTF, OrbitControls, ContactShadows } from '@react-three/drei'

@@ -1,4 +1,5 @@
 // src/components/three/tunnel.tsx
+// DO NOT EDIT! IMMUTABLE
 import React, { useState, useContext, createContext } from 'react';
 
 type Props = {

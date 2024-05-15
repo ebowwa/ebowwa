@@ -17,7 +17,7 @@ type GLTFResult = {
 
 function Model(props: JSX.IntrinsicElements['group']) {
   const group = useRef<THREE.Group>(null)
-  const { nodes, materials } = useGLTF('/mac-draco.glb') as unknown as GLTFResult
+  const { nodes, materials } = useGLTF('/models/glb/mac-draco.glb') as unknown as GLTFResult
   
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
