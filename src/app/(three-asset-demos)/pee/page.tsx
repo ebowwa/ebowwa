@@ -16,25 +16,36 @@ const MODELS = {
 
 export default function App() {
   const { model } = useControls({ model: { value: 'Beech', options: Object.keys(MODELS) } })
+  const { ambientLightColor, ambientLightIntensity, spotLightColor, spotLightIntensity, spotLightAngle, spotLightPenumbra } = useControls({
+    ambientLightColor: '#ffffff',
+    ambientLightIntensity: { value: 0.75, min: 0, max: 15, step: 0.01 },
+    spotLightColor: '#ffffff',
+    spotLightIntensity: { value: 1, min: 0, max: 15, step: 0.01 },
+    spotLightAngle: { value: 0.15, min: 0, max: 15, step: 0.01 },
+    spotLightPenumbra: { value: 1, min: 0, max: 15, step: 0.01 },
+  })
+
   return (
-    <>
-      <header>
-        This is a {model.toLowerCase()} tree.
-        <br />
-        <status.Out />
-      </header>
-      <Canvas camera={{ position: [-10, 10, 40], fov: 50 }}>
-      <hemisphereLight color="white" groundColor="blue" intensity={0.75} />
-        <spotLight position={[50, 50, 10]} angle={0.15} penumbra={1} />
-        <group position={[0, -10, 0]}>
-          <Suspense fallback={<status.In>Loading ...</status.In>}>
-            <Tree url={MODELS[model]} />
-          </Suspense>
-          <ContactShadows scale={20} blur={10} far={20} />
-        </group>
-        <OrbitControls />
-      </Canvas>
-    </>
+    <div className="h-screen w-screen">
+      <>
+        <header>
+          This is a {model.toLowerCase()} tree.
+          <br />
+          <status.Out />
+        </header>
+        <Canvas camera={{ position: [-10, 10, 40], fov: 50 }}>
+          <ambientLight color={ambientLightColor} intensity={ambientLightIntensity} />
+          <spotLight position={[50, 50, 10]} color={spotLightColor} intensity={spotLightIntensity} angle={spotLightAngle} penumbra={spotLightPenumbra} />
+          <group position={[0, -10, 0]}>
+            <Suspense fallback={<status.In>Loading ...</status.In>}>
+              <Tree url={MODELS[model]} />
+            </Suspense>
+            <ContactShadows scale={20} blur={10} far={20} />
+          </group>
+          <OrbitControls />
+        </Canvas>
+      </>
+    </div>
   )
 }
 
