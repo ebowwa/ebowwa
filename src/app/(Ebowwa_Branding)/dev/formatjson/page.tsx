@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { formatJson } from '@/utils/FormatJson';
 // if found to be invalid should feed errors and relevant code snippet to claude hauiku
 // not too effective currently
+// ui needs work; are mutations used?
 const JsonFormatter: React.FC = () => {
   const [inputJson, setInputJson] = useState<string>('');
   const [formattedJson, setFormattedJson] = useState<string>('');

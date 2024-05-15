@@ -7,31 +7,57 @@ Source: https://sketchfab.com/3d-models/picture-frame-5b4f6ab0cd54433c82b429b42f
 Title: Picture Frame
 */
 // src/components/three/assets/Picture_frame.tsx
-import * as THREE from 'three'
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
+import * as THREE from 'three';
+import React, { useRef } from 'react';
+import { useGLTF } from '@react-three/drei';
+import { GLTF } from 'three-stdlib';
 
+// Type Definitions
 type GLTFResult = GLTF & {
   nodes: {
-    defaultMaterial: THREE.Mesh
-  }
+    defaultMaterial: THREE.Mesh;
+  };
   materials: {
-    defaultMaterial: THREE.MeshStandardMaterial
-  }
-}
+    defaultMaterial: THREE.MeshStandardMaterial;
+  };
+};
 
-type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>>
+type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>>;
 
-export function Model(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/models/glb/picture_frame.glb') as GLTFResult
+// Component Definition
+export const PictureFrame = React.forwardRef<THREE.Group, Partial<{
+  position: THREE.Vector3;
+  rotation: THREE.Euler;
+  scale: THREE.Vector3;
+}>>(({ position, rotation, scale }, ref) => {
+  // Load the GLTF model using the useGLTF hook
+  const { nodes, materials } = useGLTF('/models/glb/picture_frame.glb') as GLTFResult;
+
+  // Create a ref to the group element
+  const groupRef = useRef<THREE.Group>(null);
+
+  // Set the position, rotation, and scale of the group element
+  React.useEffect(() => {
+    if (groupRef.current) {
+      groupRef.current.position.copy(position || new THREE.Vector3());
+      groupRef.current.rotation.copy(rotation || new THREE.Euler());
+      groupRef.current.scale.copy(scale || new THREE.Vector3(1, 1, 1));
+    }
+  }, [position, rotation, scale]);
+
+  // Render the 3D scene
   return (
-    <group {...props} dispose={null}>
+    <group ref={groupRef} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 35]}>
-        <mesh geometry={nodes.defaultMaterial.geometry} material={materials.defaultMaterial} rotation={[Math.PI / 2, 0, 0]} />
+        <mesh
+          geometry={nodes.defaultMaterial.geometry}
+          material={materials.defaultMaterial}
+          rotation={[Math.PI / 2, 0, 0]}
+        />
       </group>
     </group>
-  )
-}
+  );
+});
 
-useGLTF.preload('/models/glb/picture_frame.glb')
+// Preload the GLTF model
+useGLTF.preload('/models/glb/picture_frame.glb');

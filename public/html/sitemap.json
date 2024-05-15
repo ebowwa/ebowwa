@@ -3,7 +3,7 @@
     "title": "Elijah Arbee",
     "links": [
         {
-            "label": "Resume",
+            "label": "Resume // still working to update the content 😊",
             "href": "/elijah"
         }
     ]
@@ -47,6 +47,10 @@
             {
               "label": "HTML+CSS to Client-Side TSX component",
               "href": "/dev/html2tsx"
+          },
+          {
+            "label": "Format JSON",
+            "href": "/dev/formatjson"
           }
         ]
     },
