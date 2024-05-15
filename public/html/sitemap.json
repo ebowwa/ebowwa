@@ -3,7 +3,7 @@
     "title": "Elijah Arbee",
     "links": [
         {
-            "label": "Resume // still working to update the content 😊",
+            "label": "Resume // in progress 😊",
             "href": "/elijah"
         }
     ]
@@ -51,6 +51,10 @@
           {
             "label": "Format JSON",
             "href": "/dev/formatjson"
+          },
+          {
+            "label": "to webp",
+            "href": "/dev/img-convert"
           }
         ]
     },

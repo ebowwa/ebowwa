@@ -1,8 +1,7 @@
-// src/components/elijah/resume/index.tsx
+// src/components/elijah/index.tsx
 import Link from 'next/link';
 import data from './new-resume.json';
-// need to add :  `What exceptional work have you done?`
-// driving beliefs : i.e. speed of ai, relevance of factors v success potential
+import ImageDisplayComponent from '@/components/three/assets/frame';
 
 // Define interfaces/types to match the structure of resume.json
 interface WorkExperience {
@@ -94,7 +93,9 @@ export default function Resume() {
           </div>
         </div>
       </section>
-      
+
+      <ImageDisplayComponent imageSource="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/a887ec56-90e7-427e-8c98-22a8c8ba92a8.webp" showImage={true} />
+
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Work Experience</h2>
         <div className="space-y-6">
@@ -111,9 +112,10 @@ export default function Resume() {
           ))}
         </div>
       </section>
-      
+
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Hackathons</h2>
+        <ImageDisplayComponent imageSource="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/7a803307-b6fb-4419-84bf-bcc4252b15cf.webp" showImage={true} />
         <div className="space-y-6">
           {resumeData.hackathons.map((hackathon, index) => (
             <div key={index}>
@@ -124,7 +126,7 @@ export default function Resume() {
           ))}
         </div>
       </section>
-      
+
       <section>
         <h2 className="text-2xl font-bold mb-4">Skills</h2>
         <div className="grid grid-cols-2 gap-4">
