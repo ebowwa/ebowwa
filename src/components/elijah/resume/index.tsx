@@ -1,7 +1,9 @@
 // src/components/elijah/index.tsx
+
 import Link from 'next/link';
-import data from './new-resume.json';
+import data from './elijah-arbee-resume.json';
 import ImageDisplayComponent from '@/components/three/assets/frame';
+import { redact, redactPhoneNumber, calculateAge } from './utils';
 
 // Define interfaces/types to match the structure of resume.json
 interface WorkExperience {
@@ -9,13 +11,14 @@ interface WorkExperience {
   company: string;
   duration: string;
   responsibilities: string[];
+  background: string;
 }
 
 interface Hackathon {
   name: string;
   date: string;
-  project: string;
   description: string;
+  learnings: string[];
 }
 
 interface ResumeData {
@@ -33,27 +36,6 @@ interface ResumeData {
   interests: string[];
 }
 
-// Utility function to redact sensitive information
-const redact = (str: string, visibleChars: number): string => {
-  if (str.length <= visibleChars) return str;
-  return `${str.slice(0, visibleChars)}${'*'.repeat(str.length - visibleChars)}`;
-};
-
-// Specific function to redact phone numbers
-const redactPhoneNumber = (phone: string): string => {
-  const visiblePart = phone.slice(0, 8); // Adjust this to show the desired part of the phone number
-  const redactedPart = '*'.repeat(phone.length - 8);
-  return `${visiblePart}${redactedPart}`;
-};
-
-// Function to calculate age from DOB
-const calculateAge = (dob: string): number => {
-  const birthDate = new Date(dob);
-  const ageDifMs = Date.now() - birthDate.getTime();
-  const ageDate = new Date(ageDifMs);
-  return Math.abs(ageDate.getUTCFullYear() - 1970);
-};
-
 // Type assertion to ensure `data` conforms to `ResumeData` shape
 const resumeData = data as ResumeData;
 
@@ -68,9 +50,10 @@ export default function Resume() {
         <h1 className="text-4xl font-bold">{resumeData.name}, {age}</h1>
         <p className="text-gray-500">{resumeData.title}</p>
       </header>
+
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Contact</h2>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <p className="font-medium">Email</p>
             <p>{redactedEmail}</p>
@@ -79,17 +62,27 @@ export default function Resume() {
             <p className="font-medium">Phone</p>
             <p>{redactedPhone}</p>
           </div>
-          <div>
+          <div className="col-span-1 sm:col-span-1">
             <p className="font-medium">LinkedIn</p>
-            <Link className="text-blue-500 hover:underline" href={resumeData.linkedin}>
+            <a
+              className="text-blue-500 hover:underline"
+              href={resumeData.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {resumeData.linkedin}
-            </Link>
+            </a>
           </div>
-          <div>
+          <div className="col-span-1 sm:col-span-1">
             <p className="font-medium">GitHub</p>
-            <Link className="text-blue-500 hover:underline" href={resumeData.github}>
+            <a
+              className="text-blue-500 hover:underline"
+              href={resumeData.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {resumeData.github}
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -103,6 +96,7 @@ export default function Resume() {
             <div key={index}>
               <h3 className="text-xl font-medium">{experience.title}</h3>
               <p className="text-gray-500">{experience.company} | {experience.duration}</p>
+              <p>{experience.background}</p>
               <ul className="list-disc pl-6 mt-2">
                 {experience.responsibilities.map((responsibility, i) => (
                   <li key={i}>{responsibility}</li>
@@ -114,16 +108,18 @@ export default function Resume() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Hackathons</h2>
+        <h2 className="text-2xl font-bold mb-4">Hackathon Experiences</h2>
         <ImageDisplayComponent imageSource="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/7a803307-b6fb-4419-84bf-bcc4252b15cf.webp" showImage={true} />
         <div className="space-y-6">
-          {resumeData.hackathons.map((hackathon, index) => (
-            <div key={index}>
-              <h3 className="text-xl font-medium">{hackathon.name}</h3>
-              <p className="text-gray-500">{hackathon.date} | Project: {hackathon.project}</p>
-              <p>{hackathon.description}</p>
-            </div>
-          ))}
+          <div>
+            <h3 className="text-xl font-medium">{resumeData.hackathons[0].name}</h3>
+            <p>{resumeData.hackathons[0].description}</p>
+            <ul className="list-disc pl-6 mt-2">
+              {resumeData.hackathons[0].learnings.map((learning, i) => (
+                <li key={i}>{learning}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 

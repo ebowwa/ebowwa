@@ -8,10 +8,11 @@ const CollectionsPage: NextPage = () => {
   useEffect(() => {
     const fetchCollections = async () => {
       try {
-        const response = await fetch('https://api.example.com/v3/me/collections', {
+        const response = await fetch('https://api.sketchfab.com/v3/me/collections', {
           headers: {
             'Content-Type': 'application/json',
             // Add any necessary authentication headers here
+            // uid? API?
           },
         });
 

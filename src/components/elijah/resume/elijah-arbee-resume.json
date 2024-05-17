@@ -1,0 +1,49 @@
+{
+  "name": "Elijah Arbee",
+  "dob": "2000-04-14",
+  "title": "Your Title",
+  "email": "ec.arbee1@gmail.com",
+  "phone": "+1 (510) 946-9214",
+  "linkedin": "https://www.linkedin.com/in/elijah-arbee/",
+  "github": "https://github.com/ebowwa",
+  "workExperience": [
+    {
+      "title": "Co-Founder and Sales Operations Manager",
+      "company": "Autonomy Solutions: a Door-to-Door Solar Consultancy Dealership",
+      "duration": "Jan 2015 - Dec 2020",
+      "responsibilities": [
+        "Co-founded and managed the sales operations of a door-to-door solar consultancy dealership",
+        "Prospected, executed marketing campaigns, and managed general sales operations",
+        "Onboarded, trained, supported, and engaged partners and customers",
+        "Managed a team of 15 sales representatives, providing training and mentorship to improve their technical product knowledge and consultative selling skills"      ],
+      "background": "Gained extensive experience in sales operations, data analysis, and team management while co-founding and operating a door-to-door solar energy consultancy. Developed technical expertise in solar panel systems, energy efficiency, and customer relationship management software. Navigated the challenges of a rapidly evolving market and the eventual decline of the business."
+    },
+
+    {
+      "title": "Restaurant Server and Catering Staff",
+      "company": "Various Hospitality Roles",
+      "duration": "Mar 2017 - Aug 2023",
+      "responsibilities": [
+        "Provided exceptional customer service in high-volume, fast-paced dining environments",
+        "Collaborated with catering teams to set up and break down event spaces",
+        "Maintained a keen focus on customer satisfaction and exceeded guest expectations"
+      ],
+      "background": "Developed a diverse set of customer service, communication, and problem-solving skills while working in various hospitality roles, including as a restaurant server and catering staff. Gained experience in event logistics, inventory management, and delivering high-quality service in time-sensitive environments."
+    }
+  ],
+  "hackathons": [
+    {
+      "name": "Extensive Involvement in the Hackathon Community",
+      "date": "Over the past year",
+      "description": "Over the past year, I have been deeply immersed in the vibrant hackathon community, attending over 29 events ranging from 3-hour sprints to 24-hour and 2-day hackathons. These experiences have been instrumental in shaping my growth and understanding of the tech industry.",
+      "learnings": [
+        "Gained experience working with large language models and integrating them into web applications",
+        "Improved my skills in rapid prototyping and iterative development",
+        "Strengthened my collaboration and communication abilities while working in a diverse team"
+      ]
+    }
+  ],
+  "technicalSkills": ["Typescript", "React", "NextJS", "Python", "ThreeJS", "Dataset Curation", "Synthetic Data Gathering"],
+  "softSkills": ["Resiliance", "Communication", "Teamwork", "Determination", "Approachable"],
+  "interests": ["Client-side Web Platforms", "AI", "Data", "Hackathons", "Solar Energy", "Business Prospecting"]
+}

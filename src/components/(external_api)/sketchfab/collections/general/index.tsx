@@ -1,5 +1,5 @@
 'use client';
-
+// fetches 
 import { useState, useEffect } from 'react';
 import { CollectionResponse, CollectionList, UserDetail, AvatarRelated, SkillDetail} from "../../interfaces"
 
