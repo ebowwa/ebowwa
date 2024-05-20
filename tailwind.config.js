@@ -1,5 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  reactStrictMode: true,
+  turbo:{
+    enabled:true,
+  },
   darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',

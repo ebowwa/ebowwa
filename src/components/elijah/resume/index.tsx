@@ -1,7 +1,7 @@
 // src/components/elijah/index.tsx
 
 import Link from 'next/link';
-import data from './elijah-arbee-resume.json';
+import data from '@public/html/elijah-arbee-resume.json';
 import ImageDisplayComponent from '@/components/three/assets/frame';
 import { redact, redactPhoneNumber, calculateAge } from './utils';
 
@@ -29,6 +29,8 @@ interface ResumeData {
   phone: string;
   linkedin: string;
   github: string;
+  huggingface: string; // Added Hugging Face property
+  ollama: string; // Added Ollama property
   workExperience: WorkExperience[];
   hackathons: Hackathon[];
   technicalSkills: string[];
@@ -38,6 +40,10 @@ interface ResumeData {
 
 // Type assertion to ensure `data` conforms to `ResumeData` shape
 const resumeData = data as ResumeData;
+
+// Add the new properties to the resumeData object
+resumeData.huggingface = 'https://huggingface.co/ebowwa';
+resumeData.ollama = 'https://ollama.com/ebowwa';
 
 export default function Resume() {
   const redactedEmail = redact(resumeData.email, 2); // Show only the first 3 characters
@@ -82,6 +88,28 @@ export default function Resume() {
               rel="noopener noreferrer"
             >
               {resumeData.github}
+            </a>
+          </div>
+          <div className="col-span-1 sm:col-span-1">
+            <p className="font-medium">Hugging Face</p>
+            <a
+              className="text-blue-500 hover:underline"
+              href={resumeData.huggingface}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {resumeData.huggingface}
+            </a>
+          </div>
+          <div className="col-span-1 sm:col-span-1">
+            <p className="font-medium">Ollama</p>
+            <a
+              className="text-blue-500 hover:underline"
+              href={resumeData.ollama}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {resumeData.ollama}
             </a>
           </div>
         </div>
