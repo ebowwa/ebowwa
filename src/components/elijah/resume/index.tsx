@@ -41,10 +41,6 @@ interface ResumeData {
 // Type assertion to ensure `data` conforms to `ResumeData` shape
 const resumeData = data as ResumeData;
 
-// Add the new properties to the resumeData object
-resumeData.huggingface = 'https://huggingface.co/ebowwa';
-resumeData.ollama = 'https://ollama.com/ebowwa';
-
 export default function Resume() {
   const redactedEmail = redact(resumeData.email, 2); // Show only the first 3 characters
   const redactedPhone = redactPhoneNumber(resumeData.phone); // Show the first 8 characters (e.g., '+1 (510)')
