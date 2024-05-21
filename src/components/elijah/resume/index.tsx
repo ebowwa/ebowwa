@@ -1,14 +1,9 @@
 // src/components/elijah/index.tsx
-"use client"
-import React, { useEffect, useRef } from 'react';
+
 import Link from 'next/link';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import data from '@public/html/elijah-arbee-resume.json';
 import ImageDisplayComponent from '@/components/three/assets/frame';
 import { redact, redactPhoneNumber, calculateAge } from './utils';
-
-gsap.registerPlugin(ScrollTrigger);
 
 // Define interfaces/types to match the structure of resume.json
 interface WorkExperience {
@@ -51,38 +46,9 @@ resumeData.huggingface = 'https://huggingface.co/ebowwa';
 resumeData.ollama = 'https://ollama.com/ebowwa';
 
 export default function Resume() {
-  const sectionRef = useRef<HTMLElement>(null);
   const redactedEmail = redact(resumeData.email, 2); // Show only the first 3 characters
   const redactedPhone = redactPhoneNumber(resumeData.phone); // Show the first 8 characters (e.g., '+1 (510)')
   const age = calculateAge(resumeData.dob);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-
-    if (section) {
-      const scrollTriggerAnimation = gsap.fromTo(
-        section,
-        {
-          opacity: 0,
-          y: 50,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse',
-          },
-        }
-      );
-
-      return () => {
-        scrollTriggerAnimation.kill();
-      };
-    }
-  }, []);
 
   return (
     <main className="container mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
