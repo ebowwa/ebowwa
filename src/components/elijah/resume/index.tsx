@@ -136,7 +136,7 @@ export default function Resume() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Hackathon Experiences</h2>
+        <h2 className="text-2xl font-bold mb-4">Open Source Community</h2>
         <ImageDisplayComponent imageSource="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/7a803307-b6fb-4419-84bf-bcc4252b15cf.webp" showImage={true} />
         <div className="space-y-6">
           <div>
