@@ -76,17 +76,17 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'raw.githubusercontent.com',
-        pathname: '/ebowwagoldson/goldson-public-storage/main/projects/images/**',
+        pathname: '/ebowwar/main/asset-store/**',
       },
       {
         protocol: 'https',
         hostname: 'cdn.jsdelivr.net',
-        pathname: '/gh/ebowwagoldson/goldson-public-storage@main/projects/images/**',
+        pathname: '/gh/ebowwar/asset-store/**',
       },
       {
         protocol: 'https',
         hostname: 'raw.githubusercontent.com',
-        pathname: '/ebowwagoldson/goldson-public-storage/main/static/**',
+        pathname: '/ebowwar/asset-store/**',
       },
     ],
     formats: ['image/avif', 'image/webp'],

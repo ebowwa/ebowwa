@@ -4,15 +4,14 @@ import CoverImage from '../components/cover-image';
 import Link from 'next/link';
 import { route } from "@/lib/constants";
 
-// Props type definition including tags and styles
 type HeroPostProps = {
   title: string;
   coverImage: string;
   date: string;
-  tags: string[]; // Include tags in the props
+  tags: string[];
   slug: string;
   excerpt: string;
-  tagStyles: { [key: string]: string }; // CSS module for styling tags
+  tagStyles: { [key: string]: string };
 };
 
 const HeroPost = ({
@@ -42,7 +41,6 @@ const HeroPost = ({
         </div>
         <div>
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          {/* Render the tags as styled bubbles */}
           <div className={tagStyles.tagContainer}>
             {tags.map(tag => (
               <span key={tag} className={tagStyles.tagBubble}>{tag}</span>
