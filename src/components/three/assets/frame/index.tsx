@@ -24,6 +24,7 @@ const ImageDisplayComponent: React.FC<ImageDisplayComponentProps> = ({ imageSour
     // Wrap the entire component in a div with full-screen dimensions
     <div className="w-screen h-screen">
       {/* Render the Three.js Canvas component */}
+      <div style={{ width: '100vw', height: '100vh' }}>
       <Canvas>
         {/* Add an ambient light to the scene */}
         <ambientLight intensity={6.5} />
@@ -41,6 +42,7 @@ const ImageDisplayComponent: React.FC<ImageDisplayComponentProps> = ({ imageSour
         {/* If the showImage prop is true, render the ImagePlane component with the provided imageSource */}
         {showImage && <ImagePlane imageSource={imageSource} />}
       </Canvas>
+    </div>
       {/* Render the UI elements using the tunnel-rat library */}
       <div id="ui">
         <t.Out />

@@ -111,8 +111,8 @@ export default function Resume() {
         </div>
       </section>
 
-      <ImageDisplayComponent imageSource="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/a887ec56-90e7-427e-8c98-22a8c8ba92a8.webp" showImage={true} />
-
+      <ImageDisplayComponent imageSource="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/meta-cerebral-valley-5-24/a887ec56-90e7-427e-8c98-22a8c8ba92a8.webp" showImage={true} />
+      
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Work Experience</h2>
         <div className="space-y-6">
@@ -133,7 +133,7 @@ export default function Resume() {
 
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Open Source Community</h2>
-        <ImageDisplayComponent imageSource="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/7a803307-b6fb-4419-84bf-bcc4252b15cf.webp" showImage={true} />
+        <ImageDisplayComponent imageSource="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/meta-cerebral-valley-5-24/7a803307-b6fb-4419-84bf-bcc4252b15cf.webp" showImage={true} />
         <div className="space-y-6">
           <div>
             <h3 className="text-xl font-medium">{resumeData.hackathons[0].name}</h3>
