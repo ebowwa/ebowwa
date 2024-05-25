@@ -21,8 +21,8 @@ const alertContent: AlertContent = {
     linkHref: "/api/exit-preview",
   },
   preview: {
-    message: "Check out our lawn care services!",
-    linkText: "Sign up today",
+    message: "Check out the full site!",
+    linkText: "click here",
     linkHref: "/",
   },
 };
@@ -38,8 +38,8 @@ const Alert = ({ preview }: Props) => {
 
   return (
     <div
-      className={cn("border-b", {
-        "bg-green-100 border-green-200 text-green-900": preview,
+      className={cn("border-b transition-colors duration-300", {
+        "bg-[#6231F0] border-[#6231F0] text-white": preview,
         "bg-neutral-50 border-neutral-200": !preview,
       })}
     >
@@ -49,9 +49,9 @@ const Alert = ({ preview }: Props) => {
           <a
             href={linkHref}
             className={cn(
-              "text-sm font-semibold underline duration-200 transition-colors",
+              "text-sm font-semibold underline duration-300 transition-colors",
               {
-                "hover:text-green-700": preview,
+                "hover:text-[#9370DB]": preview,
                 "hover:text-blue-600": !preview,
               }
             )}
