@@ -1,5 +1,6 @@
 // src/app/elijah/[whoiselijah]/page.tsx
 import { Suspense } from 'react';
+import Resume from '@/components/elijah/resume';
 
 interface PageProps {
   params: {
@@ -7,13 +8,8 @@ interface PageProps {
   };
 }
 
-export default async function LandingPage({ params }: PageProps) {
+export default function LandingPage({ params }: PageProps) {
   const { landingId } = params;
-
-  // Use dynamic imports to lazily load the components
-  const Resume = await import('@/components/elijah/resume').then((mod) => mod.default);
-  // const Connect = await import('@/components/elijah/connect').then((mod) => mod.default);         <Connect />
-
 
   return (
     <div>

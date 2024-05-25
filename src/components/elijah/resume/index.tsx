@@ -147,7 +147,7 @@ export default function Resume() {
         </div>
       </section>
 
-      <section>
+      <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Skills</h2>
         <div className="grid grid-cols-2 gap-4">
           <div>
@@ -169,7 +169,7 @@ export default function Resume() {
         </div>
       </section>
 
-      <section>
+      <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Interests</h2>
         <div>
           <p>{resumeData.interests.join(', ')}</p>
