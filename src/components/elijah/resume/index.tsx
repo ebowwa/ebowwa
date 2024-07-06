@@ -1,10 +1,10 @@
 // src/components/elijah/index.tsx
-
+"use client"
 import Link from 'next/link';
 import data from '@public/html/elijah-arbee-resume.json';
 import ImageDisplayComponent from '@/components/three/assets/frame';
 import { redact, redactPhoneNumber, calculateAge } from './utils';
-import ShaderBackground from '@/components/ShaderBackground';
+import ShaderBackground from '@/components/shaders/wide-ruled-paper'; // src/components/shaders/wide-riled-paper.tsx
 
 // Define interfaces/types to match the structure of resume.json
 interface WorkExperience {
@@ -15,7 +15,7 @@ interface WorkExperience {
   background: string;
 }
 
-interface Hackathon {
+interface Build {
   name: string;
   date: string;
   description: string;
@@ -33,7 +33,7 @@ interface ResumeData {
   huggingface: string; // Added Hugging Face property
   ollama: string; // Added Ollama property
   workExperience: WorkExperience[];
-  hackathons: Hackathon[];
+  build: Build[];
   technicalSkills: string[];
   softSkills: string[];
   interests: string[];
@@ -117,7 +117,7 @@ export default function Resume() {
         <ImageDisplayComponent imageSource="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/meta-cerebral-valley-5-24/a887ec56-90e7-427e-8c98-22a8c8ba92a8.webp" showImage={true} />
         
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Work Experience</h2>
+          <h2 className="text-2xl font-bold mb-4">Professional Experience</h2>
           <div className="space-y-6">
             {resumeData.workExperience.map((experience, index) => (
               <div key={index}>
@@ -139,10 +139,10 @@ export default function Resume() {
           <ImageDisplayComponent imageSource="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/meta-cerebral-valley-5-24/7a803307-b6fb-4419-84bf-bcc4252b15cf.webp" showImage={true} />
           <div className="space-y-6">
             <div>
-              <h3 className="text-xl font-medium">{resumeData.hackathons[0].name}</h3>
-              <p>{resumeData.hackathons[0].description}</p>
+              <h3 className="text-xl font-medium">{resumeData.build[0].name}</h3>
+              <p>{resumeData.build[0].description}</p>
               <ul className="list-disc pl-6 mt-2">
-                {resumeData.hackathons[0].learnings.map((learning, i) => (
+                {resumeData.build[0].learnings.map((learning, i) => (
                   <li key={i}>{learning}</li>
                 ))}
               </ul>

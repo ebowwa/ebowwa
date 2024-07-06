@@ -10,42 +10,76 @@
   "ollama": "https://ollama.com/ebowwa",
   "workExperience": [
     {
-      "title": "Sales Operations",
-      "company": "Autonomy Solutions: a Door-to-Door Solar Consultancy Dealership",
-      "duration": "2021 - 2023",
+      "title": "Sales Operator",
+      "company": "Autonomy Solutions",
+      "duration": "Nov 2021 - Dec 2023", 
       "responsibilities": [
-        "Co-founded and managed the sales operations of a door-to-door solar consultancy dealership",
-        "Prospected, executed marketing campaigns, and managed general sales operations",
-        "Onboarded, trained, supported, and engaged partners and customers",
-        "Managed a team of 15 sales representatives, providing training and mentorship to improve their technical product knowledge and consultative selling skills"      ],
-      "background": "Gained extensive experience in sales operations, data analysis, and team management while co-founding and operating a door-to-door solar energy consultancy. Developed technical expertise in solar panel systems, energy efficiency, and customer relationship management software. Navigated the challenges of a rapidly evolving market and the eventual decline of the business."
-    },
-
-    {
-      "title": "Restaurant Server and Catering Staff",
-      "company": "Various Hospitality Roles",
-      "duration": "2017 - 2023",
-      "responsibilities": [
-        "Provided exceptional customer service in high-volume, fast-paced dining environments",
-        "Collaborated with catering teams to set up and break down event spaces",
-        "Maintained a keen focus on customer satisfaction and exceeded guest expectations"
+        "Co-founded and spearheaded sales operations for a door-to-door solar consultancy dealership.",
+        "Developed and executed comprehensive marketing campaigns to drive lead generation and sales.",
+        "Managed all aspects of sales operations, from prospecting and client acquisition to contract negotiation and closing deals.",
+        "Onboarded, trained, and mentored a team of 15+ sales representatives, fostering a culture of collaboration and high performance.",
+        "Leveraged data analysis and CRM systems to track sales metrics, identify growth opportunities, and optimize sales strategies."
       ],
-      "background": "Developed a diverse set of customer service, communication, and problem-solving skills while working in various hospitality roles, including as a restaurant server and catering staff. Gained experience in event logistics, inventory management, and delivering high-quality service in time-sensitive environments."
+      "background": "Gained invaluable experience in entrepreneurship, sales leadership, and data-driven decision-making while building and managing a solar energy consultancy. Navigated the complexities of a rapidly evolving market, adapting sales strategies and operational processes to achieve sustainable growth. Developed deep expertise in solar energy systems, energy efficiency solutions, and customer relationship management."
+    },
+    {
+      "title": "Hospitality Professional",
+      "company": "Various Restaurants and Catering Companies",
+      "duration": "2017 - 2023", 
+      "responsibilities": [
+        "Delivered exceptional customer service in fast-paced, high-volume dining and catering environments.",
+        "Mastered various roles, including server, caterer, food runner, and busser, demonstrating adaptability and a strong work ethic.",
+        "Collaborated effectively with teams to ensure seamless event execution and customer satisfaction.",
+        "Proactively resolved customer issues and maintained a positive and professional demeanor in challenging situations."
+      ],
+      "background": "Developed a strong foundation in customer service, communication, teamwork, and problem-solving through diverse hospitality roles. Cultivated a customer-centric approach and a commitment to exceeding expectations in demanding service environments."
     }
   ],
-  "hackathons": [
+  "build": [
     {
-      "name": "Extensive Involvement in the Hackathon Community",
-      "date": "Over the past year",
-      "description": "Over the past year, I have been deeply immersed in the vibrant hackathon community, attending over 30+ events ranging from 3-hour sprints to 24-hour and 2-day hackathons. These experiences have been instrumental in shaping my growth and understanding of the tech industry.",
+      "name": "Building a Portfolio of Real-World Solutions",
+      "date": "",
+      "description": "Passionate about pushing technological boundaries and collaborating with fellow innovators, I've actively participated in 30+ hackathons, ranging from short sprints to multi-day events.",
       "learnings": [
-        "Gained experience working with large language models and integrating them into web applications",
-        "Improved my skills in rapid prototyping and iterative development",
-        "Strengthened my collaboration and communication abilities while working in a diverse team"
+        "Developed expertise in rapid prototyping, iterative development, and agile methodologies.",
+        "Gained hands-on experience with a wide range of technologies, including LLMs, web development frameworks, and data visualization tools.",
+        "Strengthened collaboration and communication skills while working effectively in diverse, multidisciplinary teams.",
+        "Cultivated a growth mindset, embracing challenges as opportunities for learning and innovation."
       ]
     }
   ],
-  "technicalSkills": ["Typescript", "React", "NextJS", "Python", "ThreeJS", "Dataset Curation", "Synthetic Data Gathering"],
-  "softSkills": ["Resiliance", "Communication", "Teamwork", "Tranquility", "Committment", "Approachable"],
-  "interests": ["Client-side Web Platforms", "AI", "Data", "Hackathons", "Business Prospecting", "Machine Learning", "Fine Tuning"]
+  "technicalSkills": [
+    "Python", 
+    "TypeScript", 
+    "React", 
+    "Next.js",
+    "Three.js", 
+    "Data Curation", 
+    "Synthetic Data Generation", 
+    "Large Language Models (LLMs)",
+    "Fine-tuning", 
+    "API Integration",
+    "Web Scraping" 
+  ],
+  "softSkills": [
+    "Resilience", 
+    "Communication", 
+    "Teamwork", 
+    "Adaptability",
+    "Problem-Solving", 
+    "Critical Thinking", 
+    "Creativity", 
+    "Leadership" 
+  ],
+  "interests": [
+    "Artificial Intelligence", 
+    "Machine Learning", 
+    "Data Science",
+    "Web Development", 
+    "3D Modeling and Animation", 
+    "Extended Reality (XR)",
+    "Open Source Software", 
+    "Community Building", 
+    "Social Impact"
+  ]
 }
