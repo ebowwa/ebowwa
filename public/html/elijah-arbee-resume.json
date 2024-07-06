@@ -10,7 +10,7 @@
   "ollama": "https://ollama.com/ebowwa",
   "workExperience": [
     {
-      "title": "Sales Operator",
+      "title": "Sales & Marketing",
       "company": "Autonomy Solutions",
       "duration": "Nov 2021 - Dec 2023", 
       "responsibilities": [
@@ -23,7 +23,7 @@
       "background": "Gained invaluable experience in entrepreneurship, sales leadership, and data-driven decision-making while building and managing a solar energy consultancy. Navigated the complexities of a rapidly evolving market, adapting sales strategies and operational processes to achieve sustainable growth. Developed deep expertise in solar energy systems, energy efficiency solutions, and customer relationship management."
     },
     {
-      "title": "Hospitality Professional",
+      "title": "Customer Service & Hospitality",
       "company": "Various Restaurants and Catering Companies",
       "duration": "2017 - 2023", 
       "responsibilities": [
@@ -49,8 +49,8 @@
     }
   ],
   "technicalSkills": [
-    "Python", 
-    "TypeScript", 
+    "Python: Web Scraping, Dev, Inference Servers, Demos, Data Manipulations", 
+    "TypeScript: Production", 
     "React", 
     "Next.js",
     "Three.js", 
@@ -72,10 +72,9 @@
     "Leadership" 
   ],
   "interests": [
-    "Artificial Intelligence", 
     "Machine Learning", 
     "Data Science",
-    "Web Development", 
+    "Web Development: specifically WASM and dynamic web competition", 
     "3D Modeling and Animation", 
     "Extended Reality (XR)",
     "Open Source Software", 

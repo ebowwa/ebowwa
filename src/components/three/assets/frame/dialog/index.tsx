@@ -7,19 +7,21 @@ import { Button } from "@/components/landing/ui/button";
 interface DialogFrameComponentProps {
   isOpen: boolean;
   onClose: () => void;
+  title: string;
+  description: string;
 }
-
-const DialogFrameComponent: React.FC<DialogFrameComponentProps> = ({ isOpen, onClose }) => {
+// inside header can add more detail but need to extend to the frame/index & resume/index
+const DialogFrameComponent: React.FC<DialogFrameComponentProps> = ({ isOpen, onClose, title, description }) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Picture Frame Details</DialogTitle>
+          <DialogTitle>{title}</DialogTitle>
           <DialogDescription>
-            This is a 3D model of a picture frame. You can interact with it in the 3D scene.
+            {description}
           </DialogDescription>
         </DialogHeader>
-        <p>Add more details or controls here as needed.</p>
+        <p></p>
         <Button onClick={onClose}>Close</Button>
       </DialogContent>
     </Dialog>

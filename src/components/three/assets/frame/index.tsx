@@ -69,9 +69,11 @@ const ImagePlane: React.FC<ImagePlaneProps> = ({
 interface ImageDisplayComponentProps {
   imageSource: string;
   showImage: boolean;
+  dialogTitle: string;
+  dialogDescription: string;
 }
 
-const ImageDisplayComponent: React.FC<ImageDisplayComponentProps> = ({ imageSource, showImage }) => {
+const ImageDisplayComponent: React.FC<ImageDisplayComponentProps> = ({ imageSource, showImage, dialogTitle, dialogDescription }) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const handleFrameClick = () => {
@@ -115,7 +117,12 @@ const ImageDisplayComponent: React.FC<ImageDisplayComponentProps> = ({ imageSour
       <div id="ui">
         <t.Out />
       </div>
-      <DialogFrameComponent isOpen={isDialogOpen} onClose={() => setIsDialogOpen(false)} />
+      <DialogFrameComponent 
+        isOpen={isDialogOpen} 
+        onClose={() => setIsDialogOpen(false)} 
+        title={dialogTitle} 
+        description={dialogDescription} 
+      />
     </div>
   );
 };

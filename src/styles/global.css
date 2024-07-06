@@ -73,3 +73,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* styles/globals.css */
+.glow-link {
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.glow-link:hover {
+  text-shadow: 0 0 10px rgba(33, 150, 243, 0.8), 0 0 20px rgba(33, 150, 243, 0.8), 0 0 30px rgba(33, 150, 243, 0.8);
+}

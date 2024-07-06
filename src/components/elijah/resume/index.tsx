@@ -5,6 +5,7 @@ import data from '@public/html/elijah-arbee-resume.json';
 import ImageDisplayComponent from '@/components/three/assets/frame';
 import { redact, redactPhoneNumber, calculateAge } from './utils';
 import ShaderBackground from '@/components/shaders/wide-ruled-paper'; // src/components/shaders/wide-riled-paper.tsx
+import { BuildInPublicGradientButton } from '@/components/BuiltInPublicButton/black-gradient'; // Import the button component
 
 // Define interfaces/types to match the structure of resume.json
 interface WorkExperience {
@@ -30,8 +31,8 @@ interface ResumeData {
   phone: string;
   linkedin: string;
   github: string;
-  huggingface: string; // Added Hugging Face property
-  ollama: string; // Added Ollama property
+  huggingface: string; 
+  ollama: string; 
   workExperience: WorkExperience[];
   build: Build[];
   technicalSkills: string[];
@@ -70,7 +71,7 @@ export default function Resume() {
             <div className="col-span-1 sm:col-span-1">
               <p className="font-medium">LinkedIn</p>
               <a
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 hover:underline glow-link"
                 href={resumeData.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -81,7 +82,7 @@ export default function Resume() {
             <div className="col-span-1 sm:col-span-1">
               <p className="font-medium">GitHub</p>
               <a
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 hover:underline glow-link"
                 href={resumeData.github}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -92,7 +93,7 @@ export default function Resume() {
             <div className="col-span-1 sm:col-span-1">
               <p className="font-medium">Hugging Face</p>
               <a
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 hover:underline glow-link"
                 href={resumeData.huggingface}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -103,7 +104,7 @@ export default function Resume() {
             <div className="col-span-1 sm:col-span-1">
               <p className="font-medium">Ollama</p>
               <a
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 glow-link hover:underline"
                 href={resumeData.ollama}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -114,7 +115,12 @@ export default function Resume() {
           </div>
         </section>
 
-        <ImageDisplayComponent imageSource="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/meta-cerebral-valley-5-24/a887ec56-90e7-427e-8c98-22a8c8ba92a8.webp" showImage={true} />
+        <ImageDisplayComponent 
+          imageSource="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/meta-cerebral-valley-5-24/a887ec56-90e7-427e-8c98-22a8c8ba92a8.webp" 
+          showImage={true} 
+          dialogTitle="Professional Experience Image"
+          dialogDescription="This image represents the professional experience section."
+        />
         
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4">Professional Experience</h2>
@@ -136,7 +142,12 @@ export default function Resume() {
 
         <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4">Open Source Community</h2>
-          <ImageDisplayComponent imageSource="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/meta-cerebral-valley-5-24/7a803307-b6fb-4419-84bf-bcc4252b15cf.webp" showImage={true} />
+          <ImageDisplayComponent 
+            imageSource="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/meta-cerebral-valley-5-24/7a803307-b6fb-4419-84bf-bcc4252b15cf.webp" 
+            showImage={true} 
+            dialogTitle="Open Source Community Image"
+            dialogDescription="This image represents the open source community section."
+          />
           <div className="space-y-6">
             <div>
               <h3 className="text-xl font-medium">{resumeData.build[0].name}</h3>
@@ -178,6 +189,9 @@ export default function Resume() {
             <p>{resumeData.interests.join(', ')}</p>
           </div>
         </section>
+
+        {/* Use the BuildInPublicGradientButton component */}
+        <BuildInPublicGradientButton />
       </main>
     </div>
   );
