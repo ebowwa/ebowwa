@@ -46,7 +46,7 @@ const resumeData = data as ResumeData;
 export default function Resume() {
   const redactedEmail = redact(process.env.NEXT_PUBLIC_CONTACT_EMAIL || '', 2); // Show only the first 3 characters
   const redactedPhone = redactPhoneNumber(process.env.NEXT_PUBLIC_CONTACT_PHONE || ''); // Show the first 8 characters (e.g., '+1 (510)')
-  const age = calculateAge(resumeData.dob);
+  const age = calculateAge(process.env.DOB);
 
   return (
     <div>
