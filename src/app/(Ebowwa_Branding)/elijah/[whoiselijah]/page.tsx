@@ -1,5 +1,4 @@
 // src/app/elijah/[whoiselijah]/page.tsx
-import { Suspense } from 'react';
 import Resume from '@/components/elijah/resume';
 
 interface PageProps {
@@ -13,9 +12,7 @@ export default function LandingPage({ params }: PageProps) {
 
   return (
     <div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Resume />
-      </Suspense>
+      <Resume />
     </div>
   );
 }

@@ -76,7 +76,7 @@ export default function Home() {
             }}
           >
             <h1>Picture Frame</h1>
-            <p>Here we trained the most dog 💩</p>
+            <p>Here we trained the most dog 💩 model. the idea was to input ascii renderings of 3D models and blender instructions to craft a model that acts as an operator within the 3D modeling software.</p>
             <button onClick={toggleImageDisplay}>
               {showImage ? 'Hide Image' : 'Show Image'}
             </button>
