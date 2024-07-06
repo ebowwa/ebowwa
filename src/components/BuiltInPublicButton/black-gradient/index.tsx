@@ -9,7 +9,7 @@ import Link from 'next/link';
 // src/components/build-in-public-gradient-button.tsx
 export function BuildInPublicGradientButton() {
   return (
-    <Link href="https://github.com/your-repo-link" passHref>
+    <Link href="https://github.com/ebowwar/simulation" passHref>
       <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-r from-primary to-secondary px-8 py-3 font-medium text-white transition-all duration-300 ease-out hover:ring-2 hover:ring-white focus:outline-none focus:ring-2 focus:ring-white">
         <span className="absolute inset-0 h-full w-0 bg-white transition-all duration-300 ease-out group-hover:w-full opacity-10" />
         <span className="relative flex items-center gap-2">
