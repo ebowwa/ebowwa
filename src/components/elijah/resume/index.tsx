@@ -5,7 +5,7 @@ import data from '@public/html/elijah-arbee-resume.json';
 import ImageDisplayComponent from '@/components/three/assets/frame';
 import { redact, redactPhoneNumber, calculateAge } from './utils';
 import ShaderBackground from '@/components/shaders/wide-ruled-paper'; // src/components/shaders/wide-riled-paper.tsx
-import { BuildInPublicGradientButton } from '@/components/BuiltInPublicButton/black-gradient'; // Import the button component
+import { Transparent } from '@/components/BuiltInPublicButton/transparent'; // Import the button component
 
 // Define interfaces/types to match the structure of resume.json
 interface WorkExperience {
@@ -189,9 +189,7 @@ export default function Resume() {
             <p>{resumeData.interests.join(', ')}</p>
           </div>
         </section>
-
-        {/* Use the BuildInPublicGradientButton component */}
-        <BuildInPublicGradientButton />
+        <Transparent />
       </main>
     </div>
   );
