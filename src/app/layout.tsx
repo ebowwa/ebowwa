@@ -2,6 +2,7 @@
 import { Layout } from '@/components/landing/layout/dom/Layout';
 import Head from '../components/landing/layout/head';
 import '@/styles/global.css';
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
   title: 'Ebowwa',
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {/* To avoid FOUT with styled-components wrap Layout with StyledComponentsRegistry https://beta.nextjs.org/docs/styling/css-in-js#styled-components */}
         <Layout>{children}</Layout>
+        <Analytics />
       </body>
     </html>
   );
