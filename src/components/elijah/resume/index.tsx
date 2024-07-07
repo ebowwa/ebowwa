@@ -7,7 +7,10 @@ import { redact, redactPhoneNumber, calculateAge } from './utils';
 import ShaderBackground from '@/components/shaders/wide-ruled-paper'; // src/components/shaders/wide-riled-paper.tsx
 import { Transparent } from '@/components/BuiltInPublicButton/transparent'; // Import the button component
 import { BuyMeACoffeeWhiteButton } from '@/components/BuyMeCoffee'; // Import the button component
-import TimedDialog from "@/components/time-dialog"
+import { FullstackDevButton } from '@/components/transparent-buttons/fullstack';
+import { AskMeAnythingButton } from '@/components/transparent-buttons/Ama';
+import TimedDialog from "@/components/TimeDialog"
+// AMA | https://docs.google.com/forms/d/e/1FAIpQLSeaFid_fvg0WSeYvLz6zwU7xjGV0az_qaLSiF1yx7d3sXpB8Q/viewform?usp=sf_link
 
 // Define interfaces/types to match the structure of resume.json
 interface WorkExperience {
@@ -46,9 +49,9 @@ interface ResumeData {
 const resumeData = data as ResumeData;
 
 export default function Resume() {
-  const redactedEmail = redact(process.env.NEXT_PUBLIC_CONTACT_EMAIL || '', 2); // Show only the first 3 characters
-  const redactedPhone = redactPhoneNumber(process.env.NEXT_PUBLIC_CONTACT_PHONE || ''); // Show the first 8 characters (e.g., '+1 (510)')
-  const age = calculateAge(process.env.NEXT_PUBLIC_DOB || '');
+  const redactedEmail = redact(process.env.NEXT_PUBLIC_CONTACT_EMAIL || '', 2); // Shows only the first 3 characters
+  const redactedPhone = redactPhoneNumber(process.env.NEXT_PUBLIC_CONTACT_PHONE || ''); // Show the first 8 characters (e.g., '+1 (510)999-9999')
+  const age = calculateAge(process.env.NEXT_PUBLIC_DOB || ''); // i didn't want to expose this publically example: '2001-07-14'
 
   return (
     <div>
@@ -194,6 +197,7 @@ export default function Resume() {
         <div className="flex justify-center space-x-4">
           <Transparent />
           <BuyMeACoffeeWhiteButton />
+          <AskMeAnythingButton />
         </div>
       </main>
       <TimedDialog /> {/* Add the TimedDialog component here */}
