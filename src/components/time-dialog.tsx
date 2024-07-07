@@ -9,7 +9,7 @@ import {
   AlertDialogTitle 
 } from '@/components/ui/alert-dialog';
 
-const TimedDialog = ({ timerDuration = 25000, title = "Welcome!", description = "You've been browsing our page for a while. How can we help you today?" }) => {
+const TimedDialog = ({ timerDuration = 25000, title = "hey friend!", description = "Thanks for checking me out 🤠! This is all a work in progess" }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
