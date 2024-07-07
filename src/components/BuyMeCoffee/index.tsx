@@ -4,8 +4,11 @@
 * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
 ADD next link and add kofi link
 **/
+import Link from 'next/link';
+
 export function BuyMeACoffeeWhiteButton() {
   return (
+    <Link href="https://github.com/ebowwar/simulation" passHref>
     <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-white px-8 py-3 font-medium text-primary transition-all duration-300 ease-out hover:ring-2 hover:ring-primary focus:outline-none focus:ring-2 focus:ring-primary">
       <span className="absolute inset-0 h-full w-0 bg-primary transition-all duration-300 ease-out group-hover:w-full opacity-10" />
       <span className="relative flex items-center gap-2">
@@ -13,6 +16,7 @@ export function BuyMeACoffeeWhiteButton() {
         <span>Buy Me a Coffee</span>
       </span>
     </button>
+    </Link>
   )
 }
 

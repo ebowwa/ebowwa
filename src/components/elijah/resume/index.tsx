@@ -7,6 +7,7 @@ import { redact, redactPhoneNumber, calculateAge } from './utils';
 import ShaderBackground from '@/components/shaders/wide-ruled-paper'; // src/components/shaders/wide-riled-paper.tsx
 import { Transparent } from '@/components/BuiltInPublicButton/transparent'; // Import the button component
 import { BuyMeACoffeeWhiteButton } from '@/components/BuyMeCoffee'; // Import the button component
+import TimedDialog from "@/components/time-dialog"
 
 // Define interfaces/types to match the structure of resume.json
 interface WorkExperience {
@@ -191,10 +192,11 @@ export default function Resume() {
           </div>
         </section>
         <div className="flex justify-center space-x-4">
-        <Transparent />
-        <BuyMeACoffeeWhiteButton />
+          <Transparent />
+          <BuyMeACoffeeWhiteButton />
         </div>
       </main>
+      <TimedDialog /> {/* Add the TimedDialog component here */}
     </div>
   );
 }
