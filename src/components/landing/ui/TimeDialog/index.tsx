@@ -8,7 +8,7 @@ import {
   AlertDialogFooter, 
   AlertDialogHeader, 
   AlertDialogTitle 
-} from '@/components/ui/alert-dialog';
+} from '@/components/landing/ui/alert-dialog';
 //  Visit [our sitemap](https://example.com) for more information.
 const TimedDialog = ({ timerDuration = 25000, title = "hey friend!", description = "Thanks for checking me out 🤠! This is all a work in progress." }) => {
   const [isOpen, setIsOpen] = useState(false);
