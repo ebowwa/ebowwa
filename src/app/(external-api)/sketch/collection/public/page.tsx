@@ -1,6 +1,6 @@
 'use client';
 
-import CollectionPage from '@/components/(external_api)/sketchfab/collections/general';
+import CollectionPage from '@/components/(third-party)/sketchfab/collections/general';
 
 const Page: React.FC = () => {
   return (

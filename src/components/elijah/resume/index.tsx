@@ -4,12 +4,12 @@ import Link from 'next/link';
 import data from '@public/html/elijah-arbee-resume.json';
 import ImageDisplayComponent from '@/components/three/assets/frame';
 import { redact, redactPhoneNumber, calculateAge } from './utils';
-import ShaderBackground from '@/components/shaders/wide-ruled-paper'; // src/components/shaders/wide-riled-paper.tsx
-import { Transparent } from '@/components/BuiltInPublicButton/transparent'; // Import the button component
-import { BuyMeACoffeeWhiteButton } from '@/components/BuyMeCoffee'; // Import the button component
-import { FullstackDevButton } from '@/components/transparent-buttons/fullstack';
-import { AskMeAnythingButton } from '@/components/transparent-buttons/Ama';
-import TimedDialog from "@/components/TimeDialog"
+import ShaderBackground from '@/components/landing/ui/shaders/wide-ruled-paper'; // src/components/shaders/wide-riled-paper.tsx
+import { Transparent } from '@/components/landing/ui/transparent-buttons/BuiltInPublicButton/transparent'; // Import the button component
+import { BuyMeACoffeeWhiteButton } from '@/components/landing/ui/transparent-buttons/BuyMeCoffee'; // Import the button component
+import { FullstackDevButton } from '@/components/landing/ui/transparent-buttons/fullstack';
+import { AskMeAnythingButton } from '@/components/landing/ui/transparent-buttons/Ama';
+import TimedDialog from "@/components/landing/ui/TimeDialog"
 // AMA | https://docs.google.com/forms/d/e/1FAIpQLSeaFid_fvg0WSeYvLz6zwU7xjGV0az_qaLSiF1yx7d3sXpB8Q/viewform?usp=sf_link
 
 // Define interfaces/types to match the structure of resume.json
