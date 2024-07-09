@@ -9,8 +9,8 @@ import {
   AlertDialogHeader, 
   AlertDialogTitle 
 } from '@/components/landing/ui/alert-dialog';
-//  Visit [our sitemap](https://example.com) for more information.
-const TimedDialog = ({ timerDuration = 25000, title = "hey friend!", description = "Thanks for checking me out 🤠! This is all a work in progress." }) => {
+
+const TimedDialog = ({ timerDuration = 10000, title = "hey friend!", description = "Thanks for checking me out 🤠! This is all a work in progress. Visit my current works in progress [whispaw: an ai pet wearable](https://www.whispaw.com/) and [Un-Automated: a tool for ai adoption](www.un-automated.com)." }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -30,7 +30,17 @@ const TimedDialog = ({ timerDuration = 25000, title = "hey friend!", description
         const linkText = part;
         const linkUrl = description.split(linkRegex)[index + 1];
         return (
-          <a key={index} href={linkUrl} target="_blank" rel="noopener noreferrer">
+          <a 
+            key={index} 
+            href={linkUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ 
+              color: '#6200ea', 
+              textDecoration: 'underline', 
+              fontWeight: 'bold' 
+            }}
+          >
             {linkText}
           </a>
         );

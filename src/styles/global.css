@@ -82,3 +82,38 @@
 .glow-link:hover {
   text-shadow: 0 0 10px rgba(33, 150, 243, 0.8), 0 0 20px rgba(33, 150, 243, 0.8), 0 0 30px rgba(33, 150, 243, 0.8);
 }
+
+/* globals.css */
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+}
+
+.component {
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.steps {
+  background-color: #e8f6f3;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.warning {
+  background-color: #fdedec;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}

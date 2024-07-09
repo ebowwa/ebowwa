@@ -14,6 +14,9 @@ const withPWA = require('@ducanh2912/next-pwa').default({
 })
 
 const nextConfig = {
+  experimental: {
+    serverComponentsExternalPackages: ['child_process'],
+  },
   transpilePackages: ['three'],
 
   // uncomment the following snippet if using styled components

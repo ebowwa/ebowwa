@@ -10,6 +10,7 @@
     "node": ">=18"
   },
   "dependencies": {
+    "@aptos-labs/ts-sdk": "^1.22.2",
     "@ducanh2912/next-pwa": "^10.2.6",
     "@fal-ai/serverless-client": "^0.9.3",
     "@fal-ai/serverless-proxy": "^0.7.4",
