@@ -200,7 +200,7 @@ export default function Resume() {
           <AskMeAnythingButton />
         </div>
       </main>
-      <TimedDialog /> {/* Add the TimedDialog component here */}
+      <TimedDialog /> 
     </div>
   );
 }

@@ -10,7 +10,7 @@ import {
   AlertDialogTitle 
 } from '@/components/landing/ui/alert-dialog';
 
-const TimedDialog = ({ timerDuration = 10000, title = "hey friend!", description = "Thanks for checking me out 🤠! This is all a work in progress. Visit my current works in progress [whispaw: an ai pet wearable](https://www.whispaw.com/) and [Un-Automated: a tool for ai adoption](www.un-automated.com)." }) => {
+const TimedDialog = ({ timerDuration = 10000, title = "hey friend!", description = "Thanks for checking me out 🤠! This is all a work in progress. Visit my current in-progress projects [whispaw: an ai pet wearable](https://www.whispaw.com/) and [un-automated: a tool for ai adoption](www.un-automated.com) or even [support my work](https://Ko-fi.com/ebowwa)" }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
