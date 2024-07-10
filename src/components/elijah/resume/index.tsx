@@ -194,7 +194,7 @@ export default function Resume() {
             <p>{resumeData.interests.join(', ')}</p>
           </div>
         </section>
-        <div className="flex justify-center space-x-4 flex-wrap">
+        <div className="flex justify-center space-x-4">
           <Transparent />
           <BuyMeACoffeeWhiteButton />
           <AskMeAnythingButton />
