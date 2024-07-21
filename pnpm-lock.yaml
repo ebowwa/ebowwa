@@ -254,6 +254,9 @@ importers:
       react-intersection-observer:
         specifier: ^9.10.2
         version: 9.10.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-scroll-parallax:
+        specifier: ^3.4.5
+        version: 3.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       reactflow:
         specifier: ^11.11.3
         version: 11.11.3(@types/react@18.3.1)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2853,6 +2856,9 @@ packages:
     resolution: {integrity: sha512-sMm2sV5PRs0YOVk0LTKtjuIprVzxgTQUsrGX/7Yph2Rm4FO2Fqqtq7hNjsOB5xezM4v4+5rljCgK++UeQJZguA==}
     engines: {node: '>=12.20.0'}
 
+  bezier-easing@2.1.0:
+    resolution: {integrity: sha512-gbIqZ/eslnUFC1tjEvtz0sgx+xTK20wDnYMIA27VA04R7w6xxXQPZDbibjA9DTWZRA2CXtwHykkVzlCaAJAZig==}
+
   bidi-js@1.0.3:
     resolution: {integrity: sha512-RKshQI1R3YQ+n9YJz2QQ147P66ELpa1FQEg20Dk8oW9t2KgLbpDLLp9aGZ7y8WHSshDknG0bknqGw5/tyCs5tw==}
 
@@ -5125,6 +5131,10 @@ packages:
   pako@1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
 
+  parallax-controller@1.7.1:
+    resolution: {integrity: sha512-facVMEBnUynzMN7hCSqyNpF6uyCpVIl4XAUyTR9D8q2JlhgyPY6bZtj/OkFk3+Cpka1TnYCppQb8BzDWHtSaZg==}
+    engines: {node: '>=12'}
+
   parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
     engines: {node: '>=6'}
@@ -5718,6 +5728,13 @@ packages:
     peerDependenciesMeta:
       '@types/react':
         optional: true
+
+  react-scroll-parallax@3.4.5:
+    resolution: {integrity: sha512-4NLZQ8cZEUyxoA95DfrXWneOOUSFrFmpM0dZNzMErmuJ0LzY+CCw8Xw0hqB6xxHWxNknfs46AozyIPSWkZeucA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16.8.0-0 || >=17.0.1 || ^18.0.0
+      react-dom: ^16.8.0-0 || >=17.0.1 || ^18.0.0
 
   react-style-singleton@2.2.1:
     resolution: {integrity: sha512-ZWj0fHEMyWkHzKYUr2Bs/4zU6XLmq9HsgBURm7g5pAVfyn49DgUiNgY2d4lXRlYSiCif9YBGpQleewkcqddc7g==}
@@ -9985,6 +10002,8 @@ snapshots:
 
   bep53-range@2.0.0: {}
 
+  bezier-easing@2.1.0: {}
+
   bidi-js@1.0.3:
     dependencies:
       require-from-string: 2.0.2
@@ -10763,7 +10782,7 @@ snapshots:
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@8.57.0)
       eslint-plugin-react: 7.34.1(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.0)
@@ -10791,7 +10810,7 @@ snapshots:
       enhanced-resolve: 5.16.1
       eslint: 8.57.0
       eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.5
       is-core-module: 2.13.1
@@ -10813,7 +10832,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0):
+  eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlastindex: 1.2.5
@@ -12652,6 +12671,10 @@ snapshots:
 
   pako@1.0.11: {}
 
+  parallax-controller@1.7.1:
+    dependencies:
+      bezier-easing: 2.1.0
+
   parent-module@1.0.1:
     dependencies:
       callsites: 3.1.0
@@ -13315,6 +13338,12 @@ snapshots:
       use-sidecar: 1.1.2(@types/react@18.3.1)(react@18.3.1)
     optionalDependencies:
       '@types/react': 18.3.1
+
+  react-scroll-parallax@3.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      parallax-controller: 1.7.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   react-style-singleton@2.2.1(@types/react@18.3.1)(react@18.3.1):
     dependencies:

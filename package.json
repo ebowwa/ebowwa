@@ -92,6 +92,7 @@
     "react-hook-form": "^7.51.3",
     "react-hot-toast": "^2.4.1",
     "react-intersection-observer": "^9.10.2",
+    "react-scroll-parallax": "^3.4.5",
     "reactflow": "^11.11.3",
     "read-pkg-up": "^11.0.0",
     "remark": "^15.0.1",
