@@ -5,16 +5,18 @@ const VideoPage = () => {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center relative overflow-hidden">
       {/* Video background */}
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover opacity-50"
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/ebowwa-xyz/0720.mov" type="video/quicktime" />
-        Your browser does not support the video tag.
-      </video>
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+        <video
+          className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2 object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/ebowwa-xyz/0720.mov" type="video/quicktime" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
       {/* Overlay with gradient */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-900 via-blue-900 to-cyan-900 opacity-70"></div>
