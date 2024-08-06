@@ -13,7 +13,7 @@ const VideoPage = () => {
           muted
           playsInline
         >
-          <source src="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/ebowwa-xyz/F4FD3EC2-2198-45C2-B4AD-35B538622A8F.mov" type="video/quicktime" />
+          <source src="https://cdn.jsdelivr.net/gh/ebowwar/asset-store@main/ebowwa-xyz/F4FD3EC2-2198-45C2-B4AD-35B538622A8F.MOV" type="video/quicktime" />
           Your browser does not support the video tag.
         </video>
       </div>
