@@ -10,29 +10,42 @@
   "ollama": "https://ollama.com/ebowwa",
   "workExperience": [
     {
+      "title": "Open-Source Hardware & Community Engagement",
+      "company": "BasedHardware",
+      "duration": "",
+      "responsibilities": [
+        "Assembled and tested open-source hardware devices",
+        "Managed community and customer outreach",
+        "Coordinated shipping and logistics",
+        "Developed automation scripts for distribution",
+        "Organized and participated in hardware events"
+      ],
+      "background": "Hands-on experience in hardware assembly, outreach, and distribution."
+    },
+    {
       "title": "Sales & Marketing",
       "company": "Autonomy Solutions",
-      "duration": "Nov 2021 - Dec 2023", 
+      "duration": "",
       "responsibilities": [
-        "Co-founded and spearheaded sales operations for a door-to-door solar consultancy dealership.",
-        "Developed and executed comprehensive marketing campaigns to drive lead generation and sales.",
-        "Managed all aspects of sales operations, from prospecting and client acquisition to contract negotiation and closing deals.",
-        "Onboarded, trained, and mentored a team of 15+ sales representatives, fostering a culture of collaboration and high performance.",
-        "Leveraged data analysis and CRM systems to track sales metrics, identify growth opportunities, and optimize sales strategies."
+        "Co-founded and spearheaded sales operations",
+        "Developed and executed comprehensive marketing campaigns",
+        "Managed sales operations",
+        "Onboarded, trained, and mentored sales representatives",
+        "Leveraged data analysis and CRM systems"
       ],
-      "background": "Gained invaluable experience in entrepreneurship, sales leadership, and data-driven decision-making while building and managing a solar energy consultancy. Navigated the complexities of a rapidly evolving market, adapting sales strategies and operational processes to achieve sustainable growth. Developed deep expertise in solar energy systems, energy efficiency solutions, and customer relationship management."
+      "background": "Gained experience in entrepreneurship, sales leadership, and data-driven decision-making."
     },
     {
       "title": "Customer Service & Hospitality",
-      "company": "Various Restaurants and Catering Companies",
-      "duration": "2017 - 2023", 
+      "company": "Various",
+      "duration": "",
       "responsibilities": [
-        "Delivered exceptional customer service in fast-paced, high-volume dining and catering environments.",
-        "Mastered various roles, including server, caterer, food runner, and busser, demonstrating adaptability and a strong work ethic.",
-        "Collaborated effectively with teams to ensure seamless event execution and customer satisfaction.",
-        "Proactively resolved customer issues and maintained a positive and professional demeanor in challenging situations."
+        "Provided exceptional customer service",
+        "Collaborated with teams to ensure seamless operations",
+        "Resolved issues and maintained positive relationships",
+        "Adapted quickly to changing service demands"
       ],
-      "background": "Developed a strong foundation in customer service, communication, teamwork, and problem-solving through diverse hospitality roles. Cultivated a customer-centric approach and a commitment to exceeding expectations in demanding service environments."
+      "background": "Developed strong communication, teamwork, and problem-solving skills."
     }
   ],
   "build": [
@@ -72,13 +85,13 @@
     "Leadership" 
   ],
   "interests": [
-    "Machine Learning", 
-    "Data Science",
-    "Web Development: specifically WASM and dynamic web competition", 
-    "3D Modeling and Animation", 
-    "Extended Reality (XR)",
-    "Open Source Software", 
-    "Community Building", 
-    "Social Impact"
-  ]
-}
+    "Programmable Logic Controllers & Industrial Automation",
+    "AI Development, Prompt Engineering & Tooling",
+    "Full-Stack/Mobile Architectures (Offline-First & Real-Time)",
+    "High-Fidelity UI/UX & Media Optimization",
+      "3D Modeling, Animation & Extended Reality",
+      "Business Automation & Productivity Workflows",
+      "Community Building & Social Impact"
+    ]
+  }
+  

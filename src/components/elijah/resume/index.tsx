@@ -49,7 +49,8 @@ const resumeData = data as ResumeData;
 
 const VideoBackground = () => {
   return (
-    <div className="fixed top-0 left-0 w-full h-screen z-[-1] overflow-hidden">
+    <div className="fixed top-0 left-0 w-full h-full z-[-1] overflow-hidden">
+      <div className="absolute inset-0 bg-black/30"></div>
       <video
         className="absolute top-1/2 left-1/2 min-w-full min-h-full object-cover transform -translate-x-1/2 -translate-y-1/2"
         autoPlay
@@ -72,21 +73,9 @@ export default function Resume() {
   return (
     <ParallaxProvider>
       <VideoBackground />
-      <ParallaxBanner
-        layers={[
-          {
-            speed: -20,
-            children: (
-              <div className="h-screen flex items-center justify-center">
-              </div>
-            ),
-          },
-        ]}
-        className="h-screen"
-      />
-      <div>
+      <div className="relative">
         <ShaderBackground />
-        <main className="container mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8 relative z-10">
+        <main className="container mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8 relative z-10 mt-8">
           <header className="mb-8">
             <h1 className="text-4xl font-bold">{resumeData.name}, {age}</h1>
             <p className="text-gray-500">{resumeData.title}</p>
@@ -224,7 +213,7 @@ export default function Resume() {
               <p>{resumeData.interests.join(', ')}</p>
             </div>
           </section>
-          <div className="flex justify-center space-x-4">
+          <div className="flex justify-center space-x-4 mt-8">
             <Transparent />
             <BuyMeACoffeeWhiteButton />
             <FullstackDevButton />
