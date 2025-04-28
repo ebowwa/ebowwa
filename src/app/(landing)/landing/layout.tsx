@@ -8,6 +8,7 @@ import { Layout } from '@/components/landing/layout/dom/Layout';
 const navbarLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
+  { label: 'Catalog', href: '/catalog' },
   { label: 'Simulation', href: '/simulation' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -22,7 +23,7 @@ const socialMedia = [
   { platform: 'Twitter', url: 'https://twitter.com/Simulation_API' },
 ];
 
-const copyright = '© 2024 SimulationAPI. All rights reserved.';
+const copyright = ' 2024 SimulationAPI. All rights reserved.';
 
 export default function RootLayout({
   children,

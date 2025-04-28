@@ -7,7 +7,7 @@ export const redact = (str: string, visibleChars: number): string => {
 // Specific function to redact phone numbers
 export const redactPhoneNumber = (phone: string): string => {
     const visiblePart = phone.slice(0, 8); // Adjust this to show the desired part of the phone number
-    const redactedPart = '*'.repeat(phone.length - 8);
+    const redactedPart = '*'.repeat(Math.max(phone.length - 8, 0));
     return `${visiblePart}${redactedPart}`;
   };
   
