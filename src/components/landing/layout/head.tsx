@@ -31,24 +31,24 @@ export default function Head() {
       <meta property='og:title' content={title} />
       <meta property='og:type' content='site' />
       <meta property='og:url' content={url} />
-      <meta property='og:image' content={'/icons/share.png'} />
+      <meta property='og:image' content={'/platform_optimized_images_named/image_1_optimized.jpg'} />
       <meta property='og:site_name' content={title} />
       <meta property='og:description' content={description} />
 
-      <link rel='apple-touch-icon' href='/icons/apple-touch-icon.png' />
-      <link rel='apple-touch-icon' sizes='16x16' href='/icons/favicon-16x16.png' />
-      <link rel='apple-touch-icon' sizes='32x32' href='/icons/favicon-32x32.png' />
-      <link rel='apple-touch-icon' sizes='180x180' href='/icons/apple-touch-icon.png' />
+      <link rel='apple-touch-icon' href='/platform_optimized_images_named/image_1/iphone/iphone_180x180.png' />
+      <link rel='apple-touch-icon' sizes='16x16' href='/platform_optimized_images_named/image_1/web/web_16x16.png' />
+      <link rel='apple-touch-icon' sizes='32x32' href='/platform_optimized_images_named/image_1/web/web_32x32.png' />
+      <link rel='apple-touch-icon' sizes='180x180' href='/platform_optimized_images_named/image_1/iphone/iphone_180x180.png' />
       <link rel='manifest' href='/manifest.json' />
-      <link rel='mask-icon' color='#000000' href='/icons/safari-pinned-tab.svg' />
-      <link rel='apple-touch-startup-image' href='/startup.png' />
+      <link rel='mask-icon' color='#000000' href='/platform_optimized_images_named/image_1/web/web_96x96.png' />
+      <link rel='apple-touch-startup-image' href='/platform_optimized_images_named/image_1/iphone/iphone_180x180.png' />
 
       {/* Meta Tags for HTML pages on Mobile */}
       {/* <meta name="format-detection" content="telephone=yes"/>
         <meta name="HandheldFriendly" content="true"/>  */}
       <meta name='viewport' content='width=device-width, minimum-scale=1, initial-scale=1.0' />
       <meta name='theme-color' content='#000' />
-      <link rel='shortcut icon' href='/icons/apple-touch-icon.png' />
+      <link rel='shortcut icon' href='/platform_optimized_images_named/image_1/web/web_96x96.png' />
 
       {/* 
       Twitter Summary card
