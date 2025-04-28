@@ -73,6 +73,13 @@ export default function AppsPage() {
               </div>
               <div className="flex flex-wrap items-center gap-4">
                 <span className="text-xs uppercase tracking-wider text-blue-200/60">Coming Soon</span>
+                <a href="https://forms.gle/vQFoVj7Mbnkqzv9C8" target="_blank" rel="noopener noreferrer"
+                   className="inline-flex items-center px-4 py-2 bg-indigo-500/20 border border-indigo-500/50 rounded-lg text-indigo-300 hover:bg-indigo-500/30 transition-all group-hover:pl-6">
+                  <span>Join Waitlist</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -111,13 +118,22 @@ export default function AppsPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>
-                <a href="https://apps.apple.com/search?term=caringmind" target="_blank" rel="noopener noreferrer"
+                {/* App Store button - commented out until app is released */}
+                {/* <a href="https://apps.apple.com/search?term=caringmind" target="_blank" rel="noopener noreferrer"
                    className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-500/50 rounded-lg text-purple-300 hover:bg-purple-500/30 transition-all">
                   <span>App Store</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </a>
+                </a> */}
+                {/* Waitlist button - commented out for now */}
+                {/* <a href="https://forms.gle/8rLZt3iCygFxB5Qx6" target="_blank" rel="noopener noreferrer"
+                   className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-500/50 rounded-lg text-purple-300 hover:bg-purple-500/30 transition-all group-hover:pl-6">
+                  <span>Join Waitlist</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a> */}
               </div>
             </div>
           </div>
