@@ -1,5 +1,4 @@
 import { useState, useRef } from 'react';
-import html2canvas from 'html2canvas';
 
 type ScreenshotCallback = () => void;
 
@@ -9,16 +8,31 @@ const useScreenshot = (onScreenshot?: ScreenshotCallback) => {
     const pageRef = useRef<HTMLDivElement>(null);
 
     const takeScreenshot = async () => {
-        if (pageRef.current) {
-            try {
-                const canvas = await html2canvas(pageRef.current);
-                const dataURL = canvas.toDataURL('image/png');
-                setScreenshot(dataURL);
-                setIsDownloadable(true);
-                onScreenshot?.();
-            } catch (error) {
-                console.error('Error taking screenshot:', error);
-            }
+        try {
+            // prompt user to share screen/window/tab
+            const stream = await navigator.mediaDevices.getDisplayMedia({ video: true });
+            const track = stream.getVideoTracks()[0];
+            const video = document.createElement('video');
+            video.srcObject = stream;
+            await video.play();
+
+            // draw one frame to canvas
+            const canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            const ctx = canvas.getContext('2d');
+            if (!ctx) throw new Error('Could not get canvas context');
+            ctx.drawImage(video, 0, 0);
+            const dataURL = canvas.toDataURL('image/png');
+            setScreenshot(dataURL);
+            setIsDownloadable(true);
+            onScreenshot?.();
+
+            // cleanup
+            track.stop();
+            video.remove();
+        } catch (error) {
+            console.error('Error taking screenshot:', error);
         }
     };
 
