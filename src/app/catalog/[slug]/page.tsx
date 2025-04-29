@@ -3,6 +3,7 @@ import React from 'react';
 import { demos } from '@/data/catalog';
 import { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Props { params: { slug: string } }
 
@@ -42,6 +43,15 @@ export default function DemoPage({ params }: Props) {
   return (
     <div className="min-h-screen p-4 md:p-8 bg-gray-50">
       <div className="max-w-5xl mx-auto">
+        <nav className="text-sm mb-4">
+          <ol className="list-reset flex text-gray-600">
+            <li><Link href="/" className="hover:underline">Home</Link></li>
+            <li><span className="mx-2">/</span></li>
+            <li><Link href="/catalog" className="hover:underline">Catalog</Link></li>
+            <li><span className="mx-2">/</span></li>
+            <li className="font-semibold">{demo.title}</li>
+          </ol>
+        </nav>
         <div className="relative w-full rounded-lg overflow-hidden mb-4 md:mb-6 aspect-video">
           <Image
             src={imageUrl}
