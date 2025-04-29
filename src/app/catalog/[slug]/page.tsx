@@ -52,16 +52,6 @@ export default function DemoPage({ params }: Props) {
             <li className="font-semibold">{demo.title}</li>
           </ol>
         </nav>
-        <div className="relative w-full rounded-lg overflow-hidden mb-4 md:mb-6 aspect-video">
-          <Image
-            src={imageUrl}
-            alt={demo.title}
-            fill
-            priority
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
-            className="object-cover"
-          />
-        </div>
         
         <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">{demo.title}</h1>
         
