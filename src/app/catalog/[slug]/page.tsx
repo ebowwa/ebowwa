@@ -24,21 +24,41 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default function DemoPage({ params }: Props) {
   const demo = demos.find((d) => d.slug === params.slug);
-  if (!demo) return <p>Demo not found</p>;
+  
+  if (!demo) {
+    return (
+      <div className="min-h-screen p-4 md:p-8 flex items-center justify-center bg-gray-50">
+        <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+          <h1 className="text-xl font-bold text-red-500 mb-2">Demo Not Found</h1>
+          <p className="text-gray-600">The requested demo could not be found.</p>
+        </div>
+      </div>
+    );
+  }
+  
   const imageUrl = demo.image || `/images/demos/${demo.slug}.png`;
   const DemoComponent = demo.Component;
+  
   return (
-    <div className="min-h-screen p-8 bg-gray-50">
-      <Image
-        src={imageUrl}
-        alt={demo.title}
-        width={1200}
-        height={630}
-        priority
-        className="mb-6 rounded"
-      />
-      <h1 className="text-3xl font-bold mb-6">{demo.title}</h1>
-      <DemoComponent />
+    <div className="min-h-screen p-4 md:p-8 bg-gray-50">
+      <div className="max-w-5xl mx-auto">
+        <div className="relative w-full rounded-lg overflow-hidden mb-4 md:mb-6 aspect-video">
+          <Image
+            src={imageUrl}
+            alt={demo.title}
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+            className="object-cover"
+          />
+        </div>
+        
+        <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">{demo.title}</h1>
+        
+        <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm">
+          <DemoComponent />
+        </div>
+      </div>
     </div>
   );
 }
