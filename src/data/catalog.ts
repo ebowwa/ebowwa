@@ -65,7 +65,7 @@ export const demos: Demo[] = [
   { slug: 'video-asset', title: '3D Video Asset', description: 'Texture video content onto 3D objects.', Component: AssetVideoDemo },
   { slug: 'html-asset', title: 'HTML Asset Renderer', description: 'Render HTML pages as textures.', Component: HtmlAssetDemo },
   // { slug: 'pee', title: 'Particle Emitter Demo', description: 'Showcase interactive particle systems.', Component: PeeDemo },
-  { slug: 'conway', title: '3D Conway Simulation', description: '3D rendering of Conway’s Game of Life with Three.js.', Component: ConwayAssetDemo },
+  // { slug: 'conway', title: '3D Conway Simulation', description: '3D rendering of Conway’s Game of Life with Three.js.', Component: ConwayAssetDemo },
   { slug: 'model-view', title: '3D Model Viewer', description: 'Interactive 3D model viewer with controls.', Component: ModelViewDemo },
   { slug: 'txt-demo', title: 'Text Animation Demo', description: 'Animate and display 3D text geometry.', Component: TxtDemo },
   { slug: 'demy', title: 'Demy Algorithm Demo', description: 'Canvas-based algorithm visualization.', Component: DemyDemo },
