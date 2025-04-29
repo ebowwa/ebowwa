@@ -25,7 +25,7 @@ export default function CatalogPage() {
                 href={`/catalog/${demo.slug}`}
                 className="block p-3 md:p-4 border rounded-lg hover:shadow-lg bg-white transition-shadow duration-200"
               >
-                <div className="aspect-video w-full overflow-hidden rounded mb-3">
+                <div className="relative aspect-video w-full overflow-hidden rounded mb-3">
                   <DemoComponent />
                 </div>
                 <h2 className="text-lg md:text-xl font-semibold mb-1 md:mb-2 line-clamp-1">{demo.title}</h2>
