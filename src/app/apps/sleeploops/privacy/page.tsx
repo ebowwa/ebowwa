@@ -65,8 +65,8 @@ export default function SleepLoopsPrivacy() {
         <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
         <p>
           If you have any questions about this Privacy Policy, please contact us at:{' '}
-          <a href="mailto:privacy@ebowwa.xyz" className="text-blue-500 hover:text-blue-600">
-            privacy@ebowwa.xyz
+          <a href="mailto:sleeploops@ebowwa.xyz" className="text-blue-500 hover:text-blue-600">
+            sleeploops@ebowwa.xyz
           </a>
         </p>
       </section>

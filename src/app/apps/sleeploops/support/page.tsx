@@ -14,8 +14,8 @@ export default function SleepLoopsSupport() {
         <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
         <p className="mb-4">
           For support inquiries, please contact us at:
-          <a href="mailto:support@ebowwa.xyz" className="text-blue-500 hover:text-blue-600 ml-2">
-            support@ebowwa.xyz
+          <a href="mailto:sleeploops@ebowwa.xyz" className="text-blue-500 hover:text-blue-600 ml-2">
+            sleeploops@ebowwa.xyz
           </a>
         </p>
       </section>

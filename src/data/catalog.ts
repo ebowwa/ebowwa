@@ -67,7 +67,7 @@ export const demos: Demo[] = [
   // { slug: 'pee', title: 'Particle Emitter Demo', description: 'Showcase interactive particle systems.', Component: PeeDemo },
   // { slug: 'conway', title: '3D Conway Simulation', description: '3D rendering of Conway’s Game of Life with Three.js.', Component: ConwayAssetDemo },
   { slug: 'model-view', title: '3D Model Viewer', description: 'Interactive 3D model viewer with controls.', Component: ModelViewDemo },
-  { slug: 'txt-demo', title: 'Text Animation Demo', description: 'Animate and display 3D text geometry.', Component: TxtDemo },
+  //{ slug: 'txt-demo', title: 'Text Animation Demo', description: 'Animate and display 3D text geometry.', Component: TxtDemo },
   { slug: 'demy', title: 'Demy Algorithm Demo', description: 'Canvas-based algorithm visualization.', Component: DemyDemo },
   // { slug: 'mac', title: 'Mac UI Demo', description: 'Showcase of macOS-like UI components.', Component: MacDemo },
   { slug: 'outline', title: 'Outline Shader Demo', description: 'Demonstrate outline shader effects.', Component: OutlineDemo },

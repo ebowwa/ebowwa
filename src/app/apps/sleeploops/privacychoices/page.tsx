@@ -58,8 +58,8 @@ export default function SleepLoopsPrivacyChoices() {
         <h2 className="text-2xl font-semibold mb-4">Questions?</h2>
         <p>
           If you have any questions about your privacy choices, please contact us at:{' '}
-          <a href="mailto:privacy@ebowwa.xyz" className="text-blue-500 hover:text-blue-600">
-            privacy@ebowwa.xyz
+          <a href="mailto:sleeploops@ebowwa.xyz" className="text-blue-500 hover:text-blue-600">
+            sleeploops@ebowwa.xyz
           </a>
         </p>
       </section>
