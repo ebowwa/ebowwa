@@ -47,7 +47,7 @@ export default function SleepLoopsSupport() {
         <h2 className="text-2xl font-semibold mb-4">Privacy Policy</h2>
         <p>
           For information about how we handle your data, please visit our{' '}
-          <a href="/privacy" className="text-blue-500 hover:text-blue-600">
+          <a href="/apps/sleeploops/privacy" className="text-blue-500 hover:text-blue-600">
             Privacy Policy
           </a>
           .
