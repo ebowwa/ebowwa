@@ -31,7 +31,7 @@ export default function HomePage() {
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-blue-200 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
-            Ebowwa Labs delivers innovative apps and impactful digital experiences, from concept to launch.
+            delivering innovative apps and impactful digital experiences, from concept to launch.
           </p>
           <p className="text-sm sm:text-base text-blue-200/60 max-w-xl mx-auto mt-2 sm:mt-3 leading-loose font-light italic px-4 sm:px-0">
             Focused on practical, resilient software engineering—creating mobile-first and offline-capable systems that deliver real value.
