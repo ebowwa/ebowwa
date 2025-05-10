@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function HomePage() {
+  // Flag to control link visibility
+  const showLinks = true; // Set to false to hide links temporarily
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Abstract Background Elements */}
@@ -28,12 +30,13 @@ export default function HomePage() {
               Ebowwa Labs
             </span>
           </h1>
-          <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-            Ebowwa Labs delivers innovative apps and impactful digital experiences, from concept to launch. My expertise drives the development of practical, resilient software engineering—including mobile-first and offline-capable systems—and pioneers explorations at the frontiers of technology.
+          <p className="text-xl text-blue-200 max-w-2xl mx-auto leading-relaxed">
+            Ebowwa Labs delivers innovative apps and impactful digital experiences, from concept to launch.
           </p>
-          <p className="text-lg text-blue-200 max-w-3xl mx-auto mt-4">
-            This lab is more than just a portfolio; it's a showcase of proven execution and a forward-thinking vision. I'm actively developing solutions and exploring new paradigms in AI and user interaction, creating opportunities for collaboration, investment, and impactful projects. If you're looking to partner with a versatile, results-driven technologist, let's connect.
+          <p className="text-base text-blue-200/60 max-w-xl mx-auto mt-3 leading-loose font-light italic">
+            Focused on practical, resilient software engineering—creating mobile-first and offline-capable systems that deliver real value.
           </p>
+
         </div>
         
         {/* Interactive Card Grid */}
@@ -45,12 +48,16 @@ export default function HomePage() {
               <div className="mb-4 text-cyan-400 text-4xl">⚙️</div>
               <h2 className="text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors">Developers</h2>
               <p className="text-blue-100 mb-6 opacity-80">Explore a catalog of cutting-edge demos showcasing what's possible with modern technology.</p>
-              <Link href="/catalog" className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-lg text-cyan-300 hover:bg-cyan-500/30 transition-all group-hover:pl-6">
-                <span>Explore Catalog</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
+              {showLinks ? (
+                <Link href="/catalog" className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-lg text-cyan-300 hover:bg-cyan-500/30 transition-all group-hover:pl-6">
+                  <span>Explore Catalog</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+              ) : (
+                <div className="text-cyan-300/50 text-sm italic mt-2">Catalog coming soon</div>
+              )}
             </div>
           </div>
           
@@ -61,12 +68,13 @@ export default function HomePage() {
               <div className="mb-4 text-emerald-400 text-4xl">🧠</div>
               <h2 className="text-2xl font-bold mb-3 text-white group-hover:text-emerald-300 transition-colors">Thinkers & Learners</h2>
               <p className="text-blue-100 mb-6 opacity-80">Dive into the concept of the informational substrate and expand your understanding of our digital reality.</p>
-              <Link href="/landing" className="inline-flex items-center px-4 py-2 bg-emerald-500/20 border border-emerald-500/50 rounded-lg text-emerald-300 hover:bg-emerald-500/30 transition-all group-hover:pl-6">
-                <span>Discover More</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-300/70 cursor-not-allowed opacity-75">
+                <span>Under Reconstruction</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
-              </Link>
+              </div>
+              <div className="text-emerald-300/50 text-xs italic mt-2">We're currently rethinking this part of Ebowwa Labs.</div>
             </div>
           </div>
           
@@ -77,12 +85,16 @@ export default function HomePage() {
               <div className="mb-4 text-purple-400 text-4xl">📱</div>
               <h2 className="text-2xl font-bold mb-3 text-white group-hover:text-purple-300 transition-colors">App Enthusiasts</h2>
               <p className="text-blue-100 mb-6 opacity-80">Experience our innovative iOS mobile applications designed for the future of digital interaction.</p>
-              <Link href="/apps" className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-500/50 rounded-lg text-purple-300 hover:bg-purple-500/30 transition-all group-hover:pl-6">
-                <span>Try Our Apps</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
+              {showLinks ? (
+                <Link href="/apps" className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-500/50 rounded-lg text-purple-300 hover:bg-purple-500/30 transition-all group-hover:pl-6">
+                  <span>Try Our Apps</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+              ) : (
+                <div className="text-purple-300/50 text-sm italic mt-2">Apps coming soon</div>
+              )}
             </div>
           </div>
           
@@ -93,12 +105,16 @@ export default function HomePage() {
               <div className="mb-4 text-red-400 text-4xl">🚀</div>
               <h2 className="text-2xl font-bold mb-3 text-white group-hover:text-red-300 transition-colors">Employers & Collaborators</h2>
               <p className="text-blue-100 mb-6 opacity-80">Learn more about my skills and past projects. Let's create something amazing together.</p>
-              <Link href="/elijah/whoiselijah" className="inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-500/50 rounded-lg text-red-300 hover:bg-red-500/30 transition-all group-hover:pl-6">
-                <span>View Resume</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
+              {showLinks ? (
+                <Link href="/elijah/whoiselijah" className="inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-500/50 rounded-lg text-red-300 hover:bg-red-500/30 transition-all group-hover:pl-6">
+                  <span>View Resume</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+              ) : (
+                <div className="text-red-300/50 text-sm italic mt-2">Resume coming soon</div>
+              )}
             </div>
           </div>
           
@@ -109,14 +125,25 @@ export default function HomePage() {
               <div className="mb-4 text-teal-400 text-4xl">🔗</div>
               <h2 className="text-2xl font-bold mb-3 text-white group-hover:text-teal-300 transition-colors">Interesting Links</h2>
               <p className="text-blue-100 mb-6 opacity-80">Explore a curated collection of resources, notes, and conversations worth keeping.</p>
-              <Link href="/links" className="inline-flex items-center px-4 py-2 bg-teal-500/20 border border-teal-500/50 rounded-lg text-teal-300 hover:bg-teal-500/30 transition-all group-hover:pl-6">
-                <span>Browse Collection</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
+              {showLinks ? (
+                <Link href="/links" className="inline-flex items-center px-4 py-2 bg-teal-500/20 border border-teal-500/50 rounded-lg text-teal-300 hover:bg-teal-500/30 transition-all group-hover:pl-6">
+                  <span>Browse Collection</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+              ) : (
+                <div className="text-teal-300/50 text-sm italic mt-2">Collection coming soon</div>
+              )}
             </div>
           </div>*/}
+        </div>
+        
+        {/* Closing Statement */}
+        <div className="mt-12 mb-8 max-w-3xl mx-auto text-center">
+          <p className="text-xl text-blue-200 leading-relaxed px-6">
+            This lab showcases proven execution and a forward-thinking vision, creating opportunities for collaboration, investment, and impactful projects.
+          </p>
         </div>
       
         {/* Footer */}
