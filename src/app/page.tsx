@@ -1,6 +1,283 @@
-import React from 'react';
+
+'use client'
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+
+// Card type definition for better type safety
+type CardProps = {
+  title: string;
+  description: string;
+  icon?: string;
+  imageUrl?: string;
+  imageAlt?: string;
+  images?: Array<{ url: string; alt: string }>; // For carousel support
+  linkUrl?: string;
+  linkText?: string;
+  color: 'cyan' | 'emerald' | 'purple' | 'red' | 'teal';
+  showLinks?: boolean;
+  disabled?: boolean;
+  disabledText?: string;
+  disabledNote?: string;
+};
+
+// Carousel component for cards
+const ImageCarousel = ({ 
+  images, 
+  colorClass 
+}: { 
+  images: Array<{ url: string; alt: string }>, 
+  colorClass: string 
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  // Navigate to the next slide
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+  
+  // Navigate to the previous slide
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  // Auto-advance timer for the carousel
+  useEffect(() => {
+    if (images.length <= 1) return;
+    
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 5000); // Change slide every 5 seconds
+    
+    return () => clearInterval(timer);
+  }, [currentIndex, images.length]);
+
+  // Handle carousel for single images differently
+  if (images.length === 1) {
+    return (
+      <Image
+        src={images[0].url}
+        alt={images[0].alt}
+        fill
+        className="object-cover transition-transform duration-300 group-hover:scale-105"
+      />
+    );
+  }
+
+  return (
+    <div className="w-full h-full relative">
+      {/* Images container with transition effect */}
+      <div className="relative w-full h-full">
+        {images.map((image, index) => (
+          <div 
+            key={index} 
+            className={`absolute w-full h-full transition-opacity duration-500 ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+          >
+            <Image
+              src={image.url}
+              alt={image.alt}
+              fill
+              className="object-cover"
+              priority={index === 0}
+            />
+          </div>
+        ))}
+      </div>
+      
+      {/* Navigation dots */}
+      <div className="absolute bottom-2 left-0 right-0 z-20 flex justify-center gap-1.5">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-2 h-2 rounded-full transition-all ${index === currentIndex ? `bg-${colorClass} w-3` : 'bg-white/50'}`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+      
+      {/* Previous/Next buttons */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 flex items-center justify-center rounded-full bg-black/30 text-white hover:bg-black/50 transition-colors"
+        aria-label="Previous slide"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 flex items-center justify-center rounded-full bg-black/30 text-white hover:bg-black/50 transition-colors"
+        aria-label="Next slide"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  );
+};
+
+// Reusable Card Component
+const FeatureCard = ({
+  title,
+  description,
+  icon,
+  imageUrl,
+  imageAlt,
+  images,
+  linkUrl,
+  linkText,
+  color,
+  showLinks = true,
+  disabled = false,
+  disabledText,
+  disabledNote
+}: CardProps) => {
+  // Color mappings
+  const colorMap = {
+    cyan: {
+      hover: 'hover:border-cyan-500/50',
+      shadow: 'hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]',
+      gradient: 'from-blue-500/20',
+      text: 'text-cyan-400',
+      titleHover: 'group-hover:text-cyan-300',
+      buttonBg: 'bg-cyan-500/20',
+      buttonBorder: 'border-cyan-500/50',
+      buttonText: 'text-cyan-300',
+      buttonHover: 'hover:bg-cyan-500/30'
+    },
+    emerald: {
+      hover: 'hover:border-emerald-500/50',
+      shadow: 'hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]',
+      gradient: 'from-emerald-500/20',
+      text: 'text-emerald-400',
+      titleHover: 'group-hover:text-emerald-300',
+      buttonBg: 'bg-emerald-500/10',
+      buttonBorder: 'border-emerald-500/30',
+      buttonText: 'text-emerald-300',
+      buttonHover: 'hover:bg-emerald-500/30'
+    },
+    purple: {
+      hover: 'hover:border-purple-500/50',
+      shadow: 'hover:shadow-[0_0_30px_rgba(139,92,246,0.5)]',
+      gradient: 'from-purple-500/20',
+      text: 'text-purple-400',
+      titleHover: 'group-hover:text-purple-300',
+      buttonBg: 'bg-purple-500/20',
+      buttonBorder: 'border-purple-500/50',
+      buttonText: 'text-purple-300',
+      buttonHover: 'hover:bg-purple-500/30'
+    },
+    red: {
+      hover: 'hover:border-red-500/50',
+      shadow: 'hover:shadow-[0_0_30px_rgba(239,68,68,0.5)]',
+      gradient: 'from-red-500/20',
+      text: 'text-red-400',
+      titleHover: 'group-hover:text-red-300',
+      buttonBg: 'bg-red-500/20',
+      buttonBorder: 'border-red-500/50',
+      buttonText: 'text-red-300',
+      buttonHover: 'hover:bg-red-500/30'
+    },
+    teal: {
+      hover: 'hover:border-teal-500/50',
+      shadow: 'hover:shadow-[0_0_30px_rgba(20,184,166,0.5)]',
+      gradient: 'from-teal-500/20',
+      text: 'text-teal-400',
+      titleHover: 'group-hover:text-teal-300',
+      buttonBg: 'bg-teal-500/20',
+      buttonBorder: 'border-teal-500/50',
+      buttonText: 'text-teal-300',
+      buttonHover: 'hover:bg-teal-500/30'
+    }
+  };
+
+  const styles = colorMap[color];
+
+  // Prepare color styles for call-to-action based on card color
+  const ctaTextColor = {
+    cyan: 'text-cyan-600',
+    emerald: 'text-emerald-600',
+    purple: 'text-purple-600',
+    red: 'text-rose-600',
+    teal: 'text-teal-600'
+  }[color];
+
+  return (
+    <div className="group bg-white/10 dark:bg-gray-800/90 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-[1.02] transition duration-300 ease-in-out overflow-hidden h-full flex flex-col border border-gray-700/50">
+      {/* Image Section - True Airbnb style with taller images */}
+      {images && images.length > 0 ? (
+        <div className="h-56 sm:h-64 md:h-72 lg:h-80 relative overflow-hidden">
+          <ImageCarousel 
+            images={images} 
+            colorClass={color === 'cyan' ? 'cyan-400' : 
+                      color === 'emerald' ? 'emerald-400' : 
+                      color === 'purple' ? 'purple-400' : 
+                      color === 'red' ? 'red-400' : 'teal-400'} 
+          />
+        </div>
+      ) : imageUrl ? (
+        <div className="h-56 sm:h-64 md:h-72 lg:h-80 relative overflow-hidden">
+          <Image 
+            src={imageUrl} 
+            alt={imageAlt || title} 
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover"
+            priority
+          />
+        </div>
+      ) : (
+        // Skeleton placeholder when no images provided (Airbnb-style)
+        <div className="h-56 sm:h-64 md:h-72 lg:h-80 bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
+      )}
+      
+      {/* Content Section - True Airbnb style */}
+      <div className="p-5 sm:p-6 flex flex-col flex-grow">
+        {/* Title and icon with better contrast for dark theme */}
+        <div className="flex items-start gap-2 mb-2">
+          <div className="flex items-center">
+            {icon && (
+              <span className={`${styles.text} text-xl mr-2`}>{icon}</span>
+            )}
+            <h3 className="text-xl font-bold text-white inline-block">{title}</h3>
+          </div>
+        </div>
+        
+        {/* Description with improved contrast */}
+        <p className="text-sm text-gray-200 mt-2 mb-5 flex-grow">{description}</p>
+      
+        {/* Action Area - Airbnb style CTA */}
+        {disabled ? (
+          <>
+            <div className="mt-auto text-gray-500 dark:text-gray-400 text-sm">
+              <span>{disabledText || 'Coming Soon'}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+            {disabledNote && <div className="text-gray-400 text-xs mt-1">{disabledNote}</div>}
+          </>
+        ) : showLinks ? (
+          <div className="mt-auto pt-3 border-t border-gray-700/50">
+            <Link href={linkUrl || '#'} className="block">
+              <div className={`flex items-center ${styles.buttonText} text-base font-medium hover:underline`}>
+                <span>{linkText}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </div>
+            </Link>
+          </div>
+        ) : (
+          <div className="text-gray-500 dark:text-gray-400 text-sm mt-auto">{title} coming soon</div>
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default function HomePage() {
   // Flag to control link visibility
@@ -40,103 +317,71 @@ export default function HomePage() {
         </div>
         
         {/* Interactive Card Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 w-full max-w-7xl mx-auto">
-          {/* Developers Card */}
-          <div className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] transform hover:-translate-y-1 flex flex-col h-full">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="p-4 sm:p-6 md:p-8 relative z-10 h-full flex flex-col">
-              <div className="mb-3 sm:mb-4 text-cyan-400 text-3xl sm:text-4xl">⚙️</div>
-              <h2 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-white group-hover:text-cyan-300 transition-colors">Developers</h2>
-              <p className="text-blue-100 mb-4 sm:mb-6 opacity-80 text-sm sm:text-base flex-grow">Explore a catalog of cutting-edge demos showcasing what's possible with modern technology.</p>
-              {showLinks ? (
-                <Link href="/catalog" className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base bg-cyan-500/20 border border-cyan-500/50 rounded-lg text-cyan-300 hover:bg-cyan-500/30 transition-all group-hover:pl-6">
-                  <span className="whitespace-nowrap">Explore Catalog</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-              ) : (
-                <div className="text-cyan-300/50 text-sm italic mt-2">Catalog coming soon</div>
-              )}
-            </div>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 w-full max-w-7xl mx-auto">
+          {/* Using the new FeatureCard component */}
+          <FeatureCard
+            title="Developers"
+            description="Explore a catalog of cutting-edge demos showcasing what's possible with modern technology."
+            icon="⚙️"
+            color="cyan"
+            linkUrl="/catalog"
+            linkText="Explore Catalog"
+            showLinks={showLinks}
+            imageUrl="/img/IMG_3614.jpeg"
+            imageAlt="Developer environment screenshot"
+          />
           
-          {/* Thinkers Card */}
-          <div className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 hover:border-emerald-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transform hover:-translate-y-1 flex flex-col h-full">
-            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="p-4 sm:p-6 md:p-8 relative z-10 h-full flex flex-col">
-              <div className="mb-3 sm:mb-4 text-emerald-400 text-3xl sm:text-4xl">🧠</div>
-              <h2 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-white group-hover:text-emerald-300 transition-colors">Thinkers & Learners</h2>
-              <p className="text-blue-100 mb-4 sm:mb-6 opacity-80 text-sm sm:text-base flex-grow">Dive into the concept of the informational substrate and expand your understanding of our digital reality.</p>
-              <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-300/70 cursor-not-allowed opacity-75">
-                <span>Under Reconstruction</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <div className="text-emerald-300/50 text-xs italic mt-2">We're currently rethinking this part of Ebowwa Labs.</div>
-            </div>
-          </div>
+          <FeatureCard
+            title="Thinkers & Learners"
+            description="Dive into the concept of the informational substrate and expand your understanding of our digital reality."
+            icon="🧠"
+            color="emerald"
+            disabled={true}
+            disabledText="Under Reconstruction"
+            disabledNote="We're currently rethinking this part of Ebowwa Labs."
+            // Optional image example
+            // imageUrl="/images/thinkers.jpg"
+            // imageAlt="Abstract representation of neural network"
+          />
           
-          {/* App Enthusiasts Card */}
-          <div className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 hover:border-purple-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] transform hover:-translate-y-1 flex flex-col h-full">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="p-4 sm:p-6 md:p-8 relative z-10 h-full flex flex-col">
-              <div className="mb-3 sm:mb-4 text-purple-400 text-3xl sm:text-4xl">📱</div>
-              <h2 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-white group-hover:text-purple-300 transition-colors">App Enthusiasts</h2>
-              <p className="text-blue-100 mb-4 sm:mb-6 opacity-80 text-sm sm:text-base flex-grow">Experience our innovative iOS mobile applications designed for the future of digital interaction.</p>
-              {showLinks ? (
-                <Link href="/apps" className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base bg-purple-500/20 border border-purple-500/50 rounded-lg text-purple-300 hover:bg-purple-500/30 transition-all group-hover:pl-6">
-                  <span className="whitespace-nowrap">Try Our Apps</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-              ) : (
-                <div className="text-purple-300/50 text-sm italic mt-2">Apps coming soon</div>
-              )}
-            </div>
-          </div>
+          <FeatureCard
+            title="App Enthusiasts"
+            description="Experience our innovative iOS mobile applications designed for the future of digital interaction."
+            icon="📱"
+            color="purple"
+            linkUrl="/apps"
+            linkText="Try Our Apps"
+            showLinks={showLinks}
+            imageUrl="/400x800bb.png"
+            imageAlt="SleepLoops iOS app screenshot"
+          />
           
-          {/* Employers Card */}
-          <div className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 hover:border-red-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(239,68,68,0.5)] transform hover:-translate-y-1 flex flex-col h-full">
-            <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="p-4 sm:p-6 md:p-8 relative z-10 h-full flex flex-col">
-              <div className="mb-3 sm:mb-4 text-red-400 text-3xl sm:text-4xl">🚀</div>
-              <h2 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-white group-hover:text-red-300 transition-colors">Employers & Collaborators</h2>
-              <p className="text-blue-100 mb-4 sm:mb-6 opacity-80 text-sm sm:text-base flex-grow">Learn more about my skills and past projects. Let's create something amazing together.</p>
-              {showLinks ? (
-                <Link href="/elijah/whoiselijah" className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base bg-red-500/20 border border-red-500/50 rounded-lg text-red-300 hover:bg-red-500/30 transition-all group-hover:pl-6">
-                  <span className="whitespace-nowrap">View Resume</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-              ) : (
-                <div className="text-red-300/50 text-sm italic mt-2">Resume coming soon</div>
-              )}
-            </div>
-          </div>
+          <FeatureCard
+            title="Employers & Collaborators"
+            description="Learn more about my skills and past projects. Let's create something amazing together."
+            icon="🚀"
+            color="red"
+            linkUrl="/elijah/whoiselijah"
+            linkText="View Resume"
+            showLinks={showLinks}
+            // Optional image example
+            // imageUrl="/images/resume.jpg"
+            // imageAlt="Professional workspace"
+          />
           
-          {/* Interesting Links Card 
-          <div className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 hover:border- flex flex-col h-fullteal-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(20,184,166,0.5)] transform hover:-translate-y-1">
-            <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="p-4 sm:p-6 md:p-8 relative z-10 h-full flex flex-col">
-              <div className="mb-4 text-teal-400 text-4xl">🔗</div>
-              <h2 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-white group-hover:text-teal-300 transition-colors">Interesting Links</h2>
-              <p className="text-blue-100 mb-4 sm:mb-6 opacity-80 text-sm sm:text-base flex-grow">Explore a curated collection of resources, notes, and conversations worth keeping.</p>
-              {showLinks ? (
-                <Link href="/links" className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base bg-teal-500/20 border border-teal-500/50 rounded-lg text-teal-300 hover:bg-teal-500/30 transition-all group-hover:pl-6">
-                  <span>Browse Collection</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-              ) : (
-                <div className="text-teal-300/50 text-sm italic mt-2">Collection coming soon</div>
-              )}
-            </div>
-          </div>*/}
+          {/* Interesting Links Card - Commented out but updated to use the new component 
+          <FeatureCard
+            title="Interesting Links"
+            description="Explore a curated collection of resources, notes, and conversations worth keeping."
+            icon="🔗"
+            color="teal"
+            linkUrl="/links"
+            linkText="Browse Collection"
+            showLinks={showLinks}
+            // imageUrl="/images/links.jpg"
+            // imageAlt="Connected web of information"
+          />
+          */}
         </div>
         
         {/* Closing Statement */}
