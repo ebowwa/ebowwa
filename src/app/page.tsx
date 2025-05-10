@@ -28,13 +28,16 @@ export default function HomePage() {
               Ebowwa Labs
             </span>
           </h1>
-          <p className="text-xl text-blue-200 max-w-2xl mx-auto">
-            Digital innovation lab exploring the boundaries of information and technology
+          <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+            Ebowwa Labs delivers innovative apps and impactful digital experiences, from concept to launch. My expertise drives the development of practical, resilient software engineering—including mobile-first and offline-capable systems—and pioneers explorations at the frontiers of technology.
+          </p>
+          <p className="text-lg text-blue-200 max-w-3xl mx-auto mt-4">
+            This lab is more than just a portfolio; it's a showcase of proven execution and a forward-thinking vision. I'm actively developing solutions and exploring new paradigms in AI and user interaction, creating opportunities for collaboration, investment, and impactful projects. If you're looking to partner with a versatile, results-driven technologist, let's connect.
           </p>
         </div>
         
         {/* Interactive Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl mx-auto">
           {/* Developers Card */}
           <div className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] transform hover:-translate-y-1">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -98,8 +101,24 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+          
+          {/* Interesting Links Card 
+          <div className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 hover:border-teal-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(20,184,166,0.5)] transform hover:-translate-y-1">
+            <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="p-8 relative z-10">
+              <div className="mb-4 text-teal-400 text-4xl">🔗</div>
+              <h2 className="text-2xl font-bold mb-3 text-white group-hover:text-teal-300 transition-colors">Interesting Links</h2>
+              <p className="text-blue-100 mb-6 opacity-80">Explore a curated collection of resources, notes, and conversations worth keeping.</p>
+              <Link href="/links" className="inline-flex items-center px-4 py-2 bg-teal-500/20 border border-teal-500/50 rounded-lg text-teal-300 hover:bg-teal-500/30 transition-all group-hover:pl-6">
+                <span>Browse Collection</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </div>
+          </div>*/}
         </div>
-        
+      
         {/* Footer */}
         <div className="mt-16 text-center text-blue-300/60">
           <p>© {new Date().getFullYear()} Ebowwa Labs • Pushing the boundaries of what's possible</p>
