@@ -8,14 +8,14 @@ export const metadata = {
 export default function Privacy() {
   return (
     <div className="min-h-screen p-8 max-w-4xl mx-auto">
-      <h1 className="text-4xl font-bold mb-8">SleepLoops Privacy Policy</h1>
+      <h1 className="text-4xl font-bold mb-8">Ebowwa Privacy Policy</h1>
       
       <section className="mb-8">
         <p className="mb-4">Last updated: April 30, 2025</p>
         
         <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
         <p className="mb-4">
-          At SleepLoops, we take your privacy seriously. This Privacy Policy explains how we collect,
+          At Ebowwa Labs, we take your privacy seriously. This Privacy Policy explains how we collect,
           use, disclose, and safeguard your information when you use our mobile application.
         </p>
       </section>
@@ -23,10 +23,10 @@ export default function Privacy() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Information We Collect</h2>
         <ul className="list-disc pl-6 space-y-4">
-          <li>Sleep schedule data</li>
           <li>App usage statistics</li>
           <li>Device information</li>
           <li>User preferences</li>
+          <li>Account information</li>
         </ul>
       </section>
 
@@ -65,8 +65,8 @@ export default function Privacy() {
         <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
         <p>
           If you have any questions about this Privacy Policy, please contact us at:{' '}
-          <a href="mailto:sleeploops@ebowwa.xyz" className="text-blue-500 hover:text-blue-600">
-            sleeploops@ebowwa.xyz
+          <a href="mailto:support@ebowwa.xyz" className="text-blue-500 hover:text-blue-600">
+            support@ebowwa.xyz
           </a>
         </p>
       </section>

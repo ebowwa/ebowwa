@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Manage your privacy preferences and data choices for the Ebowwa app',
 };
 
-export default function SleepLoopsPrivacyChoices() {
+export default function PrivacyChoices() {
   return (
     <div className="min-h-screen p-8 max-w-4xl mx-auto">
       <h1 className="text-4xl font-bold mb-8">Your Privacy Choices</h1>
@@ -32,7 +32,7 @@ export default function SleepLoopsPrivacyChoices() {
           </div>
           <div>
             <h3 className="text-xl font-medium mb-2">Data Backup</h3>
-            <p>Choose whether to backup your sleep data to your personal cloud storage.</p>
+            <p>Choose whether to backup your data to your personal cloud storage.</p>
           </div>
           <div>
             <h3 className="text-xl font-medium mb-2">Notifications</h3>
@@ -58,8 +58,8 @@ export default function SleepLoopsPrivacyChoices() {
         <h2 className="text-2xl font-semibold mb-4">Questions?</h2>
         <p>
           If you have any questions about your privacy choices, please contact us at:{' '}
-          <a href="mailto:sleeploops@ebowwa.xyz" className="text-blue-500 hover:text-blue-600">
-            sleeploops@ebowwa.xyz
+          <a href="mailto:support@ebowwa.xyz" className="text-blue-500 hover:text-blue-600">
+            support@ebowwa.xyz
           </a>
         </p>
       </section>
