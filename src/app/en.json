@@ -1,8 +1,8 @@
 {
   "appName": { "id": 1, "value": "Ebowwa" },
-  "appDescription": { "id": 2, "value": "a blitz into react, 3D assets, and AI applications" },
+  "appDescription": { "id": 2, "value": "Structured interfaces between humans, machines, and meaning. Built with care. Meant to last." },
   "homeTitle": { "id": 3, "value": "Ebowwa Labs" },
-  "homeSubtitle": { "id": 4, "value": "a blitz into react, 3D assets, and AI applications" },
+  "homeSubtitle": { "id": 4, "value": "Structured interfaces between humans, machines, and meaning. Built with care. Meant to last." },
   "sleepLoopsTitle": { "id": 5, "value": "Sleep Loops" },
   "sleepLoopsDescription": { "id": 6, "value": "Transform your sleep environment with curated ambient loops. Focus, relax, or drift off." },
   "sleepLoopsLinkText": { "id": 7, "value": "Download on the App Store" },
