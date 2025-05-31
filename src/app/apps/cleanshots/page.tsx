@@ -78,8 +78,8 @@ export default function CleanShotsPage() {
             <div className="mb-6">
               <h2 className="text-2xl font-bold mb-2 text-green-200">{privacySupportTitle.value}</h2>
               <p className="text-green-100 opacity-80 mb-1">{privacyText.value}</p>
-              <Link href="/apps/cleanshots/privacy" className="text-green-300 underline hover:text-green-400 mr-4">{privacyPolicyLink.value}</Link>
-              <Link href="/apps/cleanshots/support" className="text-green-300 underline hover:text-green-400">{supportLink.value}</Link>
+              <Link href="/apps/privacy" className="text-green-300 underline hover:text-green-400 mr-4">{privacyPolicyLink.value}</Link>
+              <Link href="/apps/support" className="text-green-300 underline hover:text-green-400">{supportLink.value}</Link>
             </div>
           </div>
         </div>
