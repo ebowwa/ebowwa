@@ -3,10 +3,11 @@ import { Layout } from '@/components/landing/layout/dom/Layout';
 import Head from '../components/landing/layout/head';
 import '@/styles/global.css';
 import { Analytics } from "@vercel/analytics/react"
+import translations from './en.json';
 
 export const metadata = {
-  title: 'Ebowwa',
-  description: 'a blitz into react, 3D assets, and AI applications',
+  title: translations.appName.value,
+  description: translations.appDescription.value,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

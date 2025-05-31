@@ -1,8 +1,9 @@
-
 'use client'
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import translations from './en.json';
+import { DevelopersImages, AppEnthusiastsImages, ThinkersImages, EmployersImages } from '@/utils/AssetCatalog';
 
 // Card type definition for better type safety
 type CardProps = {
@@ -282,6 +283,15 @@ const FeatureCard = ({
 export default function HomePage() {
   // Flag to control link visibility
   const showLinks = true; // Set to false to hide links temporarily
+  const {
+    homeTitle, homeSubtitle,
+    developersTitle, developersDescription, developersLinkText,
+    thinkersTitle, thinkersDescription,
+    appEnthusiastsTitle, appEnthusiastsDescription, appEnthusiastsLinkText,
+    employersTitle, employersDescription, employersLinkText,
+    closingStatement
+  } = translations;
+
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Abstract Background Elements */}
@@ -304,11 +314,11 @@ export default function HomePage() {
         <div className="text-center mb-10 sm:mb-16">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-3 relative">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400 animate-pulse">
-              Ebowwa Labs
+              {homeTitle.value}
             </span>
           </h1>
-          <p className="text-lg sm:text-xl text-blue-200 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
-            delivering innovative apps and impactful digital experiences, from concept to launch.
+          <p className="text-lg sm:text-xl text-blue-200 leading-relaxed px-4 sm:px-0">
+            {homeSubtitle.value}
           </p>
           <p className="text-sm sm:text-base text-blue-200/60 max-w-xl mx-auto mt-2 sm:mt-3 leading-loose font-light italic px-4 sm:px-0">
             Focused on practical, resilient software engineering—creating mobile-first and offline-capable systems that deliver real value.
@@ -320,53 +330,47 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 w-full max-w-7xl mx-auto">
           {/* Using the new FeatureCard component */}
           <FeatureCard
-            title="Developers"
-            description="Explore a catalog of cutting-edge demos showcasing what's possible with modern technology."
+            title={developersTitle.value}
+            description={developersDescription.value}
             icon="⚙️"
             color="cyan"
             linkUrl="/catalog"
-            linkText="Explore Catalog"
+            linkText={developersLinkText.value}
             showLinks={showLinks}
-            imageUrl="/img/IMG_3614.jpeg"
-            imageAlt="Developer environment screenshot"
+            images={DevelopersImages}
           />
           
           <FeatureCard
-            title="Thinkers & Learners"
-            description="Dive into the concept of the informational substrate and expand your understanding of our digital reality."
+            title={thinkersTitle.value}
+            description={thinkersDescription.value}
             icon="🧠"
             color="emerald"
             disabled={true}
-            disabledText="Under Reconstruction"
-            disabledNote="We're currently rethinking this part of Ebowwa Labs."
-            // Optional image example
-            // imageUrl="/images/thinkers.jpg"
-            // imageAlt="Abstract representation of neural network"
+            images={ThinkersImages}
           />
           
+          {/*i want to be able to have this showing previews of multiple of my apps, currently it only shows sleep loops but i have other apps and images to include */}
+
           <FeatureCard
-            title="App Enthusiasts"
-            description="Experience our innovative iOS mobile applications designed for the future of digital interaction."
+            title={appEnthusiastsTitle.value}
+            description={appEnthusiastsDescription.value}
             icon="📱"
             color="purple"
             linkUrl="/apps"
-            linkText="Try Our Apps"
+            linkText={appEnthusiastsLinkText.value}
             showLinks={showLinks}
-            imageUrl="/400x800bb.png"
-            imageAlt="SleepLoops iOS app screenshot"
+            images={AppEnthusiastsImages}
           />
           
           <FeatureCard
-            title="Employers & Collaborators"
-            description="Learn more about my skills and past projects. Let's create something amazing together."
+            title={employersTitle.value}
+            description={employersDescription.value}
             icon="🚀"
             color="red"
             linkUrl="/elijah/whoiselijah"
-            linkText="View Resume"
+            linkText={employersLinkText.value}
             showLinks={showLinks}
-            // Optional image example
-            // imageUrl="/images/resume.jpg"
-            // imageAlt="Professional workspace"
+            images={EmployersImages}
           />
           
           {/* Interesting Links Card - Commented out but updated to use the new component 
@@ -387,7 +391,7 @@ export default function HomePage() {
         {/* Closing Statement */}
         <div className="mt-8 sm:mt-12 mb-6 sm:mb-8 max-w-3xl mx-auto text-center">
           <p className="text-lg sm:text-xl text-blue-200 leading-relaxed px-3 sm:px-6">
-            This lab showcases proven execution and a forward-thinking vision, creating opportunities for collaboration, investment, and impactful projects.
+            {closingStatement.value}
           </p>
         </div>
       

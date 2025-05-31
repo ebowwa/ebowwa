@@ -146,6 +146,52 @@ export default function AppsPage() {
               </div>
             </div>
           </div>
+
+          {/* CleanShots-Exif Scrubber Card */}
+          <div className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 hover:border-green-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] transform hover:-translate-y-1">
+            <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="p-8 relative z-10">
+              <div className="flex justify-between items-start">
+                <div className="mb-4 text-green-400 text-4xl">🧹</div>
+                <div className="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-sm font-medium">iOS App</div>
+              </div>
+              <h2 className="text-3xl font-bold mb-3 text-white group-hover:text-green-300 transition-colors">CleanShots-Exif Scrubber</h2>
+              <p className="text-blue-100 mb-6 opacity-80">
+                Easily remove sensitive EXIF metadata from your photos before sharing. CleanShots helps protect your privacy with a single tap, ensuring your photos are safe to send anywhere.
+              </p>
+              <div className="space-y-4 mb-6">
+                <div className="flex items-start space-x-2">
+                  <div className="text-green-300 mt-1">✓</div>
+                  <p className="text-blue-100 opacity-80">Removes EXIF data from images instantly</p>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <div className="text-green-300 mt-1">✓</div>
+                  <p className="text-blue-100 opacity-80">Simple, privacy-first design</p>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <div className="text-green-300 mt-1">✓</div>
+                  <p className="text-blue-100 opacity-80">Share cleaned photos directly from the app</p>
+                </div>
+              </div>
+              <div className="flex flex-wrap items-center gap-4 mt-4">
+                <a href="https://apps.apple.com/us/app/cleanshot-exif-scrub/id6745844477" target="_blank" rel="noopener noreferrer"
+                   className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/50 rounded-lg text-green-300 hover:bg-green-500/30 transition-all group-hover:pl-6">
+                  <span>Download on the App Store</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+              <div className="flex flex-wrap items-center gap-4 mt-4">
+                <Link href="/apps/cleanshots" className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/50 rounded-lg text-green-300 hover:bg-green-500/30 transition-all group-hover:pl-6">
+                  <span>Learn More</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
         
         {/* Additional Info Section */}

@@ -75,6 +75,7 @@
     "maath": "^0.10.7",
     "maath-random.esm": "link:maath/random/dist/maath-random.esm",
     "next": "^14.2.3",
+    "next-intl": "^2.0.0",
     "next-themes": "^0.3.0",
     "ollama-ai-provider": "^0.3.0",
     "openai": "^4.42.0",
@@ -146,5 +147,6 @@
     "analyze": "ANALYZE=true next build",
     "start": "next start",
     "prettier": "npx prettier --list-different \"./src/**/*.{ts,tsx,md}\" \"./app/**/*.{ts,tsx,md}\"\""
-  }
+  },
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
 }
