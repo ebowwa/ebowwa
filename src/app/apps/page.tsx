@@ -1,8 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import {useTranslations} from 'next-intl';
+import {getMessages} from 'next-intl/server';
+
+export async function generateMetadata() {
+  const messages = await getMessages();
+  return {
+    title: messages.appsTitle as string,
+    description: messages.appsSubtitle as string,
+  };
+}
 
 export default function AppsPage() {
+  const t = useTranslations();
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Abstract Background Elements */}
@@ -25,50 +36,47 @@ export default function AppsPage() {
         <div className="text-center mb-16">
           <h1 className="text-6xl md:text-7xl font-extrabold mb-3 relative">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-400 animate-pulse">
-              Our Apps
+              {t("appsTitle")}
             </span>
           </h1>
           <p className="text-xl text-blue-200 max-w-2xl mx-auto">
-            Explore innovative iOS applications designed for mindfulness and digital well-being
+            {t("appsSubtitle")}
           </p>
         </div>
         
-        {/* Back to Home Link */}
         <div className="mb-12">
           <Link href="/" className="inline-flex items-center px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-blue-200 hover:bg-white/20 transition-all">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            <span>Back to Home</span>
           </Link>
         </div>
         
         {/* App Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-5xl mx-auto">
-          {/* SleepLoops Card */}
           <div className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 hover:border-indigo-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(99,102,241,0.5)] transform hover:-translate-y-1">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="p-8 relative z-10">
               <div className="flex justify-between items-start">
                 <div className="mb-4 text-indigo-400 text-4xl">💤</div>
-                <div className="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-sm font-medium">iOS App</div>
+                <div className="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-sm font-medium">{t("iosAppLabel")}</div>
               </div>
-              <h2 className="text-3xl font-bold mb-3 text-white group-hover:text-indigo-300 transition-colors">SleepLoops</h2>
+              <h2 className="text-3xl font-bold mb-3 text-white group-hover:text-indigo-300 transition-colors">{t("sleepLoopsTitle")}</h2>
               <p className="text-blue-100 mb-6 opacity-80">
-                An innovative sleep aid application that uses advanced audio technology to help you fall asleep faster and improve sleep quality.
+                {t("sleepLoopsDescription")}
               </p>
               <div className="space-y-4 mb-6">
                 <div className="flex items-start space-x-2">
                   <div className="text-indigo-300 mt-1">✓</div>
-                  <p className="text-blue-100 opacity-80">Customizable sleep soundscapes that adapt to your preferences</p>
+                  <p className="text-blue-100 opacity-80">{t("sleepLoopsFeature1")}</p>
                 </div>
                 <div className="flex items-start space-x-2">
                   <div className="text-indigo-300 mt-1">✓</div>
-                  <p className="text-blue-100 opacity-80">Sleep tracking with detailed analytics</p>
+                  <p className="text-blue-100 opacity-80">{t("sleepLoopsFeature2")}</p>
                 </div>
                 <div className="flex items-start space-x-2">
                   <div className="text-indigo-300 mt-1">✓</div>
-                  <p className="text-blue-100 opacity-80">Intelligent alarm system that wakes you during optimal sleep cycles</p>
+                  <p className="text-blue-100 opacity-80">{t("sleepLoopsFeature3")}</p>
                 </div>
               </div>
               <div className="flex flex-wrap items-center gap-4">
@@ -84,7 +92,7 @@ export default function AppsPage() {
                 */}
                 <a href="https://apps.apple.com/us/app/sleeploops/id6745059180" target="_blank" rel="noopener noreferrer"
                    className="inline-flex items-center px-4 py-2 bg-indigo-500/20 border border-indigo-500/50 rounded-lg text-indigo-300 hover:bg-indigo-500/30 transition-all group-hover:pl-6">
-                  <span>Download on the App Store</span>
+                  <span>{t("sleepLoopsLinkText")}</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -93,36 +101,36 @@ export default function AppsPage() {
             </div>
           </div>
           
-          {/* CaringMind Card */}
+          {/* {t("caringMindTitle")} Card */}
           <div className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 hover:border-purple-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] transform hover:-translate-y-1">
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="p-8 relative z-10">
               <div className="flex justify-between items-start">
                 <div className="mb-4 text-purple-400 text-4xl">🧠</div>
-                <div className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-sm font-medium">iOS App</div>
+                <div className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-sm font-medium">{t("iosAppLabel")}</div>
               </div>
               <h2 className="text-3xl font-bold mb-3 text-white group-hover:text-purple-300 transition-colors">CaringMind</h2>
               <p className="text-blue-100 mb-6 opacity-80">
-                A mindfulness and meditation app designed to improve mental well-being through guided practices and personalized journeys.
+                {t("caringMindDescription")}
               </p>
               <div className="space-y-4 mb-6">
                 <div className="flex items-start space-x-2">
                   <div className="text-purple-300 mt-1">✓</div>
-                  <p className="text-blue-100 opacity-80">Personalized meditation sessions</p>
+                  <p className="text-blue-100 opacity-80">{t("caringMindFeature1")}</p>
                 </div>
                 <div className="flex items-start space-x-2">
                   <div className="text-purple-300 mt-1">✓</div>
-                  <p className="text-blue-100 opacity-80">Mindfulness exercises for everyday life</p>
+                  <p className="text-blue-100 opacity-80">{t("caringMindFeature2")}</p>
                 </div>
                 <div className="flex items-start space-x-2">
                   <div className="text-purple-300 mt-1">✓</div>
-                  <p className="text-blue-100 opacity-80">Stress reduction techniques and tracking</p>
+                  <p className="text-blue-100 opacity-80">{t("caringMindFeature3")}</p>
                 </div>
               </div>
               <div className="flex flex-wrap items-center gap-4">
                 <a href="https://caringmind.xyz" target="_blank" rel="noopener noreferrer"
                    className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-500/50 rounded-lg text-purple-300 hover:bg-purple-500/30 transition-all group-hover:pl-6">
-                  <span>Visit Website</span>
+                  <span>{t("visitWebsite")}</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -153,30 +161,30 @@ export default function AppsPage() {
             <div className="p-8 relative z-10">
               <div className="flex justify-between items-start">
                 <div className="mb-4 text-green-400 text-4xl">🧹</div>
-                <div className="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-sm font-medium">iOS App</div>
+                <div className="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-sm font-medium">{t("iosAppLabel")}</div>
               </div>
-              <h2 className="text-3xl font-bold mb-3 text-white group-hover:text-green-300 transition-colors">CleanShots-Exif Scrubber</h2>
+              <h2 className="text-3xl font-bold mb-3 text-white group-hover:text-green-300 transition-colors">{t("cleanShotsTitle")}</h2>
               <p className="text-blue-100 mb-6 opacity-80">
-                Easily remove sensitive EXIF metadata from your photos before sharing. CleanShots helps protect your privacy with a single tap, ensuring your photos are safe to send anywhere.
+                {t("cleanShotsDescription")}
               </p>
               <div className="space-y-4 mb-6">
                 <div className="flex items-start space-x-2">
                   <div className="text-green-300 mt-1">✓</div>
-                  <p className="text-blue-100 opacity-80">Removes EXIF data from images instantly</p>
+                  <p className="text-blue-100 opacity-80">{t("cleanShotsFeature1")}</p>
                 </div>
                 <div className="flex items-start space-x-2">
                   <div className="text-green-300 mt-1">✓</div>
-                  <p className="text-blue-100 opacity-80">Simple, privacy-first design</p>
+                  <p className="text-blue-100 opacity-80">{t("cleanShotsFeature2")}</p>
                 </div>
                 <div className="flex items-start space-x-2">
                   <div className="text-green-300 mt-1">✓</div>
-                  <p className="text-blue-100 opacity-80">Share cleaned photos directly from the app</p>
+                  <p className="text-blue-100 opacity-80">{t("cleanShotsFeature3")}</p>
                 </div>
               </div>
               <div className="flex flex-wrap items-center gap-4 mt-4">
                 <a href="https://apps.apple.com/us/app/cleanshot-exif-scrub/id6745844477" target="_blank" rel="noopener noreferrer"
                    className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/50 rounded-lg text-green-300 hover:bg-green-500/30 transition-all group-hover:pl-6">
-                  <span>Download on the App Store</span>
+                  <span>{t("sleepLoopsLinkText")}</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -184,7 +192,7 @@ export default function AppsPage() {
               </div>
               <div className="flex flex-wrap items-center gap-4 mt-4">
                 <Link href="/apps/cleanshots" className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/50 rounded-lg text-green-300 hover:bg-green-500/30 transition-all group-hover:pl-6">
-                  <span>Learn More</span>
+                  <span>{t("learnMore")}</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -197,23 +205,22 @@ export default function AppsPage() {
         {/* Additional Info Section */}
         <div className="mt-20 text-center max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-400">
-            About Our Apps
+            {t("aboutAppsTitle")}
           </h2>
           <p className="text-blue-100 mb-8 opacity-80">
-            At Ebowwa Labs, we develop applications that merge cutting-edge technology with human-centered design. 
-            Our focus is creating digital experiences that positively impact mental health, sleep quality, and overall well-being.
+            {t("aboutAppsParagraph")} 
           </p>
           <div className="inline-flex items-center px-5 py-3 bg-white/10 border border-white/20 rounded-lg text-blue-200 hover:bg-white/20 transition-all">
-            <span>Interested in collaborating? </span>
+            <span>{t("collaborationPrompt")} </span>
             <Link href="/" className="ml-2 text-indigo-300 hover:text-indigo-400 transition-colors">
-              Contact us
+              {t("contactUs")}
             </Link>
           </div>
         </div>
         
         {/* Footer */}
         <div className="mt-16 text-center text-blue-300/60">
-          <p>© {new Date().getFullYear()} Ebowwa Labs • Creating digital well-being</p>
+          <p>{t("appsFooter",{year:new Date().getFullYear()})}</p>
         </div>
       </div>
     </div>
