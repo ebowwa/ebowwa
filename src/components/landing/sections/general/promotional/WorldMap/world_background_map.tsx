@@ -1,20 +1,21 @@
 // src/components/landing/sections/general/world_background_map.tsx
 import Link from "next/link";
+import Image from "next/image";
 import data from "@public/raw_data/world_background_map.json";
 
 export default function HomePage() {
   return (
     <div className="relative w-full h-[400px] lg:h-[500px] overflow-hidden rounded-lg">
-      <img
+      <Image
         alt="World Map"
-        className="absolute inset-0 w-full h-full object-cover opacity-20"
-        height={1080}
         src="/placeholder.svg"
+        fill
+        sizes="100vw"
+        className="absolute inset-0 object-cover opacity-20"
         style={{
           aspectRatio: "1920/1080",
           objectFit: "cover",
         }}
-        width={1920}
       />
       <div className="absolute inset-0 flex justify-between items-center bg-white/70 px-4 py-6 shadow-md rounded-lg overflow-hidden">
         <div className="flex flex-col items-center justify-center">

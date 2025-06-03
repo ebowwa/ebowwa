@@ -1,6 +1,7 @@
 "use client"
 import cn from "classnames";
 import Link from "next/link";
+import Image from "next/image";
 import { z } from 'zod';
 import { route } from "@/lib/constants";
 import { useState } from "react";
@@ -30,10 +31,13 @@ const CoverImage = ({ title, githubPath, slug }: Props) => {
   const imageUrl = `${baseURL}/${githubPath}`;
 
   const image = (
-    <img
+    <Image
       src={imageUrl}
       alt={`Cover Image for ${title}`}
-      className={cn("shadow-sm w-full", {
+      width={1600}
+      height={900}
+      sizes="(max-width: 640px) 100vw, 640px"
+      className={cn("shadow-sm w-full h-auto", {
         "hover:shadow-lg transition-shadow duration-200": slug,
       })}
       onLoad={() => setIsLoading(false)}

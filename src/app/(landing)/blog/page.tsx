@@ -34,6 +34,7 @@ export default function Index() {
           src="/Ebowwa-5-25-2024 (1).png"
           alt="Header Image"
           fill
+          sizes="100vw"
           style={{
             objectPosition: 'center',
           }}
