@@ -2,7 +2,7 @@
 "use client"
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
-import { PictureFrame } from '@/components/three/assets/frame/depreciated/Picture_frame';
+import { PictureFrame } from '@/components/three/assets/frame/deprecated/Picture_frame';
 import { OrbitControls, Environment } from '@react-three/drei';
 import tunnel from 'tunnel-rat';
 import ImagePlane from './ImagePlane';
