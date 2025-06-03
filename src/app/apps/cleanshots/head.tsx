@@ -1,12 +1,12 @@
-import React from 'react';
-import translations from './en.json';
+import {getMessages} from 'next-intl/server';
 
-export default function Head() {
+export default async function Head() {
+  const messages = await getMessages();
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: translations.pageTitle.value,
-    description: translations.description.value,
+    name: messages.cleanShotsTitle as string,
+    description: messages.cleanShotsDescription as string,
     url: 'https://ebowwa.xyz/apps/cleanshots',
     applicationCategory: 'Utility',
     operatingSystem: ['iOS', 'iPadOS'],
@@ -18,9 +18,6 @@ export default function Head() {
   };
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
   );
 }
