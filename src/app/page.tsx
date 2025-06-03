@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import translations from './en.json';
+import {useTranslations} from 'next-intl';
 import { DevelopersImages, AppEnthusiastsImages, ThinkersImages, EmployersImages } from '@/utils/AssetCatalog';
 
 // Card type definition for better type safety
@@ -285,14 +285,7 @@ const FeatureCard = ({
 export default function HomePage() {
   // Flag to control link visibility
   const showLinks = true; // Set to false to hide links temporarily
-  const {
-    homeTitle, homeSubtitle,
-    developersTitle, developersDescription, developersLinkText,
-    thinkersTitle, thinkersDescription,
-    appEnthusiastsTitle, appEnthusiastsDescription, appEnthusiastsLinkText,
-    employersTitle, employersDescription, employersLinkText,
-    closingStatement
-  } = translations;
+  const t = useTranslations();
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
@@ -316,11 +309,11 @@ export default function HomePage() {
         <div className="text-center mb-10 sm:mb-16">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-3 relative">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400 animate-pulse">
-              {homeTitle.value}
+              {t('homeTitle')}
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-blue-200 leading-relaxed px-4 sm:px-0">
-            {homeSubtitle.value}
+            {t('homeSubtitle')}
           </p>
           <p className="text-sm sm:text-base text-blue-200/60 max-w-xl mx-auto mt-2 sm:mt-3 leading-loose font-light italic px-4 sm:px-0">
             Focused on practical, resilient software engineering—creating mobile-first and offline-capable systems that deliver real value.
@@ -332,19 +325,19 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 w-full max-w-7xl mx-auto">
           {/* Using the new FeatureCard component */}
           <FeatureCard
-            title={developersTitle.value}
-            description={developersDescription.value}
+            title={t('developersTitle')}
+            description={t('developersDescription')}
             icon="⚙️"
             color="cyan"
             linkUrl="/catalog"
-            linkText={developersLinkText.value}
+            linkText={t('developersLinkText')}
             showLinks={showLinks}
             images={DevelopersImages}
           />
           
           <FeatureCard
-            title={thinkersTitle.value}
-            description={thinkersDescription.value}
+            title={t('thinkersTitle')}
+            description={t('thinkersDescription')}
             icon="🧠"
             color="emerald"
             disabled={true}
@@ -354,23 +347,23 @@ export default function HomePage() {
           {/*i want to be able to have this showing previews of multiple of my apps, currently it only shows sleep loops but i have other apps and images to include */}
 
           <FeatureCard
-            title={appEnthusiastsTitle.value}
-            description={appEnthusiastsDescription.value}
+            title={t('appEnthusiastsTitle')}
+            description={t('appEnthusiastsDescription')}
             icon="📱"
             color="purple"
             linkUrl="/apps"
-            linkText={appEnthusiastsLinkText.value}
+            linkText={t('appEnthusiastsLinkText')}
             showLinks={showLinks}
             images={AppEnthusiastsImages}
           />
           
           <FeatureCard
-            title={employersTitle.value}
-            description={employersDescription.value}
+            title={t('employersTitle')}
+            description={t('employersDescription')}
             icon="🚀"
             color="red"
             linkUrl="/elijah/whoiselijah"
-            linkText={employersLinkText.value}
+            linkText={t('employersLinkText')}
             showLinks={showLinks}
             images={EmployersImages}
           />
@@ -393,7 +386,7 @@ export default function HomePage() {
         {/* Closing Statement */}
         <div className="mt-8 sm:mt-12 mb-6 sm:mb-8 max-w-3xl mx-auto text-center">
           <p className="text-lg sm:text-xl text-blue-200 leading-relaxed px-3 sm:px-6">
-            {closingStatement.value}
+            {t('closingStatement')}
           </p>
         </div>
       
