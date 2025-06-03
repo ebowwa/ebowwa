@@ -6,6 +6,16 @@ import { Analytics } from '@vercel/analytics/react';
 import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages} from 'next-intl/server';
 
+export const dynamic = 'force-dynamic';
+
+export async function generateMetadata() {
+  const messages = await getMessages();
+  return {
+    title: messages.appName as string,
+    description: messages.appDescription as string
+  };
+}
+
 export async function generateMetadata() {
   const messages = await getMessages();
   return {
