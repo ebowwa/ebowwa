@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react'
 import { Canvas, useLoader } from '@react-three/fiber'
-import { PictureFrame } from '@/components/three/assets/frame/depreciated/Picture_frame'
+import { PictureFrame } from '@/components/three/assets/frame/deprecated/Picture_frame'
 import { OrbitControls, Environment, useTexture } from '@react-three/drei'
 import tunnel from 'tunnel-rat'
 import Image from 'next/image'
