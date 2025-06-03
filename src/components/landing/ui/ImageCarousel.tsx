@@ -22,7 +22,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, colorClass }) => 
         alt={images[current].alt}
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        className="object-cover rounded-lg transition-all duration-300"
+        className="object-contain rounded-lg transition-all duration-300"
         priority
       />
       {images.length > 1 && (

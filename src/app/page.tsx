@@ -61,7 +61,7 @@ const ImageCarousel = ({
         alt={images[0].alt}
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        className="object-cover transition-transform duration-300 group-hover:scale-105"
+        className="object-contain transition-transform duration-300 group-hover:scale-105"
       />
     );
   }
@@ -80,7 +80,7 @@ const ImageCarousel = ({
               alt={image.alt}
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-cover"
+              className="object-contain"
               priority={index === 0}
             />
           </div>
@@ -212,7 +212,7 @@ const FeatureCard = ({
     <div className="group bg-white/10 dark:bg-gray-800/90 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-[1.02] transition duration-300 ease-in-out overflow-hidden h-full flex flex-col border border-gray-700/50">
       {/* Image Section - True Airbnb style with taller images */}
       {images && images.length > 0 ? (
-        <div className="h-56 sm:h-64 md:h-72 lg:h-80 relative overflow-hidden">
+        <div className="w-full aspect-[3/2] relative overflow-hidden">
           <ImageCarousel 
             images={images} 
             colorClass={color === 'cyan' ? 'cyan-400' : 
@@ -222,19 +222,19 @@ const FeatureCard = ({
           />
         </div>
       ) : imageUrl ? (
-        <div className="h-56 sm:h-64 md:h-72 lg:h-80 relative overflow-hidden">
+        <div className="w-full aspect-[3/2] relative overflow-hidden">
           <Image 
             src={imageUrl} 
             alt={imageAlt || title} 
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover"
+            className="object-contain"
             priority
           />
         </div>
       ) : (
         // Skeleton placeholder when no images provided (Airbnb-style)
-        <div className="h-56 sm:h-64 md:h-72 lg:h-80 bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
+        <div className="w-full aspect-[3/2] bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
       )}
       
       {/* Content Section - True Airbnb style */}
