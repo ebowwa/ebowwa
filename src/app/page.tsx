@@ -60,6 +60,7 @@ const ImageCarousel = ({
         src={images[0].url}
         alt={images[0].alt}
         fill
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         className="object-cover transition-transform duration-300 group-hover:scale-105"
       />
     );
@@ -78,6 +79,7 @@ const ImageCarousel = ({
               src={image.url}
               alt={image.alt}
               fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover"
               priority={index === 0}
             />

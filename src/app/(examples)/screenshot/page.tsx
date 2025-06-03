@@ -15,7 +15,7 @@ const MyPage: React.FC = () => {
             <button onClick={takeScreenshot}>Take Screenshot</button>
             {screenshot && (
                 <div>
-                    <img src={screenshot} alt="Screenshot" style={{ maxWidth: '100%' }} />
+                    <img src={screenshot} alt="Screenshot" style={{ maxWidth: '100%', height: 'auto' }} />
                     {isDownloadable && (
                         <button onClick={downloadScreenshot}>Download Screenshot</button>
                     )}

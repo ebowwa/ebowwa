@@ -60,7 +60,11 @@ export default function Page() {
           {imageFile.status === 'pending' && <p>Converting {imageFile.format} to WebP...</p>}
           {imageFile.status === 'verifying' && <p>Verifying WebP conversion...</p>}
           {imageFile.status === 'converted' && (
-            <img src={imageFile.webpUrl!} alt={`Converted Image ${index}`} />
+            <img
+              src={imageFile.webpUrl!}
+              alt={`Converted Image ${index}`}
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
           )}
           {imageFile.status === 'error' && (
             <p>Error converting {imageFile.format} to WebP: {imageFile.errorMessage}</p>
