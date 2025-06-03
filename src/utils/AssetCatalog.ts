@@ -1,6 +1,6 @@
 // these are in the home index page
 export const DevelopersImages = [
-  { url: '/img/friend-hackathon-group-photo-001.jpeg', alt: 'Friend hackathon group photo`' }
+  { url: '/img/friend-hackathon-group-photo-001.jpeg', alt: 'Friend hackathon group photo' }
 ];
 
 export const AppEnthusiastsImages = [
