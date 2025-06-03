@@ -2,20 +2,26 @@
 import { Layout } from '@/components/landing/layout/dom/Layout';
 import Head from '../components/landing/layout/head';
 import '@/styles/global.css';
-import { Analytics } from "@vercel/analytics/react"
-import translations from './en.json';
+import { Analytics } from '@vercel/analytics/react';
+import {NextIntlClientProvider} from 'next-intl';
+import {getLocale, getMessages} from 'next-intl/server';
 
-export const metadata = {
-  title: translations.appName.value,
-  description: translations.appDescription.value,
-};
+export async function generateMetadata() {
+  const messages = await getMessages();
+  return {
+    title: messages.appName as string,
+    description: messages.appDescription as string
+  };
+}
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   // Register the Serwist service worker
   registerWebWorker('/public/serwist.worker.ts');
+  const locale = await getLocale();
+  const messages = await getMessages();
 
   return (
-    <html lang="en" className="antialiased">
+    <html lang={locale} className="antialiased">
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
@@ -23,8 +29,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <Head />
       <body>
         {/* To avoid FOUT with styled-components wrap Layout with StyledComponentsRegistry https://beta.nextjs.org/docs/styling/css-in-js#styled-components */}
-        <Layout>{children}</Layout>
-        <Analytics />
+        <NextIntlClientProvider messages={messages} locale={locale}>
+          <Layout>{children}</Layout>
+          <Analytics />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
