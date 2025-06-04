@@ -16,6 +16,7 @@ export async function generateMetadata() {
   };
 }
 
+
 export async function generateMetadata() {
   const messages = await getMessages();
   return {
