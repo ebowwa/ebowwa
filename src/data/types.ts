@@ -11,3 +11,11 @@ export interface Link {
   tags?: string[];
   related?: string[];
 }
+
+export interface ChatShare {
+  slug: string;
+  title: string;
+  date: string;
+  url?: string;
+  content: string;
+}
