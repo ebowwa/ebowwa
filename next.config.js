@@ -23,7 +23,6 @@ const nextConfig = {
   // compiler: {
   //   styledComponents: true,
   // },  
-  images: {},
   webpack: (config, { isServer }) => {
     if (!isServer) {
       // Don't resolve 'tls' module on the client-side
