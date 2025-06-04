@@ -1,12 +1,9 @@
-import {getMessages} from 'next-intl/server';
-
-export default async function Head() {
-  const messages = await getMessages();
+export default function Head() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: messages.cleanShotsTitle as string,
-    description: messages.cleanShotsDescription as string,
+    name: 'CleanShots-Exif Scrubber',
+    description: 'Easily remove sensitive EXIF metadata from your photos before sharing. CleanShots helps protect your privacy with a single tap, ensuring your photos are safe to send anywhere.',
     url: 'https://ebowwa.xyz/apps/cleanshots',
     applicationCategory: 'Utility',
     operatingSystem: ['iOS', 'iPadOS'],

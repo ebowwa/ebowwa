@@ -1,19 +1,42 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import {useTranslations} from 'next-intl';
-import {getMessages} from 'next-intl/server';
 
-export async function generateMetadata() {
-  const messages = await getMessages();
-  return {
-    title: messages.appsTitle as string,
-    description: messages.appsSubtitle as string,
-  };
-}
+export const metadata = {
+  title: 'Our Apps',
+  description: 'Explore innovative iOS applications designed for mindfulness and digital well-being',
+};
+
+const t = {
+  appsTitle: 'Our Apps',
+  appsSubtitle: 'Explore innovative iOS applications designed for mindfulness and digital well-being',
+  backToHome: 'Back to Home',
+  iosAppLabel: 'iOS App',
+  sleepLoopsTitle: 'Sleep Loops',
+  sleepLoopsDescription: 'Transform your sleep environment with curated ambient loops. Focus, relax, or drift off.',
+  sleepLoopsFeature1: 'Customizable sleep soundscapes that adapt to your preferences',
+  sleepLoopsFeature2: 'Sleep tracking with detailed analytics',
+  sleepLoopsFeature3: 'Intelligent alarm system that wakes you during optimal sleep cycles',
+  sleepLoopsLinkText: 'Download on the App Store',
+  caringMindDescription: 'A mindfulness and meditation app designed to improve mental well-being through guided practices and personalized journeys.',
+  caringMindFeature1: 'Personalized meditation sessions',
+  caringMindFeature2: 'Mindfulness exercises for everyday life',
+  caringMindFeature3: 'Stress reduction techniques and tracking',
+  visitWebsite: 'Visit Website',
+  cleanShotsTitle: 'CleanShots-Exif Scrubber',
+  cleanShotsDescription: 'Easily remove sensitive EXIF metadata from your photos before sharing. CleanShots helps protect your privacy with a single tap, ensuring your photos are safe to send anywhere.',
+  cleanShotsFeature1: 'Removes EXIF data from images instantly',
+  cleanShotsFeature2: 'Simple, privacy-first design',
+  cleanShotsFeature3: 'Share cleaned photos directly from the app',
+  aboutAppsTitle: 'About Our Apps',
+  aboutAppsParagraph: 'At Ebowwa Labs, we develop applications that merge cutting-edge technology with human-centered design. Our focus is creating digital experiences that positively impact mental health, sleep quality, and overall well-being.',
+  collaborationPrompt: 'Interested in collaborating?',
+  contactUs: 'Contact us',
+  learnMore: 'Learn More',
+  appsFooter: '© YEAR Ebowwa Labs • Creating digital well-being'
+};
 
 export default function AppsPage() {
-  const t = useTranslations();
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Abstract Background Elements */}
@@ -25,7 +48,7 @@ export default function AppsPage() {
       
       {/* Animated Grid Lines */}
       <div className="absolute inset-0 opacity-10">
-        <div className="h-full w-full" style={{ 
+        <div className="h-full w-full" style={{
           backgroundImage: 'linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)',
           backgroundSize: '80px 80px'
         }}></div>
@@ -36,11 +59,11 @@ export default function AppsPage() {
         <div className="text-center mb-16">
           <h1 className="text-6xl md:text-7xl font-extrabold mb-3 relative">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-indigo-400 animate-pulse">
-              {t("appsTitle")}
+              {t.appsTitle}
             </span>
           </h1>
           <p className="text-xl text-blue-200 max-w-2xl mx-auto">
-            {t("appsSubtitle")}
+            {t.appsSubtitle}
           </p>
         </div>
         
@@ -49,38 +72,38 @@ export default function AppsPage() {
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            <span>{t('backToHome')}</span>
-            <span>{t('backToHome')}</span>
-          </Link>
-        </div>
-        
-        {/* App Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-5xl mx-auto">
-          <div className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 hover:border-indigo-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(99,102,241,0.5)] transform hover:-translate-y-1">
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <span>{t.backToHome}</span>
+                <div className="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-sm font-medium">{t.iosAppLabel}</div>
+              <h2 className="text-3xl font-bold mb-3 text-white group-hover:text-indigo-300 transition-colors">{t.sleepLoopsTitle}</h2>
+                {t.sleepLoopsDescription}
+                  <p className="text-blue-100 opacity-80">{t.sleepLoopsFeature1}</p>
+                  <p className="text-blue-100 opacity-80">{t.sleepLoopsFeature2}</p>
+                  <p className="text-blue-100 opacity-80">{t.sleepLoopsFeature3}</p>
+                  <span>{t.sleepLoopsLinkText}</span>
+          {/* {t.caringMindTitle} Card */}
             <div className="p-8 relative z-10">
               <div className="flex justify-between items-start">
-                <div className="mb-4 text-indigo-400 text-4xl">💤</div>
-                <div className="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-sm font-medium">{t("iosAppLabel")}</div>
-              </div>
-              <h2 className="text-3xl font-bold mb-3 text-white group-hover:text-indigo-300 transition-colors">{t("sleepLoopsTitle")}</h2>
-              <p className="text-blue-100 mb-6 opacity-80">
-                {t("sleepLoopsDescription")}
-              </p>
-              <div className="space-y-4 mb-6">
-                <div className="flex items-start space-x-2">
-                  <div className="text-indigo-300 mt-1">✓</div>
-                  <p className="text-blue-100 opacity-80">{t("sleepLoopsFeature1")}</p>
+                <div className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-sm font-medium">{t.iosAppLabel}</div>
+                {t.caringMindDescription}
+                  <p className="text-blue-100 opacity-80">{t.caringMindFeature1}</p>
+                  <p className="text-blue-100 opacity-80">{t.caringMindFeature2}</p>
+                  <p className="text-blue-100 opacity-80">{t.caringMindFeature3}</p>
+                  <span>{t.visitWebsite}</span>
+                <div className="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-sm font-medium">{t.iosAppLabel}</div>
+              <h2 className="text-3xl font-bold mb-3 text-white group-hover:text-green-300 transition-colors">{t.cleanShotsTitle}</h2>
+                {t.cleanShotsDescription}
+                  <p className="text-blue-100 opacity-80">{t.cleanShotsFeature1}</p>
+                  <p className="text-blue-100 opacity-80">{t.cleanShotsFeature2}</p>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <div className="text-indigo-300 mt-1">✓</div>
-                  <p className="text-blue-100 opacity-80">{t("sleepLoopsFeature2")}</p>
-                </div>
-                <div className="flex items-start space-x-2">
-                  <div className="text-indigo-300 mt-1">✓</div>
-                  <p className="text-blue-100 opacity-80">{t("sleepLoopsFeature3")}</p>
-                </div>
-              </div>
+                  <p className="text-blue-100 opacity-80">{t.cleanShotsFeature3}</p>
+                  <span>{t.sleepLoopsLinkText}</span>
+                  <span>{t.learnMore}</span>
+            {t.aboutAppsTitle}
+            {t.aboutAppsParagraph} 
+            <span>{t.collaborationPrompt} </span>
+              {t.contactUs}
+          <p>{t.appsFooter.replace('YEAR', String(new Date().getFullYear()))}</p>
               <div className="flex flex-wrap items-center gap-4">
                 {/**
                   <span className="text-xs uppercase tracking-wider text-blue-200/60">Coming Soon</span>

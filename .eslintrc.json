@@ -4,5 +4,4 @@
     "react/no-unescaped-entities": "off",
     "react/display-name": "off"
   }
-  "extends": "next/core-web-vitals"
 }

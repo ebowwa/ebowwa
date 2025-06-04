@@ -2,8 +2,24 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import {useTranslations} from 'next-intl';
 import { DevelopersImages, AppEnthusiastsImages, ThinkersImages, EmployersImages } from '@/utils/AssetCatalog';
+
+const t = {
+  homeTitle: 'Ebowwa Labs',
+  homeSubtitle: 'Structured interfaces between humans, machines, and meaning. Built with care. Meant to last.',
+  developersTitle: 'Developers',
+  developersDescription: 'Explore a collection of developer-focused tools and utilities.',
+  developersLinkText: 'Explore Catalog',
+  thinkersTitle: 'Thinkers & Learners',
+  thinkersDescription: 'Dive into the concept of the informational substrate and expand your understanding of our digital reality.',
+  appEnthusiastsTitle: 'App Enthusiasts',
+  appEnthusiastsDescription: 'Discover and try our unique mobile apps designed to improve your life, creativity, and productivity.',
+  appEnthusiastsLinkText: 'See All Apps',
+  employersTitle: 'Employers & Collaborators',
+  employersDescription: "Learn more about my skills and past projects. Let's create something amazing together.",
+  employersLinkText: 'View Resume',
+  closingStatement: 'This lab showcases proven execution and a forward-thinking vision, creating opportunities for collaboration, investment, and impactful projects.'
+};
 
 // Card type definition for better type safety
 type CardProps = {
@@ -285,7 +301,6 @@ const FeatureCard = ({
 export default function HomePage() {
   // Flag to control link visibility
   const showLinks = true; // Set to false to hide links temporarily
-  const t = useTranslations();
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
@@ -309,11 +324,11 @@ export default function HomePage() {
         <div className="text-center mb-10 sm:mb-16">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-3 relative">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400 animate-pulse">
-              {t('homeTitle')}
+              {t.homeTitle}
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-blue-200 leading-relaxed px-4 sm:px-0">
-            {t('homeSubtitle')}
+            {t.homeSubtitle}
           </p>
           <p className="text-sm sm:text-base text-blue-200/60 max-w-xl mx-auto mt-2 sm:mt-3 leading-loose font-light italic px-4 sm:px-0">
             Focused on practical, resilient software engineering—creating mobile-first and offline-capable systems that deliver real value.
@@ -325,19 +340,19 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 w-full max-w-7xl mx-auto">
           {/* Using the new FeatureCard component */}
           <FeatureCard
-            title={t('developersTitle')}
-            description={t('developersDescription')}
+            title={t.developersTitle}
+            description={t.developersDescription}
             icon="⚙️"
             color="cyan"
             linkUrl="/catalog"
-            linkText={t('developersLinkText')}
+            linkText={t.developersLinkText}
             showLinks={showLinks}
             images={DevelopersImages}
           />
           
           <FeatureCard
-            title={t('thinkersTitle')}
-            description={t('thinkersDescription')}
+            title={t.thinkersTitle}
+            description={t.thinkersDescription}
             icon="🧠"
             color="emerald"
             disabled={true}
@@ -347,23 +362,23 @@ export default function HomePage() {
           {/*i want to be able to have this showing previews of multiple of my apps, currently it only shows sleep loops but i have other apps and images to include */}
 
           <FeatureCard
-            title={t('appEnthusiastsTitle')}
-            description={t('appEnthusiastsDescription')}
+            title={t.appEnthusiastsTitle}
+            description={t.appEnthusiastsDescription}
             icon="📱"
             color="purple"
             linkUrl="/apps"
-            linkText={t('appEnthusiastsLinkText')}
+            linkText={t.appEnthusiastsLinkText}
             showLinks={showLinks}
             images={AppEnthusiastsImages}
           />
           
           <FeatureCard
-            title={t('employersTitle')}
-            description={t('employersDescription')}
+            title={t.employersTitle}
+            description={t.employersDescription}
             icon="🚀"
             color="red"
             linkUrl="/elijah/whoiselijah"
-            linkText={t('employersLinkText')}
+            linkText={t.employersLinkText}
             showLinks={showLinks}
             images={EmployersImages}
           />
@@ -386,7 +401,7 @@ export default function HomePage() {
         {/* Closing Statement */}
         <div className="mt-8 sm:mt-12 mb-6 sm:mb-8 max-w-3xl mx-auto text-center">
           <p className="text-lg sm:text-xl text-blue-200 leading-relaxed px-3 sm:px-6">
-            {t('closingStatement')}
+            {t.closingStatement}
           </p>
         </div>
       
