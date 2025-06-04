@@ -1,5 +1,4 @@
 import { NextRequest } from 'next/server'
-import * as cheerio from 'cheerio'
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url)
@@ -12,6 +11,7 @@ export async function GET(req: NextRequest) {
   }
   try {
     const html = await fetch(targetUrl).then(r => r.text())
+    const cheerio = await import('cheerio')
     const $ = cheerio.load(html)
 
     const getMeta = (name: string) =>
