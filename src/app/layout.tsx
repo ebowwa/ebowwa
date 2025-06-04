@@ -16,15 +16,6 @@ export async function generateMetadata() {
   };
 }
 
-
-export async function generateMetadata() {
-  const messages = await getMessages();
-  return {
-    title: messages.appName as string,
-    description: messages.appDescription as string
-  };
-}
-
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   // Register the Serwist service worker
   registerWebWorker('/public/serwist.worker.ts');
