@@ -10,8 +10,9 @@ import { ShareIcon, DownloadIcon, CopyIcon } from "@/components/landing/ui/icons
 import QRCodeGenerator from './QRCodeGenerator';
 import marketplaceContent from '@public/html/marketplaceContent.json';
 import Image from 'next/image';
+import { route } from '@/lib/constants';
 
-const QR_CODE_LINK = 'https://simulationguide.vercel.app/';
+const QR_CODE_LINK = route.baseUrl;
 
 const ShareButton: FC = () => {
     return (
