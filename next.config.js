@@ -1,3 +1,4 @@
+require('./progress-event-polyfill');
 // next.config.mjs
 /** @type {import('next').NextConfig} */
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
