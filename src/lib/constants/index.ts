@@ -23,7 +23,7 @@ export const twitterCreator = '@innitEBOWWA';
 export const ogType = 'website';
 
 export const route = {
-  baseUrl: process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000',
+  baseUrl: process.env.NEXT_PUBLIC_BASE_URL || 'https://ebowwa.xyz',
   postRoute: 'blog' // Update this with your desired route for blog posts i.e. app/blog therefore `blog`
 };
 

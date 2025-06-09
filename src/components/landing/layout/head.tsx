@@ -1,6 +1,7 @@
 // app/head.tsx
+import { route } from '@/lib/constants'
 const title = 'Simulation Guide'
-const url = 'https://simulationguide.vercel.app/'
+const url = route.baseUrl
 const description = 'by ebowwa'
 const author = 'Elijah Arbee'
 const twitter = '@innitEbowwa'

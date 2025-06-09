@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
-const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://ebowwa.xyz';
 
 const pages = glob.sync('src/app/**/page.tsx', { ignore: ['**/(api)/**'] });
 
