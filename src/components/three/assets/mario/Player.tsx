@@ -4,8 +4,9 @@ import React, { useRef, useEffect } from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { Group, SkinnedMesh} from 'three';
-import { GLTFResult } from '../../studio/src/core/ModelLoader';
+import { Group } from 'three';
+import CharacterRenderer from './Character';
+import type { GLTFResult } from './PlayerTyped';
 
 
 // Define the props interface for the Player component
@@ -20,10 +21,10 @@ export function Player({ animation, rotation }: PlayerProps) {
     // Create a ref to hold the group of objects that make up the 3D character model
     const group = useRef<Group>(null);
 
-    // Use the useGLTF hook to load the 3D model from the '/Player.glb' file
-    // The returned object contains the nodes, materials, and animations of the model
-    // @ts-ignore
-    const { nodes, materials, animations } = useGLTF('https://cdn.jsdelivr.net/gh/ebowwar/threejs-assets@main/Player.glb') as GLTFResult;
+    // Load the 3D model with typed nodes and materials
+    const { nodes, materials, animations } = useGLTF<GLTFResult>(
+        'https://cdn.jsdelivr.net/gh/ebowwar/threejs-assets@main/Player.glb'
+    );
 
     // Use the useAnimations hook to extract the animation actions from the loaded model
     // The actions object contains the individual animation actions that can be played
@@ -34,7 +35,6 @@ export function Player({ animation, rotation }: PlayerProps) {
 
     // Use the useEffect hook to handle the animation of the character
     useEffect(() => {
-        console.log(timeScale.current);
 
         // If the animation is not "run" or "walk", set the time scale to 1
         // Otherwise, set the time scale to 5
@@ -75,105 +75,8 @@ export function Player({ animation, rotation }: PlayerProps) {
         }
     }, [rotation]);
 
-    // Render the 3D character model using the loaded nodes, materials, and animations
-    return (
-        <group ref={group} dispose={null}>
-            <group name="Player" position={[0, -0.7, 0]}>
-                <group name="Player_1">
-                    <group name="Mario">
-                        <group name="AllRoot">
-                            <group name="JointRoot" position={[0, 0.611, -0.041]}>
-                                {nodes.Hip && <primitive object={nodes.Hip} />}
-                                {nodes.Spine1 && <primitive object={nodes.Spine1} />}
-                            </group>
-                        </group>
-                        {nodes.Face00__MarioFaceMat00 && (
-                            <skinnedMesh
-                                name="Face00__MarioFaceMat00"
-                                geometry={(nodes.Face00__MarioFaceMat00 as SkinnedMesh).geometry}
-                                material={materials.MarioFaceMat00}
-                                skeleton={(nodes.Face00__MarioFaceMat00 as SkinnedMesh).skeleton}
-                            >
-                                {nodes.Face00__MarioHigeMat00 && (
-                                    <skinnedMesh
-                                        name="Face00__MarioHigeMat00"
-                                        geometry={(nodes.Face00__MarioHigeMat00 as SkinnedMesh).geometry}
-                                        material={materials.MarioHigeMat00}
-                                        skeleton={(nodes.Face00__MarioHigeMat00 as SkinnedMesh).skeleton}
-                                    />
-                                )}
-                            </skinnedMesh>
-                        )}
-                        {nodes.Mario__MarioBodyMat00 && (
-                            <skinnedMesh
-                                name="Mario__MarioBodyMat00"
-                                geometry={(nodes.Mario__MarioBodyMat00 as SkinnedMesh).geometry}
-                                material={materials.MarioBodyMat00}
-                                skeleton={(nodes.Mario__MarioBodyMat00 as SkinnedMesh).skeleton}
-                            >
-                                {nodes.Mario__MarioBodyMat01 && (
-                                    <skinnedMesh
-                                        name="Mario__MarioBodyMat01"
-                                        geometry={(nodes.Mario__MarioBodyMat01 as SkinnedMesh).geometry}
-                                        material={materials.MarioBodyMat01}
-                                        skeleton={(nodes.Mario__MarioBodyMat01 as SkinnedMesh).skeleton}
-                                    />
-                                )}
-                                {nodes.Mario__MarioFaceMat00 && (
-                                    <skinnedMesh
-                                        name="Mario__MarioFaceMat00"
-                                        geometry={(nodes.Mario__MarioFaceMat00 as SkinnedMesh).geometry}
-                                        material={materials.MarioMetalMat00}
-                                        skeleton={(nodes.Mario__MarioFaceMat00 as SkinnedMesh).skeleton}
-                                    />
-                                )}
-                                {nodes.Mario__MarioMetalMat00 && (
-                                    <skinnedMesh
-                                        name="Mario__MarioMetalMat00"
-                                        geometry={(nodes.Mario__MarioMetalMat00 as SkinnedMesh).geometry}
-                                        material={materials.MarioMetalMat00}
-                                        skeleton={(nodes.Mario__MarioMetalMat00 as SkinnedMesh).skeleton}
-                                    />
-                                )}
-                                {nodes.Mario__MarioShoesMat00 && (
-                                    <skinnedMesh
-                                        name="Mario__MarioShoesMat00"
-                                        geometry={(nodes.Mario__MarioShoesMat00 as SkinnedMesh).geometry}
-                                        material={materials.MarioShoesMat00}
-                                        skeleton={(nodes.Mario__MarioShoesMat00 as SkinnedMesh).skeleton}
-                                    />
-                                )}
-                            </skinnedMesh>
-                        )}
-                        {nodes.Eyeball__MarioEyeMat00 && (
-                            <skinnedMesh
-                                name="Eyeball__MarioEyeMat00"
-                                geometry={(nodes.Eyeball__MarioEyeMat00 as SkinnedMesh).geometry}
-                                material={materials.MarioEyeMat00}
-                                skeleton={(nodes.Eyeball__MarioEyeMat00 as SkinnedMesh).skeleton}
-                            />
-                        )}
-                        {nodes.HandL00__MarioHandMat00 && (
-                            <skinnedMesh
-                                name="HandL00__MarioHandMat00"
-                                geometry={(nodes.HandL00__MarioHandMat00 as SkinnedMesh).geometry}
-                                material={materials.MarioHandMat00}
-                                skeleton={(nodes.HandL00__MarioHandMat00 as SkinnedMesh).skeleton}
-                            />
-                        )}
-                        {nodes.HandR00__MarioHandMat00 && (
-                            <skinnedMesh
-                                name="HandR00__MarioHandMat00"
-                                geometry={(nodes.HandR00__MarioHandMat00 as SkinnedMesh).geometry}
-                                material={materials.MarioHandMat00}
-                                skeleton={(nodes.HandR00__MarioHandMat00 as SkinnedMesh).skeleton}
-                            />
-                        )}
-                    </group>
-                </group>
-            </group>
-        </group>
-    );
+    // Render the character using a generic renderer
+    return <CharacterRenderer nodes={nodes} materials={materials} groupRef={group} />;
 }
 
 useGLTF.preload('https://cdn.jsdelivr.net/gh/ebowwar/threejs-assets@main/Player.glb');
