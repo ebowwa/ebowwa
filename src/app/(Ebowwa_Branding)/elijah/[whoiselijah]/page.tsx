@@ -3,12 +3,12 @@ import Resume from '@/components/elijah/resume';
 
 interface PageProps {
   params: {
-    landingId: string;
+    whoiselijah: string;
   };
 }
 
 export default function LandingPage({ params }: PageProps) {
-  const { landingId } = params;
+  const { whoiselijah } = params;
 
   return (
     <div>
