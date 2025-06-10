@@ -9,10 +9,11 @@ interface CharacterRendererProps {
     materials: {
         [key: string]: THREE.Material;
     };
+    groupRef?: React.Ref<Group>;
 }
 
-const CharacterRenderer: React.FC<CharacterRendererProps> = ({ nodes, materials }) => {
-    const group = useRef<THREE.Group>(null);
+const CharacterRenderer: React.FC<CharacterRendererProps> = ({ nodes, materials, groupRef }) => {
+    const internalRef = useRef<THREE.Group>(null);
 
     const renderedElements = useMemo(() => {
         const elements: JSX.Element[] = [];
@@ -50,8 +51,10 @@ const CharacterRenderer: React.FC<CharacterRendererProps> = ({ nodes, materials 
         return elements;
     }, [nodes, materials]);
 
+    const ref = (groupRef ?? internalRef) as React.MutableRefObject<Group | null>;
+
     return (
-        <group ref={group} dispose={null}>
+        <group ref={ref} dispose={null}>
             <group name="Player" position={[0, -0.7, 0]}>
                 <group name="Player_1">
                     <group name="Mario">
