@@ -3,7 +3,12 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import translations from './en.json';
-import { DevelopersImages, AppEnthusiastsImages, ThinkersImages, EmployersImages } from '@/utils/AssetCatalog';
+import {
+  DevelopersImages,
+  AppEnthusiastsImages,
+  /* ThinkersImages, */
+  EmployersImages
+} from '@/utils/AssetCatalog';
 
 // Card type definition for better type safety
 type CardProps = {
@@ -288,7 +293,7 @@ export default function HomePage() {
   const {
     homeTitle, homeSubtitle,
     developersTitle, developersDescription, developersLinkText,
-    thinkersTitle, thinkersDescription,
+    /* thinkersTitle, thinkersDescription, */
     appEnthusiastsTitle, appEnthusiastsDescription, appEnthusiastsLinkText,
     employersTitle, employersDescription, employersLinkText,
     closingStatement
@@ -342,14 +347,16 @@ export default function HomePage() {
             images={DevelopersImages}
           />
           
-          <FeatureCard
-            title={thinkersTitle.value}
-            description={thinkersDescription.value}
-            icon="🧠"
-            color="emerald"
-            disabled={true}
-            images={ThinkersImages}
-          />
+          {/**
+           * <FeatureCard
+           *   title={thinkersTitle.value}
+           *   description={thinkersDescription.value}
+           *   icon="🧠"
+           *   color="emerald"
+           *   disabled={true}
+           *   images={ThinkersImages}
+           * />
+           */}
           
           {/*i want to be able to have this showing previews of multiple of my apps, currently it only shows sleep loops but i have other apps and images to include */}
 
