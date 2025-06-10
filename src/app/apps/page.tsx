@@ -192,6 +192,38 @@ export default function AppsPage() {
               </div>
             </div>
           </div>
+
+          {/* OpenWhisperFlow Card */}
+          <div className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 hover:border-yellow-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(234,179,8,0.5)] transform hover:-translate-y-1">
+            <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="p-8 relative z-10">
+              <div className="flex justify-between items-start">
+                <div className="mb-4 text-yellow-400 text-4xl">🪄</div>
+                <div className="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-sm font-medium">macOS App</div>
+              </div>
+              <h2 className="text-3xl font-bold mb-3 text-white group-hover:text-yellow-300 transition-colors">OpenWhisperFlow</h2>
+              <p className="text-blue-100 mb-6 opacity-80">
+                Lightweight transcription workflow powered by Whisper and Electron for offline audio projects.
+              </p>
+              <div className="space-y-4 mb-6">
+                <div className="flex items-start space-x-2">
+                  <div className="text-yellow-300 mt-1">✓</div>
+                  <p className="text-blue-100 opacity-80">Runs locally using open-source Whisper models</p>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <div className="text-yellow-300 mt-1">✓</div>
+                  <p className="text-blue-100 opacity-80">Flow-based editor for easy transcript management</p>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <div className="text-yellow-300 mt-1">✓</div>
+                  <p className="text-blue-100 opacity-80">Export transcripts in multiple formats</p>
+                </div>
+              </div>
+              <div className="flex flex-wrap items-center gap-4">
+                <span className="text-xs uppercase tracking-wider text-yellow-200/60">Coming Soon</span>
+              </div>
+            </div>
+          </div>
         </div>
         
         {/* Additional Info Section */}
