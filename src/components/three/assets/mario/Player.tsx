@@ -5,7 +5,7 @@ import { useGLTF, useAnimations } from '@react-three/drei';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { Group, SkinnedMesh} from 'three';
-import { GLTFResult } from '../../studio/src/core/ModelLoader';
+import { GLTFResult } from './PlayerTyped';
 
 
 // Define the props interface for the Player component
