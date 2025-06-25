@@ -1,8 +1,8 @@
 {
   "appName": { "id": 1, "value": "Ebowwa" },
-  "appDescription": { "id": 2, "value": "Structured interfaces between humans, machines, and meaning. Built with care. Meant to last." },
+  "appDescription": { "id": 2, "value": "Looking to remove frictions in the real world." },
   "homeTitle": { "id": 3, "value": "Ebowwa Labs" },
-  "homeSubtitle": { "id": 4, "value": "Structured interfaces between humans, machines, and meaning. Built with care. Meant to last." },
+  "homeSubtitle": { "id": 4, "value": "Looking to remove frictions in the real world." },
   "sleepLoopsTitle": { "id": 5, "value": "Sleep Loops" },
   "sleepLoopsDescription": { "id": 6, "value": "Transform your sleep environment with curated ambient loops. Focus, relax, or drift off." },
   "sleepLoopsLinkText": { "id": 7, "value": "Download on the App Store" },
