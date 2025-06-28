@@ -11,6 +11,7 @@ const navbarLinks = [
   { label: 'Catalog', href: '/catalog' },
   { label: 'Simulation', href: '/simulation' },
   { label: 'Contact', href: '/contact' },
+  { label: 'Discord', href: 'https://discord.gg/pAsQkT8u' },
 ];
 
 const footerLinks = [
@@ -21,6 +22,7 @@ const footerLinks = [
 
 const socialMedia = [
   { platform: 'Twitter', url: 'https://twitter.com/Simulation_API' },
+  { platform: 'Discord', url: 'https://discord.gg/pAsQkT8u' },
 ];
 
 const copyright = ' 2024 SimulationAPI. All rights reserved.';
