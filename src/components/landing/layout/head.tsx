@@ -1,5 +1,5 @@
 // app/head.tsx
-const title = 'Simulation Guide'
+const title = 'Ebowwa Labs'
 const url = 'https://ebowwa.xyz/'
 const description = 'Building fast and with precision. Ebowwa Labs runs multiple projects exploring offline, AI-first solutions. We cut through fluff to deliver actionable systems that remove friction and accelerate growth.'
 const author = 'Elijah Arbee'

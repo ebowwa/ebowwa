@@ -11,7 +11,7 @@ import QRCodeGenerator from './QRCodeGenerator';
 import marketplaceContent from '@public/html/marketplaceContent.json';
 import Image from 'next/image';
 
-const QR_CODE_LINK = 'https://simulationguide.vercel.app/';
+const QR_CODE_LINK = 'https://ebowwa.xyz/';
 
 const ShareButton: FC = () => {
     return (
