@@ -1,7 +1,7 @@
 // app/head.tsx
 const title = 'Simulation Guide'
-const url = 'https://simulationguide.vercel.app/'
-const description = 'by ebowwa'
+const url = 'https://ebowwa.xyz/'
+const description = 'Building fast and with precision. Ebowwa Labs runs multiple projects exploring offline, AI-first solutions. We cut through fluff to deliver actionable systems that remove friction and accelerate growth.'
 const author = 'Elijah Arbee'
 const twitter = '@innitEbowwa'
 
@@ -31,7 +31,7 @@ export default function Head() {
       <meta property='og:title' content={title} />
       <meta property='og:type' content='site' />
       <meta property='og:url' content={url} />
-      <meta property='og:image' content={'/platform_optimized_images_named/image_1_optimized.jpg'} />
+      <meta property='og:image' content={'/social/default-share.png'} />
       <meta property='og:site_name' content={title} />
       <meta property='og:description' content={description} />
 
@@ -54,8 +54,11 @@ export default function Head() {
       Twitter Summary card
         documentation: https://dev.twitter.com/cards/getting-started
         Be sure validate your Twitter card markup on the documentation site. */}
-      <meta name='twitter:card' content='summary' />
+      <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:site' content={twitter} />
+      <meta name='twitter:title' content={title} />
+      <meta name='twitter:description' content={description} />
+      <meta name='twitter:image' content='/social/default-share.png' />
     </>
   )
 }

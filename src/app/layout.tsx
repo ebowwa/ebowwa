@@ -8,6 +8,17 @@ import translations from './en.json';
 export const metadata = {
   title: translations.appName.value,
   description: translations.appDescription.value,
+  openGraph: {
+    title: translations.appName.value,
+    description: translations.appDescription.value,
+    images: ['/social/default-share.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: translations.appName.value,
+    description: translations.appDescription.value,
+    images: ['/social/default-share.png'],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
