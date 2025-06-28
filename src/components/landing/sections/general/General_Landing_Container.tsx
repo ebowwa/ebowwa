@@ -36,12 +36,20 @@ export default function LandingContainer() {
                     <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">{textData.welcomeTitle}</h1>
                     <p className="max-w-xl text-lg">{textData.welcomeDescription}</p>
                     <div className="flex items-center space-x-8">
-                        <div>
+                        <div className="flex space-x-4">
                             <Link
                                 className="inline-flex h-10 items-center justify-center rounded-md bg-white px-6 py-2 text-sm font-medium text-gray-900 transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900"
                                 href="#"
                             >
                                 {textData.learnMoreLabel}
+                            </Link>
+                            <Link
+                                className="inline-flex h-10 items-center justify-center rounded-md bg-indigo-600 px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900"
+                                href="https://discord.gg/pAsQkT8u"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Join our Discord
                             </Link>
                         </div>
                         <div className="w-64 h-64" suppressHydrationWarning>
