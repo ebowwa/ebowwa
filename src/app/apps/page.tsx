@@ -225,29 +225,6 @@ export default function AppsPage() {
             </div>
           </div>
 
-          {/* Ebowwa.xyz Website Card */}
-          <div className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 hover:border-blue-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transform hover:-translate-y-1">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="p-8 relative z-10">
-              <div className="flex justify-between items-start">
-                <div className="mb-4 text-blue-400 text-4xl">🌐</div>
-                <div className="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium">Website</div>
-              </div>
-              <h2 className="text-3xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">Ebowwa.xyz</h2>
-              <p className="text-blue-100 mb-6 opacity-80">
-                Hub for our latest projects, experiments, and updates from Ebowwa Labs.
-              </p>
-              <div className="flex flex-wrap items-center gap-4">
-                <a href="https://ebowwa.xyz" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/50 rounded-lg text-blue-300 hover:bg-blue-500/30 transition-all group-hover:pl-6">
-                  <span>Visit Website</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 group-hover:ml-3 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
           {/* PrintPeer.xyz Website Card */}
           <div className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 hover:border-teal-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(20,184,166,0.5)] transform hover:-translate-y-1">
             <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
