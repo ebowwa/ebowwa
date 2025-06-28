@@ -203,20 +203,20 @@ export default function AppsPage() {
               </div>
               <h2 className="text-3xl font-bold mb-3 text-white group-hover:text-yellow-300 transition-colors">Speakd</h2>
               <p className="text-blue-100 mb-6 opacity-80">
-                Lightweight transcription workflow powered by Whisper and Electron for offline audio projects.
+                Instant dictation anywhere: press the Fn key and your words appear in any app—all offline.
               </p>
               <div className="space-y-4 mb-6">
                 <div className="flex items-start space-x-2">
                   <div className="text-yellow-300 mt-1">✓</div>
-                  <p className="text-blue-100 opacity-80">Runs locally using open-source Whisper models</p>
+                  <p className="text-blue-100 opacity-80">Works entirely on-device with open-source Whisper models</p>
                 </div>
                 <div className="flex items-start space-x-2">
                   <div className="text-yellow-300 mt-1">✓</div>
-                  <p className="text-blue-100 opacity-80">Flow-based editor for easy transcript management</p>
+                  <p className="text-blue-100 opacity-80">Global hotkey to transcribe directly into any text field</p>
                 </div>
                 <div className="flex items-start space-x-2">
                   <div className="text-yellow-300 mt-1">✓</div>
-                  <p className="text-blue-100 opacity-80">Export transcripts in multiple formats</p>
+                  <p className="text-blue-100 opacity-80">Set it up once and forget it's there</p>
                 </div>
               </div>
               <div className="flex flex-wrap items-center gap-4">
