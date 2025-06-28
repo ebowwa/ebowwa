@@ -16,12 +16,6 @@
   <url><loc>https://ebowwa.xyz/apps/privacychoices</loc></url>
   <url><loc>https://ebowwa.xyz/apps/privacy</loc></url>
   <url><loc>https://ebowwa.xyz/apps/cleanshots</loc></url>
-  <url><loc>https://ebowwa.xyz/(landing)/share-us</loc></url>
-  <url><loc>https://ebowwa.xyz/(landing)/landing</loc></url>
-  <url><loc>https://ebowwa.xyz/(landing)/landing/[component]</loc></url>
-  <url><loc>https://ebowwa.xyz/(landing)/contact</loc></url>
-  <url><loc>https://ebowwa.xyz/(landing)/blog</loc></url>
-  <url><loc>https://ebowwa.xyz/(landing)/blog/[slug]</loc></url>
   <url><loc>https://ebowwa.xyz/(examples)/uncert</loc></url>
   <url><loc>https://ebowwa.xyz/(examples)/screenshot</loc></url>
   <url><loc>https://ebowwa.xyz/(examples)/notion-clone</loc></url>
