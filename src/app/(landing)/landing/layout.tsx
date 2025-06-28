@@ -20,10 +20,10 @@ const footerLinks = [
 ];
 
 const socialMedia = [
-  { platform: 'Twitter', url: 'https://twitter.com/Simulation_API' },
+  { platform: 'Twitter', url: 'https://twitter.com/innitEbowwa' },
 ];
 
-const copyright = ' 2024 SimulationAPI. All rights reserved.';
+const copyright = ' 2024 Ebowwa Labs. All rights reserved.';
 
 export default function RootLayout({
   children,
@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar
-          logo={{ altText: 'SimulationAPI' }}
+          logo={{ altText: 'Ebowwa Labs' }}
           links={navbarLinks}
         />
         <Layout>
