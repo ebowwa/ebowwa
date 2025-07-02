@@ -23,8 +23,13 @@ export default function GoogleSheetsIntegration({ sheetId, onDataFetch }: Google
       const response = await fetch(`/api/google-sheets?sheetId=${sheetId}`);
       
       if (!response.ok) {
+        // Parse API error JSON
         const errorData = await response.json();
-        throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+        // Set main error message
+        setError(errorData.error || `HTTP error! status: ${response.status}`);
+        // Include full error details JSON for troubleshooting
+        setErrorDetails(JSON.stringify(errorData, null, 2));
+        return; // Exit early
       }
       
       const data = await response.json();
@@ -36,15 +41,8 @@ export default function GoogleSheetsIntegration({ sheetId, onDataFetch }: Google
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to fetch data';
       setError(errorMessage);
-      
-      // Try to get more detailed error info
-      try {
-        const response = await fetch(`/api/google-sheets/test`);
-        const testData = await response.json();
-        setErrorDetails(JSON.stringify(testData, null, 2));
-      } catch (testErr) {
-        setErrorDetails('Could not fetch diagnostic information');
-      }
+      // Unexpected network or parse error, no details
+      setErrorDetails(null);
     } finally {
       setLoading(false);
     }

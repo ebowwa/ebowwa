@@ -31,19 +31,58 @@ export async function GET(request: Request) {
       hasKey: !!privateKey
     });
 
-    // Initialize the JWT auth client
+    // Initialize the JWT auth client with explicit scopes
     const serviceAccountAuth = new JWT({
       email: serviceAccountEmail,
       key: privateKey.replace(/\\n/g, '\n'),
-      scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
+      scopes: [
+        'https://www.googleapis.com/auth/spreadsheets.readonly',
+        'https://www.googleapis.com/auth/drive.readonly'
+      ],
     });
+
+    // Test authentication first
+    console.log('Testing authentication...');
+    try {
+      await serviceAccountAuth.authorize();
+      console.log('Authentication successful');
+    } catch (authError) {
+      console.error('Authentication failed:', authError);
+      return NextResponse.json({
+        error: 'Authentication failed. Please check your service account credentials.',
+        details: authError instanceof Error ? authError.message : 'Unknown auth error'
+      }, { status: 401 });
+    }
 
     // Initialize the sheet
     const doc = new GoogleSpreadsheet(sheetId, serviceAccountAuth);
     
     console.log('Loading sheet info...');
-    await doc.loadInfo();
-    console.log('Sheet info loaded successfully:', doc.title);
+    try {
+      await doc.loadInfo();
+      console.log('Sheet info loaded successfully:', doc.title);
+    } catch (loadError) {
+      console.error('Failed to load sheet info:', loadError);
+      
+      if (loadError instanceof Error && loadError.message.includes('403')) {
+        return NextResponse.json({
+          error: 'Access denied to Google Sheet. Please ensure: 1) Google Sheets API is enabled in your Google Cloud project, 2) The sheet is shared with your service account email, 3) Your service account has proper permissions.',
+          details: loadError.message,
+          troubleshooting: {
+            sheetId,
+            serviceAccountEmail,
+            steps: [
+              'Go to Google Cloud Console',
+              'Enable Google Sheets API for your project',
+              `Share the sheet with: ${serviceAccountEmail}`,
+              'Give the service account "Viewer" permissions'
+            ]
+          }
+        }, { status: 403 });
+      }
+      
+      throw loadError;
+    }
 
     // Get the first sheet (or specify by title)
     const sheet = doc.sheetsByIndex[0];
@@ -55,26 +94,51 @@ export async function GET(request: Request) {
     await sheet.loadHeaderRow();
     console.log('Headers:', sheet.headerValues);
 
+    // Validate expected headers
+    const expectedHeaders = ['slug', 'title', 'description', 'type', 'date'];
+    const missingHeaders = expectedHeaders.filter(header => !sheet.headerValues.includes(header));
+    
+    if (missingHeaders.length > 0) {
+      console.warn('Missing expected headers:', missingHeaders);
+    }
+
     // Get all rows
     console.log('Loading rows...');
     const rows = await sheet.getRows();
     console.log(`Found ${rows.length} rows`);
 
     // Transform rows to the expected Link format
-    const links = rows.map((row, index) => ({
-      slug: row.get('slug') || `link-${index}`,
-      title: row.get('title') || 'Untitled',
-      description: row.get('description') || '',
-      type: row.get('type') || 'other',
-      date: row.get('date') || new Date().toISOString().split('T')[0],
-      url: row.get('url') || undefined,
-      content: row.get('content') || '',
-      tags: row.get('tags') ? row.get('tags').split(',').map((tag: string) => tag.trim()) : [],
-      related: row.get('related') ? row.get('related').split(',').map((rel: string) => rel.trim()) : []
-    }));
+    const links = rows.map((row, index) => {
+      const link = {
+        slug: row.get('slug') || `link-${index}`,
+        title: row.get('title') || 'Untitled',
+        description: row.get('description') || '',
+        type: (row.get('type') as 'notion' | 'chatgpt' | 'other') || 'other',
+        date: row.get('date') || new Date().toISOString().split('T')[0],
+        url: row.get('url') || undefined,
+        content: row.get('content') || '',
+        tags: row.get('tags') ? row.get('tags').split(',').map((tag: string) => tag.trim()).filter(Boolean) : [],
+        related: row.get('related') ? row.get('related').split(',').map((rel: string) => rel.trim()).filter(Boolean) : []
+      };
+      
+      // Clean up undefined url
+      if (!link.url) {
+        delete (link as any).url;
+      }
+      
+      return link;
+    });
 
     console.log(`Successfully transformed ${links.length} links`);
-    return NextResponse.json({ links }, { status: 200 });
+    return NextResponse.json({ 
+      links,
+      meta: {
+        sheetTitle: doc.title,
+        totalRows: rows.length,
+        headers: sheet.headerValues,
+        missingHeaders: missingHeaders.length > 0 ? missingHeaders : undefined
+      }
+    }, { status: 200 });
   } catch (error) {
     console.error('Detailed error fetching Google Sheets data:', {
       error: error instanceof Error ? error.message : error,
