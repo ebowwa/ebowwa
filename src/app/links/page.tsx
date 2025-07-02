@@ -1,14 +1,26 @@
-import React from 'react';
-import Link from 'next/link';
-import { getAllLinks } from '../../data/links';
+'use client';
 
-export const metadata = {
-  title: 'Interesting Links - Ebowwa Labs',
-  description: 'A collection of interesting resources, notes, and conversations worth sharing',
-};
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { getAllLinksSync } from '../../data/links';
+import { Link as LinkType } from '../../data/types';
+import GoogleSheetsIntegration from '../../components/(third-party)/Google/Sheets';
+
+// Metadata moved to layout.tsx since this is now a client component
 
 export default function LinksPage() {
-  const links = getAllLinks();
+  const [links, setLinks] = useState<LinkType[]>(getAllLinksSync());
+  const [isUsingGoogleSheets, setIsUsingGoogleSheets] = useState(false);
+  
+  const googleSheetsId = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_ID;
+
+  const handleGoogleSheetsData = (googleLinks: LinkType[]) => {
+    if (googleLinks && googleLinks.length > 0) {
+      setLinks(googleLinks);
+      setIsUsingGoogleSheets(true);
+    }
+  };
+
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Abstract Background Elements */}
@@ -36,6 +48,22 @@ export default function LinksPage() {
           <p className="text-xl text-blue-200 max-w-2xl mx-auto">
             A collection of interesting resources, notes, and conversations I've found worth keeping.
           </p>
+          
+          {/* Google Sheets Integration */}
+          {googleSheetsId && (
+            <div className="mt-6">
+              <GoogleSheetsIntegration 
+                sheetId={googleSheetsId} 
+                onDataFetch={handleGoogleSheetsData}
+              />
+            </div>
+          )}
+          
+          {isUsingGoogleSheets && (
+            <div className="mt-4 text-sm text-green-400">
+              📊 Data sourced from Google Sheets
+            </div>
+          )}
         </header>
 
         {/* Back to Home Link */}

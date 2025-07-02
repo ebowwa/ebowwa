@@ -28,4 +28,11 @@ Create a `.env` file and define the following variables as needed:
 - `NEXT_PUBLIC_CONTACT_PHONE` – Contact phone number
 - `NEXT_PUBLIC_DOB` – Date of birth used in the resume page
 
+### Google Sheets Integration
+For the interesting links feature to pull data from Google Sheets:
+
+- `NEXT_PUBLIC_GOOGLE_SHEETS_ID` – ID of your Google Sheet (found in the URL)
+- `GOOGLE_SERVICE_ACCOUNT_EMAIL` – Service account email for Google Sheets API
+- `GOOGLE_PRIVATE_KEY` – Private key for the service account (include the full key with newlines)
+
 Use `.env.example` as a starting point.

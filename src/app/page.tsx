@@ -7,7 +7,8 @@ import {
   DevelopersImages,
   AppEnthusiastsImages,
   /* ThinkersImages, */
-  EmployersImages
+  EmployersImages,
+  LinksImages
 } from '@/utils/AssetCatalog';
 
 // Card type definition for better type safety
@@ -214,10 +215,13 @@ const FeatureCard = ({
   }[color];
 
   return (
-    <div className="group bg-white/10 dark:bg-gray-800/90 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-[1.02] transition duration-300 ease-in-out overflow-hidden h-full flex flex-col border border-gray-700/50">
-      {/* Image Section - True Airbnb style with taller images */}
+    <div className={`group relative overflow-hidden rounded-3xl backdrop-blur-lg bg-white/5 border border-white/10 ${styles.hover} transition-all duration-500 ${styles.shadow} transform hover:-translate-y-2 h-full flex flex-col`}>
+      {/* Gradient overlay for depth */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${styles.gradient} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+      
+      {/* Image Section - Improved aspect ratio and styling */}
       {images && images.length > 0 ? (
-        <div className="w-full aspect-[3/2] relative overflow-hidden">
+        <div className="w-full aspect-[4/3] relative overflow-hidden rounded-t-3xl">
           <ImageCarousel 
             images={images} 
             colorClass={color === 'cyan' ? 'cyan-400' : 
@@ -227,60 +231,67 @@ const FeatureCard = ({
           />
         </div>
       ) : imageUrl ? (
-        <div className="w-full aspect-[3/2] relative overflow-hidden">
+        <div className="w-full aspect-[4/3] relative overflow-hidden rounded-t-3xl">
           <Image 
             src={imageUrl} 
             alt={imageAlt || title} 
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-contain"
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
             priority
           />
         </div>
       ) : (
-        // Skeleton placeholder when no images provided (Airbnb-style)
-        <div className="w-full aspect-[3/2] bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
-      )}
-      
-      {/* Content Section - True Airbnb style */}
-      <div className="p-5 sm:p-6 flex flex-col flex-grow">
-        {/* Title and icon with better contrast for dark theme */}
-        <div className="flex items-start gap-2 mb-2">
-          <div className="flex items-center">
-            {icon && (
-              <span className={`${styles.text} text-xl mr-2`}>{icon}</span>
-            )}
-            <h3 className="text-xl font-bold text-white inline-block">{title}</h3>
+        // Gradient placeholder when no images provided
+        <div className={`w-full aspect-[4/3] bg-gradient-to-br ${styles.gradient} to-gray-800 relative overflow-hidden rounded-t-3xl`}>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className={`${styles.text} text-6xl opacity-30`}>{icon}</span>
           </div>
         </div>
-        
-        {/* Description with improved contrast */}
-        <p className="text-sm text-gray-200 mt-2 mb-5 flex-grow">{description}</p>
+      )}
       
-        {/* Action Area - Airbnb style CTA */}
+      {/* Content Section - Enhanced styling */}
+      <div className="p-6 sm:p-8 flex flex-col flex-grow relative z-10">
+        {/* Title and icon with enhanced styling */}
+        <div className="flex items-center gap-3 mb-4">
+          {icon && (
+            <span className={`${styles.text} text-2xl`}>{icon}</span>
+          )}
+          <h3 className={`text-2xl font-bold text-white ${styles.titleHover} transition-colors duration-300`}>{title}</h3>
+        </div>
+        
+        {/* Description with better typography */}
+        <p className="text-base text-gray-300 leading-relaxed mb-6 flex-grow">{description}</p>
+      
+        {/* Action Area - Enhanced CTA */}
         {disabled ? (
           <>
-            <div className="mt-auto text-gray-500 dark:text-gray-400 text-sm">
-              <span>{disabledText || 'Coming Soon'}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="mt-auto flex items-center text-gray-400 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
+              <span>{disabledText || 'Coming Soon'}</span>
             </div>
-            {disabledNote && <div className="text-gray-400 text-xs mt-1">{disabledNote}</div>}
+            {disabledNote && <div className="text-gray-500 text-xs mt-2">{disabledNote}</div>}
           </>
         ) : showLinks ? (
-          <div className="mt-auto pt-3 border-t border-gray-700/50">
+          <div className="mt-auto">
             <Link href={linkUrl || '#'} className="block">
-              <div className={`flex items-center ${styles.buttonText} text-base font-medium hover:underline`}>
+              <div className={`inline-flex items-center px-6 py-3 rounded-xl ${styles.buttonBg} ${styles.buttonBorder} border ${styles.buttonText} font-medium ${styles.buttonHover} transition-all duration-300 group/btn`}>
                 <span>{linkText}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </div>
             </Link>
           </div>
         ) : (
-          <div className="text-gray-500 dark:text-gray-400 text-sm mt-auto">{title} coming soon</div>
+          <div className="text-gray-400 text-sm mt-auto flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            {title} coming soon
+          </div>
         )}
       </div>
     </div>
@@ -316,96 +327,84 @@ export default function HomePage() {
         }}></div>
       </div>
       
-      <div className="relative z-10 container mx-auto px-3 sm:px-6 py-8 sm:py-16 flex flex-col items-center justify-center min-h-screen">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         {/* Header with Glowing Effect */}
-        <div className="text-center mb-10 sm:mb-16">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-3 relative">
+        <div className="text-center mb-16 sm:mb-20">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-6 relative">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400 animate-pulse">
               {homeTitle.value}
             </span>
           </h1>
-          <p className="text-lg sm:text-xl text-blue-200 leading-relaxed px-4 sm:px-0">
+          <p className="text-xl sm:text-2xl text-blue-200 leading-relaxed mb-4 max-w-4xl mx-auto">
             {homeSubtitle.value}
           </p>
-          <p className="text-sm sm:text-base text-blue-200/60 max-w-xl mx-auto mt-2 sm:mt-3 leading-loose font-light italic px-4 sm:px-0">
+          <p className="text-base sm:text-lg text-blue-200/70 max-w-2xl mx-auto leading-relaxed font-light">
             Focused on practical, resilient software engineering—creating mobile-first and offline-capable systems that deliver real value.
           </p>
-
         </div>
         
-        {/* Interactive Card Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 w-full max-w-7xl mx-auto">
-          {/* Using the new FeatureCard component */}
-          <FeatureCard
-            title={developersTitle.value}
-            description={developersDescription.value}
-            icon="⚙️"
-            color="cyan"
-            linkUrl="/catalog"
-            linkText={developersLinkText.value}
-            showLinks={showLinks}
-            images={DevelopersImages}
-          />
+        {/* Interactive Card Grid - Improved Layout */}
+        <div className="max-w-6xl mx-auto mb-16 sm:mb-20">
+          {/* Primary Cards Row - Featured Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <FeatureCard
+              title={developersTitle.value}
+              description={developersDescription.value}
+              icon="⚙️"
+              color="cyan"
+              linkUrl="/catalog"
+              linkText={developersLinkText.value}
+              showLinks={showLinks}
+              images={DevelopersImages}
+            />
+            
+            <FeatureCard
+              title={appEnthusiastsTitle.value}
+              description={appEnthusiastsDescription.value}
+              icon="📱"
+              color="purple"
+              linkUrl="/apps"
+              linkText={appEnthusiastsLinkText.value}
+              showLinks={showLinks}
+              images={AppEnthusiastsImages}
+            />
+          </div>
           
-          {/**
-           * <FeatureCard
-           *   title={thinkersTitle.value}
-           *   description={thinkersDescription.value}
-           *   icon="🧠"
-           *   color="emerald"
-           *   disabled={true}
-           *   images={ThinkersImages}
-           * />
-           */}
-          
-          {/*i want to be able to have this showing previews of multiple of my apps, currently it only shows sleep loops but i have other apps and images to include */}
-
-          <FeatureCard
-            title={appEnthusiastsTitle.value}
-            description={appEnthusiastsDescription.value}
-            icon="📱"
-            color="purple"
-            linkUrl="/apps"
-            linkText={appEnthusiastsLinkText.value}
-            showLinks={showLinks}
-            images={AppEnthusiastsImages}
-          />
-          
-          <FeatureCard
-            title={employersTitle.value}
-            description={employersDescription.value}
-            icon="🚀"
-            color="red"
-            linkUrl="/elijah/whoiselijah"
-            linkText={employersLinkText.value}
-            showLinks={showLinks}
-            images={EmployersImages}
-          />
-          
-          {/* Interesting Links Card - Commented out but updated to use the new component 
-          <FeatureCard
-            title="Interesting Links"
-            description="Explore a curated collection of resources, notes, and conversations worth keeping."
-            icon="🔗"
-            color="teal"
-            linkUrl="/links"
-            linkText="Browse Collection"
-            showLinks={showLinks}
-            // imageUrl="/images/links.jpg"
-            // imageAlt="Connected web of information"
-          />
-          */}
+          {/* Secondary Cards Row - Supporting Content */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <FeatureCard
+              title={employersTitle.value}
+              description={employersDescription.value}
+              icon="🚀"
+              color="red"
+              linkUrl="/elijah/whoiselijah"
+              linkText={employersLinkText.value}
+              showLinks={showLinks}
+              images={EmployersImages}
+            />
+            
+            <FeatureCard
+              title="Interesting Links"
+              description="Explore a curated collection of resources, notes, and conversations worth keeping."
+              icon="🔗"
+              color="teal"
+              linkUrl="/links"
+              linkText="Browse Collection"
+              showLinks={showLinks}
+              images={LinksImages}
+            />
+          </div>
         </div>
         
         {/* Closing Statement */}
-        <div className="mt-8 sm:mt-12 mb-6 sm:mb-8 max-w-3xl mx-auto text-center">
-          <p className="text-lg sm:text-xl text-blue-200 leading-relaxed px-3 sm:px-6">
+        <div className="max-w-4xl mx-auto text-center mb-12">
+          <p className="text-xl sm:text-2xl text-blue-200 leading-relaxed">
             {closingStatement.value}
           </p>
         </div>
       
         {/* Footer */}
-        <div className="mt-8 sm:mt-16 text-center text-blue-300/60 text-sm sm:text-base">
+        <div className="text-center text-blue-300/60 text-sm sm:text-base">
           <p>© {new Date().getFullYear()} Ebowwa Labs • Pushing the boundaries of what's possible</p>
         </div>
       </div>
