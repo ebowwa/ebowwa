@@ -1,29 +1,37 @@
 import React from 'react';
 import Link from 'next/link';
 import translations from './en.json';
+import esTranslations from './es.json';
 
-export const metadata = {
-  title: translations.pageTitle.value,
-  description: translations.description.value,
-  keywords: ['exif', 'exif removal', 'photo privacy', 'cleanshots', 'metadata scrubber'],
-  openGraph: {
-    title: translations.pageTitle.value,
-    description: translations.description.value,
-    url: 'https://ebowwa.xyz/apps/cleanshots',
-    images: [{ url: 'https://ebowwa.xyz/social/cleanshots-og.png', alt: translations.pageTitle.value }],
-    siteName: 'Ebowwa Labs',
-    locale: 'en_US'
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: translations.pageTitle.value,
-    description: translations.description.value,
-    images: ['https://ebowwa.xyz/social/cleanshots-og.png']
-  }
-};
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }];
+}
 
-export default function CleanShotsPage() {
-  const t = translations;
+export function generateMetadata({ params: { locale } }) {
+  const t = locale === 'es' ? esTranslations : translations;
+  return {
+    title: t.pageTitle.value,
+    description: t.description.value,
+    keywords: ['exif', 'exif removal', 'photo privacy', 'cleanshots', 'metadata scrubber'],
+    openGraph: {
+      title: t.pageTitle.value,
+      description: t.description.value,
+      url: 'https://ebowwa.xyz/apps/cleanshots',
+      images: [{ url: 'https://ebowwa.xyz/social/cleanshots-og.png', alt: t.pageTitle.value }],
+      siteName: 'Ebowwa Labs',
+      locale: locale === 'es' ? 'es_ES' : 'en_US'
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t.pageTitle.value,
+      description: t.description.value,
+      images: ['https://ebowwa.xyz/social/cleanshots-og.png']
+    }
+  };
+}
+
+export default function CleanShotsPage({ params: { locale } }) {
+  const t = locale === 'es' ? esTranslations : translations;
   const {
     backButton, pageIcon, pageTitle, description,
     feature1, feature2, feature3, downloadButton,

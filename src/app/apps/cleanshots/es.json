@@ -1,0 +1,54 @@
+{
+  "backButton": { "id": 1, "value": "Volver a Apps" },
+  "pageIcon": { "id": 2, "value": "🧹" },
+  "pageTitle": { "id": 3, "value": "Limpiador EXIF de CleanShots" },
+  "description": { "id": 4, "value": "Elimina fácilmente metadatos EXIF sensibles de tus fotos antes de compartir. CleanShots ayuda a proteger tu privacidad con un solo toque, asegurando que tus fotos sean seguras para enviar a cualquier parte." },
+  "feature1": { "id": 5, "value": "Elimina datos EXIF de imágenes al instante" },
+  "feature2": { "id": 6, "value": "Diseño simple y centrado en la privacidad" },
+  "feature3": { "id": 7, "value": "Comparte fotos limpias directamente desde la app" },
+  "downloadButton": { "id": 8, "value": "Descargar en App Store" },
+  "howItWorksTitle": { "id": 9, "value": "Cómo Funciona" },
+  "step1": { "id": 10, "value": "Selecciona una foto de tu galería o toma una nueva." },
+  "step2": { "id": 11, "value": "Toca 'Limpiar' para eliminar todos los metadatos EXIF al instante." },
+  "step3": { "id": 12, "value": "Comparte tu foto limpia de forma segura." },
+  "privacySupportTitle": { "id": 13, "value": "Privacidad y Soporte" },
+  "privacyText": { "id": 14, "value": "Nunca recopilamos tus fotos ni metadatos. Todo el procesamiento ocurre en tu dispositivo." },
+  "privacyPolicyLink": { "id": 15, "value": "Política de Privacidad" },
+  "supportLink": { "id": 16, "value": "Soporte" },
+  "structuredDataHead": {
+    "id": 17,
+    "value": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "CleanShots-Exif Scrubber",
+      "description": "Elimina fácilmente metadatos EXIF sensibles de tus fotos antes de compartir. CleanShots ayuda a proteger tu privacidad con un solo toque.",
+      "url": "https://ebowwa.xyz/apps/cleanshots",
+      "applicationCategory": "Utilities",
+      "operatingSystem": "iOS",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://apps.apple.com/us/app/cleanshot-exif-scrub/id6745844477",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  },
+  "structuredDataBody": {
+    "id": 18,
+    "value": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "CleanShots-Exif Scrubber",
+      "description": "Elimina fácilmente metadatos EXIF sensibles de tus fotos antes de compartir. CleanShots ayuda a proteger tu privacidad con un solo toque.",
+      "url": "https://ebowwa.xyz/apps/cleanshots",
+      "applicationCategory": "Utilities",
+      "operatingSystem": "iOS",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://apps.apple.com/us/app/cleanshot-exif-scrub/id6745844477",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  }
+}

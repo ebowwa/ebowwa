@@ -31,7 +31,7 @@ export default function Head() {
       <meta property='og:title' content={title} />
       <meta property='og:type' content='site' />
       <meta property='og:url' content={url} />
-      <meta property='og:image' content={'/social/default-share.png'} />
+      <meta property='og:image' content={'/social-share.png'} />
       <meta property='og:site_name' content={title} />
       <meta property='og:description' content={description} />
 
@@ -58,7 +58,7 @@ export default function Head() {
       <meta name='twitter:site' content={twitter} />
       <meta name='twitter:title' content={title} />
       <meta name='twitter:description' content={description} />
-      <meta name='twitter:image' content='/social/default-share.png' />
+      <meta name='twitter:image' content='/social-share.png' />
     </>
   )
 }

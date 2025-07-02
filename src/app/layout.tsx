@@ -7,18 +7,18 @@ import translations from './en.json';
 import DiscordInviteBanner from '@/components/DiscordInviteBanner';
 
 export const metadata = {
-  title: translations.appName.value,
+  title: translations.homeTitle.value,
   description: translations.appDescription.value,
   openGraph: {
-    title: translations.appName.value,
+    title: translations.homeTitle.value,
     description: translations.appDescription.value,
-    images: ['/social/default-share.png'],
+    images: ['/social-share.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: translations.appName.value,
+    title: translations.homeTitle.value,
     description: translations.appDescription.value,
-    images: ['/social/default-share.png'],
+    images: ['/social-share.png'],
   },
 };
 

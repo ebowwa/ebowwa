@@ -19,6 +19,11 @@ const nextConfig = {
     serverComponentsExternalPackages: ['child_process'],
   },
   transpilePackages: ['three'],
+  i18n: {
+    locales: ['en', 'es'],
+    defaultLocale: 'en',
+    localeDetection: true
+  },
 
   // uncomment the following snippet if using styled components
   // compiler: {
