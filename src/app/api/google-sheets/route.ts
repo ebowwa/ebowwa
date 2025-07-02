@@ -31,32 +31,18 @@ export async function GET(request: Request) {
       hasKey: !!privateKey
     });
 
-    // Initialize the JWT auth client with explicit scopes
+    // Initialize the JWT auth client
     const serviceAccountAuth = new JWT({
       email: serviceAccountEmail,
       key: privateKey.replace(/\\n/g, '\n'),
-      scopes: [
-        'https://www.googleapis.com/auth/spreadsheets.readonly',
-        'https://www.googleapis.com/auth/drive.readonly'
-      ],
+      scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
     });
-
-    // Test authentication first
-    console.log('Testing authentication...');
-    try {
-      await serviceAccountAuth.authorize();
-      console.log('Authentication successful');
-    } catch (authError) {
-      console.error('Authentication failed:', authError);
-      return NextResponse.json({
-        error: 'Authentication failed. Please check your service account credentials.',
-        details: authError instanceof Error ? authError.message : 'Unknown auth error'
-      }, { status: 401 });
-    }
-
-    // Initialize the sheet
-    const doc = new GoogleSpreadsheet(sheetId, serviceAccountAuth);
+    // Authorize to obtain access tokens
+    await serviceAccountAuth.authorize();
     
+    // Initialize the spreadsheet doc with authentication
+    const doc = new GoogleSpreadsheet(sheetId, serviceAccountAuth);
+
     console.log('Loading sheet info...');
     try {
       await doc.loadInfo();

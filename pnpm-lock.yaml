@@ -165,11 +165,11 @@ importers:
         specifier: 6.2.12
         version: 6.2.12(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       google-auth-library:
-        specifier: ^10.1.0
-        version: 10.1.0
+        specifier: ^9.15.1
+        version: 9.15.1
       google-spreadsheet:
         specifier: ^4.1.4
-        version: 4.1.4(google-auth-library@10.1.0)
+        version: 4.1.4(google-auth-library@9.15.1)
       gsap:
         specifier: ^3.12.5
         version: 3.12.5
@@ -3924,13 +3924,13 @@ packages:
   functions-have-names@1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
 
-  gaxios@7.1.1:
-    resolution: {integrity: sha512-Odju3uBUJyVCkW64nLD4wKLhbh93bh6vIg/ZIXkWiLPBrdgtc65+tls/qml+un3pr6JqYVFDZbbmLDQT68rTOQ==}
-    engines: {node: '>=18'}
+  gaxios@6.7.1:
+    resolution: {integrity: sha512-LDODD4TMYx7XXdpwxAVRAIAuB0bzv0s+ywFonY46k126qzQHT9ygyoa9tncmOiQmmDrik65UYsEkv3lbfqQ3yQ==}
+    engines: {node: '>=14'}
 
-  gcp-metadata@7.0.1:
-    resolution: {integrity: sha512-UcO3kefx6dCcZkgcTGgVOTFb7b1LlQ02hY1omMjjrrBzkajRMCFgYOjs7J71WqnuG1k2b+9ppGL7FsOfhZMQKQ==}
-    engines: {node: '>=18'}
+  gcp-metadata@6.1.1:
+    resolution: {integrity: sha512-a4tiq7E0/5fTjxPAaH4jpjkSv/uCaU2p5KC6HVGrvl0cDjA8iBZv4vv1gyzlmK0ZUKqwpOyQMKzZQe3lTit77A==}
+    engines: {node: '>=14'}
 
   gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
@@ -4096,12 +4096,12 @@ packages:
     peerDependencies:
       csstype: ^3.0.10
 
-  google-auth-library@10.1.0:
-    resolution: {integrity: sha512-GspVjZj1RbyRWpQ9FbAXMKjFGzZwDKnUHi66JJ+tcjcu5/xYAP1pdlWotCuIkMwjfVsxxDvsGZXGLzRt72D0sQ==}
-    engines: {node: '>=18'}
+  google-auth-library@9.15.1:
+    resolution: {integrity: sha512-Jb6Z0+nvECVz+2lzSMt9u98UsoakXxA2HGHMCxh+so3n90XgYWkq5dur19JAJV7ONiJY22yBTyJB1TSkvPq9Ng==}
+    engines: {node: '>=14'}
 
-  google-logging-utils@1.1.1:
-    resolution: {integrity: sha512-rcX58I7nqpu4mbKztFeOAObbomBbHU2oIb/d3tJfF3dizGSApqtSwYJigGCooHdnMyQBIw8BrWyK96w3YXgr6A==}
+  google-logging-utils@0.0.2:
+    resolution: {integrity: sha512-NEgUnEcBiP5HrPzufUkBzJOD/Sxsco3rLNo1F1TNf7ieU8ryUzBhqba8r756CjLX7rn3fHl6iLEwPYuqpoKgQQ==}
     engines: {node: '>=14'}
 
   google-spreadsheet@4.1.4:
@@ -4128,9 +4128,9 @@ packages:
   gsap@3.12.5:
     resolution: {integrity: sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==}
 
-  gtoken@8.0.0:
-    resolution: {integrity: sha512-+CqsMbHPiSTdtSO14O51eMNlrp9N79gmeqmXeouJOhfucAedHw9noVe/n5uJk3tbKE6a+6ZCQg3RPhVhHByAIw==}
-    engines: {node: '>=18'}
+  gtoken@7.1.0:
+    resolution: {integrity: sha512-pCcEwRi+TKpMlxAQObHDQ56KawURgyAf6jtIY046fJ5tIv3zDe/LEIubckAO8fj6JnAxLdmWkUfNyulQ2iKdEw==}
+    engines: {node: '>=14.0.0'}
 
   gzip-size@6.0.0:
     resolution: {integrity: sha512-ax7ZYomf6jqPTQ4+XCpUGyXKHk5WweS+e05MBO4/y3WJ5RkmPXNKvX+bx1behVILVwr6JSQvZAku021CHPXG3Q==}
@@ -11417,20 +11417,24 @@ snapshots:
 
   functions-have-names@1.2.3: {}
 
-  gaxios@7.1.1:
+  gaxios@6.7.1:
     dependencies:
       extend: 3.0.2
       https-proxy-agent: 7.0.6
-      node-fetch: 3.3.2
+      is-stream: 2.0.1
+      node-fetch: 2.7.0
+      uuid: 9.0.1
     transitivePeerDependencies:
+      - encoding
       - supports-color
 
-  gcp-metadata@7.0.1:
+  gcp-metadata@6.1.1:
     dependencies:
-      gaxios: 7.1.1
-      google-logging-utils: 1.1.1
+      gaxios: 6.7.1
+      google-logging-utils: 0.0.2
       json-bigint: 1.0.0
     transitivePeerDependencies:
+      - encoding
       - supports-color
 
   gensync@1.0.0-beta.2: {}
@@ -11666,26 +11670,26 @@ snapshots:
     dependencies:
       csstype: 3.1.3
 
-  google-auth-library@10.1.0:
+  google-auth-library@9.15.1:
     dependencies:
       base64-js: 1.5.1
       ecdsa-sig-formatter: 1.0.11
-      gaxios: 7.1.1
-      gcp-metadata: 7.0.1
-      google-logging-utils: 1.1.1
-      gtoken: 8.0.0
+      gaxios: 6.7.1
+      gcp-metadata: 6.1.1
+      gtoken: 7.1.0
       jws: 4.0.0
     transitivePeerDependencies:
+      - encoding
       - supports-color
 
-  google-logging-utils@1.1.1: {}
+  google-logging-utils@0.0.2: {}
 
-  google-spreadsheet@4.1.4(google-auth-library@10.1.0):
+  google-spreadsheet@4.1.4(google-auth-library@9.15.1):
     dependencies:
       axios: 1.10.0
       lodash: 4.17.21
     optionalDependencies:
-      google-auth-library: 10.1.0
+      google-auth-library: 9.15.1
     transitivePeerDependencies:
       - debug
 
@@ -11713,11 +11717,12 @@ snapshots:
 
   gsap@3.12.5: {}
 
-  gtoken@8.0.0:
+  gtoken@7.1.0:
     dependencies:
-      gaxios: 7.1.1
+      gaxios: 6.7.1
       jws: 4.0.0
     transitivePeerDependencies:
+      - encoding
       - supports-color
 
   gzip-size@6.0.0:
