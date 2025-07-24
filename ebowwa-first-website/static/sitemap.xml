@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://meet-ebowwa.ebowwa.repl.co/about</loc>
+  </url>
+  <url>
+    <loc>https://meet-ebowwa.ebowwa.repl.co/blogs</loc>
+  </url>
+  <url>
+    <loc>https://meet-ebowwa.ebowwa.repl.co/notes_solar</loc>
+  </url>
+  <url>
+    <loc>https://meet-ebowwa.ebowwa.repl.co/error</loc>
+  </url>
+  <url>
+    <loc>https://meet-ebowwa.ebowwa.repl.co/admin_dashboard</loc>
+  </url>
+  <url>
+    <loc>https://meet-ebowwa.ebowwa.repl.co/user_dashboard</loc>
+  </url>
+  <url>
+    <loc>https://meet-ebowwa.ebowwa.repl.co/login</loc>
+  </url>
+  <url>
+    <loc>https://meet-ebowwa.ebowwa.repl.co/contact</loc>
+  </url>
+  <url>
+    <loc>https://meet-ebowwa.ebowwa.repl.co/edit_message</loc>
+  </url>
+  <url>
+    <loc>https://meet-ebowwa.ebowwa.repl.co/view_messages</loc>
+  </url>
+  <url>
+    <loc>https://meet-ebowwa.ebowwa.repl.co/dashboard</loc>
+  </url>
+</urlset>

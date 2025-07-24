@@ -1,0 +1,93 @@
+<!-- This goes in templates/create_post.html -->
+{% extends "layout.html" %}
+
+{% block content %}
+<style>
+    /* Add some basic styling to make the form visually appealing */
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<h1>New Post</h1>
+<form id="post-form" method="POST">
+    {{ form.hidden_tag() }}
+    <p>
+        <label for="{{ form.title.id }}">Title:</label><br>
+        {{ form.title(size=30, id=form.title.id, placeholder="Enter the title of your post") }}
+    </p>
+    <p>
+        <label for="{{ form.content.id }}">Content:</label><br>
+        {{ form.content(cols=40, rows=10, id=form.content.id, placeholder="Write your post content here") }}
+    </p>
+    <p>
+        {{ form.submit() }}
+    </p>
+</form>
+
+<script>
+    // Add JavaScript to provide real-time feedback and validation for the input fields
+    document.addEventListener('DOMContentLoaded', function () {
+        const postForm = document.getElementById('post-form');
+        const titleInput = document.getElementById('{{ form.title.id }}');
+        const contentInput = document.getElementById('{{ form.content.id }}');
+
+        titleInput.addEventListener('input', function () {
+            if (titleInput.value.trim() === '') {
+                titleInput.style.border = '1px solid red';
+            } else {
+                titleInput.style.border = '1px solid #ccc';
+            }
+        });
+
+        contentInput.addEventListener('input', function () {
+            if (contentInput.value.trim() === '') {
+                contentInput.style.border = '1px solid red';
+            } else {
+                contentInput.style.border = '1px solid #ccc';
+            }
+        });
+
+        postForm.addEventListener('submit', function (event) {
+            if (titleInput.value.trim() === '') {
+                event.preventDefault();
+                titleInput.style.border = '1px solid red';
+            }
+            if (contentInput.value.trim() === '') {
+                event.preventDefault();
+                contentInput.style.border = '1px solid red';
+            }
+        });
+    });
+</script>
+{% endblock %}

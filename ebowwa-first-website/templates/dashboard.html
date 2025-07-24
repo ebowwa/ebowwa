@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elijah Arbee - Meet Ebowwa">
+    <title>Dashboard</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpg" href="static/img/koko.jpg">
+    <link rel="apple-touch-icon" href="static/img/koko.jpg">
+    <link rel="shortcut icon" href="static/img/koko.jpg">
+    <link rel="manifest" href="/manifest.json">
+    <!-- Fonts and CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"> <!-- Add Bootstrap CSS -->
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive layout for small screens */
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="container">
+        <h1>Dashboard</h1>
+        <h2>Messages</h2>
+        <ul>
+            {% for message in messages %}
+                <li>{{ message.timestamp.strftime('%Y-%m-%d %H:%M:%S') }} - {{ message.user.username }}: {{ message.content }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('new_blog_post') }}">Create New Blog Post</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Your Website | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+
+</html>

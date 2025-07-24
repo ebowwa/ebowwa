@@ -1,0 +1,602 @@
+<link rel="icon" type="image/jpg" href="static/img/koko.jpg">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <meta name="description" content="Elijah Arbee - Meet Ebowwa">
+    <link rel="apple-touch-icon" href="static/img/koko.jpg">
+    <link rel="shortcut icon" href="static/img/koko.jpg">
+    <link rel="manifest" href="/manifest.json">
+    <title>Elijah Arbee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8
+      
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Add Tailwind CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.1/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3D5AFE;
+            --secondary-color: #2979FF;
+            --tertiary-color: #1E88E5;
+            --background-color: #E3F2FD;
+            --font-family: 'Inter', sans-serif;
+            --main-transition: all 0.25s ease;
+            --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: var(--font-family);
+            background: var(--background-color);
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+
+        header {
+            text-align: center;
+            background: #FFF;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-logo {
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .project-actions,
+        .share-button {
+            display: inline-block;
+            margin-top: 1em;
+            padding: 0.5em 2em;
+            border-radius: 2em;
+            background: var(--primary-color);
+            color: #FFF;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-actions:hover,
+        .share-button:hover {
+            background: var(--secondary-color);
+        }
+
+        .project-actions:active,
+        .share-button:active {
+            background: var(--tertiary-color);
+        }
+
+        .project-actions:focus,
+        .share-button:focus {
+            outline: none;
+        }
+
+        .project-actions:disabled,
+        .share-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        footer {
+            padding: 2em 0;
+            text-align: center;
+            background: #FFF;
+            box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .bubble-container {
+            position: fixed;
+            top: 0;
+            right: 20px;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            z-index: 999;
+        }
+        
+        .bubble-container a {
+            display: block;
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+        
+        .bubble-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            cursor: pointer;
+            transition: transform 0.5s;
+        }
+        
+        .bubble-container img:hover {
+            transform: scale(1.2);
+        }
+
+
+          .bubble {
+            width: 60px;
+            height: 60px;
+            background-color: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.5s;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            line-height: 60px;
+            animation: bubble 8s linear infinite;
+        }
+        
+        .bubble:hover {
+            transform: scale(1.2);
+        }
+
+        @keyframes bubble {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100%);
+            }
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio (adjust this value to control the height) */
+            overflow: hidden;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .project-actions {
+            display: inline-block;
+            margin-top: 1em;
+            padding: 0.5em 2em;
+            border-radius: 2em;
+            background: var(--primary-color);
+            color: #FFF;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-actions:hover {
+            background: var(--secondary-color);
+        }
+
+        .project-actions:active {
+            background: var(--tertiary-color);
+        }
+
+        .project-actions:focus {
+            outline: none;
+        }
+
+        .project-actions:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+       #diagram {
+            width: 100%;
+            height: auto;
+            margin: auto;
+            padding: auto;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.5;
+            color: #333;
+            color-rendering: optimizeSpeed;
+            orientation: center;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            white-space: pre-wrap;
+          }
+        
+        .mermaid {
+          max-width: 100%;
+          height: auto;
+          white-space: nowrap;
+        }
+      
+        .mermaid.hover {
+          background-color: #f5f5f5;
+        }
+      
+        .mermaid.hover .mermaid-node {
+          background-color: #f5f5f5;
+        }
+      
+        .mermaid.hover .mermaid-node-text {
+          color: #666;
+        }
+      
+        .mermaid.hover .mermaid-node-text:hover {
+          color: #666;
+        }
+      
+        .mermaid.hover .mermaid-node-text:active {
+          color: #666;
+        }
+      
+        .mermaid.hover .mermaid-node-text:focus {
+          outline: none;
+        }
+      
+        .mermaid.hover .mermaid-node-text:disabled {
+          color: #ccc;
+          cursor: not-allowed;
+        }
+      
+        .mermaid.hover .mermaid-node-text:disabled:hover {
+          color: #ccc;
+        }
+      
+        .mermaid.hover .mermaid-node-text:disabled:active {
+          color: #ccc;
+        }
+      
+        .mermaid .node {
+          cursor: pointer;
+        }
+      .hero h1 {
+            font-size: 2em;
+            width: bold;
+        }
+
+        .hero h2 {
+            font-size: 1.5em;
+             width: bold;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2em;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+            margin-bottom: 1em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-form textarea {
+            height: 10em;
+        }
+        .blog-section {
+        margin: 20px 0; /* Adjust as needed */
+        padding: 20px; /* Adjust as needed */
+        width: 100%; /* Adjust as needed */
+      }
+      
+      .blog-post {
+        margin-bottom: 20px; /* Adjust as needed */
+      }
+                        
+    </style>
+</head>
+
+<body>
+     {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                  <div class="alert alert-success">
+                      {% for message in messages %}
+                          {{ message }}
+                      {% endfor %}
+                  </div>
+              {% endif %}
+          {% endwith %}
+  <header class="bg-white shadow">
+        <div class="container flex justify-between items-center py-3">
+            <div class="header-logo text-xl uppercase font-bold">
+                Elijah Arbee
+            </div>
+            <button class="project-actions share-button bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded uppercase font-medium" onclick="sharePage()">Share</button>
+        </div>
+    </header>
+
+    <section class="hero">
+    <div class="container">
+        <h1 class="text-4xl font-bold">👋 Hey Everyone,</h1>
+        <div class="video-container">
+            <video autoplay loop muted playsinline style="width: 100%; height: auto; object-fit: cover;">
+                <source src="{{ mp4_url1 }}" type="video/mp4">
+            </video>
+
+        </div>
+        <p class="mt-4">
+        
+        <h3 class="text-2xl font-bold"> Driven by innovation and the will to make a difference. I'm on a journey of continuous growth.</p> </h3>
+    </div>
+</section>
+
+    <section class="about" id="about">
+    <div class="container">
+        <h2 class="text-3xl font-bold">Unveiling the Journey of a Resilient Innovator</h2>
+        <p class="mt-4">Every individual is a complex tapestry of experiences, dreams, and talents, much like a black box full of untold stories and unexplored potential. My journey, too, is a testament to this complexity. It's been an unconventional path, marked by resilience, innovation, and a relentless pursuit of knowledge. Despite not following a traditional route, I've managed to carve out a niche for myself in the dynamic world of AI and solar sales.</p>
+      <br>
+        <h3 class="text-2xl font-bold">A Foray into the World of Solar Sales</h3>
+        <p>My journey into solar sales was born out of necessity and fueled by the support of friends. Over time, what started as a means to an end transformed into a thriving venture - Autonomy Solutions. Alongside my co-founder Armando and our dedicated team, we navigated the complexities of the industry, turning solar sales into our bread and butter. However, like any venture, we faced our share of challenges, from unpredictable changes in federal fund rates to issues with installer partners. These challenges tested our resilience but also taught us invaluable lessons about adaptability and perseverance.</p>
+      <button data-cal-config='{"layout":"month_view"}' data-cal-link="ebowwa/30min" style="background-color: var(--primary-color); color: #FFF; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-top: 20px;" type="submit">Schedule Meeting</button></div>
+</section>
+  
+<section class="projects" id="projects">
+    <div class="container">
+
+        <div class="project-item">
+            <h3 class="text-2xl font-bold">Strategic Shift</h3>
+            <p class="mt-4">While my involvement with Autonomy Solutions has lessened recently, it wasn't due to a loss of focus. Instead, it was a strategic shift based on my growing interest in artificial intelligence and the potential I saw in this field. I recognized that AI was rapidly transforming industries and businesses, and I wanted to be a part of that transformation. I started teaching myself coding, which fueled my passion and enabled me to shape innovative projects and embrace fresh concepts. I ventured into various realms of AI, including text-to-speech, speech-to-text, computer vision, and heuristic models. This diverse experience empowered me to provide comprehensive consulting services and tackle a wide range of problems.</p>
+          <br>
+          <h3 class="text-2xl font-bold">The Rise of the AI Engineer</h3>
+           <p>The rise of AI has led to a shift in the job market, creating a new role beyond the Prompt Engineer - the AI Engineer. This role is a testament to the emergent capabilities and open source/API availability of Foundation Models. A wide range of AI tasks that used to take a research team and years to accomplish now just require API docs and a spare afternoon. However, the devil is in the details - there are no end of challenges in successfully evaluating, applying, and productizing AI.</p>
+            <p>Through daily hackathons and events, I have explored the intricacies of machine learning, training, and deploying a wide range of models. My contributions include developing plugins for ChatGPT and similar language model providers, significantly improving conversational abilities in AI models. This comprehensive skill set equips me to tackle any AI challenge and deliver exceptional consulting services.</p>
+            <div class="project-actions">
+                    <a href="https://replit.com/@ebowwa" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded font-medium" target="_blank">Visit Replit Profile</a>
+                </div>
+            <br>
+                <div class="project-actions">
+                    <a href="https://github.com/ebowwa" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded font-medium" target="_blank">Visit Github Profile</a>
+                </div>
+            </div>
+        <br>
+            <div class="project-item">
+                <h3 class="text-2xl font-bold">Co-Founder of Autonomy Solutions</h3>
+                <div class="section-content">
+                    <p>As a co-founder of Autonomy Solutions, I have demonstrated my ability to take on significant leadership and strategic responsibilities. Co-founding a company requires a deep understanding of the industry and a commitment to creating and executing a successful business strategy. It also highlights my entrepreneurial skills, market insight, and drive to leverage opportunities.</p>
+                </div>
+                <div class="project-actions">
+                    <a href="https://ditchtheutility.com/" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded font-medium" target="_blank">Visit Autonomy</a>
+                </div>
+            </div>
+      <br>
+          <section>
+                <div>
+                    <div>
+                        <p></p>
+                        <div class="mermaid">
+        graph TB
+        E['Elijah Arbee'] -- 'Co-founder' --> A['Autonomy Solutions']
+        A -- 'Solar Sales Dealership' --> SD['Solar Sales Dealership']
+        style SD fill:#99cc99
+        SD -- 'Coordinates' --> I['Installer']
+        SD -- 'Coordinates' --> F['Financer']
+        SD -- 'Coordinates' --> SA['Sales Agent']
+        SD -- 'Coordinates' --> H['Homeowner']
+        I -- 'Installation' --> P['Successful Project']
+        F -- 'Financing' --> P
+        SA -- 'Sales' --> P
+        H -- 'Ownership' --> P
+        SD -- 'Loan Agreements' --> LA['Loan Agreements']
+        LA -- 'Secures Financing' --> F
+        LA -- 'Ensures Affordability' --> H
+        LA -- 'Boosts Sales' --> SA
+        LA -- 'Facilitates Installation' --> I
+        linkStyle 0 stroke:#2ecd71,stroke-width:2px;
+        linkStyle 1 stroke:#2ecd71,stroke-width:2px;
+        linkStyle 2 stroke:#2ecd71,stroke-width:2px;
+        linkStyle 3 stroke:#2ecd71,stroke-width:2px;
+        linkStyle 4 stroke:#2ecd71,stroke-width:2px;
+        linkStyle 5 stroke:#2ecd71,stroke-width:2px;
+        linkStyle 6 stroke:#2ecd71,stroke-width:2px;
+        linkStyle 7 stroke:#2ecd71,stroke-width:2px;
+        linkStyle 8 stroke:#2ecd71,stroke-width:2px;
+        linkStyle 9 stroke:#2ecd71,stroke-width:2px;
+        linkStyle 10 stroke:#2ecd71,stroke-width:2px;
+        linkStyle 11 stroke:#2ecd71,stroke-width:2px;
+        linkStyle 12 stroke:#2ecd71,stroke-width:2px;
+        linkStyle 13 stroke:#2ecd71,stroke-width:2px;
+        linkStyle 14 stroke:#2ecd71,stroke-width:2px;
+    </div>
+    <script>
+        mermaid.initialize({startOnLoad:true});
+        </script>        
+                    </div>
+                </div>
+            <br>
+<section>
+        <div class="project-item">
+            <h2 class="text-3xl font-bold">Implementing and Enhancing Campaign Activities</h2>
+            <div class="section-content">
+                <p>I have been responsible for implementing and enhancing campaign activities, showcasing my marketing and outreach expertise. This includes defining target audiences, setting specific goals, creating compelling messages, and selecting the right platforms for effective reach. By continuously evaluating and optimizing campaigns, I have demonstrated strategic thinking and data-driven decision-making.</p>
+            </div>
+        </div>
+        <br>
+        <div class="project-item">
+            <h2 class="text-3xl font-bold">Forging Strategic Partnerships</h2>
+            <div class="section-content">
+                <p>One of my key responsibilities has been forging strategic partnerships, building relationships with companies and stakeholders that can benefit Autonomy Solutions. This involves strong negotiation and relationship-building skills, as well as the ability to identify partners aligned with our goals and values.</p>
+            </div>
+        </div>
+        <br>
+        <div class="project-item">
+            <h2 class="text-3xl font-bold">Nurturing Client Relationships and Training Partners</h2>
+            <div class="section-content">
+                <p>I have nurtured client relationships, prioritizing customer satisfaction, addressing issues, and building long-term partnerships based on trust and mutual benefit. Additionally, I have played a role in training partners, sharing knowledge and empowering them to succeed. These efforts have resulted in high customer satisfaction, loyalty, and effective relationship management.</p>
+            </div>
+        </div>
+        <br>
+        <div class="project-item">
+            <div class="section-content">
+                <p>These experiences exemplify my entrepreneurial spirit, unwavering commitment, and tireless pursuit of excellence. I am an individual driven by passion, dedicated to pushing boundaries, and motivated to make a positive impact. With a charismatic approach and a track record of success, I am poised to captivate the attention of venture capitalists, entrepreneurs, and anyone seeking a dynamic, visionary individual to join their endeavors.</p>
+            </div>
+        </div>
+        <br>
+        <section>
+            <div class="video-container">
+                <video autoplay muted loop playsinline style="width: 100%; height: auto;">
+                    <source src="{{ mp4_url2 }}" type="video/mp4">
+                </video>
+            </div>
+        </section>
+        <section class="contact-form">
+            <h2 class="text-3xl font-bold">Let's Connect 🥳</h2>
+            <form action="/message" method="POST">
+                <label for="name" class="text-lg">Name*</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name" class="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2">
+    
+                <label for="email" class="text-lg">Email*</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email" class="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2">
+    
+                <label for="message" class="text-lg">Message*</label>
+                <textarea id="message" name="message" required placeholder="Enter your message" class="w-full px-4 py-2 border border-gray-300 rounded-lg mt-2"></textarea>
+    
+                <input type="hidden" id="selected-date" name="selected-date">
+    
+                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-lg uppercase font-medium mt-4">Send</button>
+            </form>
+        </section>
+    </section>
+    <div>   
+    <div class="blog-section">
+        <h1 class="text-center">Ebowwa Blogs</h1>    
+        {% for post in posts %}
+    <h2><a href="{{ url_for('post', id=post[0]) }}">{{ post[1] }}</a></h2>
+    <p>{{ post[2] }}</p>
+{% endfor %}
+
+  </div>
+    </div>
+</section>
+    <footer>
+        <div class="container">
+            © 2023 Elijah Arbee
+        </div>
+        <div>
+            <a href='/about' class="hyperlink">About</a>
+        </div>
+    </footer>
+
+       <div class="bubble-container">
+        <a href="https://replit.com/@ebowwa" target="_blank"><img class="bubble" src="static/img/replit-icon.png" alt="Replit"></a>
+        <a href="https://twitter.com/innitEBOWWA" target="_blank"><img class="bubble" src="static/img/twitter-icon.png" alt="Twitter"></a>
+        <a href="https://www.linkedin.com/in/elijah-arbee" target="_blank"><img class="bubble" src="static/img/linkedin-icon.png" alt="LinkedIn"></a>
+        <a href="https://github.com/ebowwa" target="_blank"><img class="bubble" src="static/img/github-icon.png" alt="GitHub"></a>
+         <a href="https://huggingface.co/ebowwa" target="_blank"><img
+class="bubble" src="static/img/huggingface-icon.png" alt="HuggingFace"></a> 
+       </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="https://unpkg.com/bowser/dist/bowser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+        });
+        // Render the diagram
+        mermaid.init(undefined, document.getElementsByClassName('mermaid'));
+
+        // Function to generate a random number
+        function randomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        // Function to animate the bubbles
+        function moveBubble(bubble) {
+            var containerWidth = $('.bubble-container').width();
+            var containerHeight = $('.bubble-container').height();
+            var bubbleWidth = bubble.width();
+            var bubbleHeight = bubble.height();
+            var newX = Math.random() * (containerWidth - bubbleWidth);
+            var newY = Math.random() * (containerHeight - bubbleHeight);
+            bubble.animate({
+                    left: newX,
+                    top: newY
+                },
+                5000,
+                function () {
+                    moveBubble(bubble);
+                }
+            );
+        }
+
+        $('.bubble').each(function () {
+            moveBubble($(this));
+        });
+
+        // Rest of the script
+        $('#github').on('click', function () {
+            window.open('https://github.com/ebowwa', '_blank');
+        });
+
+        $('#replit').on('click', function () {
+            window.open('https://replit.com/@ebowwa', '_blank');
+        });
+
+        $('#twitter').on('click', function () {
+            window.open('https://twitter.com/innitEBOWWA', '_blank');
+        });
+
+        $('#linkedin').on('click', function () {
+            window.open('https://www.linkedin.com/in/elijah-arbee', '_blank');
+        });
+
+        function sharePage() {
+            // Get the current page URL
+            var url = window.location.href;
+
+            // Create a temporary input element
+            var input = document.createElement('input');
+            input.setAttribute('value', url);
+            document.body.appendChild(input);
+
+            // Copy the URL from the input element
+            input.select();
+            document.execCommand('copy');
+
+            // Remove the temporary input element
+            document.body.removeChild(input);
+
+            // Show a notification or perform any other action to indicate the URL has been copied
+            alert('URL copied to clipboard: ' + url);
+        }
+</script>
+   <script type="text/javascript">
+   (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", {origin:"https://app.cal.com"});
+
+    Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+</html>

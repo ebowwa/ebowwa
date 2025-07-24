@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Welcome</title>
+    <link rel="icon" type="image/jpg" href="static/img/koko.jpg">
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #f5f5f5;
+            background: -webkit-linear-gradient(to right, #f5f5f5, #e0e0e0);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 1em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h1 {
+            font-size: 2em;
+            font-weight: 400;
+            margin-bottom: 10px;
+            margin-top: 0; /* Add margin-top to create space */
+        }
+
+        .container input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .container input:focus {
+            border-bottom: 1px solid #5fbae9;
+        }
+
+        .container input[type="submit"] {
+            background: #5fbae9;
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 1em;
+            font-weight: 300;
+            cursor: pointer;
+            border-radius: 2em;
+            margin-top: 20px;
+        }
+
+        .container input[type="submit"]:hover {
+            background: #49a9e0;
+        }
+
+        .container a {
+            text-decoration: none;
+            font-size: 0.8em;
+            color: #888;
+            -webkit-transition: .3s;
+            transition: .3s;
+            margin-top: 20px;
+        }
+        .container a:hover {
+            color: #5fbae9;
+        }
+        .laptop-gif {
+            width: 300px; /* Adjust the width as needed */
+            height: auto; /* Maintain the aspect ratio */
+        }
+    </style>
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script>
+        function redirectToDashboard() {
+            window.location.href = "/view_messages";
+        }
+
+        function redirectToRegistration() {
+            window.location.href = "/register";
+        }
+    </script>
+</head>
+
+<body>
+    <img src="static/img/laptop.gif">
+    <div class="container">
+        <h1>Login</h1> <!-- Move the h1 tag inside the container div -->
+        <form id="loginForm" method="POST" action="{{ url_for('login') }}">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="register.html" onclick="redirectToRegistration()">Register</a></p>
+    </div>
+</body>
+
+</html>

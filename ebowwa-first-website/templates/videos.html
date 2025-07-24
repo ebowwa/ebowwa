@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TikTok Replica</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 480px;
+            height: 100%;
+            max-height: 800px;
+            overflow: hidden;
+            background-color: #000;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-info {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        .video-info h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .video-info p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <div class="video-wrapper">
+            <video id="current-video" autoplay muted>
+                <source src="{{ video_sources[0] }}" type="video/mp4">
+            </video>
+            <div class="video-info">
+                <h3>Video Title</h3>
+                <p>Username</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="tutorial">
+        <div class="tutorial-text">
+            <h3>Welcome to the TikTok Replica!</h3>
+            <p>Swipe left to view the next video</p>
+            <p>Videos will play automatically with sound muted</p>
+        </div>
+    </div>
+
+    <script>
+        var videoSources = {{ video_sources|tojson }};
+        var currentVideoIndex = 0;
+        var currentVideo = document.getElementById('current-video');
+        var tutorial = document.getElementById('tutorial');
+
+        document.addEventListener('DOMContentLoaded', function() {
+            currentVideo.addEventListener('ended', playNextVideo);
+            tutorial.addEventListener('click', startTutorial);
+        });
+
+        function playNextVideo() {
+            currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
+            currentVideo.src = videoSources[currentVideoIndex];
+            currentVideo.load();
+            currentVideo.play();
+        }
+
+        function startTutorial() {
+            tutorial.style.display = 'none';
+        }
+
+        // Swipe Gesture Handling
+        var initialX = null;
+        var initialY = null;
+
+        document.addEventListener('touchstart', function(event) {
+            initialX = event.touches[0].clientX;
+            initialY = event.touches[0].clientY;
+        });
+
+        document.addEventListener('touchmove', function(event) {
+            if (initialX === null || initialY === null) {
+                return;
+            }
+
+            var currentX = event.touches[0].clientX;
+            var currentY = event.touches[0].clientY;
+            var diffX = initialX - currentX;
+            var diffY = initialY - currentY;
+
+            if (Math.abs(diffX) > Math.abs(diffY)) {
+                if (diffX > 0) {
+                    playNextVideo();
+                }
+            }
+
+            initialX = null;
+            initialY = null;
+        });
+    </script>
+</body>
+</html>
+

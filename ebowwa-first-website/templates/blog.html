@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebowwa's Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles go here */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+
+        .blog-header {
+            background-color: #3B82F6;
+            color: #FFFFFF;
+            animation: headerFadeIn 1s;
+        }
+
+        .blog-header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .blog-card {
+            background-color: #FFFFFF;
+            border-radius: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            animation: cardFadeIn 1s;
+        }
+
+        .blog-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .blog-card img {
+            border-radius: 1rem 1rem 0 0;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-content h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3B82F6;
+        }
+
+        .blog-content p {
+            color: #4A5568;
+        }
+
+        .blog-footer {
+            background-color: #E5E7EB;
+            animation: footerFadeIn 1s;
+        }
+
+        .blog-footer p {
+            color: #4A5568;
+        }
+
+        .blog-footer a {
+            color: #3B82F6;
+            text-decoration: underline;
+        }
+
+        /* Animation Keyframes */
+        @keyframes headerFadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes cardFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes footerFadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="blog-header py-8 px-4 text-center">
+        <h1>Welcome to Ebowwa's Blog</h1>
+    </header>
+
+    <main class="container mx-auto py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Blog Card 1 -->
+            <div class="blog-card">
+                <img src="https://placeimg.com/640/480/nature" alt="Blog Image">
+                <div class="blog-content">
+                    <h2 class="mb-4">The Journey of a Resilient Innovator</h2>
+                    <p>Every individual is a complex tapestry of experiences, dreams, and talents, much like a black box full of untold stories and unexplored potential. My journey, too, is a testament to this complexity. It's been an unconventional path, marked by resilience, innovation, and a relentless pursuit of knowledge.</p>
+                </div>
+                <div class="blog-footer px-4 py-2">
+                    <p>Published on July 29, 2023</p>
+                    <a href="#" class="block mt-2">Read More</a>
+                </div>
+            </div>
+
+            <!-- Blog Card 2 -->
+            <div class="blog-card">
+                <img src="https://placeimg.com/640/480/tech" alt="Blog Image">
+                <div class="blog-content">
+                    <h2 class="mb-4">Embracing AI in Our Lives</h2>
+                    <p>The rise of AI has led to a shift in the job market, creating a new role beyond the Prompt Engineer - the AI Engineer. This role is a testament to the emergent capabilities and open source/API availability of Foundation Models.</p>
+                </div>
+                <div class="blog-footer px-4 py-2">
+                    <p>Published on July 28, 2023</p>
+                    <a href="#" class="block mt-2">Read More</a>
+                </div>
+            </div>
+
+            <!-- Blog Card 3 -->
+            <div class="blog-card">
+                <img src="https://placeimg.com/640/480/animals" alt="Blog Image">
+                <div class="blog-content">
+                    <h2 class="mb-4">Co-Founder of Autonomy Solutions</h2>
+                    <p>As a co-founder of Autonomy Solutions, I have demonstrated my ability to take on significant leadership and strategic responsibilities. Co-founding a company requires a deep understanding of the industry and a commitment to creating and executing a successful business strategy.</p>
+                </div>
+                <div class="blog-footer px-4 py-2">
+                    <p>Published on July 27, 2023</p>
+                    <a href="#" class="block mt-2">Read More</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="blog-footer py-4 px-4 text-center">
+        <p>&copy; 2023 Ebowwa's Blog. All rights reserved.</p>
+        <a href="#" class="mt-2">Privacy Policy</a>
+    </footer>
+</body>
+
+</html>

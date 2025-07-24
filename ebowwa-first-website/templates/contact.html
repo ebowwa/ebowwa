@@ -1,0 +1,185 @@
+<link href="static/img/koko.jpg" rel="icon" type="image/jpg"/>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Elijah Arbee - Meet Ebowwa" name="description"/>
+<link href="static/img/koko.jpg" rel="apple-touch-icon"/>
+<link href="static/img/koko.jpg" rel="shortcut icon"/>
+<link href="/manifest.json" rel="manifest"/>
+<title>Elijah Arbee</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --primary-color: #3D5AFE;
+            --secondary-color: #2979FF;
+            --tertiary-color: #1E88E5;
+            --background-color: #E3F2FD;
+            --font-family: 'Inter', sans-serif;
+            --main-transition: all 0.25s ease;
+            --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: var(--main-transition);
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background: var(--background-color);
+            color: var(--primary-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+
+        header {
+            text-align: center;
+            background: #FFF;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-logo {
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90vh;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #FFF;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .contact-form button {
+            background-color: var(--primary-color);
+            color: #FFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        footer {
+            padding: 2em 0;
+            text-align: center;
+            background: #FFF;
+            box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .bubble-container {
+            position: fixed;
+            top: 0;
+            right: 20px;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+<header>
+<div class="container">
+<div class="header-logo">
+                Elijah Arbee
+            </div>
+</div>
+</header>
+<main>
+<section class="hero">
+<div class="container">
+<h1>Contact Me</h1>
+<p>From a solar sales business leader to an aspiring tech enthusiast, I'm on a journey of continuous growth, driven by innovation and the will to make a difference.</p>
+<button data-cal-config='{"layout":"month_view"}' data-cal-link="ebowwa/30min" style="background-color: var(--primary-color); color: #FFF; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; margin-top: 20px;" type="submit">Schedule Meeting</button></div>
+</section>
+<section class="contact-form">
+<h2>Get in Touch</h2>
+<form action="/message" method="POST">
+<label for="name">Name*</label>
+<input id="name" name="name" required="" type="text"/>
+<label for="email">Email*</label>
+<input id="email" name="email" required="" type="email"/>
+<label for="message">Message*</label>
+<textarea id="message" name="message" required=""></textarea>
+<input id="selected-date" name="selected-date" type="hidden"/>
+<button type="submit">Send</button>
+</form>
+</section>
+</main>
+<footer>
+<div class="container">
+            © 2023 Elijah Arbee. All rights reserved.
+        </div>
+</footer>
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://app.cal.com"});
+Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
+</script></body>
+</html>

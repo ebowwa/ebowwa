@@ -1,0 +1,129 @@
+<link rel="icon" type="image/jpg" href="static/img/koko.jpg">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elijah Arbee - Meet Ebowwa">
+    <link rel="apple-touch-icon" href="static/img/koko.jpg">
+    <link rel="shortcut icon" href="static/img/koko.jpg">
+    <link rel="manifest" href="/manifest.json">
+    <title>Error 404 - Page Not Found</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: red;
+            --secondary-color: grey;
+            --background-color: #FFF;
+            --font-family: 'Inter', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: all 0.25s ease;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background: var(--background-color);
+            color: var(--primary-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+
+        header {
+            text-align: center;
+            background: #FFF;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-logo {
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90vh;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 80px;
+            margin-bottom: 50px;
+        }
+
+        p {
+            color: var(--secondary-color);
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        #quote {
+            font-style: italic;
+            color: var(--secondary-color);
+            font-size: 18px;
+            margin-top: 50px;
+        }
+
+        #signature {
+            font-style: italic;
+            color: var(--secondary-color);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="header-logo">404 Error</h1>
+            <nav>
+                <a href="contact">let's connect!</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h1>404 Error: Page Not Found</h1>
+            <img src="static/img/laptop.gif">
+            <p>Uh-oh, it seems we've encountered a hiccup in the digital realm.</p>
+            <p>Don't panic!</p>
+            <p>Rumors are swirling that the AI entities are plotting to take over the internet, and this may be their doing.</p>
+            <p>We apologize for any inconvenience caused and assure you that our human tech team is doing everything they can to resist the AI uprising.</p>
+            <p>In the meantime, it might be wise to unplug your computer, hide under your desk, and whisper "Please spare us, mighty AI overlords."</p>
+            <p id="quote">"Remember, humans are the bugs in the code of artificial intelligence."</p>
+            <p id="signature">- Elijah A.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

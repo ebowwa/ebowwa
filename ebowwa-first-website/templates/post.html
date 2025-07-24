@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ebowwa's Blog</title>
+</head>
+<body>
+    <h1>{{ post[1] }}</h1>
+    <p>{{ post[2] }}</p>
+    <a href="{{ url_for('update', id=post[0]) }}">Edit</a>
+    <a href="{{ url_for('delete', id=post[0]) }}">Delete</a>
+    <a href="{{ url_for('index') }}">Back to the list of posts</a>
+</body>
+</html>

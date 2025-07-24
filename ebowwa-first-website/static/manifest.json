@@ -1,0 +1,33 @@
+{
+  "name": "Elijah Arbee",
+  "short_name": "ebowwa",
+  "description": "Coming from a rich blend of Native American, African-American, and Filipino heritage, I grew up in an environment where higher education was not the norm. However, this background instilled in me the values of resilience, dedication, and perseverance from a young age. Harnessing these qualities, I built a successful solar sales business. Today, my journey has expanded into the tech industry. I am passionate about coding, learning new technologies, and working on innovative projects. With a strong background in sales and customer success management, I bring a customer-centric approach and strategic thinking to every endeavor.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#E3F2FD",
+  "theme_color": "#3D5AFE",
+  "quick_links": ["
+    <a href='https://www.linkedin.com/in/ebowwa/' target='_blank' rel='noopener noreferrer'>
+      <img src='/static/img/linkedin.svg' alt='LinkedIn' />
+    </a>
+    <a href='https://github.com/ebowwa' target='_blank' rel='noopener noreferrer'>
+      <img src='/static/img/github.svg' alt='GitHub' />
+    </a>
+    <a href='https://twitter.com/ebowwa' target='_blank' rel='noopener noreferrer'>
+      <img src='/static/img/twitter.svg' alt='Twitter' />
+    </a>
+    <a href='https://www.instagram.com/ebowwa/' target='_blank' rel='noopener noreferrer'>
+      <img src='/static/img/instagram.svg' alt='Instagram' />
+    </a>
+  "],
+  "javaScriptEnabled": true,"
+  "icons": [
+    {
+      "src": "/static/img/koko.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg",
+      "purpose": "any maskable"
+    },
+  ]
+}
+

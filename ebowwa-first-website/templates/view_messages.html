@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Messages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3D5AFE;
+            --background-color: #E3F2FD;
+            --font-family: 'Inter', sans-serif;
+            --main-transition: all 0.25s ease;
+            --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background: var(--background-color);
+            color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        .message-container {
+            background: #FFF;
+            box-shadow: var(--shadow);
+            padding: 1em;
+            margin-bottom: 2em;
+            position: relative;
+        }
+
+        .message-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+
+        .message-content {
+            white-space: pre-line;
+        }
+
+        .delete-button {
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            background-color: #FF5252;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .delete-button:hover {
+            background-color: #FF1744;
+        }
+
+        .reply-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .reply-button:hover {
+            background-color: #2A3CB1;
+        }
+
+        .message-reply {
+            display: none;
+            margin-top: 1em;
+        }
+
+        .message-reply textarea {
+            width: 100%;
+            height: 100px;
+            padding: 0.5em;
+            margin-top: 0.5em;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        .show-reply {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Messages</h1>
+        {% for message in messages %}
+        <div class="message-container">
+            <div class="message-details">
+                <span>Name: {{ message.name }}</span>
+                <span>Email: {{ message.email }}</span>
+                <span>Date: {{ message.selected_date }}</span>
+            </div>
+            <div class="message-content">
+                <p>{{ message.message }}</p>
+            </div>
+            {% if current_user.is_admin %}
+            <form class="delete-form" method="POST" action="{{ url_for('delete_message', id=message.id) }}">
+                {{ csrf_token() }}
+                <button class="delete-button" type="submit">Delete</button>
+            </form>
+            {% else %}
+            <button class="reply-button">Reply</button>
+            <div class="message-reply">
+                <textarea placeholder="Type your reply here..."></textarea>
+                <button class="send-reply">Send</button>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+   <a href="{{ url_for('create') }}">Create a new post</a>
+    </div>
+    <a href="/logout">Logout</a>
+
+    <script>
+        // Toggle reply section
+        var replyButtons = document.getElementsByClassName('reply-button');
+        var replyForms = document.getElementsByClassName('message-reply');
+
+        Array.from(replyButtons).forEach(function(button, index) {
+            button.addEventListener('click', function() {
+                if (replyForms[index].classList.contains('show-reply')) {
+                    replyForms[index].classList.remove('show-reply');
+                } else {
+                    replyForms[index].classList.add('show-reply');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

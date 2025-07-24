@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }  
+    .swiper-slide video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .swiper-slide .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      background: #fff;
+      border: 1px solid #000;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .swiper-slide .play-button:hover {
+      background: #000;
+      color: #fff;
+    }
+    .swiper-slide .play-button.playing,
+    .swiper-slide .play-button.paused,
+    .swiper-slide .play-button.stopped {
+      background: #000;
+      color: #fff;
+    }
+    .swiper-slide .play-button.playing:hover,
+    .swiper-slide .play-button.paused:hover,
+    .swiper-slide .play-button.stopped:hover {
+      background: #000;
+      color: #fff;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <style>
+    /* Adjust the size of the diagram container */
+    #diagram {
+      max-width: auto;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="diagram">
+    <!-- Add a container for the diagram -->
+    <div class="mermaid">
+         graph TB
+          SD["Solar Dealership"]
+          SD -- "Project Management" --> I["Installer"]
+          SD -- "Communication" --> I
+          SD -- "Site Analysis" --> I
+          SD -- "Design Proposals" --> I
+          SD -- "Sales and Financing Options" --> F["Financer"]
+          SD -- "Customer Relations" --> C["Customer"]
+          SD -- "CRM (Sunbase Data)" --> CRM["CRM Software"]
+          CRM -- "Lead Management" --> SD
+          CRM -- "Project Management" --> SD
+          CRM -- "Proposal Generation" --> SD
+          CRM -- "Analytics and Reporting" --> SD
+          CRM -- "Customer Service" --> SD
+          SD -- "Loan Agreements" --> LA["Loan Agreements"]
+          LA -- "Loan Terms" --> F
+          LA -- "Payment Schedule" --> C
+          LA -- "Contract Enforcement" --> CE["Contract Enforcement"]
+          CE -- "Legal Action" --> L["Legal"]
+          CE -- "Dispute Resolution" --> DR["Dispute Resolution"]
+          subgraph M["Moat"]
+          CRM -- "Competitive Advantage" --> CA["Competitive Advantage"]
+          CRM -- "Leveraging Relationships" --> LR["Leveraging Relationships"]
+          end
+          style M fill:#99cc99,stroke:#333,stroke-width:2px
+          style SD fill:#f9d71c,stroke:#333,stroke-width:2px
+          linkStyle 0 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 1 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 2 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 3 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 4 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 5 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 6 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 7 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 8 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 9 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 10 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 11 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 12 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 13 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 14 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 15 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 16 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 17 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 18 stroke:#2ecd71,stroke-width:2px;
+          linkStyle 19 stroke:#2ecd71,stroke-width:2px;
+    </div>
+  </div>
+
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'default', // You can change the theme if desired
+    });
+    // Render the diagram
+    mermaid.init(undefined, document.getElementsByClassName('mermaid'));
+  </script>
+</body>
+</html>

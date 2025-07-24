@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elijah Arbee - Aspiring tech enthusiast and entrepreneur">
+    <link rel="icon" type="image/jpg" href="static/img/koko.jpg">
+    <link rel="apple-touch-icon" href="static/img/koko.jpg">
+    <link rel="shortcut icon" href="static/img/koko.jpg">
+    <link rel="manifest" href="/manifest.json">
+    <title>Elijah Arbee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3D5AFE;
+            --secondary-color: #2979FF;
+            --tertiary-color: #1E88E5;
+            --background-color: #E3F2FD;
+            --font-family: 'Inter', sans-serif;
+            --main-transition: all 0.25s ease;
+            --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 1em;
+            font: bold;
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: var(--main-transition);
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background: var(--background-color);
+            color: var(--primary-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+
+        header {
+            text-align: center;
+            background: #FFF;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-logo {
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .project-actions,
+        .share-button {
+            display: inline-block;
+            margin-top: 1em;
+            padding: 0.5em 2em;
+            border-radius: 2em;
+            background: var(--primary-color);
+            color: #FFF;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-actions:hover,
+        .share-button:hover {
+            background: var(--secondary-color);
+        }
+
+        .project-actions:active,
+        .share-button:active {
+            background: var(--tertiary-color);
+        }
+
+        .project-actions:focus,
+        .share-button:focus {
+            outline: none;
+        }
+
+        .project-actions:disabled,
+        .share-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        footer {
+            padding: 2em 0;
+            text-align: center;
+            background: #FFF;
+            box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .bubble-container {
+            position: fixed;
+            top: 0;
+            right: 20px;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            z-index: 999;
+        }
+
+        .bubble-container a {
+            display: block;
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .bubble-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            cursor: pointer;
+            transition: transform 0.5s;
+        }
+
+        .bubble-container img:hover {
+            transform: scale(1.2);
+        }
+
+        .bubble {
+            width: 60px;
+            height: 60px;
+            background-color: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.5s;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            line-height: 60px;
+            animation: bubble 8s linear infinite;
+        }
+
+        .bubble:hover {
+            transform: scale(1.2);
+        }
+
+        @keyframes bubble {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100%);
+            }
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-slide video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-slide .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            border: 1px solid #000;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .swiper-slide .play-button:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        .swiper-slide .play-button.playing,
+        .swiper-slide .play-button.paused,
+        .swiper-slide .play-button.stopped {
+            background: #000;
+            color: #fff;
+        }
+
+        .swiper-slide .play-button.playing:hover,
+        .swiper-slide .play-button.paused:hover,
+        .swiper-slide .play-button.stopped:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        #diagram {
+            margin: 7px auto;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.5;
+            color: #333;
+            color-rendering: optimizeSpeed;
+            orientation: center;
+        }
+
+        #diagram .mermaid {
+            width: 100%;
+            max-height: 100%;
+            white-space: nowrap;
+        }
+        .signature {
+            font-size: 1em;
+            color: (--font-family-color);
+            text-align: right;
+        }
+        
+        .signature-name {
+            font-size: 1.2em;
+            color: (--font-family-color);
+            font-weight: bold;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/">Elijah Arbee</a>
+            <nav>
+                <a href="contact">let's connect!</a>
+            </nav>
+        </div>
+    </header>
+
+<div class="container">
+    <h1>About: What is this?</h1>
+    <p>Welcome to my digital sphere, a testament to a journey that has taken me from leading a thriving solar sales business to becoming an impassioned tech enthusiast. This platform is a reflection of my continuous growth, fueled by innovation, resilience, and a drive to make a difference.</p>
+
+    <!-- iOS-specific content -->
+    <!--[if iOS]>
+    <div class="hidden-comment">
+        <p>Attention, curious minds!</p>
+        <p>I believe the internet is heading towards a fascinating frontier, driven by the power of advanced models and scraping tools.</p>
+        <p>Within the hidden recesses of this site, a secret awaits, waiting for astute explorers like you to discover and interpret.</p>
+        <p>This cryptic path serves as an invitation, a gateway into the depths of my digital world. It beckons you to explore, uncover hidden meanings, and reshape the boundaries of technology.</p>
+        <p>Together, we can unravel the untapped potential of advanced systems, especially in the iOS ecosystem. Let's forge a path towards a future where humans and machines coexist harmoniously.</p>
+        <p>Embark on this enigmatic journey, dear explorers, and let us shape the destiny of the internet, one hidden message at a time. Happy exploring!</p>
+    </div>
+    <![endif]-->
+    <!-- Common content for all platforms -->
+    <p>Discover the wonders that await and join me in embracing the incredible potential of digital experiences.</p>
+
+    <h2>The Goal</h2>
+    <p>As we journey together through this digital landscape, I want to share with you my goal. I dream of a world where technology and humanity are intertwined, where advanced systems serve as a tool to unlock our full potential and not as a replacement for our unique human abilities.</p>
+
+    <p>My desire is to contribute to this vision by creating solutions that are accessible, ethical, and beneficial for all. I aim to build technologies that respect our privacy, enhance our productivity, and enrich our lives in meaningful ways.</p>
+
+    <p>Through this website, I hope to share my passion for technology and inspire others to join me in shaping a future where technology serves humanity. I invite you to explore, learn, and contribute to this exciting journey. Together, we can make a difference.</p>
+<p class="signature">Thank you for reading!</p>
+<p class="signature">Elijah Arbee</p>
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Elijah Arbee. All rights reserved.</p>
+</footer>
+</body>
+
+</html>
