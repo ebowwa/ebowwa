@@ -1,0 +1,184 @@
+/* VoiceRecorder.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1f1f1f;
+    color: white;
+  }
+  
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  }
+  
+  .recorder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .circleContainer {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #4caf50;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pulsingRing {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    animation: pulseRing 2s infinite;
+  }
+  
+  .instructions {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  }
+  
+  .recordingTime {
+    font-size: 2rem;
+    margin-top: 1rem;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  .recordButton {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .recordButton:hover {
+    transform: scale(1.1);
+  }
+  
+  .micIcon {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  }
+  
+  .recordingIndicators {
+    display: flex;
+  }
+  
+  .recordingIndicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ff5252;
+    margin-right: 8px;
+    animation: pulse 1s infinite;
+  }
+  
+  .cancelButton {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ff5252;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .cancelButton:hover {
+    transform: scale(1.1);
+  }
+  
+  .cancelIcon {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 2px;
+    position: relative;
+  }
+  
+  .cancelIcon::before,
+  .cancelIcon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 80%;
+    height: 2px;
+    background-color: #ff5252;
+  }
+  
+  .cancelIcon::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  
+  @keyframes pulseRing {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }

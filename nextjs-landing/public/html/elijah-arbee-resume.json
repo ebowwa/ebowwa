@@ -1,0 +1,97 @@
+{
+  "name": "Elijah Arbee",
+  "dob": "null",
+  "title": "passionate about data, 3d and ai models, and the potential of computing on a more connected, fair, and growth-friendly world ",
+  "email": "email@gmail.com",
+  "phone": "+1 (510) 000-0000",
+  "linkedin": "https://www.linkedin.com/in/elijah-arbee/",
+  "github": "https://github.com/ebowwa",
+  "huggingface":"https://huggingface.co/ebowwa",
+  "ollama": "https://ollama.com/ebowwa",
+  "workExperience": [
+    {
+      "title": "Open-Source Hardware & Community Engagement",
+      "company": "BasedHardware",
+      "duration": "",
+      "responsibilities": [
+        "Assemble and test open-source hardware devices",
+        "Manage community and customer outreach",
+        "Coordinate shipping and logistics",
+        "Develop automation scripts for distribution",
+        "Organize and participate in hardware events"
+      ],
+      "background": "Hands-on experience in hardware assembly, outreach, and distribution."
+    },
+    {
+      "title": "Sales & Marketing",
+      "company": "Autonomy Solutions",
+      "duration": "",
+      "responsibilities": [
+        "Co-founded and spearheaded sales operations",
+        "Developed and executed comprehensive marketing campaigns",
+        "Managed sales operations",
+        "Onboarded, trained, and mentored sales representatives",
+        "Leveraged data analysis and CRM systems"
+      ],
+      "background": "Gained experience in entrepreneurship, sales leadership, and data-driven decision-making."
+    },
+    {
+      "title": "Customer Service & Hospitality",
+      "company": "Various",
+      "duration": "",
+      "responsibilities": [
+        "Provided exceptional customer service",
+        "Collaborated with teams to ensure seamless operations",
+        "Resolved issues and maintained positive relationships",
+        "Adapted quickly to changing service demands"
+      ],
+      "background": "Developed strong communication, teamwork, and problem-solving skills."
+    }
+  ],
+  "build": [
+    {
+      "name": "Building a Portfolio of Real-World Solutions",
+      "date": "",
+      "description": "Passionate about pushing technological boundaries and collaborating with fellow innovators, I've actively participated in 30+ hackathons, ranging from short sprints to multi-day events.",
+      "learnings": [
+        "Developed expertise in rapid prototyping, iterative development, and agile methodologies.",
+        "Gained hands-on experience with a wide range of technologies, including LLMs, web development frameworks, and data visualization tools.",
+        "Strengthened collaboration and communication skills while working effectively in diverse, multidisciplinary teams.",
+        "Cultivated a growth mindset, embracing challenges as opportunities for learning and innovation."
+      ]
+    }
+  ],
+  "technicalSkills": [
+    "Python: Web Scraping, Dev, Inference Servers, Demos, Data Manipulations", 
+    "TypeScript: Production", 
+    "React", 
+    "Next.js",
+    "Three.js", 
+    "Data Curation", 
+    "Synthetic Data Generation", 
+    "Large Language Models (LLMs)",
+    "Fine-tuning", 
+    "API Integration",
+    "Web Scraping" 
+  ],
+  "softSkills": [
+    "Resilience", 
+    "Communication", 
+    "Teamwork", 
+    "Adaptability",
+    "Problem-Solving", 
+    "Critical Thinking", 
+    "Creativity", 
+    "Leadership" 
+  ],
+  "interests": [
+    "Programmable Logic Controllers & Industrial Automation",
+    "AI Development, Prompt Engineering & Tooling",
+    "Full-Stack/Mobile Architectures (Offline-First & Real-Time)",
+    "High-Fidelity UI/UX & Media Optimization",
+      "3D Modeling, Animation & Extended Reality",
+      "Business Automation & Productivity Workflows",
+      "Community Building & Social Impact"
+    ]
+  }
+  

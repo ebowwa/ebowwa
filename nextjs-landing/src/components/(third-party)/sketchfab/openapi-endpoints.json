@@ -1,0 +1,547 @@
+[
+  {
+    "Resource": "Models",
+    "Action": "POST",
+    "URL": "/v3/models/{uid}/transfer-to-org"
+  },
+  {
+    "Resource": "Models",
+    "Action": "DELETE",
+    "URL": "/v3/models/{uid}"
+  },
+  {
+    "Resource": "Models",
+    "Action": "GET",
+    "URL": "/v3/models/{uid}"
+  },
+  {
+    "Resource": "Models",
+    "Action": "PATCH",
+    "URL": "/v3/models/{uid}"
+  },
+  {
+    "Resource": "Models",
+    "Action": "PUT",
+    "URL": "/v3/models/{uid}"
+  },
+  {
+    "Resource": "Models",
+    "Action": "PATCH",
+    "URL": "/v3/models/{uid}/options"
+  },
+  {
+    "Resource": "Models",
+    "Action": "GET",
+    "URL": "/v3/models"
+  },
+  {
+    "Resource": "Models",
+    "Action": "POST",
+    "URL": "/v3/models"
+  },
+  {
+    "Resource": "Models",
+    "Action": "GET",
+    "URL": "/v3/me/models/purchases"
+  },
+  {
+    "Resource": "Collections",
+    "Action": "DELETE",
+    "URL": "/v3/collections/{uid}/models"
+  },
+  {
+    "Resource": "Collections",
+    "Action": "GET",
+    "URL": "/v3/collections/{uid}/models"
+  },
+  {
+    "Resource": "Collections",
+    "Action": "POST",
+    "URL": "/v3/collections/{uid}/models"
+  },
+  {
+    "Resource": "Models",
+    "Action": "GET",
+    "URL": "/v3/models/{uid}/download"
+  },
+  {
+    "Resource": "Search",
+    "Action": "GET",
+    "URL": "/v3/me/search?type=models"
+  },
+  {
+    "Resource": "Models",
+    "Action": "DELETE",
+    "URL": "/v3/models/{uid}/archives/extra/latest"
+  },
+  {
+    "Resource": "Models",
+    "Action": "GET",
+    "URL": "/v3/models/{uid}/archives/extra/latest"
+  },
+  {
+    "Resource": "Search",
+    "Action": "GET",
+    "URL": "/v3/search?type=models"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "DELETE",
+    "URL": "/v3/orgs/{orgUid}/models/{modelUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/models/{modelUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "PATCH",
+    "URL": "/v3/orgs/{orgUid}/models/{modelUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "PUT",
+    "URL": "/v3/orgs/{orgUid}/models/{modelUid}"
+  },
+  {
+    "Resource": "Search",
+    "Action": "GET",
+    "URL": "/v3/search"
+  },
+  {
+    "Resource": "Search",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/search?type=models"
+  },
+  {
+    "Resource": "Models",
+    "Action": "POST",
+    "URL": "/v3/models/{uid}/archives/extra"
+  },
+  {
+    "Resource": "Me",
+    "Action": "GET",
+    "URL": "/v3/me/models"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/models"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "POST",
+    "URL": "/v3/orgs/{orgUid}/models"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/models/{modelUid}/download"
+  },
+  {
+    "Resource": "Users",
+    "Action": "GET",
+    "URL": "/v3/users"
+  },
+  {
+    "Resource": "Me",
+    "Action": "GET",
+    "URL": "/v3/me"
+  },
+  {
+    "Resource": "Me",
+    "Action": "PATCH",
+    "URL": "/v3/me"
+  },
+  {
+    "Resource": "Users",
+    "Action": "GET",
+    "URL": "/v3/users/{uid}"
+  },
+  {
+    "Resource": "Me",
+    "Action": "GET",
+    "URL": "/v3/me/account"
+  },
+  {
+    "Resource": "Users",
+    "Action": "GET",
+    "URL": "/v3/users/{uid}/followings"
+  },
+  {
+    "Resource": "Me",
+    "Action": "GET",
+    "URL": "/v3/me/orgs"
+  },
+  {
+    "Resource": "Avatars",
+    "Action": "GET",
+    "URL": "/v3/avatars/{uid}"
+  },
+  {
+    "Resource": "Users",
+    "Action": "GET",
+    "URL": "/v3/users/{uid}/followers"
+  },
+  {
+    "Resource": "Me",
+    "Action": "DELETE",
+    "URL": "/v3/me/followings/{uid}"
+  },
+  {
+    "Resource": "Me",
+    "Action": "GET",
+    "URL": "/v3/me/followings"
+  },
+  {
+    "Resource": "Me",
+    "Action": "POST",
+    "URL": "/v3/me/followings"
+  },
+  {
+    "Resource": "Me",
+    "Action": "GET",
+    "URL": "/v3/me/followers"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/backgrounds"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "POST",
+    "URL": "/v3/orgs/{orgUid}/backgrounds"
+  },
+  {
+    "Resource": "Me",
+    "Action": "GET",
+    "URL": "/v3/me/backgrounds"
+  },
+  {
+    "Resource": "Me",
+    "Action": "POST",
+    "URL": "/v3/me/backgrounds"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "DELETE",
+    "URL": "/v3/orgs/{orgUid}/backgrounds/{backgroundUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/backgrounds/{backgroundUid}"
+  },
+  {
+    "Resource": "Me",
+    "Action": "DELETE",
+    "URL": "/v3/me/backgrounds/{uid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "DELETE",
+    "URL": "/v3/orgs/{orgUid}/matcaps/{matcapUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/matcaps/{matcapUid}"
+  },
+  {
+    "Resource": "Me",
+    "Action": "GET",
+    "URL": "/v3/me/matcaps"
+  },
+  {
+    "Resource": "Me",
+    "Action": "POST",
+    "URL": "/v3/me/matcaps"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/matcaps"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "POST",
+    "URL": "/v3/orgs/{orgUid}/matcaps"
+  },
+  {
+    "Resource": "Me",
+    "Action": "DELETE",
+    "URL": "/v3/me/matcaps/{matcapUid}"
+  },
+  {
+    "Resource": "Me",
+    "Action": "GET",
+    "URL": "/v3/me/matcaps/{matcapUid}"
+  },
+  {
+    "Resource": "Thumbnails",
+    "Action": "GET",
+    "URL": "/v3/collections/thumbnails"
+  },
+  {
+    "Resource": "Likes",
+    "Action": "GET",
+    "URL": "/v3/me/likes"
+  },
+  {
+    "Resource": "Likes",
+    "Action": "POST",
+    "URL": "/v3/me/likes"
+  },
+  {
+    "Resource": "Likes",
+    "Action": "DELETE",
+    "URL": "/v3/me/likes/{uid}"
+  },
+  {
+    "Resource": "Search",
+    "Action": "GET",
+    "URL": "/v3/search"
+  },
+  {
+    "Resource": "Search",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/search?type=projects"
+  },
+  {
+    "Resource": "Search",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/search?type=models"
+  },
+  {
+    "Resource": "Search",
+    "Action": "GET",
+    "URL": "/v3/search?type=users"
+  },
+  {
+    "Resource": "Comments",
+    "Action": "GET",
+    "URL": "/v3/comments"
+  },
+  {
+    "Resource": "Comments",
+    "Action": "POST",
+    "URL": "/v3/comments"
+  },
+  {
+    "Resource": "Comments",
+    "Action": "DELETE",
+    "URL": "/v3/comments/{uid}"
+  },
+  {
+    "Resource": "Licenses",
+    "Action": "GET",
+    "URL": "/v3/licenses"
+  },
+  {
+    "Resource": "Licenses",
+    "Action": "GET",
+    "URL": "/v3/licences/{uid}"
+  },
+  {
+    "Resource": "Purchases",
+    "Action": "GET",
+    "URL": "/v3/me/models/purchases"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "PATCH",
+    "URL": "/v3/orgs/{orgUid}"
+  },
+  {
+    "Resource": "Models",
+    "Action": "POST",
+    "URL": "/v3/models/{uid}/transfer-to-org"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "DELETE",
+    "URL": "/v3/orgs/{orgUid}/matcaps/{matcapUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/matcaps/{matcapUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/backgrounds"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "POST",
+    "URL": "/v3/orgs/{orgUid}/backgrounds"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "DELETE",
+    "URL": "/v3/orgs/{orgUid}/environments/{environmentUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/environments/{environmentUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "PATCH",
+    "URL": "/v3/orgs/{orgUid}/environments/{environmentUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/environments"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "POST",
+    "URL": "/v3/orgs/{orgUid}/environments"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/tags"
+  },
+  {
+    "Resource": "Me",
+    "Action": "GET",
+    "URL": "/v3/me/orgs"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "PATCH",
+    "URL": "/v3/orgs/{orgUid}/models/{modelUid}/options"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/matcaps"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "POST",
+    "URL": "/v3/orgs/{orgUid}/matcaps"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "DELETE",
+    "URL": "/v3/orgs/{orgUid}/backgrounds/{backgroundUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/backgrounds/{backgroundUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "DELETE",
+    "URL": "/v3/orgs/{orgUid}/models/{modelUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/models/{modelUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "PATCH",
+    "URL": "/v3/orgs/{orgUid}/models/{modelUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "PUT",
+    "URL": "/v3/orgs/{orgUid}/models/{modelUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/projects"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "POST",
+    "URL": "/v3/orgs/{orgUid}/projects"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/search?type=projects"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/search?type=models"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/models"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "POST",
+    "URL": "/v3/orgs/{orgUid}/models"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "DELETE",
+    "URL": "/v3/orgs/{orgUid}/projects/{projectUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/projects/{projectUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "PATCH",
+    "URL": "/v3/orgs/{orgUid}/projects/{projectUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/models/{modelUid}/download"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/projects"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "POST",
+    "URL": "/v3/orgs/{orgUid}/projects"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/search?type=projects"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "DELETE",
+    "URL": "/v3/orgs/{orgUid}/projects/{projectUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "GET",
+    "URL": "/v3/orgs/{orgUid}/projects/{projectUid}"
+  },
+  {
+    "Resource": "Orgs",
+    "Action": "PATCH",
+    "URL": "/v3/orgs/{orgUid}/projects/{projectUid}"
+  }
+]

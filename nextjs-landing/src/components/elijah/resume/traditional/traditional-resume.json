@@ -1,0 +1,57 @@
+{
+    "name": "Elijah",
+    "title": "Data Lover, driven by code and creating",
+    "email": "ec.arbee1@gmail.com",
+    "phone": "+1 (510) 946-9214",
+    "linkedin": "https://www.linkedin.com/in/elijah-arbee/",
+    "github": "https://github.com/ebowwa",
+    "workExperience": [
+      {
+        "title": "Software Engineer",
+        "company": "Acme Inc.",
+        "duration": "2019 - Present",
+        "responsibilities": [
+          "Developed and maintained web applications using React, Node.js, and MongoDB.",
+          "Collaborated with cross-functional teams to design and implement new features.",
+          "Participated in code reviews and pair programming to ensure code quality."
+        ]
+      },
+      {
+        "title": "Intern",
+        "company": "Globex Corporation",
+        "duration": "2018 - 2019",
+        "responsibilities": [
+          "Assisted in the development of a mobile app using React Native.",
+          "Participated in agile development processes and attended daily standups.",
+          "Gained experience in testing and debugging web applications."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Computer Science",
+        "school": "San Fransisco State University",
+        "duration": "2014 - 2018"
+      },
+      {
+        "degree": "High School Diploma",
+        "school": "American High School",
+        "duration": "2014 - 2018"
+      }
+    ],
+    "technicalSkills": [
+      "React",
+      "NextJS",
+      "Full Stack",
+      "Git",
+      "SQL"
+    ],
+    "softSkills": [
+      "Problem-solving",
+      "Teamwork",
+      "Communication",
+      "Adaptability",
+      "Critical Thinking"
+    ]
+  }
+  

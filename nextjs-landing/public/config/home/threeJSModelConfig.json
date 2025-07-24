@@ -1,0 +1,47 @@
+{
+    "spaceBoi": {
+        "url": "https://cdn.jsdelivr.net/gh/ebowwar/threejs-assets@main/space_boi.glb",
+        "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "visible": true,
+        "castShadow": true,
+        "receiveShadow": true,
+        "animation": {
+            "y": "+=1.0",
+            "duration": 10,
+            "repeat": -1,
+            "ease": "linear"
+        }
+    },
+    "twitterLogo": {
+        "url": "https://cdn.jsdelivr.net/gh/ebowwar/threejs-assets@main/x_logo_twitter.glb",
+        "position": {
+            "x": -1.68,
+            "y": 2.98,
+            "z": -2.52
+        },
+        "rotation": {
+            "x": 0,
+            "y": 1.3788101090755205,
+            "z": 0
+        },
+        "visible": true,
+        "castShadow": true,
+        "receiveShadow": true,
+        "animation": {
+            "y": "+=3.14",
+            "duration": 5,
+            "repeat": -1,
+            "ease": "linear"
+        },
+        "redirectUrl": "https://example.com"
+    }
+}

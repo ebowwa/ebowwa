@@ -1,0 +1,24 @@
+{
+    "backgroundColor": "#000000",
+    "ambientLightColor": "#ffffff",
+    "pointLights": [
+        {
+            "position": {
+                "x": 20,
+                "y": 30,
+                "z": 10
+            },
+            "intensity": 3,
+            "decay": 0.2
+        },
+        {
+            "position": {
+                "x": -10,
+                "y": -10,
+                "z": -10
+            },
+            "color": "#0000ff",
+            "decay": 0.2
+        }
+    ]
+}
