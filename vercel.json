@@ -1,9 +1,19 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
+  "buildCommand": "cd nextjs-landing && pnpm build",
+  "outputDirectory": "nextjs-landing/.next",
+  "installCommand": "cd nextjs-landing && pnpm install",
+  "framework": "nextjs",
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_BASE_URL": "@next_public_base_url",
+      "NEXT_PUBLIC_EXA_API_KEY": "@next_public_exa_api_key",
+      "NEXT_PUBLIC_GOOGLE_ANALYTICS_ID": "@next_public_google_analytics_id",
+      "NEXT_PUBLIC_CONTACT_EMAIL": "@next_public_contact_email",
+      "NEXT_PUBLIC_CONTACT_PHONE": "@next_public_contact_phone",
+      "NEXT_PUBLIC_DOB": "@next_public_dob",
+      "NEXT_PUBLIC_GOOGLE_SHEETS_ID": "@next_public_google_sheets_id",
+      "GOOGLE_SERVICE_ACCOUNT_EMAIL": "@google_service_account_email",
+      "GOOGLE_PRIVATE_KEY": "@google_private_key"
     }
-  ]
+  }
 }
