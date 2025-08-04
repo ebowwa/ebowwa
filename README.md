@@ -111,6 +111,38 @@ Building at the intersection of mobile, web, and embedded systems. Ship fast, it
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 
+## 📊 GitHub Stats
+
+<div align="center">
+  
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ebowwa&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true)
+
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ebowwa&theme=radical&hide_border=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ebowwa&layout=compact&theme=radical&hide_border=true&langs_count=8)
+
+</div>
+
+### 📈 Contribution Graph
+
+![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=ebowwa&theme=redical&hide_border=true&area=true)
+
+### 🏆 GitHub Trophies
+
+<div align="center">
+  
+![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=ebowwa&theme=radical&no-frame=true&no-bg=false&margin-w=4&column=7)
+
+</div>
+
+### 💻 Most Used Languages
+
+<div align="center">
+  
+![Languages](https://github-readme-stats.vercel.app/api/wakatime?username=ebowwa&theme=radical&hide_border=true&layout=compact)
+
+</div>
+
 ## 📊 Patterns (Self-Analyzed)
 
 ```javascript
