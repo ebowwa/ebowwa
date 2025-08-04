@@ -135,11 +135,16 @@ Building at the intersection of mobile, web, and embedded systems. Ship fast, it
 
 </div>
 
-### 💻 Most Used Languages
+### 📊 Additional Stats
 
 <div align="center">
-  
-![Languages](https://github-readme-stats.vercel.app/api/wakatime?username=ebowwa&theme=radical&hide_border=true&layout=compact)
+
+<!-- WakaTime stats - configure at https://wakatime.com -->
+<!-- ![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?username=ebowwa&theme=radical&hide_border=true&layout=compact) -->
+
+![Profile Details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ebowwa&theme=radical)
+
+![Commit Time](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=ebowwa&theme=radical)
 
 </div>
 
