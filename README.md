@@ -1,11 +1,9 @@
-# Hi, I'm Ebowwa 👋
+# Hi 👋, this is ..
 
 <div align="center">
 
-[![GitHub followers](https://img.shields.io/github/followers/ebowwa?label=Follow&style=social)](https://github.com/ebowwa)
-[![Personal Site](https://img.shields.io/badge/🌐_ebowwa.xyz-4285F4?style=flat-square)](https://ebowwa.xyz)
-[![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=flat-square)](https://huggingface.co/ebowwa)
-[![Ollama](https://img.shields.io/badge/🦙_Ollama-000000?style=flat-square)](https://ollama.com/ebowwa)
+
+`🚀 Mobile` • `🌐 Web` • `🔧 Embedded` • `🔒 Security` • `🤖 AI/ML`
 
 ```
 ███████╗██████╗  ██████╗ ██╗    ██╗██╗    ██╗ █████╗     ██╗      █████╗ ██████╗ ███████╗
@@ -19,7 +17,10 @@
 
 **Building at the intersection of mobile, web, and embedded systems**
 
-`🚀 Mobile` • `🌐 Web` • `🔧 Embedded` • `🔒 Security` • `🤖 AI/ML`
+[![GitHub followers](https://img.shields.io/github/followers/ebowwa?label=Follow&style=social)](https://github.com/ebowwa)
+[![Personal Site](https://img.shields.io/badge/🌐_ebowwa.xyz-4285F4?style=flat-square)](https://ebowwa.xyz)
+[![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=flat-square)](https://huggingface.co/ebowwa)
+[![Ollama](https://img.shields.io/badge/🦙_Ollama-000000?style=flat-square)](https://ollama.com/ebowwa)
 
 </div>
 
