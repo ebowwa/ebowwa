@@ -38,13 +38,13 @@ Nodes spanning from MacBook to Linux machines to the glasses recording it all. B
 
 ## 📱 Shipped to Apple App Store
 
-### [CaringMind](https://apps.apple.com/app/id6749468165)
+### [CaringMind](https://apps.apple.com/app/id6749468165) (v0.0.0)
 AI companion app providing advocacy, augmentation, and enhancement. Your personal AI that actually cares.
 
-### [CleanShots – Remove Photo Info](https://apps.apple.com/app/id6745844477)
+### [CleanShots – Remove Photo Info](https://apps.apple.com/app/id6745844477) (v1.0.8)
 Privacy-focused photo metadata removal tool. Because your photos shouldn't tell everyone where you've been.
 
-### [SleepLoops](https://apps.apple.com/app/id6745059180)
+### [SleepLoops](https://apps.apple.com/app/id6745059180) (v2.0.0)
 90-minute sleep cycle optimizer. Wake up sharp by harnessing your natural sleep rhythms.
 
 ## 📦 Published on PyPI
