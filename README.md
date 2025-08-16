@@ -27,11 +27,14 @@
 
 ## 📱 Shipped to App Store
 
+### [CaringMind](https://apps.apple.com/app/id6749468165)
+AI companion app providing advocacy, augmentation, and enhancement. Your personal AI that actually cares.
+
 ### [CleanShots – Remove Photo Info](https://apps.apple.com/app/id6745844477)
 Privacy-focused photo metadata removal tool. Because your photos shouldn't tell everyone where you've been.
 
 ### [SleepLoops](https://apps.apple.com/app/id6745059180)
-Ambient sound generator for better sleep. Built with React Native and custom audio processing.
+90-minute sleep cycle optimizer. Wake up sharp by harnessing your natural sleep rhythms.
 
 ## 🏗️ How I Build
 
