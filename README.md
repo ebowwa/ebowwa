@@ -1,5 +1,16 @@
 # Hi 👋, this is ..
 
+## 🏗️ How I Build
+
+Nodes spanning from MacBook to Linux machines to the glasses recording it all. Build a universal proxy layer ([ai-proxy-core](https://github.com/ebowwa/ai-proxy-core)) that talks to everything - why call 10 different APIs when you can have one interface to rule them all.
+
+**Modular everything** - from [Next.js + Vite monorepo experiments](https://github.com/ebowwa/starstride-001/issues/7) where each framework does what it does best, to finding [the cheapest GPU compute](https://github.com/ebowwa/ebowwa/issues/48) by orchestrating spot instances and free tiers.
+
+### Development Philosophy
+- **Ship first, optimize later** - But make it modular so you can swap parts without breaking everything
+- **Automate the boring stuff** - From my [development machine setup script](https://github.com/ebowwa/new-development-machine-setup) with [scenario-specific branches](https://github.com/ebowwa/new-development-machine-setup/issues/1) to publishing tools like [structured-prompts](https://pypi.org/project/structured-prompts/) on PyPI
+- **Find arbitrage everywhere** - Whether it's [discovering that 65% of Denmark uses iOS](https://github.com/ebowwa/ebowwa/issues/47) or rotating through free GPU tiers
+
 <div align="center">
 
 
@@ -85,18 +96,6 @@
 ![Commit Time](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=ebowwa&theme=radical)
 
 </div>
-
-## 🏗️ How I Build
-
-Nodes spanning from MacBook to Linux machines to the glasses recording it all. Build a universal proxy layer ([ai-proxy-core](https://github.com/ebowwa/ai-proxy-core)) that talks to everything - why call 10 different APIs when you can have one interface to rule them all.
-
-**Modular everything** - from [Next.js + Vite monorepo experiments](https://github.com/ebowwa/starstride-001/issues/7) where each framework does what it does best, to finding [the cheapest GPU compute](https://github.com/ebowwa/ebowwa/issues/48) by orchestrating spot instances and free tiers.
-
-### Development Philosophy
-- **Ship first, optimize later** - But make it modular so you can swap parts without breaking everything
-- **Automate the boring stuff** - From my [development machine setup script](https://github.com/ebowwa/new-development-machine-setup) with [scenario-specific branches](https://github.com/ebowwa/new-development-machine-setup/issues/1) to publishing tools like [structured-prompts](https://pypi.org/project/structured-prompts/) on PyPI
-- **Find arbitrage everywhere** - Whether it's [discovering that 65% of Denmark uses iOS](https://github.com/ebowwa/ebowwa/issues/47) or rotating through free GPU tiers
-
 
 ## 💡 What I'm Learning
 
