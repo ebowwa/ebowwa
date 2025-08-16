@@ -19,10 +19,19 @@
 
 [![GitHub followers](https://img.shields.io/github/followers/ebowwa?label=Follow&style=social)](https://github.com/ebowwa)
 [![Personal Site](https://img.shields.io/badge/🌐_ebowwa.xyz-4285F4?style=flat-square)](https://ebowwa.xyz)
+[![App Store](https://img.shields.io/badge/📱_App_Store-Published_Apps-0D96F6?style=flat-square)](https://apps.apple.com/developer/id1745844476)
 [![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=flat-square)](https://huggingface.co/ebowwa)
 [![Ollama](https://img.shields.io/badge/🦙_Ollama-000000?style=flat-square)](https://ollama.com/ebowwa)
 
 </div>
+
+## 📱 Shipped to App Store
+
+### [CleanShots – Remove Photo Info](https://apps.apple.com/app/id6745844477)
+Privacy-focused photo metadata removal tool. Because your photos shouldn't tell everyone where you've been.
+
+### [SleepLoops](https://apps.apple.com/app/id6745059180)
+Ambient sound generator for better sleep. Built with React Native and custom audio processing.
 
 ## 🏗️ How I Build
 
