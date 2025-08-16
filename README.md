@@ -109,13 +109,6 @@ Nodes spanning from MacBook to Linux machines to the glasses recording it all. B
 
 </div>
 
-## 💡 What I'm Learning
-
-- 🧠 Advanced AI/ML deployment strategies
-- 🔐 Deeper hardware security exploits
-- 📱 Native iOS/Android performance optimization
-- 🚀 WebAssembly for compute-intensive tasks
-
 ## 🤝 Let's Connect
 
 <div align="center">
@@ -128,12 +121,6 @@ Nodes spanning from MacBook to Linux machines to the glasses recording it all. B
 | 💬 **GitHub** | [@ebowwa](https://github.com/ebowwa) | Open source collabs |
 
 </div>
-
-### 🎯 Open to Collaborate On:
-- Mobile apps with hardware integration
-- Performance-critical web applications
-- Security research and vulnerability disclosure
-- AI/ML practical implementations
 
 ---
 
