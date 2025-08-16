@@ -123,6 +123,7 @@ A modular package for managing structured prompts with any LLM API. Makes LLM in
 | Platform | Link | Best For |
 |----------|------|----------|
 | 🌐 **Portfolio** | [ebowwa.xyz](https://ebowwa.xyz) | Projects & demos |
+| 🐦 **X/Twitter** | [@innitEBOWWA](https://x.com/innitEBOWWA) | Updates & thoughts |
 | 🤗 **Hugging Face** | [huggingface.co/ebowwa](https://huggingface.co/ebowwa) | AI/ML models |
 | 🦙 **Ollama** | [ollama.com/ebowwa](https://ollama.com/ebowwa) | LLM experiments |
 | 💬 **GitHub** | [@ebowwa](https://github.com/ebowwa) | Open source collabs |
