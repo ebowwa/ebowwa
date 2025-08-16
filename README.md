@@ -25,17 +25,6 @@
 
 </div>
 
-## 📱 Shipped to Apple App Store
-
-### [CaringMind](https://apps.apple.com/app/id6749468165)
-AI companion app providing advocacy, augmentation, and enhancement. Your personal AI that actually cares.
-
-### [CleanShots – Remove Photo Info](https://apps.apple.com/app/id6745844477)
-Privacy-focused photo metadata removal tool. Because your photos shouldn't tell everyone where you've been.
-
-### [SleepLoops](https://apps.apple.com/app/id6745059180)
-90-minute sleep cycle optimizer. Wake up sharp by harnessing your natural sleep rhythms.
-
 ## 🏗️ How I Build
 
 Nodes spanning from MacBook to Linux machines to the glasses recording it all. Build a universal proxy layer ([ai-proxy-core](https://github.com/ebowwa/ai-proxy-core)) that talks to everything - why call 10 different APIs when you can have one interface to rule them all.
@@ -47,6 +36,24 @@ Nodes spanning from MacBook to Linux machines to the glasses recording it all. B
 - **Automate the boring stuff** - From my [development machine setup script](https://github.com/ebowwa/new-development-machine-setup) with [scenario-specific branches](https://github.com/ebowwa/new-development-machine-setup/issues/1) to publishing tools like [structured-prompts](https://pypi.org/project/structured-prompts/) on PyPI
 - **Find arbitrage everywhere** - Whether it's [discovering that 65% of Denmark uses iOS](https://github.com/ebowwa/ebowwa/issues/47) or rotating through free GPU tiers
 
+## 📱 Shipped to Apple App Store
+
+### [CaringMind](https://apps.apple.com/app/id6749468165)
+AI companion app providing advocacy, augmentation, and enhancement. Your personal AI that actually cares.
+
+### [CleanShots – Remove Photo Info](https://apps.apple.com/app/id6745844477)
+Privacy-focused photo metadata removal tool. Because your photos shouldn't tell everyone where you've been.
+
+### [SleepLoops](https://apps.apple.com/app/id6745059180)
+90-minute sleep cycle optimizer. Wake up sharp by harnessing your natural sleep rhythms.
+
+## 📦 Published on PyPI
+
+### [ai-proxy-core](https://pypi.org/project/ai-proxy-core/) (v0.3.9)
+Minimal, reusable AI service handlers for Gemini and other LLMs. The universal proxy layer mentioned above.
+
+### [structured-prompts](https://pypi.org/project/structured-prompts/) (v0.1.1)
+A modular package for managing structured prompts with any LLM API. Makes LLM interactions predictable and testable.
 
 ## 🛠️ Tech Stack
 
