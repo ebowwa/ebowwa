@@ -107,6 +107,24 @@ I'm a full-stack developer passionate about creating seamless experiences across
 
 </div>
 
+## 🏗️ How I Build: Architecture & Philosophy
+
+### The Reality Behind the Whiteboard
+If you caught me explaining my system architecture, you'd see a chaotic whiteboard mapping out what I call "organized chaos" - nodes spanning from my MacBook to Linux machines to the glasses recording it all. My approach? Build a universal proxy layer ([ai-proxy-core](https://github.com/ebowwa/ai-proxy-core)) that talks to everything, because why call 10 different APIs when you can have one interface to rule them all.
+
+I believe in **modular everything** - from my [Next.js + Vite monorepo experiments](https://github.com/ebowwa/starstride-001/issues/7) where each framework does what it does best, to my obsession with finding [the cheapest GPU compute](https://github.com/ebowwa/ebowwa/issues/48) by orchestrating spot instances and free tiers like a conductor managing an orchestra of penny-pinching musicians.
+
+### Development Philosophy
+- **Ship first, optimize later** - But make it modular so you can swap parts without breaking everything
+- **Automate the boring stuff** - Like my [development machine setup script](https://github.com/ebowwa/new-development-machine-setup) that gets Claude Code running on any server in minutes
+- **Find arbitrage everywhere** - Whether it's [discovering that 65% of Denmark uses iOS](https://github.com/ebowwa/ebowwa/issues/47) or rotating through free GPU tiers
+
+### Current Deep Dives
+- Building LLM proxies that handle structured outputs (because Gemini's audio capabilities paired with structured prompts = magic)
+- Exploring why Swiss German speakers embrace iOS at 53% despite no Schweizerdeutsch support
+- Creating Firebase boundaries that keep the backend stateless while the frontend manages all the chaos
+- Turning Google search trends into a publishable package (it's on the whiteboard to-do)
+
 ## 💡 What I'm Learning
 
 - 🧠 Advanced AI/ML deployment strategies
