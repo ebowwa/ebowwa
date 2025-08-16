@@ -25,7 +25,7 @@
 
 </div>
 
-## 📱 Shipped to App Store
+## 📱 Shipped to Apple App Store
 
 ### [CaringMind](https://apps.apple.com/app/id6749468165)
 AI companion app providing advocacy, augmentation, and enhancement. Your personal AI that actually cares.
