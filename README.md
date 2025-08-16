@@ -119,11 +119,6 @@ I believe in **modular everything** - from my [Next.js + Vite monorepo experimen
 - **Automate the boring stuff** - From my [development machine setup script](https://github.com/ebowwa/new-development-machine-setup) with [scenario-specific branches](https://github.com/ebowwa/new-development-machine-setup/issues/1) to publishing tools like [structured-prompts](https://pypi.org/project/structured-prompts/) on PyPI
 - **Find arbitrage everywhere** - Whether it's [discovering that 65% of Denmark uses iOS](https://github.com/ebowwa/ebowwa/issues/47) or rotating through free GPU tiers
 
-### Current Deep Dives
-- Building LLM proxies that handle structured outputs (because Gemini's audio capabilities paired with structured prompts = magic)
-- Exploring why Swiss German speakers embrace iOS at 53% despite no Schweizerdeutsch support
-- Creating Firebase boundaries that keep the backend stateless while the frontend manages all the chaos
-- Turning Google search trends into a publishable package (it's on the whiteboard to-do)
 
 ## 💡 What I'm Learning
 
