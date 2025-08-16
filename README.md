@@ -116,7 +116,7 @@ I believe in **modular everything** - from my [Next.js + Vite monorepo experimen
 
 ### Development Philosophy
 - **Ship first, optimize later** - But make it modular so you can swap parts without breaking everything
-- **Automate the boring stuff** - Like my [development machine setup script](https://github.com/ebowwa/new-development-machine-setup) that gets Claude Code running on any server in minutes
+- **Automate the boring stuff** - Like my [development machine setup script](https://github.com/ebowwa/new-development-machine-setup) that eliminates friction when spinning up new environments (Claude Code, Tailscale, GitHub CLI, and growing)
 - **Find arbitrage everywhere** - Whether it's [discovering that 65% of Denmark uses iOS](https://github.com/ebowwa/ebowwa/issues/47) or rotating through free GPU tiers
 
 ### Current Deep Dives
