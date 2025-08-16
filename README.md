@@ -24,11 +24,6 @@
 
 </div>
 
-## 🎯 About Me
-
-I'm a full-stack developer passionate about creating seamless experiences across mobile, web, and hardware. I believe in shipping fast, iterating faster, and diving deep when it matters.
-
-> *"Time anxiety is my superpower for rapid creation"*
 
 ## 🛠️ Tech Stack
 
@@ -53,22 +48,6 @@ I'm a full-stack developer passionate about creating seamless experiences across
 
 </div>
 
-## 🚀 Current Projects
-
-### 📱 Mobile & Native Development
-- **Expo Audio Modules** - Custom native modules for advanced audio processing
-- **React Native BLE Integration** - Hardware communication apps with real-time data sync
-- **Swift Deep Dives** - Low-level Bluetooth protocols and iOS system integrations
-
-### 🔒 Hardware Security Research
-- **Smart Glasses Vulnerability Analysis** - Reverse engineering consumer IoT devices
-- **Bluetooth Protocol Research** - Security analysis of BLE implementations
-- **Embedded Systems Exploits** - Finding and documenting hardware vulnerabilities
-
-### ⚡ High-Performance Web Apps
-- **Vite-Powered Applications** - Lightning-fast development with modern tooling
-- **Real-time Features** - WebSocket implementations for live collaboration
-- **Next.js Solutions** - SSR/SSG when performance and SEO matter
 
 ## 📊 GitHub Analytics
 
@@ -107,12 +86,11 @@ I'm a full-stack developer passionate about creating seamless experiences across
 
 </div>
 
-## 🏗️ How I Build: Architecture & Philosophy
+## 🏗️ How I Build
 
-### The Reality Behind the Whiteboard
-If you caught me explaining my system architecture, you'd see a chaotic whiteboard mapping out what I call "organized chaos" - nodes spanning from my MacBook to Linux machines to the glasses recording it all. My approach? Build a universal proxy layer ([ai-proxy-core](https://github.com/ebowwa/ai-proxy-core)) that talks to everything, because why call 10 different APIs when you can have one interface to rule them all.
+Nodes spanning from MacBook to Linux machines to the glasses recording it all. Build a universal proxy layer ([ai-proxy-core](https://github.com/ebowwa/ai-proxy-core)) that talks to everything - why call 10 different APIs when you can have one interface to rule them all.
 
-I believe in **modular everything** - from my [Next.js + Vite monorepo experiments](https://github.com/ebowwa/starstride-001/issues/7) where each framework does what it does best, to my obsession with finding [the cheapest GPU compute](https://github.com/ebowwa/ebowwa/issues/48) by orchestrating spot instances and free tiers like a conductor managing an orchestra of penny-pinching musicians.
+**Modular everything** - from [Next.js + Vite monorepo experiments](https://github.com/ebowwa/starstride-001/issues/7) where each framework does what it does best, to finding [the cheapest GPU compute](https://github.com/ebowwa/ebowwa/issues/48) by orchestrating spot instances and free tiers.
 
 ### Development Philosophy
 - **Ship first, optimize later** - But make it modular so you can swap parts without breaking everything
