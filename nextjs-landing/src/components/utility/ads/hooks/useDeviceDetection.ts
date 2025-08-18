@@ -1,4 +1,5 @@
 // @src/hooks/useDeviceDetection.ts
+"use client";
 import { useMediaQuery } from './browser/useMediaQuery';
 import { useState, useEffect } from 'react';
 import useCookieStore from '@/store/cookies-store';
@@ -14,21 +15,22 @@ export function useDeviceDetection() {
     const isReducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
     const isWebGL = isDesktop && !isReducedMotion;
     const isLowPowerMode = useMediaQuery('(battery-level < 20%) and (charging: false)');
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !(navigator.userAgent).includes('MSStream');
-    const isAndroid = /Android/.test(navigator.userAgent);
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    const isIPad = /iPad/.test(navigator.userAgent);
-    const isTV = /TV/.test(navigator.userAgent);
+    
+    const isBrowser = typeof window !== 'undefined';
+    const isIOS = isBrowser && /iPad|iPhone|iPod/.test(navigator.userAgent) && !(navigator.userAgent).includes('MSStream');
+    const isAndroid = isBrowser && /Android/.test(navigator.userAgent);
+    const isTouchDevice = isBrowser && ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+    const isIPad = isBrowser && /iPad/.test(navigator.userAgent);
+    const isTV = isBrowser && /TV/.test(navigator.userAgent);
 
     const [orientation, setOrientation] = useState<'portrait' | 'landscape'>('portrait');
-    const [pixelRatio, setPixelRatio] = useState(window.devicePixelRatio || 1);
+    const [pixelRatio, setPixelRatio] = useState(1);
     const [connectionType, setConnectionType] = useState<'4g' | '3g' | 'wifi' | 'unknown'>('unknown');
     const [viewportSize, setViewportSize] = useState<{ width: number; height: number }>({
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: 0,
+        height: 0,
     });
 
-    const isBrowser = typeof window !== 'undefined';
     const isChrome = isBrowser && /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
     const isFirefox = isBrowser && typeof (window as any).InstallTrigger !== 'undefined';
     const isSafari = isBrowser && /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
@@ -36,6 +38,14 @@ export function useDeviceDetection() {
     const isOpera = isBrowser && /OPR/.test(navigator.userAgent);
 
     useEffect(() => {
+        if (!isBrowser) return;
+
+        setPixelRatio(window.devicePixelRatio || 1);
+        setViewportSize({
+            width: window.innerWidth,
+            height: window.innerHeight,
+        });
+
         const handleOrientationChange = () => {
             const newOrientation = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
             setOrientation(newOrientation);
@@ -94,7 +104,7 @@ export function useDeviceDetection() {
             window.removeEventListener('offline', handleNetworkChange);
             window.removeEventListener('resize', handleResize);
         };
-    }, [setCookie, getCookie, hasCookie]);
+    }, [setCookie, getCookie, hasCookie, isBrowser]);
 
     return {
         isMobile,
