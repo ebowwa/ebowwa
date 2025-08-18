@@ -398,7 +398,7 @@ export default function HomePage() {
       
         {/* Footer */}
         <div className="text-center text-slate-500 text-sm sm:text-base">
-          <p>© {new Date().getFullYear()} Ebowwa Labs • Pushing the boundaries of what's possible</p>
+          <p>© {new Date().getFullYear()} Ebowwa Labs • Building the future, one commit at a time</p>
         </div>
       </div>
     </div>
