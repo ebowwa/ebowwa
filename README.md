@@ -19,6 +19,7 @@
 
 [![GitHub followers](https://img.shields.io/github/followers/ebowwa?label=Follow&style=social)](https://github.com/ebowwa)
 [![Personal Site](https://img.shields.io/badge/🌐_ebowwa.xyz-4285F4?style=flat-square)](https://ebowwa.xyz)
+[![PrintPeer](https://img.shields.io/badge/🖨️_printpeer.xyz-FF6B6B?style=flat-square)](https://printpeer.xyz)
 [![App Store](https://img.shields.io/badge/📱_App_Store-Published_Apps-0D96F6?style=flat-square)](https://apps.apple.com/developer/id1745844476)
 [![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=flat-square)](https://huggingface.co/ebowwa)
 [![Ollama](https://img.shields.io/badge/🦙_Ollama-000000?style=flat-square)](https://ollama.com/ebowwa)
@@ -123,6 +124,7 @@ A modular package for managing structured prompts with any LLM API. Makes LLM in
 | Platform | Link | Best For |
 |----------|------|----------|
 | 🌐 **Portfolio** | [ebowwa.xyz](https://ebowwa.xyz) | Projects & demos |
+| 🖨️ **PrintPeer** | [printpeer.xyz](https://printpeer.xyz) | Print services & tools |
 | 🐦 **X/Twitter** | [@innitEBOWWA](https://x.com/innitEBOWWA) | Updates & thoughts |
 | 🤗 **Hugging Face** | [huggingface.co/ebowwa](https://huggingface.co/ebowwa) | AI/ML models |
 | 🦙 **Ollama** | [ollama.com/ebowwa](https://ollama.com/ebowwa) | LLM experiments |
