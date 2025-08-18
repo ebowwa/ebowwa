@@ -1,8 +1,9 @@
 {
-  "buildCommand": "cd nextjs-landing && npm run build",
-  "outputDirectory": "nextjs-landing/.next",
-  "installCommand": "cd nextjs-landing && npm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
   "framework": "nextjs",
+  "rootDirectory": "nextjs-landing",
   "build": {
     "env": {
       "NEXT_PUBLIC_BASE_URL": "$NEXT_PUBLIC_BASE_URL",
