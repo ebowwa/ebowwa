@@ -2,18 +2,5 @@
   "buildCommand": "cd nextjs-landing && npm run build",
   "outputDirectory": "nextjs-landing/.next",
   "installCommand": "cd nextjs-landing && npm install",
-  "framework": "nextjs",
-  "build": {
-    "env": {
-      "NEXT_PUBLIC_BASE_URL": "$NEXT_PUBLIC_BASE_URL",
-      "NEXT_PUBLIC_EXA_API_KEY": "$NEXT_PUBLIC_EXA_API_KEY",
-      "NEXT_PUBLIC_GOOGLE_ANALYTICS_ID": "$NEXT_PUBLIC_GOOGLE_ANALYTICS_ID",
-      "NEXT_PUBLIC_CONTACT_EMAIL": "$NEXT_PUBLIC_CONTACT_EMAIL",
-      "NEXT_PUBLIC_CONTACT_PHONE": "$NEXT_PUBLIC_CONTACT_PHONE",
-      "NEXT_PUBLIC_DOB": "$NEXT_PUBLIC_DOB",
-      "NEXT_PUBLIC_GOOGLE_SHEETS_ID": "$NEXT_PUBLIC_GOOGLE_SHEETS_ID",
-      "GOOGLE_SERVICE_ACCOUNT_EMAIL": "$GOOGLE_SERVICE_ACCOUNT_EMAIL",
-      "GOOGLE_PRIVATE_KEY": "$GOOGLE_PRIVATE_KEY"
-    }
-  }
+  "framework": "nextjs"
 }

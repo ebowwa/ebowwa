@@ -1,0 +1,13 @@
+{
+  "name": "ebowwa-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "next": "^14.2.3"
+  },
+  "scripts": {
+    "build": "cd nextjs-landing && npm run build",
+    "dev": "cd nextjs-landing && npm run dev",
+    "start": "cd nextjs-landing && npm start"
+  }
+}
