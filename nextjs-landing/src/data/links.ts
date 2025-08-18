@@ -7,8 +7,13 @@ let cachedGoogleSheetsData: Link[] | null = null;
 let lastFetchTime = 0;
 const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 
-// Fetch links from Google Sheets
+// Fetch links from Google Sheets (client-side only)
 async function fetchLinksFromGoogleSheets(): Promise<Link[]> {
+  if (typeof window === 'undefined') {
+    console.warn('fetchLinksFromGoogleSheets called on server-side, using static data');
+    return linksData;
+  }
+
   const sheetId = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_ID;
   
   if (!sheetId) {

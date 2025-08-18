@@ -1,4 +1,5 @@
 // src/components/utility/video/autoplayloop/Video.tsx
+"use client";
 import videoConfig from './config/video.config.json';
 import React, { useRef, useEffect, useState } from 'react';
 import { getVideoClassNames, getVideoAttributes } from './utils';
