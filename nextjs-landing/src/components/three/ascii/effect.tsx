@@ -1,4 +1,5 @@
 // src/app/ascii/scene.tsx
+"use client";
 import * as React from 'react';
 import * as THREE from 'three';
 import { AsciiEffect } from 'three/addons/effects/AsciiEffect';
