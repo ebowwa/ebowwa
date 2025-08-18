@@ -5,6 +5,7 @@ import '@/styles/global.css';
 import { Analytics } from "@vercel/analytics/react"
 import translations from './en.json';
 import DiscordInviteBanner from '@/components/DiscordInviteBanner';
+import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration';
 
 export const metadata = {
   title: translations.homeTitle.value,
@@ -23,9 +24,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // Register the Serwist service worker
-  registerWebWorker('/public/serwist.worker.ts');
-
   return (
     <html lang="en" className="antialiased">
       {/*
@@ -38,19 +36,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Layout>{children}</Layout>
         <DiscordInviteBanner />
         <Analytics />
+        <ServiceWorkerRegistration />
       </body>
     </html>
   );
 }
 
-// Register the Serwist service worker
-function registerWebWorker(url: string) {
-  if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
-    navigator.serviceWorker.register(url).catch((error) => {
-      console.error('Error registering service worker:', error);
-    });
-  }
-}
 
 // add ip tracker 
 // add src/hooks/useDeviceDetection.ts
