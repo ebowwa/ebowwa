@@ -7,3 +7,4 @@ yarn-error.log
 .DS_Store
 src/components/three/studio/.DS_Store
 .env.local
+.vercel
