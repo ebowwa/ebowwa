@@ -144,62 +144,62 @@ const FeatureCard = ({
   disabledText,
   disabledNote
 }: CardProps) => {
-  // Color mappings
+  // Clean, professional color mappings
   const colorMap = {
     cyan: {
-      hover: 'hover:border-cyan-500/50',
-      shadow: 'hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]',
-      gradient: 'from-blue-500/20',
-      text: 'text-cyan-400',
-      titleHover: 'group-hover:text-cyan-300',
-      buttonBg: 'bg-cyan-500/20',
-      buttonBorder: 'border-cyan-500/50',
-      buttonText: 'text-cyan-300',
-      buttonHover: 'hover:bg-cyan-500/30'
+      hover: 'hover:border-blue-200',
+      shadow: 'hover:shadow-lg',
+      gradient: 'from-blue-50',
+      text: 'text-blue-600',
+      titleHover: 'group-hover:text-blue-700',
+      buttonBg: 'bg-blue-600',
+      buttonBorder: 'border-blue-600',
+      buttonText: 'text-white',
+      buttonHover: 'hover:bg-blue-700'
     },
     emerald: {
-      hover: 'hover:border-emerald-500/50',
-      shadow: 'hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]',
-      gradient: 'from-emerald-500/20',
-      text: 'text-emerald-400',
-      titleHover: 'group-hover:text-emerald-300',
-      buttonBg: 'bg-emerald-500/10',
-      buttonBorder: 'border-emerald-500/30',
-      buttonText: 'text-emerald-300',
-      buttonHover: 'hover:bg-emerald-500/30'
+      hover: 'hover:border-emerald-200',
+      shadow: 'hover:shadow-lg',
+      gradient: 'from-emerald-50',
+      text: 'text-emerald-600',
+      titleHover: 'group-hover:text-emerald-700',
+      buttonBg: 'bg-emerald-600',
+      buttonBorder: 'border-emerald-600',
+      buttonText: 'text-white',
+      buttonHover: 'hover:bg-emerald-700'
     },
     purple: {
-      hover: 'hover:border-purple-500/50',
-      shadow: 'hover:shadow-[0_0_30px_rgba(139,92,246,0.5)]',
-      gradient: 'from-purple-500/20',
-      text: 'text-purple-400',
-      titleHover: 'group-hover:text-purple-300',
-      buttonBg: 'bg-purple-500/20',
-      buttonBorder: 'border-purple-500/50',
-      buttonText: 'text-purple-300',
-      buttonHover: 'hover:bg-purple-500/30'
+      hover: 'hover:border-purple-200',
+      shadow: 'hover:shadow-lg',
+      gradient: 'from-purple-50',
+      text: 'text-purple-600',
+      titleHover: 'group-hover:text-purple-700',
+      buttonBg: 'bg-purple-600',
+      buttonBorder: 'border-purple-600',
+      buttonText: 'text-white',
+      buttonHover: 'hover:bg-purple-700'
     },
     red: {
-      hover: 'hover:border-red-500/50',
-      shadow: 'hover:shadow-[0_0_30px_rgba(239,68,68,0.5)]',
-      gradient: 'from-red-500/20',
-      text: 'text-red-400',
-      titleHover: 'group-hover:text-red-300',
-      buttonBg: 'bg-red-500/20',
-      buttonBorder: 'border-red-500/50',
-      buttonText: 'text-red-300',
-      buttonHover: 'hover:bg-red-500/30'
+      hover: 'hover:border-rose-200',
+      shadow: 'hover:shadow-lg',
+      gradient: 'from-rose-50',
+      text: 'text-rose-600',
+      titleHover: 'group-hover:text-rose-700',
+      buttonBg: 'bg-rose-600',
+      buttonBorder: 'border-rose-600',
+      buttonText: 'text-white',
+      buttonHover: 'hover:bg-rose-700'
     },
     teal: {
-      hover: 'hover:border-teal-500/50',
-      shadow: 'hover:shadow-[0_0_30px_rgba(20,184,166,0.5)]',
-      gradient: 'from-teal-500/20',
-      text: 'text-teal-400',
-      titleHover: 'group-hover:text-teal-300',
-      buttonBg: 'bg-teal-500/20',
-      buttonBorder: 'border-teal-500/50',
-      buttonText: 'text-teal-300',
-      buttonHover: 'hover:bg-teal-500/30'
+      hover: 'hover:border-teal-200',
+      shadow: 'hover:shadow-lg',
+      gradient: 'from-teal-50',
+      text: 'text-teal-600',
+      titleHover: 'group-hover:text-teal-700',
+      buttonBg: 'bg-teal-600',
+      buttonBorder: 'border-teal-600',
+      buttonText: 'text-white',
+      buttonHover: 'hover:bg-teal-700'
     }
   };
 
@@ -215,9 +215,9 @@ const FeatureCard = ({
   }[color];
 
   return (
-    <div className={`group relative overflow-hidden rounded-3xl backdrop-blur-lg bg-white/5 border border-white/10 ${styles.hover} transition-all duration-500 ${styles.shadow} transform hover:-translate-y-2 h-full flex flex-col`}>
-      {/* Gradient overlay for depth */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${styles.gradient} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+    <div className={`group relative overflow-hidden rounded-2xl bg-white border border-gray-200 ${styles.hover} transition-all duration-300 ${styles.shadow} transform hover:-translate-y-1 h-full flex flex-col`}>
+      {/* Subtle gradient overlay for depth */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${styles.gradient} to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-300`}></div>
       
       {/* Image Section - Improved aspect ratio and styling */}
       {images && images.length > 0 ? (
@@ -257,11 +257,11 @@ const FeatureCard = ({
           {icon && (
             <span className={`${styles.text} text-2xl`}>{icon}</span>
           )}
-          <h3 className={`text-2xl font-bold text-white ${styles.titleHover} transition-colors duration-300`}>{title}</h3>
+          <h3 className={`text-2xl font-bold text-gray-900 ${styles.titleHover} transition-colors duration-300`}>{title}</h3>
         </div>
         
         {/* Description with better typography */}
-        <p className="text-base text-gray-300 leading-relaxed mb-6 flex-grow">{description}</p>
+        <p className="text-base text-gray-600 leading-relaxed mb-6 flex-grow">{description}</p>
       
         {/* Action Area - Enhanced CTA */}
         {disabled ? (
@@ -277,7 +277,7 @@ const FeatureCard = ({
         ) : showLinks ? (
           <div className="mt-auto">
             <Link href={linkUrl || '#'} className="block">
-              <div className={`inline-flex items-center px-6 py-3 rounded-xl ${styles.buttonBg} ${styles.buttonBorder} border ${styles.buttonText} font-medium ${styles.buttonHover} transition-all duration-300 group/btn`}>
+              <div className={`inline-flex items-center px-6 py-3 rounded-lg ${styles.buttonBg} ${styles.buttonText} font-medium ${styles.buttonHover} transition-all duration-300 group/btn shadow-sm`}>
                 <span>{linkText}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -311,34 +311,27 @@ export default function HomePage() {
   } = translations;
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Abstract Background Elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-20 w-64 h-64 rounded-full bg-purple-500 blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 rounded-full bg-blue-500 blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-green-500 blur-3xl"></div>
-      </div>
-      
-      {/* Animated Grid Lines */}
-      <div className="absolute inset-0 opacity-10">
+    <div className="min-h-screen bg-white text-gray-900">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-[0.02]">
         <div className="h-full w-full" style={{ 
-          backgroundImage: 'linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)',
-          backgroundSize: '80px 80px'
+          backgroundImage: 'radial-gradient(circle at 1px 1px, rgb(15 23 42) 1px, transparent 0)',
+          backgroundSize: '24px 24px'
         }}></div>
       </div>
       
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
-        {/* Header with Glowing Effect */}
-        <div className="text-center mb-16 sm:mb-20">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-6 relative">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400 animate-pulse">
+        {/* Clean, Professional Header */}
+        <div className="text-center mb-20 sm:mb-24">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-8 tracking-tight">
+            <span className="text-slate-900">
               {homeTitle.value}
             </span>
           </h1>
-          <p className="text-xl sm:text-2xl text-blue-200 leading-relaxed mb-4 max-w-4xl mx-auto">
+          <p className="text-xl sm:text-2xl text-slate-600 leading-relaxed mb-6 max-w-4xl mx-auto font-medium">
             {homeSubtitle.value}
           </p>
-          <p className="text-base sm:text-lg text-blue-200/70 max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
             Focused on practical, resilient software engineering—creating mobile-first and offline-capable systems that deliver real value.
           </p>
         </div>
@@ -398,13 +391,13 @@ export default function HomePage() {
         
         {/* Closing Statement */}
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <p className="text-xl sm:text-2xl text-blue-200 leading-relaxed">
+          <p className="text-xl sm:text-2xl text-slate-600 leading-relaxed">
             {closingStatement.value}
           </p>
         </div>
       
         {/* Footer */}
-        <div className="text-center text-blue-300/60 text-sm sm:text-base">
+        <div className="text-center text-slate-500 text-sm sm:text-base">
           <p>© {new Date().getFullYear()} Ebowwa Labs • Pushing the boundaries of what's possible</p>
         </div>
       </div>
@@ -424,4 +417,4 @@ export default function HomePage() {
  * 
  * 
  * 
- * */ 
+ * */    
