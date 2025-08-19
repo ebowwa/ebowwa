@@ -51,6 +51,8 @@ Privacy-focused photo metadata removal tool. Because your photos shouldn't tell 
 
 ### [ai-proxy-core](https://pypi.org/project/ai-proxy-core/) (v0.3.9)
 Minimal, reusable AI service handlers for Gemini and other LLMs. The universal proxy layer mentioned above.
+- Providers: openai • google • ollama 
+- Services: Unified post requests, websockets, unique provider features (image generation)
 
 ### [structured-prompts](https://pypi.org/project/structured-prompts/) (v0.1.1)
 A modular package for managing structured prompts with any LLM API. Makes LLM interactions predictable and testable.
