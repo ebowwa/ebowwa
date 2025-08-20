@@ -41,7 +41,7 @@ Nodes spanning from MacBook to Linux machines to the glasses recording it all. B
 ### [CaringMind](https://apps.apple.com/app/id6749468165) (v0.0.0)
 AI companion app providing advocacy, augmentation, and enhancement. Your personal AI that actually cares.
 
-### [CleanShots – Remove Photo Info](https://apps.apple.com/app/id6745844477) (v1.0.8)
+### [CleanShots – Remove Photo Info](https://apps.apple.com/app/id6745844477) (v1.0.8) (v1.0.9 pending-review)
 Privacy-focused photo metadata removal tool. Because your photos shouldn't tell everyone where you've been.
 
 ### [SleepLoops](https://apps.apple.com/app/id6745059180) (v1.0.0)
