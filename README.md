@@ -49,7 +49,7 @@ Privacy-focused photo metadata removal tool. Because your photos shouldn't tell 
 
 ## 📦 Published on PyPI
 
-### [ai-proxy-core](https://pypi.org/project/ai-proxy-core/) (v0.4.1)
+### [ai-proxy-core](https://pypi.org/project/ai-proxy-core/) (v0.4.2)
 Minimal, reusable AI service handlers for Gemini and other LLMs. The universal proxy layer mentioned above.
 - Providers: openai • google • ollama 
 - Services: Unified post requests, websockets, unique provider features (image generation)
