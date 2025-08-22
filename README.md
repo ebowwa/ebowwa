@@ -33,7 +33,8 @@ Nodes spanning from MacBook to Linux machines to the glasses recording it all. B
 
 ### Development Philosophy
 - **Ship first, optimize later** - But make it modular so you can swap parts without breaking everything
-- **Automate the boring stuff** - From my [development machine setup script](https://github.com/ebowwa/new-development-machine-setup) with [scenario-specific branches](https://github.com/ebowwa/new-development-machine-setup/issues/1) to publishing tools like [structured-prompts](https://pypi.org/project/structured-prompts/) on PyPI
+- **Automate the boring stuff** - From my [development machine setup script](https://github.com/ebowwa/new-development-machine-setup) with [scenario-specific branches](https://github.com/ebowwa/new-development-machine-setup/issues/1) to publishing tools like [structured-prompts](https://pypi.org/project/structured-prompts/) on PyPI. [iOS Localization & Cultural Branding Architecture](https://github.com/ebowwa/ebowwa/issues/52)
+
 - **Find arbitrage everywhere** - Whether it's [discovering that 65% of Denmark uses iOS](https://github.com/ebowwa/ebowwa/issues/47) or rotating through free GPU tiers
 
 ## 📱 Shipped to Apple App Store
@@ -56,11 +57,6 @@ Minimal, reusable AI service handlers for Gemini and other LLMs. The universal p
 
 ### [structured-prompts](https://pypi.org/project/structured-prompts/) (v0.1.1)
 A modular package for managing structured prompts with any LLM API. Makes LLM interactions predictable and testable.
-
-## 📚 Technical Documentation & Learnings
-
-### [iOS Localization & Cultural Branding Architecture](https://github.com/ebowwa/ebowwa/issues/52)
-Comprehensive guide for building scalable, culturally-aware iOS apps with 15+ language support. Covers type-safe localization, per-market branding, cultural theming, and performance optimization patterns that scale from 2 to 100+ languages with O(1) complexity.
 
 ## 🛠️ Tech Stack
 
