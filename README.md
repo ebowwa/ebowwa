@@ -25,9 +25,7 @@
 
 </div>
 
-## 🏗️ How I Build
-
-Nodes spanning from MacBook to Linux machines to the glasses recording it all. Build a universal proxy layer ([ai-proxy-core](https://github.com/ebowwa/ai-proxy-core)) that talks to everything - why call 10 different APIs when you can have one interface to rule them all.
+I operate across every possible edge and node. 
 
 ### Development Philosophy
 - **Ship first, optimize later** - But make it modular so you can swap parts without breaking everything
