@@ -33,8 +33,7 @@ Nodes spanning from MacBook to Linux machines to the glasses recording it all. B
 
 ### Development Philosophy
 - **Ship first, optimize later** - But make it modular so you can swap parts without breaking everything
-- **Automate the boring stuff** - From my [development machine setup script](https://github.com/ebowwa/new-development-machine-setup) with [scenario-specific branches](https://github.com/ebowwa/new-development-machine-setup/issues/1) to publishing tools like [structured-prompts](https://pypi.org/project/structured-prompts/) on PyPI. [iOS Localization & Cultural Branding Architecture](https://github.com/ebowwa/ebowwa/issues/52)
-
+- **Automate the boring stuff** - From my [development machine setup script](https://github.com/ebowwa/new-development-machine-setup) with [scenario-specific branches](https://github.com/ebowwa/new-development-machine-setup/issues/1) to publishing tools like [structured-prompts](https://pypi.org/project/structured-prompts/) on PyPI.
 - **Find arbitrage everywhere** - Whether it's [discovering that 65% of Denmark uses iOS](https://github.com/ebowwa/ebowwa/issues/47) or rotating through free GPU tiers
 
 ## 📱 Shipped to Apple App Store
@@ -44,7 +43,9 @@ AI companion app providing advocacy, augmentation, and enhancement. Your persona
 
 ### [CleanShots – Remove Photo Info](https://apps.apple.com/app/id6745844477) (v1.0.9)
 Privacy-focused photo metadata removal tool. Because your photos shouldn't tell everyone where you've been.
+<img width="1196" height="729" alt="Screenshot 2025-08-24 at 9 57 14 PM" src="https://github.com/user-attachments/assets/c2192203-df2d-4a25-82cd-243e107bbf7e" /><img width="1196" height="729" alt="Screenshot 2025-08-24 at 9 59 34 PM" src="https://github.com/user-attachments/assets/bc285d5b-10a1-4f78-8f4e-1dc7b0e5a078" />
 
+Notes: This has been a humble start, and educating into the current ASO market, see [iOS Localization & Cultural Branding Architecture](https://github.com/ebowwa/ebowwa/issues/52).
 ### [SleepLoops](https://apps.apple.com/app/id6745059180) (v1.0.0)
 90-minute sleep cycle optimizer. Wake up sharp by harnessing your natural sleep rhythms.
 
