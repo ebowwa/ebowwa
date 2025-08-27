@@ -11,7 +11,7 @@ export default function Home() {
             Building the future, one line of code at a time.
           </p>
           <p className="text-sm text-gray-500 mt-2">
-            Live updates enabled via Git + Vercel
+            Auto-deploy from GitHub enabled ✓
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
