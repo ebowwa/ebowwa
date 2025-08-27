@@ -1,0 +1,6 @@
+{
+  "name": "nextjs-landing",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs"
+}
