@@ -10,6 +10,9 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto">
             Building the future, one line of code at a time.
           </p>
+          <p className="text-sm text-gray-500 mt-2">
+            Live updates enabled via Git + Vercel
+          </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
             <a
