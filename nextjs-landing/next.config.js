@@ -1,18 +1,30 @@
 require('./progress-event-polyfill');
 // next.config.mjs
 /** @type {import('next').NextConfig} */
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
+
+// Conditionally load bundle analyzer
+let withBundleAnalyzer = (config) => config;
+try {
+  withBundleAnalyzer = require('@next/bundle-analyzer')({
+    enabled: process.env.ANALYZE === 'true',
+  })
+} catch (e) {
+  // Bundle analyzer not available in production
+}
 
 /**
  * A fork of 'next-pwa' that has app directory support
  * @see https://github.com/shadowwalker/next-pwa/issues/424#issuecomment-1332258575
  */
-const withPWA = require('@ducanh2912/next-pwa').default({
-  dest: 'public',
-  disable: process.env.NODE_ENV === 'development',
-})
+let withPWA = (config) => config;
+try {
+  withPWA = require('@ducanh2912/next-pwa').default({
+    dest: 'public',
+    disable: process.env.NODE_ENV === 'development',
+  })
+} catch (e) {
+  // PWA not available in production
+}
 
 const nextConfig = {
   experimental: {
