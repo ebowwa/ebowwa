@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "cd nextjs-landing && npm install --legacy-peer-deps && npm run build",
   "framework": "nextjs",
   "outputDirectory": "nextjs-landing/.next"
 }
