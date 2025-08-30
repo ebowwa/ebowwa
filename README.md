@@ -51,7 +51,7 @@ Notes: This has been a humble start, and educating into the current ASO market; 
 
 ## 📦 Published on PyPI
 
-### [ai-proxy-core](https://pypi.org/project/ai-proxy-core/) (v0.4.40)
+### [ai-proxy-core](https://pypi.org/project/ai-proxy-core/) (v0.4.43)
 Minimal, reusable AI service handlers for Gemini and other LLMs. The universal proxy layer mentioned above.
 - Providers: openai • google • ollama 
 - Services: Unified post requests, websockets, unique provider features (image generation)
