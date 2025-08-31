@@ -33,6 +33,8 @@ I operate across every possible edge and node.
   - From [development machine setup script](https://github.com/ebowwa/new-development-machine-setup) with [scenario-specific branches](https://github.com/ebowwa/new-development-machine-setup/issues/1)
   - To publishing tools like [structured-prompts](https://pypi.org/project/structured-prompts/) on PyPI.
   - [App Store Icon Pipelines](https://github.com/ebowwa/ios-icon-generator), [App Store Connect API wrapper](https://github.com/ebowwa/app-store-connect-wrapper), [Xcode Mcp](https://github.com/ebowwa/xcode-mcp), etc
+  - **Planning**
+    - [MacOS Automation Platform - For IOS APP screenshots and user testing](https://github.com/ebowwa/macOS-Screenshot-Tester)
 - **Find arbitrage everywhere** - Whether it's [discovering that 65% of Denmark uses iOS](https://github.com/ebowwa/ebowwa/issues/47) or rotating through free GPU tiers
 - **Composable EVERYTHING** - from [Next.js + Vite monorepo experiments](https://github.com/ebowwa/starstride-001/issues/7) where each framework does what it does best, to finding [the cheapest GPU compute](https://github.com/ebowwa/ebowwa/issues/48) by orchestrating spot instances and free tiers.
 
