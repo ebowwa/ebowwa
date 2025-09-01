@@ -36,6 +36,7 @@ I operate across every possible edge and node.
   - **Planning**
     - [MacOS Automation Platform - For IOS app screenshots and user testing](https://github.com/ebowwa/macOS-Screenshot-Tester)
     - [Nano Banana Video Editor - For rushing to global market(s) new ideas](https://github.com/ebowwa/Nano-Banana-Shorts-Editor)
+    - [Appstore Preview Generator](https://github.com/ebowwa/app-preview-generator)
 - **Find arbitrage everywhere** - Whether it's [discovering that 65% of Denmark uses iOS](https://github.com/ebowwa/ebowwa/issues/47) or rotating through free GPU tiers
 - **Composable EVERYTHING** - from [Next.js + Vite monorepo experiments](https://github.com/ebowwa/starstride-001/issues/7) where each framework does what it does best, to finding [the cheapest GPU compute](https://github.com/ebowwa/ebowwa/issues/48) by orchestrating spot instances and free tiers.
 
@@ -48,7 +49,8 @@ AI companion app providing advocacy, augmentation, and enhancement. Your persona
 Privacy-focused photo metadata removal tool. Because your photos shouldn't tell everyone where you've been.
 <img width="1196" height="729" alt="Screenshot 2025-08-24 at 9 57 14 PM" src="https://github.com/user-attachments/assets/c2192203-df2d-4a25-82cd-243e107bbf7e" /><img width="1196" height="729" alt="Screenshot 2025-08-24 at 9 59 34 PM" src="https://github.com/user-attachments/assets/bc285d5b-10a1-4f78-8f4e-1dc7b0e5a078" />
 
-Notes: This has been a humble start, and educating into the current ASO market; see [iOS Localization & Cultural Branding Architecture](https://github.com/ebowwa/ebowwa/issues/52), [Appstore Preview Generator](https://github.com/ebowwa/app-preview-generator), [IOS App Icon Generator](https://github.com/ebowwa/ios-icon-generator)
+Notes: This has been a humble start, and educating into the current ASO market; see [iOS Localization & Cultural Branding Architecture](https://github.com/ebowwa/ebowwa/issues/52)
+
 ### [SleepLoops](https://apps.apple.com/app/id6745059180) (v1.0.0)
 90-minute sleep cycle optimizer. Wake up sharp by harnessing your natural sleep rhythms.
 
