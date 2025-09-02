@@ -68,6 +68,7 @@ A modular package for managing structured prompts with any LLM API. Makes LLM in
 
 ### [Cam Heart Rate, Respitory, Emotions CV](https://github.com/ebowwa/rppg-vitalsigns)
 What if your phone camera could read your vitals as accurately as medical equipment?
+<img width="735" height="971" alt="Screenshot 2025-08-05 at 12 05 31 PM" src="https://github.com/user-attachments/assets/af5668ba-4d67-4fb7-badb-67d6eb8c03c2" />
 
 The technology exists. VitalLens charges $X/month. Meta's tech is locked in smart glasses. It works. But it's locked behind paywalls and proprietary APIs. This project aims to change that
 
