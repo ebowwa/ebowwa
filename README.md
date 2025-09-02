@@ -68,10 +68,16 @@ A modular package for managing structured prompts with any LLM API. Makes LLM in
 
 ### [Cam Heart Rate, Respitory, Emotions CV](https://github.com/ebowwa/rppg-vitalsigns)
 What if your phone camera could read your vitals as accurately as medical equipment?
+
 <img width="735" height="971" alt="Screenshot 2025-08-05 at 12 05 31 PM" src="https://github.com/user-attachments/assets/af5668ba-4d67-4fb7-badb-67d6eb8c03c2" />
 
 The technology exists. VitalLens charges $X/month. Meta's tech is locked in smart glasses. It works. But it's locked behind paywalls and proprietary APIs. This project aims to change that
 
+### [Self-Classifying Edge devices](https://github.com/dako2/edaxshifu)
+
+![IMG_8611](https://github.com/user-attachments/assets/9c084302-298e-47a4-9e31-9d78e16e7c89)
+
+we created a for real-time self-classification framework and demo'd to andrej karpathy
 ### What I cant share
 - Sleeploops and other ios apps
 - Flux LoRA models feature trainings
