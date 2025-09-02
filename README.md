@@ -67,6 +67,9 @@ A modular package for managing structured prompts with any LLM API. Makes LLM in
 ## MOONSHOTS - Future Smart Glasses Fun
 
 ### [Cam Heart Rate, Respitory, Emotions CV](https://github.com/ebowwa/rppg-vitalsigns)
+What if your phone camera could read your vitals as accurately as medical equipment?
+
+The technology exists. VitalLens charges $X/month. Meta's tech is locked in smart glasses. It works. But it's locked behind paywalls and proprietary APIs. This project aims to change that
 
 ### What I cant share
 - Sleeploops and other ios apps
