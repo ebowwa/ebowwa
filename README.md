@@ -70,7 +70,7 @@ A modular package for managing structured prompts with any LLM API. Makes LLM in
 
 ### What I cant share
 - Sleeploops and other ios apps
-- an image platform with fal, flux, loras, etc
+- Flux LoRA models feature trainings
 - hardware sdks
 
 ## 🛠️ Tech Stack
