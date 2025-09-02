@@ -68,6 +68,11 @@ A modular package for managing structured prompts with any LLM API. Makes LLM in
 
 ### [Cam Heart Rate, Respitory, Emotions CV](https://github.com/ebowwa/rppg-vitalsigns)
 
+### What I cant share
+- Sleeploops and other ios apps
+- an image platform with fal, flux, loras, etc
+- hardware sdks
+
 ## 🛠️ Tech Stack
 
 <div align="center">
