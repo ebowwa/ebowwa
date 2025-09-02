@@ -64,6 +64,10 @@ Minimal, reusable AI service handlers for Gemini and other LLMs. The universal p
 ### [structured-prompts](https://pypi.org/project/structured-prompts/) (v0.1.1)
 A modular package for managing structured prompts with any LLM API. Makes LLM interactions predictable and testable.
 
+## MOONSHOTS 
+
+### [Cam Heart Rate, Respitory, Emotions CV](https://github.com/ebowwa/rppg-vitalsigns)
+
 ## 🛠️ Tech Stack
 
 <div align="center">
