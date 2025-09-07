@@ -39,6 +39,7 @@ I operate across every possible edge and node.
     - [Appstore Preview Generator](https://github.com/ebowwa/app-preview-generator)
 - **Find arbitrage everywhere** - Whether it's [discovering that 65% of Denmark uses iOS](https://github.com/ebowwa/ebowwa/issues/47) or rotating through free GPU tiers
 - **Composable EVERYTHING** - from [Next.js + Vite monorepo experiments](https://github.com/ebowwa/starstride-001/issues/7) where each framework does what it does best, to finding [the cheapest GPU compute](https://github.com/ebowwa/ebowwa/issues/48) by orchestrating spot instances and free tiers.
+- **Resources I ship with** - Tailscale, Uptime Kuma, Doppler
 
 ## 📱 Shipped to Apple App Store
 
