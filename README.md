@@ -46,7 +46,7 @@ I operate across every possible edge and node.
 ### [CaringMind](https://apps.apple.com/app/id6749468165) (v0.0.0)
 AI companion app providing advocacy, augmentation, and enhancement. Your personal AI that actually cares.
 
-### [CleanShots – Remove Photo Info](https://apps.apple.com/app/id6745844477) (v1.1.0)
+### [CleanShots – Remove Photo Info](https://apps.apple.com/app/id6745844477) (v1.1.01)
 Privacy-focused photo metadata removal tool. Because your photos shouldn't tell everyone where you've been.
 <img width="1196" height="729" alt="Screenshot 2025-08-24 at 9 57 14 PM" src="https://github.com/user-attachments/assets/c2192203-df2d-4a25-82cd-243e107bbf7e" /><img width="1196" height="729" alt="Screenshot 2025-08-24 at 9 59 34 PM" src="https://github.com/user-attachments/assets/bc285d5b-10a1-4f78-8f4e-1dc7b0e5a078" />
 
