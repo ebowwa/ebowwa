@@ -30,7 +30,7 @@ I operate across every possible edge and node.
 ### Development Philosophy
 - **Ship first, optimize later** - But make it modular so you can swap parts without breaking everything
 - **Automate workflows**
-  - From [development machine setup script](https://github.com/ebowwa/new-development-machine-setup) with [scenario-specific branches](https://github.com/ebowwa/new-development-machine-setup/issues/1)
+  - From [node-starter](https://github.com/ebowwa/new-development-machine-setup) with [scenario-specific branches](https://github.com/ebowwa/new-development-machine-setup/issues/1)
   - To publishing tools like [structured-prompts](https://pypi.org/project/structured-prompts/) on PyPI.
   - [App Store Icon Pipelines](https://github.com/ebowwa/ios-icon-generator), [App Store Connect API wrapper](https://github.com/ebowwa/app-store-connect-wrapper), [Xcode Mcp](https://github.com/ebowwa/xcode-mcp), etc
   - **Planning**
