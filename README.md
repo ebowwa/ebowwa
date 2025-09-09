@@ -79,6 +79,9 @@ The technology exists. VitalLens charges $X/month. Meta's tech is locked in smar
 ![IMG_8611](https://github.com/user-attachments/assets/9c084302-298e-47a4-9e31-9d78e16e7c89)
 
 we created a for real-time self-classification framework and demo'd to andrej karpathy
+
+### [Open-Alterego: Device for novocal movement based communication](https://github.com/ebowwa/Open-Altergo)
+
 ### What I cant share
 - Sleeploops and other ios apps
 - Flux LoRA models feature trainings
