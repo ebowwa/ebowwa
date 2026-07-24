@@ -1,9 +1,8 @@
-# Hi 👋, this is ..
+# Elijah Arbee
 
 <div align="center">
 
-
-`🚀 Mobile` • `🌐 Web` • `🔧 Embedded` • `🔒 Security` • `🤖 AI/ML`
+`📱 Apple Platforms` • `🤖 Edge AI` • `🔧 Connected Hardware` • `⚙️ Developer Infrastructure`
 
 ```
 ███████╗██████╗  ██████╗ ██╗    ██╗██╗    ██╗ █████╗     ██╗      █████╗ ██████╗ ███████╗
@@ -12,10 +11,9 @@
 ██╔══╝  ██╔══██╗██║   ██║██║███╗██║██║███╗██║██╔══██║    ██║     ██╔══██║██╔══██╗╚════██║
 ███████╗██████╔╝╚██████╔╝╚███╔███╔╝╚███╔███╔╝██║  ██║    ███████╗██║  ██║██████╔╝███████║
 ╚══════╝╚═════╝  ╚═════╝  ╚══╝╚══╝  ╚══╝╚══╝ ╚═╝  ╚═╝    ╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝
-
 ```
 
-**Building at the intersection of mobile, web, and embedded systems**
+**Applied systems engineer building products across native software, AI models, hardware, and infrastructure.**
 
 [![GitHub followers](https://img.shields.io/github/followers/ebowwa?label=Follow&style=social)](https://github.com/ebowwa)
 [![Personal Site](https://img.shields.io/badge/🌐_ebowwa.xyz-4285F4?style=flat-square)](https://ebowwa.xyz)
@@ -25,68 +23,79 @@
 
 </div>
 
-I operate across every possible edge and node. 
+I build end-to-end systems: native applications, on-device inference, cameras and BLE devices, model-training pipelines, web services, and the infrastructure needed to test and ship them. My strongest work starts with a product or hardware capability and connects every required layer until it works outside a demo.
 
-### Development Philosophy
-- **Ship first, optimize later** - But make it modular so you can swap parts without breaking everything
-- **Automate workflows**
-  - From [node-starter](https://github.com/ebowwa/new-development-machine-setup) with [scenario-specific branches](https://github.com/ebowwa/new-development-machine-setup/issues/1)
-  - To publishing tools like [structured-prompts](https://pypi.org/project/structured-prompts/) on PyPI.
-  - [App Store Icon Pipelines](https://github.com/ebowwa/ios-icon-generator), [App Store Connect API wrapper](https://github.com/ebowwa/app-store-connect-wrapper), [Xcode Mcp](https://github.com/ebowwa/xcode-mcp), etc
-  - **Planning**
-    - [MacOS Automation Platform - For IOS app screenshots and user testing](https://github.com/ebowwa/macOS-Screenshot-Tester)
-    - [Nano Banana Video Editor - For rushing to global market(s) new ideas](https://github.com/ebowwa/Nano-Banana-Shorts-Editor)
-    - [Appstore Preview Generator](https://github.com/ebowwa/app-preview-generator)
-- **Find arbitrage everywhere** - Whether it's [discovering that 65% of Denmark uses iOS](https://github.com/ebowwa/ebowwa/issues/47) or rotating through free GPU tiers
-- **Composable EVERYTHING** - from [Next.js + Vite monorepo experiments](https://github.com/ebowwa/starstride-001/issues/7) where each framework does what it does best, to finding [the cheapest GPU compute](https://github.com/ebowwa/ebowwa/issues/48) by orchestrating spot instances and free tiers.
-- **Resources I ship with** - Tailscale, Uptime Kuma, Doppler
+## Current focus
 
-## 📱 Shipped to Apple App Store
+- **On-device and edge AI:** quantization, local model runtimes, perception, tracking, and multimodal systems
+- **Apple platforms:** Swift/SwiftUI products, macOS automation, iOS testing, signing, release, and App Store operations
+- **Wearables and alternative interfaces:** smart glasses, BLE, camera/audio relays, silent speech, and sensor-driven interaction
+- **Agent infrastructure:** composable tools, MCP servers, evaluation, orchestration, and machine-to-machine workflows
 
-### [CaringMind](https://apps.apple.com/app/id6749468165) (v0.0.0)
-AI companion app providing advocacy, augmentation, and enhancement. Your personal AI that actually cares.
+## Selected public work
 
-### [CleanShots – Remove Photo Info](https://apps.apple.com/app/id6745844477) (v1.1.01)
-Privacy-focused photo metadata removal tool. Because your photos shouldn't tell everyone where you've been.
+| Area | Projects |
+|---|---|
+| Silent speech and multimodal research | [Open-Alterego](https://github.com/ebowwa/Open-Alterego), [cosmos-framework](https://github.com/ebowwa/cosmos-framework), [rPPG Vital Signs](https://github.com/ebowwa/rppg-vitalsigns) |
+| Edge and native runtimes | [MetalNMS](https://github.com/ebowwa/MetalNMS), [NCNNBackend](https://github.com/ebowwa/NCNNBackend), [OnDeviceRecall](https://github.com/ebowwa/OnDeviceRecall) |
+| Connected hardware | [BluetoothHID](https://github.com/ebowwa/BluetoothHID), [ESP32-S3 Camera Firmware](https://github.com/ebowwa/esp32s3-cam-firmware), [Pi BLE Keyboard](https://github.com/ebowwa/pi-ble-keyboard) |
+| Developer and AI tooling | [xcode-mcp](https://github.com/ebowwa/xcode-mcp), [ai-proxy-core](https://github.com/ebowwa/ai-proxy-core), [structured-prompts](https://github.com/ebowwa/structured-prompts) |
 
-Notes: This has been a humble start, and educating into the current ASO market; see [iOS Localization & Cultural Branding Architecture](https://github.com/ebowwa/ebowwa/issues/52)
+Larger product systems and internal platform monorepos are mostly private. Older experiments are being consolidated into explicit archives so the public account has a clearer canonical map.
 
-### [SleepLoops](https://apps.apple.com/app/id6745059180) (v1.0.0)
-90-minute sleep cycle optimizer. Wake up sharp by harnessing your natural sleep rhythms.
+## Shipped to the Apple App Store
 
-## 📦 Published on PyPI
+### [CleanShots – Remove Photo Info](https://apps.apple.com/app/id6745844477)
 
-### [ai-proxy-core](https://pypi.org/project/ai-proxy-core/) (v0.4.43)
-Minimal, reusable AI service handlers for Gemini and other LLMs. The universal proxy layer mentioned above.
-- Providers: openai • google • ollama 
-- Services: Unified post requests, websockets, unique provider features (image generation)
+Privacy-focused iOS media processing: metadata removal, watermarking, and fail-closed visual masking.
 
-### [structured-prompts](https://pypi.org/project/structured-prompts/) (v0.1.1)
-A modular package for managing structured prompts with any LLM API. Makes LLM interactions predictable and testable.
+### [CaringMind](https://apps.apple.com/app/id6749468165)
 
-## MOONSHOTS - Future Smart Glasses Fun
+An AI companion and audio-journaling product focused on personal advocacy, augmentation, and reflection.
 
-### [Cam Heart Rate, Respitory, Emotions CV](https://github.com/ebowwa/rppg-vitalsigns)
-What if your phone camera could read your vitals as accurately as medical equipment?
+### [SleepLoops](https://apps.apple.com/app/id6745059180)
+
+A sleep-cycle utility built around 90-minute timing and practical wake-time planning.
+
+Shipping these products has included native implementation, screenshots and localization, signing, CI, TestFlight delivery, App Store Connect automation, and post-release iteration.
+
+## Research and hardware work
+
+### [Camera heart rate, respiration, and emotion signals](https://github.com/ebowwa/rppg-vitalsigns)
+
+Exploring camera-based physiological sensing for phones and wearable cameras.
 
 <img width="735" height="971" alt="Screenshot 2025-08-05 at 12 05 31 PM" src="https://github.com/user-attachments/assets/af5668ba-4d67-4fb7-badb-67d6eb8c03c2" />
 
-The technology exists. VitalLens charges $X/month. Meta's tech is locked in smart glasses. It works. But it's locked behind paywalls and proprietary APIs. This project aims to change that
+### [Self-classifying edge devices](https://github.com/dako2/edaxshifu)
 
-### [Self-Classifying Edge devices](https://github.com/dako2/edaxshifu)
+An earlier real-time self-classification framework and hardware demonstration.
 
 ![IMG_8611](https://github.com/user-attachments/assets/9c084302-298e-47a4-9e31-9d78e16e7c89)
 
-we created a for real-time self-classification framework and demo'd to andrej karpathy
+### [Open-Alterego](https://github.com/ebowwa/Open-Alterego)
 
-### [Open-Alterego: Device for novocal movement based communication](https://github.com/ebowwa/Open-Altergo)
+Silent-speech and non-vocal communication research, including visual speech recognition, personalization, and deployment paths for Apple devices.
 
-### What I cant share
-- Sleeploops and other ios apps
-- Flux LoRA models feature trainings
-- hardware sdks
+## Published packages
 
-## 🛠️ Tech Stack
+### [ai-proxy-core](https://pypi.org/project/ai-proxy-core/)
+
+Reusable service handlers for multiple AI providers, streaming, WebSockets, and provider-specific capabilities.
+
+### [structured-prompts](https://pypi.org/project/structured-prompts/)
+
+A small prompt-template registry for predictable, testable LLM interactions.
+
+## Engineering approach
+
+- Build the thinnest end-to-end system that can be tested in the real environment.
+- Keep hardware, model, application, and infrastructure boundaries replaceable.
+- Automate repeated work—especially testing, deployment, screenshots, signing, and releases.
+- Extract reusable packages after an interface has become real, not merely hypothetical.
+- Treat AI coding agents as implementation multipliers; verify the resulting system with tests, device evidence, and operational checks.
+
+## Tech stack
 
 <div align="center">
 
@@ -109,11 +118,10 @@ we created a for real-time self-classification framework and demo'd to andrej ka
 
 </div>
 
-
-## 📊 GitHub Analytics
+## GitHub analytics
 
 <div align="center">
-  
+
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ebowwa&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true)
 
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ebowwa&theme=radical&hide_border=true)
@@ -122,19 +130,19 @@ we created a for real-time self-classification framework and demo'd to andrej ka
 
 </div>
 
-### 📈 Contribution Activity
+### Contribution activity
 
 ![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=ebowwa&theme=redical&hide_border=true&area=true)
 
-### 🏆 Achievements
+### Achievements
 
 <div align="center">
-  
+
 ![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=ebowwa&theme=radical&no-frame=true&no-bg=false&margin-w=4&column=7)
 
 </div>
 
-### 📊 Additional Stats
+### Additional stats
 
 <div align="center">
 
@@ -147,16 +155,17 @@ we created a for real-time self-classification framework and demo'd to andrej ka
 
 </div>
 
-## 🤝 Let's Connect
+## Connect
 
 <div align="center">
 
-| Platform | Link | Best For |
-|----------|------|----------|
-| 🐦 **X/Twitter** | [@innitEBOWWA](https://x.com/innitEBOWWA) | Updates & thoughts |
-| 🤗 **Hugging Face** | [huggingface.co/ebowwa](https://huggingface.co/ebowwa) | AI/ML models |
-| 🦙 **Ollama** | [ollama.com/ebowwa](https://ollama.com/ebowwa) | LLM experiments |
-| 💬 **GitHub** | [@ebowwa](https://github.com/ebowwa) | Open source collabs |
+| Platform | Link |
+|---|---|
+| X | [@simulationapi](https://x.com/simulationapi) |
+| Website | [ebowwa.xyz](https://ebowwa.xyz) |
+| Hugging Face | [huggingface.co/ebowwa](https://huggingface.co/ebowwa) |
+| Ollama | [ollama.com/ebowwa](https://ollama.com/ebowwa) |
+| GitHub | [@ebowwa](https://github.com/ebowwa) |
 
 </div>
 
@@ -164,7 +173,7 @@ we created a for real-time self-classification framework and demo'd to andrej ka
 
 <div align="center">
 
-*"Ship fast, learn faster, make complex systems accessible"*
+*Ship end-to-end. Verify on real systems. Extract what becomes reusable.*
 
 <img src="https://komarev.com/ghpvc/?username=ebowwa&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
 
