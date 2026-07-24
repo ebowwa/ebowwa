@@ -36,7 +36,7 @@ I build end-to-end systems: native applications, on-device inference, cameras an
 
 | Area | Projects |
 |---|---|
-| Silent speech and multimodal research | [Open-Alterego](https://github.com/ebowwa/Open-Alterego), [cosmos-framework](https://github.com/ebowwa/cosmos-framework), [rPPG Vital Signs](https://github.com/ebowwa/rppg-vitalsigns) |
+| Camera-enabled interfaces | [Transcription — Open-Alterego](https://github.com/ebowwa/Open-Alterego), [Robotic reasoning — cosmos-framework](https://github.com/ebowwa/cosmos-framework), [Human vitals — rPPG](https://github.com/ebowwa/rppg-vitalsigns) |
 | Connected hardware | [BluetoothHID](https://github.com/ebowwa/BluetoothHID), [ESP32-S3 Camera Firmware](https://github.com/ebowwa/esp32s3-cam-firmware), [Pi BLE Keyboard](https://github.com/ebowwa/pi-ble-keyboard) |
 | Developer and AI tooling | [xcode-mcp](https://github.com/ebowwa/xcode-mcp), [structured-prompts](https://github.com/ebowwa/structured-prompts) |
 
