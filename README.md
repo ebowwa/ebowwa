@@ -22,13 +22,13 @@
 
 </div>
 
-I build end-to-end systems: native applications, on-device inference, cameras and BLE devices, model-training pipelines, web services, and the infrastructure needed to test and ship them. My strongest work starts with a product or hardware capability and connects every required layer until it works outside a demo.
+I build systems that work outside the demo — native apps, on-device inference, camera and BLE hardware, model-training pipelines, and the services and infrastructure that connect them. Most projects start with a product or hardware capability and grow every layer needed to ship it for real.
 
 ## Current focus
 
 - **On-device and edge AI:** quantization, local model runtimes, perception, tracking, and multimodal systems
-- **Apple platforms:** Swift/SwiftUI products, macOS automation, iOS testing, signing, release, and App Store operations
-- **Wearables and alternative interfaces:** smart glasses, BLE, camera/audio relays, silent speech, and sensor-driven interaction
+- **Apple platforms:** Swift/SwiftUI products with the macOS automation, signing, and release engineering behind them
+- **Wearables and alternative interfaces:** smart glasses, BLE, camera and audio relays, silent speech
 - **Agent infrastructure:** composable tools, MCP servers, evaluation, orchestration, and machine-to-machine workflows
 
 ## Selected public work
@@ -39,7 +39,7 @@ I build end-to-end systems: native applications, on-device inference, cameras an
 | Connected hardware | [BluetoothHID](https://github.com/ebowwa/BluetoothHID), [ESP32-S3 Camera Firmware](https://github.com/ebowwa/esp32s3-cam-firmware), [Pi BLE Keyboard](https://github.com/ebowwa/pi-ble-keyboard) |
 | Developer and AI tooling | [xcode-mcp](https://github.com/ebowwa/xcode-mcp), [structured-prompts](https://github.com/ebowwa/structured-prompts) |
 
-Larger product systems and internal platform monorepos are mostly private. Older experiments are being consolidated into explicit archives so the public account has a clearer canonical map.
+The larger product systems and internal platform monorepos are private. Older experiments get folded into archives, so what stays public is the short list above — the work that best represents how I build.
 
 ## Lab notebooks
 
@@ -66,31 +66,31 @@ An AI companion and audio-journaling product focused on personal advocacy, augme
 
 A sleep-cycle utility built around 90-minute timing and practical wake-time planning.
 
-Shipping these products has included native implementation, screenshots and localization, signing, CI, TestFlight delivery, App Store Connect automation, and post-release iteration.
+All three ship through the same pipeline I own: native implementation, signing, CI, TestFlight, App Store Connect automation, localization, and post-release iteration.
 
 ## Research and hardware work
 
 ### [Camera heart rate, respiration, and emotion signals](https://github.com/ebowwa/rppg-vitalsigns)
 
-Exploring camera-based physiological sensing for phones and wearable cameras.
+Contactless physiological sensing from ordinary cameras — on phones and wearable devices.
 
 <img width="400" alt="rPPG — camera heart-rate and vitals detection demo" src="https://github.com/user-attachments/assets/af5668ba-4d67-4fb7-badb-67d6eb8c03c2" />
 
 ### [Self-classifying edge devices](https://github.com/dako2/edaxshifu)
 
-An earlier real-time self-classification framework and hardware demonstration.
+An earlier real-time self-classification framework and its hardware demonstration.
 
 <img width="400" alt="EdaxShifu — edge device self-classification demo" src="https://github.com/user-attachments/assets/9c084302-298e-47a4-9e31-9d78e16e7c89" />
 
 ### [Open-Alterego](https://github.com/ebowwa/Open-Alterego)
 
-Silent-speech and non-vocal communication research, including visual speech recognition, personalization, and deployment paths for Apple devices.
+Silent-speech and non-vocal communication research — visual speech recognition, personalization, and deployment on Apple devices.
 
 ## Published packages
 
 ### [ai-proxy-core](https://pypi.org/project/ai-proxy-core/)
 
-Reusable service handlers for multiple AI providers, streaming, WebSockets, and provider-specific capabilities.
+One reusable core for multi-provider AI services — streaming, WebSockets, and provider-specific capabilities.
 
 ### [structured-prompts](https://pypi.org/project/structured-prompts/)
 
@@ -98,11 +98,11 @@ A small prompt-template registry for predictable, testable LLM interactions.
 
 ## Engineering approach
 
-- Build the thinnest end-to-end system that can be tested in the real environment.
+- Build the thinnest system that can be tested in the real environment.
 - Keep hardware, model, application, and infrastructure boundaries replaceable.
-- Automate repeated work—especially testing, deployment, screenshots, signing, and releases.
-- Extract reusable packages after an interface has become real, not merely hypothetical.
-- Treat AI coding agents as implementation multipliers; verify the resulting system with tests, device evidence, and operational checks.
+- Automate repeated work: testing, deployment, signing, releases.
+- Extract reusable packages once an interface has proven itself.
+- Treat AI coding agents as multipliers — then verify the result with tests, device evidence, and operational checks.
 
 ## Tech stack
 
