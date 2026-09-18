@@ -48,16 +48,6 @@ A sleep-cycle utility built around 90-minute timing and practical wake-time plan
 
 All three ship through one pipeline I own: implementation, signing, CI, TestFlight, App Store Connect automation, post-release iteration.
 
-## Published packages
-
-### [ai-proxy-core](https://pypi.org/project/ai-proxy-core/)
-
-One reusable core for multi-provider AI services — streaming, WebSockets, and provider-specific capabilities.
-
-### [structured-prompts](https://pypi.org/project/structured-prompts/)
-
-A small prompt-template registry for predictable, testable LLM interactions.
-
 
 ---
 
