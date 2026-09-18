@@ -75,13 +75,13 @@ Shipping these products has included native implementation, screenshots and loca
 
 Exploring camera-based physiological sensing for phones and wearable cameras.
 
-<img width="735" height="971" alt="Screenshot 2025-08-05 at 12 05 31 PM" src="https://github.com/user-attachments/assets/af5668ba-4d67-4fb7-badb-67d6eb8c03c2" />
+<img width="735" height="971" alt="rPPG — camera heart-rate and vitals detection demo" src="https://github.com/user-attachments/assets/af5668ba-4d67-4fb7-badb-67d6eb8c03c2" />
 
 ### [Self-classifying edge devices](https://github.com/dako2/edaxshifu)
 
 An earlier real-time self-classification framework and hardware demonstration.
 
-![IMG_8611](https://github.com/user-attachments/assets/9c084302-298e-47a4-9e31-9d78e16e7c89)
+![EdaxShifu — edge device self-classification demo](https://github.com/user-attachments/assets/9c084302-298e-47a4-9e31-9d78e16e7c89)
 
 ### [Open-Alterego](https://github.com/ebowwa/Open-Alterego)
 
@@ -134,21 +134,9 @@ A small prompt-template registry for predictable, testable LLM interactions.
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ebowwa&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true)
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ebowwa&theme=radical&hide_border=true)
+![GitHub Streak](https://streak-stats.demolab.com/?user=ebowwa&theme=radical&hide_border=true)
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ebowwa&layout=compact&theme=radical&hide_border=true&langs_count=8)
-
-</div>
-
-### Contribution activity
-
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=ebowwa&theme=redical&hide_border=true&area=true)
-
-### Achievements
-
-<div align="center">
-
-![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=ebowwa&theme=radical&no-frame=true&no-bg=false&margin-w=4&column=7)
 
 </div>
 
@@ -160,6 +148,8 @@ A small prompt-template registry for predictable, testable LLM interactions.
 <!-- ![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?username=ebowwa&theme=radical&hide_border=true&layout=compact) -->
 
 ![Profile Details](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ebowwa&theme=radical)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ebowwa&layout=compact&theme=radical&hide_border=true&langs_count=8)
 
 ![Commit Time](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=ebowwa&theme=radical)
 
