@@ -23,9 +23,7 @@ I build systems that work outside the demo — native apps, on-device inference,
 
 Larger systems live in private monorepos; older experiments get folded into archives. What stays public is the short list above.
 
-## Lab notebooks
-
-Long-form engineering notebooks on gist — the narrative layer behind everything above, one debugging war per entry.
+Their narrative layer lives in the lab notebooks on gist — one debugging war per entry:
 
 - [The lab notebooks — the index of indexes](https://gist.github.com/ebowwa/4a61f3c4035dd540c58615c96f2812b3) — the shelf: thread maps for all five series, plus the ecosystem census of which repos feed which series.
 - [Series 1 — A7 iOS 12.5.x](https://gist.github.com/ebowwa/9bfe970058959b09b8da675ad71e854f) — a junked iPad mini 2 turned self-hosting lab: Chimera jailbreak, kernel RE, an on-device ObjC/Rust toolchain — and the birth of the resident agent that types, watches its own screen, and studies its own deaths.
