@@ -41,6 +41,17 @@ I build end-to-end systems: native applications, on-device inference, cameras an
 
 Larger product systems and internal platform monorepos are mostly private. Older experiments are being consolidated into explicit archives so the public account has a clearer canonical map.
 
+## Lab notebooks
+
+Long-form engineering notebooks on gist — one debugging war per entry.
+
+- [The lab notebooks — the index of indexes](https://gist.github.com/ebowwa/4a61f3c4035dd540c58615c96f2812b3) — master index of all five series, plus the ecosystem census of which repos feed which series.
+- [Series 1 — A7 iOS 12.5.x](https://gist.github.com/ebowwa/9bfe970058959b09b8da675ad71e854f) — jailbreaking, infra, compute, kernel RE, and agents on a junked iPad mini 2; one device, five threads.
+- [Series 2 — The ANE lab](https://gist.github.com/ebowwa/565142c77ffda0d3ae96d0175281d038) — the Apple Neural Engine: the engine, the lab, non-AI workloads, and models on the engine.
+- [Series 3 — Developer-space patterns](https://gist.github.com/ebowwa/f1306779962c342bfbfd49caba03a576) — ordinal-layer architecture, the measurement-methods gauntlet, the eval-cost ledger, and reading macOS metrics cheaply.
+- [Series 4 — Agents: the mind loop](https://gist.github.com/ebowwa/d279afaf219d35765399d876c23a184e) — the resident agent's mortality architecture: obituaries, resurrections, death-detection tripwires, the memory ledger, and the fleet that watches the loop.
+- [Series 5 — Products](https://gist.github.com/ebowwa/c3aab014e92f116d937bff8572906aaa) — what the lab ships outward: a keyless web search + fetch toolkit for coding agents, built from the Mac's own headless Chrome.
+
 ## Shipped to the Apple App Store
 
 ### [CleanShots – Remove Photo Info](https://apps.apple.com/app/id6745844477)
