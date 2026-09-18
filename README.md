@@ -120,20 +120,19 @@ A small prompt-template registry for predictable, testable LLM interactions.
 
 <div align="center">
 
-<img width="400" alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=ebowwa&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true" />
+<img width="400" alt="GitHub Stats" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ebowwa&theme=radical" />
 
 <img width="400" alt="GitHub Streak" src="https://streak-stats.demolab.com/?user=ebowwa&theme=radical&hide_border=true" />
 
-<img width="400" alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ebowwa&layout=compact&theme=radical&hide_border=true&langs_count=8" />
+<img width="400" alt="Repos per language" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ebowwa&theme=radical" />
+
+<img width="400" alt="Most committed languages" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ebowwa&theme=radical" />
 
 </div>
 
 ### Additional stats
 
 <div align="center">
-
-<!-- WakaTime stats - configure at https://wakatime.com -->
-<!-- ![WakaTime](https://github-readme-stats.vercel.app/api/wakatime?username=ebowwa&theme=radical&hide_border=true&layout=compact) -->
 
 <img width="400" alt="Profile Details" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ebowwa&theme=radical" />
 
