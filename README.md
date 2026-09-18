@@ -41,6 +41,25 @@ All three apps ship through one pipeline I own: implementation, signing, CI, Tes
 Larger systems live in private monorepos; older experiments get folded into archives. The [index of indexes](https://gist.github.com/ebowwa/4a61f3c4035dd540c58615c96f2812b3) holds the thread maps and the ecosystem census of which repos feed which series.
 
 
+
+## GitHub stats
+
+<div align="center">
+
+<img width="400" alt="GitHub Streak" src="https://streak-stats.demolab.com/?user=ebowwa&theme=radical&hide_border=true" />
+
+<img width="400" alt="GitHub Stats" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ebowwa&theme=radical" />
+
+<img width="400" alt="Repos per language" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ebowwa&theme=radical" />
+
+<img width="400" alt="Most committed languages" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ebowwa&theme=radical" />
+
+<img width="400" alt="Profile Details" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ebowwa&theme=radical" />
+
+<img width="400" alt="Commit Time" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=ebowwa&theme=radical" />
+
+</div>
+
 ---
 
 <div align="center">
