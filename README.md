@@ -22,14 +22,14 @@
 
 </div>
 
-I build systems that work outside the demo — native apps, on-device inference, camera and BLE hardware, model-training pipelines, and the services and infrastructure that connect them. Most projects start with a product or hardware capability and grow every layer needed to ship it for real.
+I build systems that work outside the demo — native apps, on-device inference, camera and BLE hardware, training pipelines, and the services that connect them. Each starts with a product or hardware capability and grows the layers needed to ship it.
 
 ## Current focus
 
-- **On-device and edge AI:** quantization, local model runtimes, perception, tracking, and multimodal systems
-- **Apple platforms:** Swift/SwiftUI products with the macOS automation, signing, and release engineering behind them
+- **On-device and edge AI:** quantization, local runtimes, perception, tracking, multimodal systems
+- **Apple platforms:** Swift/SwiftUI products, plus the macOS automation, signing, and release engineering behind them
 - **Wearables and alternative interfaces:** smart glasses, BLE, camera and audio relays, silent speech
-- **Agent infrastructure:** composable tools, MCP servers, evaluation, orchestration, and machine-to-machine workflows
+- **Agent infrastructure:** composable tools, MCP servers, evaluation, machine-to-machine workflows
 
 ## Selected public work
 
@@ -39,7 +39,7 @@ I build systems that work outside the demo — native apps, on-device inference,
 | Connected hardware | [BluetoothHID](https://github.com/ebowwa/BluetoothHID), [ESP32-S3 Camera Firmware](https://github.com/ebowwa/esp32s3-cam-firmware), [Pi BLE Keyboard](https://github.com/ebowwa/pi-ble-keyboard) |
 | Developer and AI tooling | [xcode-mcp](https://github.com/ebowwa/xcode-mcp), [structured-prompts](https://github.com/ebowwa/structured-prompts) |
 
-The larger product systems and internal platform monorepos are private. Older experiments get folded into archives, so what stays public is the short list above — the work that best represents how I build.
+Larger systems live in private monorepos; older experiments get folded into archives. What stays public is the short list above.
 
 ## Lab notebooks
 
@@ -60,13 +60,13 @@ Privacy-focused iOS media processing: metadata removal, watermarking, and fail-c
 
 ### [CaringMind](https://apps.apple.com/app/id6749468165)
 
-An AI companion and audio-journaling product focused on personal advocacy, augmentation, and reflection.
+An AI companion and audio journal for personal advocacy, augmentation, and reflection.
 
 ### [SleepLoops](https://apps.apple.com/app/id6745059180)
 
 A sleep-cycle utility built around 90-minute timing and practical wake-time planning.
 
-All three ship through the same pipeline I own: native implementation, signing, CI, TestFlight, App Store Connect automation, localization, and post-release iteration.
+All three ship through one pipeline I own: implementation, signing, CI, TestFlight, App Store Connect automation, post-release iteration.
 
 ## Research and hardware work
 
@@ -98,11 +98,11 @@ A small prompt-template registry for predictable, testable LLM interactions.
 
 ## Engineering approach
 
-- Build the thinnest system that can be tested in the real environment.
+- Build the thinnest system that can be tested for real.
 - Keep hardware, model, application, and infrastructure boundaries replaceable.
 - Automate repeated work: testing, deployment, signing, releases.
 - Extract reusable packages once an interface has proven itself.
-- Treat AI coding agents as multipliers — then verify the result with tests, device evidence, and operational checks.
+- Agents multiply implementation; tests, device evidence, and operational checks verify it.
 
 ## Tech stack
 
