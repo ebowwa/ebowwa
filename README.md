@@ -18,6 +18,7 @@
 [![App Store](https://img.shields.io/badge/📱_App_Store-Published_Apps-0D96F6?style=flat-square)](https://apps.apple.com/developer/id1745844476)
 [![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=flat-square)](https://huggingface.co/ebowwa)
 [![Ollama](https://img.shields.io/badge/🦙_Ollama-000000?style=flat-square)](https://ollama.com/ebowwa)
+[![X](https://img.shields.io/badge/X-@simulationapi-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/simulationapi)
 
 </div>
 
@@ -137,20 +138,6 @@ A small prompt-template registry for predictable, testable LLM interactions.
 <img width="400" alt="Profile Details" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ebowwa&theme=radical" />
 
 <img width="400" alt="Commit Time" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=ebowwa&theme=radical" />
-
-</div>
-
-## Connect
-
-<div align="center">
-
-| Platform | Link |
-|---|---|
-| X | [@simulationapi](https://x.com/simulationapi) |
-| Website | [ebowwa.xyz](https://ebowwa.xyz) |
-| Hugging Face | [huggingface.co/ebowwa](https://huggingface.co/ebowwa) |
-| Ollama | [ollama.com/ebowwa](https://ollama.com/ebowwa) |
-| GitHub | [@ebowwa](https://github.com/ebowwa) |
 
 </div>
 
