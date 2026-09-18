@@ -25,14 +25,14 @@ Larger systems live in private monorepos; older experiments get folded into arch
 
 ## Lab notebooks
 
-Long-form engineering notebooks on gist — one debugging war per entry.
+Long-form engineering notebooks on gist — the narrative layer behind everything above, one debugging war per entry.
 
-- [The lab notebooks — the index of indexes](https://gist.github.com/ebowwa/4a61f3c4035dd540c58615c96f2812b3) — master index of all five series, plus the ecosystem census of which repos feed which series.
-- [Series 1 — A7 iOS 12.5.x](https://gist.github.com/ebowwa/9bfe970058959b09b8da675ad71e854f) — jailbreaking, infra, compute, kernel RE, and agents on a junked iPad mini 2; one device, five threads.
-- [Series 2 — The ANE lab](https://gist.github.com/ebowwa/565142c77ffda0d3ae96d0175281d038) — the Apple Neural Engine: the engine, the lab, non-AI workloads, and models on the engine.
-- [Series 3 — Developer-space patterns](https://gist.github.com/ebowwa/f1306779962c342bfbfd49caba03a576) — ordinal-layer architecture, the measurement-methods gauntlet, the eval-cost ledger, and reading macOS metrics cheaply.
-- [Series 4 — Agents: the mind loop](https://gist.github.com/ebowwa/d279afaf219d35765399d876c23a184e) — the resident agent's mortality architecture: obituaries, resurrections, death-detection tripwires, the memory ledger, and the fleet that watches the loop.
-- [Series 5 — Products](https://gist.github.com/ebowwa/c3aab014e92f116d937bff8572906aaa) — what the lab ships outward: a keyless web search + fetch toolkit for coding agents, built from the Mac's own headless Chrome.
+- [The lab notebooks — the index of indexes](https://gist.github.com/ebowwa/4a61f3c4035dd540c58615c96f2812b3) — the shelf: thread maps for all five series, plus the ecosystem census of which repos feed which series.
+- [Series 1 — A7 iOS 12.5.x](https://gist.github.com/ebowwa/9bfe970058959b09b8da675ad71e854f) — a junked iPad mini 2 turned self-hosting lab: Chimera jailbreak, kernel RE, an on-device ObjC/Rust toolchain — and the birth of the resident agent that types, watches its own screen, and studies its own deaths.
+- [Series 2 — The ANE lab](https://gist.github.com/ebowwa/565142c77ffda0d3ae96d0175281d038) — bending Apple's undocumented Neural Engine: shape laws, int8, the eval-cost ledger; non-AI workloads (a donut, XOR without xor); embedding and cardio models on the engine — the research behind rppg-vitalsigns.
+- [Series 3 — Developer-space patterns](https://gist.github.com/ebowwa/f1306779962c342bfbfd49caba03a576) — the habits the wars run on: ordinal-layer architecture, how a number gets to be true, and reading macOS metrics the OS stopped giving you.
+- [Series 4 — Agents: the mind loop](https://gist.github.com/ebowwa/d279afaf219d35765399d876c23a184e) — the resident agent's mortality architecture: the curiosity engine, watchdog tripwires, the obituary file, a mind in one gigabyte — and the fleet that watches the loop.
+- [Series 5 — Products](https://gist.github.com/ebowwa/c3aab014e92f116d937bff8572906aaa) — what the lab ships outward: the agent's keyless web search + fetch toolkit built on the Mac's own headless Chrome, and gauge, the macOS monitor the fleet runs.
 
 ## Shipped to the Apple App Store
 
