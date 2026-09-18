@@ -74,14 +74,6 @@ One reusable core for multi-provider AI services — streaming, WebSockets, and 
 
 A small prompt-template registry for predictable, testable LLM interactions.
 
-## Engineering approach
-
-- Build the thinnest system that can be tested for real.
-- Keep hardware, model, application, and infrastructure boundaries replaceable.
-- Automate repeated work: testing, deployment, signing, releases.
-- Extract reusable packages once an interface has proven itself.
-- Agents multiply implementation; tests, device evidence, and operational checks verify it.
-
 ## Tech stack
 
 <div align="center">
