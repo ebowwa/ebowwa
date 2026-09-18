@@ -15,21 +15,25 @@ I build systems that work outside the demo — native apps, on-device inference,
 
 ## Selected public work
 
-| Area | Projects |
-|---|---|
-| Camera-enabled interfaces | [Transcription — Open-Alterego](https://github.com/ebowwa/Open-Alterego), [Robotic reasoning — cosmos-framework](https://github.com/ebowwa/cosmos-framework), [Human vitals — rPPG](https://github.com/ebowwa/rppg-vitalsigns) |
-| Connected hardware | [BluetoothHID](https://github.com/ebowwa/BluetoothHID), [ESP32-S3 Camera Firmware](https://github.com/ebowwa/esp32s3-cam-firmware), [Pi BLE Keyboard](https://github.com/ebowwa/pi-ble-keyboard), [Self-classifying edge devices — EdaxShifu](https://github.com/dako2/edaxshifu) |
-| Developer and AI tooling | [xcode-mcp](https://github.com/ebowwa/xcode-mcp), [structured-prompts](https://github.com/ebowwa/structured-prompts) |
-| 📓 [The lab notebooks — the index of indexes](https://gist.github.com/ebowwa/4a61f3c4035dd540c58615c96f2812b3) | The shelf: thread maps for all five series, plus the ecosystem census of which repos feed which series |
-| 📓 Series 1 — [A7 iOS 12.5.x](https://gist.github.com/ebowwa/9bfe970058959b09b8da675ad71e854f) | A junked iPad mini 2 turned self-hosting lab: Chimera jailbreak, kernel RE, an on-device ObjC/Rust toolchain — and the birth of the resident agent that types, watches its own screen, and studies its own deaths |
-| 📓 Series 2 — [The ANE lab](https://gist.github.com/ebowwa/565142c77ffda0d3ae96d0175281d038) | Bending Apple's undocumented Neural Engine: shape laws, int8, the eval-cost ledger; non-AI workloads (a donut, XOR without xor); embedding and cardio models on the engine — the research behind rppg-vitalsigns |
-| 📓 Series 3 — [Developer-space patterns](https://gist.github.com/ebowwa/f1306779962c342bfbfd49caba03a576) | The habits the wars run on: ordinal-layer architecture, how a number gets to be true, and reading macOS metrics the OS stopped giving you |
-| 📓 Series 4 — [Agents: the mind loop](https://gist.github.com/ebowwa/d279afaf219d35765399d876c23a184e) | The resident agent's mortality architecture: the curiosity engine, watchdog tripwires, the obituary file, a mind in one gigabyte — and the fleet that watches the loop |
-| 📓 Series 5 — [Products](https://gist.github.com/ebowwa/c3aab014e92f116d937bff8572906aaa) | What the lab ships outward: the agent's keyless web search + fetch toolkit built on the Mac's own headless Chrome, and gauge, the macOS monitor the fleet runs |
+The repos are the artifacts; the [lab notebooks](https://gist.github.com/ebowwa/4a61f3c4035dd540c58615c96f2812b3) are the wars — one debugging war per entry.
 
-Larger systems live in private monorepos; older experiments get folded into archives. What stays public is the short list above.
+**Sensing & interfaces**
+[rppg-vitalsigns](https://github.com/ebowwa/rppg-vitalsigns) · [Open-Alterego](https://github.com/ebowwa/Open-Alterego) · [cosmos-framework](https://github.com/ebowwa/cosmos-framework)
+📓 [The ANE lab](https://gist.github.com/ebowwa/565142c77ffda0d3ae96d0175281d038) — bending Apple's undocumented Neural Engine: shape laws, int8, the eval-cost ledger, embedding and cardio models on the engine — the research behind rppg-vitalsigns.
 
-The 📓 rows are the lab notebooks on gist — the narrative layer behind the repos, one debugging war per entry.
+**Hardware & edge labs**
+[BluetoothHID](https://github.com/ebowwa/BluetoothHID) · [ESP32-S3 Camera Firmware](https://github.com/ebowwa/esp32s3-cam-firmware) · [Pi BLE Keyboard](https://github.com/ebowwa/pi-ble-keyboard) · [Self-classifying edge devices — EdaxShifu](https://github.com/dako2/edaxshifu)
+📓 [A7 iOS 12.5.x](https://gist.github.com/ebowwa/9bfe970058959b09b8da675ad71e854f) — a junked iPad mini 2 turned self-hosting lab: Chimera jailbreak, kernel RE, an on-device ObjC/Rust toolchain — birthplace of the resident agent that types, watches its own screen, and studies its own deaths.
+
+**Agents & the fleet**
+[xcode-mcp](https://github.com/ebowwa/xcode-mcp) · [structured-prompts](https://github.com/ebowwa/structured-prompts)
+📓 [Agents: the mind loop](https://gist.github.com/ebowwa/d279afaf219d35765399d876c23a184e) — the resident agent's mortality architecture: the curiosity engine, watchdog tripwires, the obituary file, a mind in one gigabyte — and the fleet that watches the loop.
+📓 [Developer-space patterns](https://gist.github.com/ebowwa/f1306779962c342bfbfd49caba03a576) — the habits the wars run on: ordinal-layer architecture, how a number gets to be true, and reading macOS metrics the OS stopped giving you.
+
+**What ships**
+📓 [Products](https://gist.github.com/ebowwa/c3aab014e92f116d937bff8572906aaa) — the agent's keyless web search + fetch toolkit built on the Mac's own headless Chrome, and gauge, the macOS monitor the fleet runs.
+
+Larger systems live in private monorepos; older experiments get folded into archives. The [index of indexes](https://gist.github.com/ebowwa/4a61f3c4035dd540c58615c96f2812b3) holds the thread maps and the ecosystem census of which repos feed which series.
 
 ## Shipped to the Apple App Store
 
