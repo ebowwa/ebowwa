@@ -18,7 +18,7 @@ I build systems that work outside the demo — native apps, on-device inference,
 | Area | Projects |
 |---|---|
 | Camera-enabled interfaces | [Transcription — Open-Alterego](https://github.com/ebowwa/Open-Alterego), [Robotic reasoning — cosmos-framework](https://github.com/ebowwa/cosmos-framework), [Human vitals — rPPG](https://github.com/ebowwa/rppg-vitalsigns) |
-| Connected hardware | [BluetoothHID](https://github.com/ebowwa/BluetoothHID), [ESP32-S3 Camera Firmware](https://github.com/ebowwa/esp32s3-cam-firmware), [Pi BLE Keyboard](https://github.com/ebowwa/pi-ble-keyboard) |
+| Connected hardware | [BluetoothHID](https://github.com/ebowwa/BluetoothHID), [ESP32-S3 Camera Firmware](https://github.com/ebowwa/esp32s3-cam-firmware), [Pi BLE Keyboard](https://github.com/ebowwa/pi-ble-keyboard), [Self-classifying edge devices — EdaxShifu](https://github.com/dako2/edaxshifu) |
 | Developer and AI tooling | [xcode-mcp](https://github.com/ebowwa/xcode-mcp), [structured-prompts](https://github.com/ebowwa/structured-prompts) |
 
 Larger systems live in private monorepos; older experiments get folded into archives. What stays public is the short list above.
@@ -50,20 +50,6 @@ A sleep-cycle utility built around 90-minute timing and practical wake-time plan
 
 All three ship through one pipeline I own: implementation, signing, CI, TestFlight, App Store Connect automation, post-release iteration.
 
-## Research and hardware work
-
-### [Camera heart rate, respiration, and emotion signals](https://github.com/ebowwa/rppg-vitalsigns)
-
-Contactless physiological sensing from ordinary cameras — on phones and wearable devices.
-
-### [Self-classifying edge devices](https://github.com/dako2/edaxshifu)
-
-An earlier real-time self-classification framework and its hardware demonstration.
-
-### [Open-Alterego](https://github.com/ebowwa/Open-Alterego)
-
-Silent-speech and non-vocal communication research — visual speech recognition, personalization, and deployment on Apple devices.
-
 ## Published packages
 
 ### [ai-proxy-core](https://pypi.org/project/ai-proxy-core/)
@@ -73,29 +59,6 @@ One reusable core for multi-provider AI services — streaming, WebSockets, and 
 ### [structured-prompts](https://pypi.org/project/structured-prompts/)
 
 A small prompt-template registry for predictable, testable LLM interactions.
-
-## Tech stack
-
-<div align="center">
-
-### Core Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![Swift](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)
-
-### Mobile Development
-![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
-![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
-
-### Web Technologies
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-
-</div>
 
 
 ---
