@@ -13,13 +13,6 @@
 
 I build systems that work outside the demo — native apps, on-device inference, camera and BLE hardware, training pipelines, and the services that connect them. Each starts with a product or hardware capability and grows the layers needed to ship it.
 
-## Current focus
-
-- **On-device and edge AI:** quantization, local runtimes, perception, tracking, multimodal systems
-- **Apple platforms:** Swift/SwiftUI products, plus the macOS automation, signing, and release engineering behind them
-- **Wearables and alternative interfaces:** smart glasses, BLE, camera and audio relays, silent speech
-- **Agent infrastructure:** composable tools, MCP servers, evaluation, machine-to-machine workflows
-
 ## Selected public work
 
 | Area | Projects |
