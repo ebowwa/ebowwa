@@ -30,26 +30,15 @@ The repos are the artifacts; the [lab notebooks](https://gist.github.com/ebowwa/
 📓 [Agents: the mind loop](https://gist.github.com/ebowwa/d279afaf219d35765399d876c23a184e) — the resident agent's mortality architecture: the curiosity engine, watchdog tripwires, the obituary file, a mind in one gigabyte — and the fleet that watches the loop.
 📓 [Developer-space patterns](https://gist.github.com/ebowwa/f1306779962c342bfbfd49caba03a576) — the habits the wars run on: ordinal-layer architecture, how a number gets to be true, and reading macOS metrics the OS stopped giving you.
 
-**What ships**
-📓 [Products](https://gist.github.com/ebowwa/c3aab014e92f116d937bff8572906aaa) — the agent's keyless web search + fetch toolkit built on the Mac's own headless Chrome, and gauge, the macOS monitor the fleet runs.
+**Products**
+📓 [Products](https://gist.github.com/ebowwa/c3aab014e92f116d937bff8572906aaa) — the lab ships outward: the agent's keyless web search + fetch toolkit built on the Mac's own headless Chrome, and gauge, the macOS monitor the fleet runs.
+[CleanShots](https://apps.apple.com/app/id6745844477) — privacy-focused iOS media processing: metadata removal, watermarking, fail-closed visual masking
+[CaringMind](https://apps.apple.com/app/id6749468165) — an AI companion and audio journal for personal advocacy, augmentation, and reflection
+[SleepLoops](https://apps.apple.com/app/id6745059180) — a sleep-cycle utility built around 90-minute timing and practical wake-time planning
+
+All three apps ship through one pipeline I own: implementation, signing, CI, TestFlight, App Store Connect automation, post-release iteration.
 
 Larger systems live in private monorepos; older experiments get folded into archives. The [index of indexes](https://gist.github.com/ebowwa/4a61f3c4035dd540c58615c96f2812b3) holds the thread maps and the ecosystem census of which repos feed which series.
-
-## Shipped to the Apple App Store
-
-### [CleanShots – Remove Photo Info](https://apps.apple.com/app/id6745844477)
-
-Privacy-focused iOS media processing: metadata removal, watermarking, and fail-closed visual masking.
-
-### [CaringMind](https://apps.apple.com/app/id6749468165)
-
-An AI companion and audio journal for personal advocacy, augmentation, and reflection.
-
-### [SleepLoops](https://apps.apple.com/app/id6745059180)
-
-A sleep-cycle utility built around 90-minute timing and practical wake-time planning.
-
-All three ship through one pipeline I own: implementation, signing, CI, TestFlight, App Store Connect automation, post-release iteration.
 
 
 ---
