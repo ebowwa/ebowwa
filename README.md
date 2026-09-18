@@ -1,16 +1,5 @@
 <div align="center">
 
-`📱 Apple Platforms` • `🤖 Edge AI` • `🔧 Connected Hardware` • `⚙️ Developer Infrastructure`
-
-```
-███████╗██████╗  ██████╗ ██╗    ██╗██╗    ██╗ █████╗     ██╗      █████╗ ██████╗ ███████╗
-██╔════╝██╔══██╗██╔═══██╗██║    ██║██║    ██║██╔══██╗    ██║     ██╔══██╗██╔══██╗██╔════╝
-█████╗  ██████╔╝██║   ██║██║ █╗ ██║██║ █╗ ██║███████║    ██║     ███████║██████╔╝███████╗
-██╔══╝  ██╔══██╗██║   ██║██║███╗██║██║███╗██║██╔══██║    ██║     ██╔══██║██╔══██╗╚════██║
-███████╗██████╔╝╚██████╔╝╚███╔███╔╝╚███╔███╔╝██║  ██║    ███████╗██║  ██║██████╔╝███████║
-╚══════╝╚═════╝  ╚═════╝  ╚══╝╚══╝  ╚══╝╚══╝ ╚═╝  ╚═╝    ╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝
-```
-
 **Applied systems engineer building products across native software, AI models, hardware, and infrastructure.**
 
 [![GitHub followers](https://img.shields.io/github/followers/ebowwa?label=Follow&style=social)](https://github.com/ebowwa)
