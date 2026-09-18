@@ -74,13 +74,9 @@ All three ship through one pipeline I own: implementation, signing, CI, TestFlig
 
 Contactless physiological sensing from ordinary cameras — on phones and wearable devices.
 
-<img width="400" alt="rPPG — camera heart-rate and vitals detection demo" src="https://github.com/user-attachments/assets/af5668ba-4d67-4fb7-badb-67d6eb8c03c2" />
-
 ### [Self-classifying edge devices](https://github.com/dako2/edaxshifu)
 
 An earlier real-time self-classification framework and its hardware demonstration.
-
-<img width="400" alt="EdaxShifu — edge device self-classification demo" src="https://github.com/user-attachments/assets/9c084302-298e-47a4-9e31-9d78e16e7c89" />
 
 ### [Open-Alterego](https://github.com/ebowwa/Open-Alterego)
 
@@ -127,29 +123,6 @@ A small prompt-template registry for predictable, testable LLM interactions.
 
 </div>
 
-## GitHub analytics
-
-<div align="center">
-
-<img width="400" alt="GitHub Stats" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ebowwa&theme=radical" />
-
-<img width="400" alt="GitHub Streak" src="https://streak-stats.demolab.com/?user=ebowwa&theme=radical&hide_border=true" />
-
-<img width="400" alt="Repos per language" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ebowwa&theme=radical" />
-
-<img width="400" alt="Most committed languages" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ebowwa&theme=radical" />
-
-</div>
-
-### Additional stats
-
-<div align="center">
-
-<img width="400" alt="Profile Details" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ebowwa&theme=radical" />
-
-<img width="400" alt="Commit Time" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=ebowwa&theme=radical" />
-
-</div>
 
 ---
 
